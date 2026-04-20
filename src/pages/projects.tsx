@@ -40,6 +40,7 @@ const RecentWorkPage = () => {
             aria-hidden="true"
             className="recent-work-hero__media"
             imgClassName="recent-work-hero__image"
+            layout="fullWidth"
             placeholder="blurred"
             quality={72}
             formats={["auto", "webp", "avif"]}

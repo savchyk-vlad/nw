@@ -198,6 +198,7 @@ const ContactPage = () => {
               aria-hidden="true"
               className="contact-hero__poster"
               imgClassName="contact-hero__poster-image"
+              layout="fullWidth"
               placeholder="blurred"
               quality={70}
               formats={["auto", "webp", "avif"]}

@@ -104,6 +104,7 @@ const Hero = () => {
         aria-hidden="true"
         className="home-quote-hero__media"
         imgClassName="home-quote-hero__image"
+        layout="fullWidth"
         placeholder="blurred"
         quality={72}
         formats={["auto", "webp", "avif"]}
