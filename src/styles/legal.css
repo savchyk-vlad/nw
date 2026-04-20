@@ -1,0 +1,313 @@
+.page-hero {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(89, 95, 57, 0.14),
+      transparent 42%
+    ),
+    linear-gradient(155deg, #2f2d2a 0%, #1c1b19 100%);
+  border-radius: 28px;
+  color: var(--color-ivory);
+  margin: 28px calc(var(--content-gutter) * -0.72) 0;
+  overflow: hidden;
+  padding: 88px max(24px, calc(var(--content-gutter) * 0.72));
+  text-align: center;
+}
+
+.page-hero__eyebrow {
+  color: var(--color-sage);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  font-size: clamp(38px, 7vw, 64px);
+  line-height: 1;
+  margin: 0 auto 18px;
+  max-width: 850px;
+}
+
+.page-hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 auto 28px;
+  max-width: 720px;
+}
+
+.page-hero__button {
+  background: var(--color-clay);
+  border-radius: 999px;
+  box-shadow: 0 14px 32px rgba(89, 95, 57, 0.35);
+  color: var(--color-ivory);
+  display: inline-flex;
+  font-weight: 800;
+  padding: 13px 24px;
+  text-decoration: none;
+  transition:
+    background 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.page-hero__button:hover {
+  background: var(--color-clay-dark);
+  transform: translateY(-2px);
+}
+
+.page-content {
+  margin: 0 calc(var(--content-gutter) * -0.72);
+  padding: 84px max(24px, calc(var(--content-gutter) * 0.72)) 96px;
+}
+
+.page-content h2 {
+  font-size: 32px;
+  margin: 0 0 14px;
+}
+
+.page-content > p {
+  color: rgba(27, 27, 27, 0.72);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+  max-width: 760px;
+}
+
+.page-card-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1280px;
+}
+
+.page-card {
+  background: rgba(228, 228, 222, 0.72);
+  border: 1px solid rgba(89, 95, 57, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(27, 27, 27, 0.07);
+  padding: 24px;
+}
+
+.page-card h3 {
+  margin: 0 0 10px;
+}
+
+.page-card p {
+  color: rgba(27, 27, 27, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.policy-hero {
+  background:
+    radial-gradient(
+      circle at 14% 12%,
+      rgba(196, 197, 186, 0.48),
+      transparent 34%
+    ),
+    linear-gradient(135deg, #f6f4ec 0%, #e8eadf 100%);
+  border: 1px solid rgba(89, 95, 57, 0.14);
+  border-radius: 28px;
+  margin: 36px calc(var(--content-gutter) * -0.3) 0;
+  padding: clamp(58px, 7vw, 88px) clamp(24px, 6vw, 76px);
+  text-align: center;
+}
+
+.policy-hero__icon {
+  align-items: center;
+  background: rgba(89, 95, 57, 0.12);
+  border: 1px solid rgba(89, 95, 57, 0.16);
+  border-radius: 999px;
+  color: #595f39;
+  display: inline-flex;
+  height: 58px;
+  justify-content: center;
+  margin-bottom: 18px;
+  width: 58px;
+}
+
+.policy-hero__icon svg {
+  fill: none;
+  height: 28px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: 28px;
+}
+
+.policy-hero__eyebrow {
+  color: #595f39;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.policy-hero h1 {
+  color: var(--color-black);
+  font-size: clamp(42px, 5vw, 66px);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+
+.policy-hero p {
+  color: rgba(27, 27, 27, 0.76);
+  font-size: clamp(17px, 1.35vw, 20px);
+  font-weight: 650;
+  line-height: 1.7;
+  margin: 0 auto 20px;
+  max-width: 850px;
+}
+
+.policy-hero strong {
+  color: var(--color-black);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.policy-content {
+  display: grid;
+  gap: 28px;
+  margin: 0 calc(var(--content-gutter) * -0.3);
+  padding: 52px 0 92px;
+}
+
+.policy-card {
+  background: #fffdf7;
+  border: 1px solid rgba(89, 95, 57, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(27, 27, 27, 0.055);
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.policy-card h2 {
+  color: var(--color-black);
+  font-size: clamp(21px, 2vw, 27px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.policy-card p {
+  color: rgba(27, 27, 27, 0.76);
+  font-size: 16px;
+  line-height: 1.72;
+  margin: 0 0 14px;
+}
+
+.policy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-card ul {
+  display: grid;
+  gap: 9px;
+  list-style: none;
+  margin: 14px 0 20px;
+  padding: 0;
+}
+
+.policy-card li {
+  color: rgba(27, 27, 27, 0.78);
+  font-size: 15px;
+  line-height: 1.55;
+  padding-left: 24px;
+  position: relative;
+}
+
+.policy-card li::before {
+  background: #595f39;
+  border-radius: 999px;
+  content: "";
+  height: 7px;
+  left: 2px;
+  position: absolute;
+  top: 9px;
+  width: 7px;
+}
+
+.policy-card--contact {
+  background:
+    linear-gradient(135deg, rgba(89, 95, 57, 0.08), rgba(196, 197, 186, 0.2)),
+    #fffdf7;
+}
+
+.policy-card address {
+  display: grid;
+  font-style: normal;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.policy-card address strong {
+  color: var(--color-black);
+  font-size: 17px;
+}
+
+.policy-card address a,
+.policy-card address span {
+  color: rgba(27, 27, 27, 0.78);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.policy-card address a:hover {
+  color: #595f39;
+}
+
+.policy-cta {
+  align-items: center;
+  background: var(--color-moss);
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(27, 27, 27, 0.16);
+  color: var(--color-ivory);
+  display: flex;
+  gap: 26px;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: clamp(26px, 4vw, 38px);
+}
+
+.policy-cta p {
+  color: rgba(228, 228, 222, 0.74);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.policy-cta h2 {
+  color: var(--color-ivory);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.policy-cta a {
+  background: var(--color-ivory);
+  border-radius: 999px;
+  color: var(--color-moss);
+  flex: 0 0 auto;
+  font-weight: 900;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.policy-cta a:hover {
+  background: var(--color-sage);
+  transform: translateY(-2px);
+}
+

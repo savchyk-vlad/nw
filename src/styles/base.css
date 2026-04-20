@@ -1,0 +1,97 @@
+html {
+  /* Brand: Ethereal Ivory — main canvas */
+  --color-page-bg: #e4e4de;
+  --color-safe-area-top: #595f39;
+  background: var(--color-page-bg);
+  background-color: var(--color-page-bg);
+  color-scheme: light;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-page-bg);
+  background-color: var(--color-page-bg);
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+}
+
+body::before {
+  background: var(--color-safe-area-top);
+  content: "";
+  height: env(safe-area-inset-top);
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2147483647;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  background: var(--color-page-bg);
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.site-shell {
+  --content-gutter: 15%;
+  --wide-section-gutter: calc(var(--content-gutter) * 0.28);
+  --page-section-gap-y-top: 56px;
+  --page-section-gap-y-bottom: 26px;
+  /* Brand palette: Eerie Black, Sage, Muted Moss — no clay/orange */
+  --color-charcoal: #1b1b1b;
+  --color-ivory: #e4e4de;
+  --color-sage: #c4c5ba;
+  --color-black: #1b1b1b;
+  --color-moss: #595f39;
+  --color-moss-dark: #4a5230;
+  --color-moss-soft: rgba(89, 95, 57, 0.14);
+  --color-trust-green: #595f39;
+  /* Legacy aliases map to moss for primary actions */
+  --color-clay: #595f39;
+  --color-clay-dark: #4a5230;
+  --color-warm-ivory: #e4e4de;
+  --color-cream-card: #f2f2ec;
+  color: var(--color-black);
+  font-family: Arial, sans-serif;
+  min-height: 100svh;
+  padding-top: env(safe-area-inset-top);
+}
+
+@supports (height: 100dvh) {
+  .site-shell {
+    min-height: 100dvh;
+  }
+}
+
+.site-content {
+  background: var(--color-page-bg);
+  padding-left: var(--content-gutter);
+  padding-right: var(--content-gutter);
+}
+
+/* Homepage: section panels without outer borders + nav-to-hero spacing */
+.site-content:has(.home-page) {
+  /* Padding (not hero margin-top) so the gap below nav isn’t lost to margin collapse → body bg */
+  padding-top: 28px;
+}
+
+.home-page > section {
+  border: none !important;
+}
+
+.brand-highlight {
+  color: var(--color-trust-green);
+  font-weight: 950;
+}
+
+.hero-accent {
+  color: var(--color-trust-green);
+  font-weight: 950;
+}

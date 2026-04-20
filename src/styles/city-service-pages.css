@@ -1,0 +1,602 @@
+.city-service-page {
+  background: var(--color-page-bg);
+  color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin: 0 calc(var(--content-gutter) * -0.72);
+  padding: 28px 0 76px;
+}
+
+.city-service-hero,
+.city-service-intro,
+.city-service-services,
+.city-service-why,
+.city-service-projects,
+.city-service-process,
+.city-service-climate,
+.city-service-reviews,
+.city-service-faq,
+.city-service-final-cta {
+  border-radius: 24px;
+}
+
+.city-service-hero {
+  align-items: center;
+  background-color: #c4c5ba;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 16px 38px rgba(27, 27, 27, 0.08);
+  display: flex;
+  overflow: hidden;
+  padding: clamp(24px, 3.4vw, 42px);
+  position: relative;
+}
+
+.city-service-section-head > p {
+  color: #595f39;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.city-service-hero__overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(27, 27, 27, 0.82) 0%,
+      rgba(27, 27, 27, 0.58) 34%,
+      rgba(27, 27, 27, 0.28) 68%,
+      rgba(27, 27, 27, 0.14) 100%
+    ),
+    linear-gradient(180deg, rgba(27, 27, 27, 0.04), rgba(27, 27, 27, 0.26));
+  inset: 0;
+  position: absolute;
+}
+
+.city-service-accent {
+  color: #595f39;
+}
+
+.city-service-hero h1 {
+  color: #e4e4de;
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+  margin: 0;
+}
+
+.city-service-hero__copy {
+  max-width: 760px;
+  min-height: clamp(420px, 46vw, 560px);
+  padding: clamp(22px, 2vw, 18px);
+  position: relative;
+  z-index: 1;
+}
+
+.city-service-hero__eyebrow {
+  align-items: center;
+  color: rgba(228, 228, 222, 0.95);
+  display: inline-flex;
+  gap: 10px;
+  font-size: clamp(15px, 1.2vw, 17px);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  margin: 6px 0 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+}
+
+.city-service-hero__eyebrow-icon {
+  color: #c4c5ba;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.city-service-hero__eyebrow-icon svg {
+  display: block;
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+}
+
+.city-service-hero__seo-line {
+  color: rgba(228, 228, 222, 0.88) !important;
+  font-size: 14px !important;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  margin-top: 14px !important;
+  text-transform: none;
+}
+
+.city-service-hero__copy > p:not(.city-service-hero__eyebrow) {
+  color: rgba(228, 228, 222, 0.9);
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 1.62;
+  margin: 16px 0 0;
+  max-width: 720px;
+}
+
+.city-service-hero__cta-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.city-service-hero__phone,
+.city-service-hero__primary,
+.city-service-hero__secondary {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  text-decoration: none;
+}
+
+.city-service-hero__phone {
+  background: rgba(228, 228, 222, 0.1);
+  color: #e4e4de;
+  font-size: 13px;
+  min-height: 40px;
+}
+
+.city-service-hero__primary {
+  background: #595f39;
+  box-shadow: 0 14px 30px rgba(27, 27, 27, 0.18);
+  color: #e4e4de;
+}
+
+.city-service-hero__secondary {
+  background: transparent;
+  color: #e4e4de;
+  text-decoration: none;
+}
+
+.city-service-hero__primary:hover {
+  background: #4a5230;
+  transform: translateY(-1px);
+}
+
+.city-service-hero__phone:hover {
+  background: rgba(228, 228, 222, 0.16);
+}
+
+.city-service-hero__secondary:hover {
+  color: #c4c5ba;
+}
+
+.city-service-hero__trust-line {
+  color: rgba(228, 228, 222, 0.82);
+  font-size: 13px !important;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  margin-top: 18px !important;
+  max-width: none;
+}
+
+.city-service-trust-cards,
+.city-service-services__grid,
+.city-service-why__grid,
+.city-service-projects__grid,
+.city-service-reviews__summary,
+.city-service-reviews__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.city-service-trust-card,
+.city-service-service-card,
+.city-service-why__item,
+.city-service-project-card,
+.city-service-review-summary-card,
+.city-service-review-card,
+.city-service-faq__item {
+  background: #efeee6;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(27, 27, 27, 0.07);
+}
+
+.city-service-trust-card {
+  padding: 22px;
+}
+
+.city-service-trust-card__icon {
+  align-items: center;
+  background: rgba(89, 95, 57, 0.12);
+  border-radius: 999px;
+  color: #595f39;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.city-service-trust-card h2,
+.city-service-service-card h3,
+.city-service-project-card h3,
+.city-service-review-card h3,
+.city-service-faq__item h3,
+.city-service-process-card h3 {
+  color: #1b1b1b;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 14px 0 10px;
+}
+
+.city-service-trust-card p,
+.city-service-service-card p,
+.city-service-review-card p,
+.city-service-faq__item p,
+.city-service-process-card p,
+.city-service-climate__copy p,
+.city-service-intro__copy p,
+.city-service-section-head > span,
+.city-service-final-cta p {
+  color: rgba(27, 27, 27, 0.78);
+  font-size: 15px;
+  line-height: 1.62;
+  margin: 0;
+}
+
+.city-service-intro,
+.city-service-services,
+.city-service-why,
+.city-service-projects,
+.city-service-process,
+.city-service-climate,
+.city-service-reviews,
+.city-service-faq {
+  background: #e4e4de;
+  padding: clamp(24px, 3.2vw, 38px);
+}
+
+.city-service-intro {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1fr);
+}
+
+.city-service-intro__header p {
+  color: #595f39;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.city-service-intro__header h2,
+.city-service-section-head h2,
+.city-service-final-cta h2 {
+  color: #1b1b1b;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 950;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.city-service-intro__copy {
+  display: grid;
+  gap: 14px;
+}
+
+.city-service-section-head {
+  margin: 0 0 22px;
+}
+
+.city-service-section-head > span {
+  display: block;
+  margin-top: 12px;
+  max-width: 760px;
+}
+
+.city-service-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+  padding: 22px;
+}
+
+.city-service-service-card a,
+.city-service-project-card__link {
+  color: #595f39;
+  font-size: 14px;
+  font-weight: 900;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.city-service-why__item {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 18px 20px;
+}
+
+.city-service-why__item span {
+  color: #595f39;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.city-service-why__item p {
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.city-service-project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.city-service-project-card__media {
+  aspect-ratio: 16 / 10;
+  background: #c4c5ba;
+  display: block;
+}
+
+.city-service-project-card__media img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.city-service-project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.city-service-project-card__type {
+  color: #595f39;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.city-service-project-card__location {
+  color: rgba(27, 27, 27, 0.6);
+  font-size: 14px;
+  font-weight: 850;
+  margin: 0 0 12px;
+}
+
+.city-service-project-card__body > p:last-of-type:not(.city-service-project-card__location) {
+  margin-bottom: 18px;
+}
+
+.city-service-process__grid {
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr) 40px minmax(0, 1fr) 40px minmax(0, 1fr);
+  row-gap: 14px;
+}
+
+.city-service-process-card {
+  background: #efeee6;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(27, 27, 27, 0.07);
+  padding: 22px;
+}
+
+.city-service-process-card__number {
+  align-items: center;
+  background: #595f39;
+  border-radius: 999px;
+  color: #e4e4de;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.city-service-process__arrow {
+  align-items: center;
+  color: #595f39;
+  display: inline-flex;
+  font-size: 24px;
+  font-weight: 900;
+  justify-content: center;
+}
+
+.city-service-climate__copy,
+.city-service-faq__list {
+  display: grid;
+  gap: 14px;
+}
+
+.city-service-reviews__summary {
+  margin-bottom: 16px;
+}
+
+.city-service-review-summary-card,
+.city-service-review-card,
+.city-service-faq__item {
+  padding: 20px;
+}
+
+.city-service-review-summary-card img {
+  display: block;
+  height: 24px;
+  max-width: 120px;
+  object-fit: contain;
+  width: auto;
+}
+
+.city-service-review-summary-card strong {
+  color: #595f39;
+  display: block;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 14px;
+}
+
+.city-service-review-summary-card p {
+  margin-top: 8px;
+}
+
+.city-service-final-cta {
+  background: #595f39;
+  color: #e4e4de;
+  padding: clamp(28px, 4vw, 42px);
+}
+
+.city-service-final-cta h2 {
+  color: #e4e4de;
+}
+
+.city-service-final-cta .city-service-accent {
+  background: rgba(228, 228, 222, 0.92);
+  border-radius: 0.18em;
+  box-decoration-break: clone;
+  color: #595f39;
+  -webkit-box-decoration-break: clone;
+  padding: 0 0.14em;
+}
+
+.city-service-final-cta p {
+  color: rgba(228, 228, 222, 0.86);
+  margin-top: 14px;
+  max-width: 760px;
+}
+
+.city-service-final-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.city-service-final-cta__primary,
+.city-service-final-cta__secondary {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.city-service-final-cta__primary {
+  background: #e4e4de;
+  color: #1b1b1b;
+}
+
+.city-service-final-cta__secondary {
+  background: rgba(228, 228, 222, 0.14);
+  color: #e4e4de;
+}
+
+@media (max-width: 1024px) {
+  .city-service-page {
+    margin: 0;
+  }
+
+  .city-service-hero,
+  .city-service-intro,
+  .city-service-trust-cards,
+  .city-service-services__grid,
+  .city-service-why__grid,
+  .city-service-projects__grid,
+  .city-service-reviews__summary,
+  .city-service-reviews__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .city-service-hero__copy {
+    min-height: 440px;
+  }
+
+  .city-service-process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-service-process__arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .city-service-hero,
+  .city-service-intro,
+  .city-service-trust-cards,
+  .city-service-services__grid,
+  .city-service-why__grid,
+  .city-service-projects__grid,
+  .city-service-reviews__summary,
+  .city-service-reviews__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-service-hero__copy {
+    min-height: 420px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .city-service-page {
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .city-service-hero,
+  .city-service-intro,
+  .city-service-services,
+  .city-service-why,
+  .city-service-projects,
+  .city-service-process,
+  .city-service-climate,
+  .city-service-reviews,
+  .city-service-faq,
+  .city-service-final-cta {
+    border-radius: 18px;
+  }
+
+  .city-service-hero__cta-row,
+  .city-service-final-cta__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .city-service-hero__copy {
+    min-height: 380px;
+    padding: 0;
+  }
+
+  .city-service-hero__phone,
+  .city-service-hero__primary,
+  .city-service-hero__secondary,
+  .city-service-final-cta__primary,
+  .city-service-final-cta__secondary {
+    width: 100%;
+  }
+}
+

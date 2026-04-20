@@ -1,0 +1,679 @@
+.about-page {
+  --about-ivory: #e4e4de;
+  --about-sage: #c4c5ba;
+  --about-black: #1b1b1b;
+  --about-moss: #595f39;
+  --about-cream: #efeee6;
+  background: var(--color-page-bg);
+  color: var(--about-black);
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  margin: 0 calc(var(--content-gutter) * -0.72);
+  padding: 28px 0 76px;
+}
+
+.about-hero {
+  background-position: center;
+  background-size: cover;
+  border-radius: 28px;
+  min-height: clamp(500px, 54vw, 720px);
+  overflow: hidden;
+  position: relative;
+}
+
+.about-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(27, 27, 27, 0.72), rgba(27, 27, 27, 0.18)),
+    linear-gradient(180deg, rgba(27, 27, 27, 0.08), rgba(27, 27, 27, 0.34));
+  inset: 0;
+  position: absolute;
+}
+
+.about-hero__content {
+  color: var(--about-ivory);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 860px;
+  min-height: inherit;
+  padding: clamp(52px, 7vw, 96px);
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero__content > p,
+.about-label {
+  color: var(--about-moss);
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.15em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.about-highlight {
+  color: var(--about-moss);
+  font-weight: 950;
+}
+
+.about-hero__content > p {
+  color: var(--about-sage);
+}
+
+.about-hero .about-highlight,
+.about-final-cta .about-highlight {
+  color: var(--about-sage);
+}
+
+.about-hero h1 {
+  color: var(--about-ivory);
+  font-size: clamp(44px, 6.2vw, 82px);
+  font-weight: 950;
+  letter-spacing: -0.058em;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.about-hero__content > span {
+  color: rgba(228, 228, 222, 0.88);
+  display: block;
+  font-size: clamp(17px, 1.5vw, 22px);
+  font-weight: 700;
+  line-height: 1.55;
+  margin-top: 22px;
+  max-width: 700px;
+}
+
+.about-hero__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.about-button,
+.about-final-cta__button {
+  align-items: center;
+  background: var(--about-moss);
+  border-radius: 999px;
+  color: var(--about-ivory);
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 950;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 24px;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-button:hover,
+.about-final-cta__button:hover {
+  background: #4d5231;
+  box-shadow: 0 18px 34px rgba(27, 27, 27, 0.2);
+  transform: translateY(-2px);
+}
+
+.about-hero__secondary {
+  color: var(--about-ivory);
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration-color: rgba(228, 228, 222, 0.45);
+  text-underline-offset: 7px;
+}
+
+.about-hero__secondary:hover {
+  color: var(--about-sage);
+}
+
+.about-intro,
+.about-story-section,
+.about-build-section,
+.about-split-section,
+.about-approach-section,
+.about-team-section,
+.about-why-section,
+.about-materials-section,
+.about-services-list-section,
+.about-service-area-section,
+.about-reviews-section,
+.about-final-cta {
+  border-radius: 28px;
+  padding: clamp(34px, 4.4vw, 60px);
+}
+
+.about-intro {
+  background: var(--about-ivory);
+  display: grid;
+  gap: clamp(24px, 4vw, 58px);
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+}
+
+.about-story-section,
+.about-services-list-section {
+  background: var(--about-ivory);
+  display: grid;
+  gap: clamp(24px, 4vw, 58px);
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+}
+
+.about-intro h2,
+.about-story-section h2,
+.about-section-head h2,
+.about-split-section h2,
+.about-team-section h2,
+.about-materials-section h2,
+.about-services-list-section h2,
+.about-service-area-section h2,
+.about-final-cta h2 {
+  color: var(--about-black);
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 950;
+  letter-spacing: -0.047em;
+  line-height: 1.06;
+  margin: 0;
+}
+
+.about-intro p:not(.about-label),
+.about-story-section p:not(.about-label),
+.about-split-section p:not(.about-label),
+.about-team-section p:not(.about-label),
+.about-materials-section p:not(.about-label),
+.about-services-list-section p:not(.about-label),
+.about-service-area-section p {
+  color: rgba(27, 27, 27, 0.76);
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.72;
+  margin: 18px 0 0;
+}
+
+.about-story-section p:not(.about-label):first-of-type,
+.about-services-list-section p:not(.about-label):first-of-type {
+  margin-top: 18px;
+}
+
+.about-section-head {
+  margin: 0 auto 30px;
+  max-width: 760px;
+  text-align: center;
+}
+
+.about-build-section,
+.about-reviews-section {
+  background: var(--about-ivory);
+}
+
+.about-card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.about-card-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-card-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-service-card,
+.about-trust-card,
+.about-approach-card,
+.about-review-grid article,
+.about-rating-card {
+  background: var(--about-cream);
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(27, 27, 27, 0.055);
+}
+
+.about-service-card,
+.about-trust-card {
+  padding: 26px;
+}
+
+.about-card-icon {
+  align-items: center;
+  background: rgba(89, 95, 57, 0.12);
+  border-radius: 18px;
+  color: var(--about-moss);
+  display: flex;
+  height: 52px;
+  justify-content: center;
+  margin-bottom: 18px;
+  width: 52px;
+}
+
+.about-card-icon svg,
+.about-check-list svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+}
+
+.about-card-icon svg {
+  height: 26px;
+  width: 26px;
+}
+
+.about-service-card h3,
+.about-trust-card h3,
+.about-approach-card h3 {
+  color: var(--about-black);
+  font-size: 19px;
+  font-weight: 950;
+  letter-spacing: -0.025em;
+  margin: 0 0 10px;
+}
+
+.about-service-card p,
+.about-trust-card p,
+.about-approach-card p,
+.about-review-grid article p,
+.about-rating-card p {
+  color: rgba(27, 27, 27, 0.74);
+  font-size: 15px;
+  line-height: 1.58;
+  margin: 0;
+}
+
+.about-split-section,
+.about-team-section,
+.about-materials-section {
+  align-items: center;
+  background: var(--about-sage);
+  display: grid;
+  gap: clamp(28px, 4vw, 52px);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+
+.about-split-section__image,
+.about-team-section__image,
+.about-materials-section__image {
+  border-radius: 24px;
+  box-shadow: 0 20px 48px rgba(27, 27, 27, 0.12);
+  overflow: hidden;
+}
+
+.about-split-section__image img,
+.about-team-section__image img,
+.about-materials-section__image img {
+  aspect-ratio: 4 / 3;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.about-check-list {
+  display: grid;
+  gap: 13px;
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+}
+
+.about-check-list li {
+  align-items: flex-start;
+  color: var(--about-black);
+  display: flex;
+  font-size: 15px;
+  font-weight: 850;
+  gap: 11px;
+  line-height: 1.45;
+}
+
+.about-check-list svg {
+  color: var(--about-moss);
+  flex: 0 0 21px;
+  height: 21px;
+  margin-top: 1px;
+  width: 21px;
+}
+
+.about-approach-section,
+.about-why-section,
+.about-services-list-section,
+.about-service-area-section {
+  background: rgba(196, 197, 186, 0.54);
+}
+
+.about-difference-copy {
+  display: grid;
+  gap: 16px;
+  margin: 0 auto 28px;
+  max-width: 880px;
+}
+
+.about-difference-copy p,
+.about-section-note {
+  color: rgba(27, 27, 27, 0.76);
+  font-size: 16px;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.about-section-note {
+  font-weight: 850;
+  margin: 28px auto 0;
+  max-width: 820px;
+  text-align: center;
+}
+
+.about-approach-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-approach-card {
+  padding: 28px;
+}
+
+.about-approach-card span {
+  color: var(--about-moss);
+  display: block;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  margin-bottom: 18px;
+}
+
+.about-team-section,
+.about-materials-section {
+  background: var(--about-ivory);
+}
+
+.about-team-section {
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+}
+
+.about-materials-section {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+}
+
+.about-service-area-section {
+  align-items: center;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+}
+
+.about-area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-services-list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-services-list span {
+  align-items: center;
+  background: var(--about-ivory);
+  border-radius: 999px;
+  color: var(--about-black);
+  display: flex;
+  font-size: 15px;
+  font-weight: 850;
+  gap: 10px;
+  padding: 12px 15px;
+}
+
+.about-services-list svg {
+  color: var(--about-moss);
+  flex: 0 0 19px;
+  fill: none;
+  height: 19px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.3;
+  width: 19px;
+}
+
+.about-area-list span {
+  background: var(--about-ivory);
+  border-radius: 999px;
+  color: var(--about-black);
+  font-size: 14px;
+  font-weight: 850;
+  padding: 10px 14px;
+}
+
+.about-rating-card {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding: 24px;
+}
+
+.about-rating-card > div {
+  display: grid;
+  gap: 6px;
+}
+
+.about-rating-card__stars {
+  color: var(--about-moss);
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
+.about-rating-card strong {
+  color: var(--about-black);
+  font-size: 22px;
+  font-weight: 950;
+}
+
+.about-rating-card p {
+  max-width: 600px;
+}
+
+.about-review-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-review-grid article {
+  padding: 24px;
+}
+
+.about-review-grid article strong {
+  color: var(--about-moss);
+  display: block;
+  font-size: 15px;
+  font-weight: 950;
+  margin-top: 18px;
+}
+
+.about-final-cta {
+  align-items: center;
+  background: var(--about-moss);
+  display: grid;
+  gap: clamp(28px, 5vw, 72px);
+  grid-template-columns: minmax(0, 0.65fr) minmax(280px, 0.35fr);
+  justify-content: stretch;
+  padding-bottom: clamp(46px, 5.6vw, 78px);
+  padding-top: clamp(46px, 5.6vw, 78px);
+}
+
+.about-final-cta .about-label,
+.about-final-cta h2 {
+  color: var(--about-ivory);
+}
+
+.about-final-cta__copy {
+  color: rgba(228, 228, 222, 0.82);
+  display: block;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.68;
+  margin-top: 18px;
+  max-width: 620px;
+}
+
+.about-final-cta__actions {
+  align-items: flex-end;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 16px;
+  justify-self: end;
+  text-align: right;
+}
+
+.about-final-cta__button-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+.about-final-cta__button {
+  background: var(--about-ivory);
+  color: var(--about-black);
+}
+
+.about-final-cta__button:hover {
+  background: var(--about-sage);
+}
+
+.about-final-cta__link {
+  color: var(--about-ivory);
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration-color: rgba(228, 228, 222, 0.46);
+  text-underline-offset: 7px;
+}
+
+.about-final-cta__trust {
+  color: var(--about-sage);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .about-card-grid--four,
+  .about-approach-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-card-grid--three,
+  .about-review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .about-page {
+    margin: 0;
+  }
+
+  .about-intro,
+  .about-story-section,
+  .about-split-section,
+  .about-team-section,
+  .about-materials-section,
+  .about-services-list-section,
+  .about-service-area-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-final-cta,
+  .about-rating-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .about-final-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .about-final-cta__actions {
+    align-items: flex-start;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .about-final-cta__button-row {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    gap: 24px;
+    padding-top: 20px;
+  }
+
+  .about-hero,
+  .about-intro,
+  .about-story-section,
+  .about-build-section,
+  .about-split-section,
+  .about-approach-section,
+  .about-team-section,
+  .about-why-section,
+  .about-materials-section,
+  .about-services-list-section,
+  .about-service-area-section,
+  .about-reviews-section,
+  .about-final-cta,
+  .about-service-card,
+  .about-trust-card,
+  .about-approach-card,
+  .about-rating-card,
+  .about-review-grid article {
+    border-radius: 20px;
+  }
+
+  .about-hero {
+    min-height: 560px;
+  }
+
+  .about-hero__content {
+    padding: 34px 22px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(38px, 12vw, 52px);
+  }
+
+  .about-intro,
+  .about-story-section,
+  .about-build-section,
+  .about-split-section,
+  .about-approach-section,
+  .about-team-section,
+  .about-why-section,
+  .about-materials-section,
+  .about-services-list-section,
+  .about-service-area-section,
+  .about-reviews-section,
+  .about-final-cta {
+    padding: 28px 18px;
+  }
+
+  .about-card-grid--four,
+  .about-card-grid--three,
+  .about-approach-grid,
+  .about-review-grid,
+  .about-services-list {
+    grid-template-columns: 1fr;
+  }
+}
+
