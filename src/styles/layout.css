@@ -44,9 +44,9 @@
 }
 
 .site-header__subline {
-  color: rgba(27, 27, 27, 0.48);
+  color: rgba(27, 27, 27, 0.7);
   font-size: clamp(11px, 0.82vw, 13px);
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: 0.02em;
 }
 
