@@ -10,8 +10,11 @@
 }
 
 .home-quote-hero__media {
+  display: block;
   inset: 0;
+  pointer-events: none;
   position: absolute;
+  z-index: 0;
 }
 
 .home-quote-hero__media,
@@ -38,6 +41,8 @@
     rgba(27, 27, 27, 0.42);
   min-height: clamp(500px, 48vw, 630px);
   padding: clamp(54px, 7vw, 94px) clamp(40px, 7vw, 110px);
+  position: relative;
+  z-index: 1;
 }
 
 .home-quote-hero__content {
@@ -48,6 +53,8 @@
   margin: 0 auto;
   max-width: 1360px;
   min-height: 400px;
+  position: relative;
+  z-index: 1;
 }
 
 .home-quote-hero__copy {
