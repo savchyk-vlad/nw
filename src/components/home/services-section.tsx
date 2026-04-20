@@ -11,6 +11,7 @@ import servicesWoodDeck from "../../images/services-wood-deck.jpg";
 const services = [
   {
     name: "Cedar Wood Fences",
+    href: "/fence/cedar-wood-fence/",
     description:
       "Cedar wood fences are a great choice for homeowners who want natural beauty, privacy, and long-term value. Northwood Renovation builds cedar fencing with clean lines, strong posts, and careful installation so the fence looks great and performs well through changing weather.",
     image: servicesFenceRoad,
@@ -18,6 +19,7 @@ const services = [
   },
   {
     name: "Chain Link Fence",
+    href: "/fence/chain-link-fence/",
     description:
       "Chain link fencing is practical, durable, and cost-effective. It is a good solution for securing yards, pet areas, side yards, and property boundaries while keeping the space open and visible.",
     image: servicesChainLinkFence,
@@ -25,6 +27,7 @@ const services = [
   },
   {
     name: "Wood Deck",
+    href: "/deck/wood-deck/",
     description:
       "Wood decks bring warmth and natural character to an outdoor space. Northwood Renovation designs and builds wood decks that feel comfortable, sturdy, and connected to the home’s existing style.",
     image: servicesWoodDeck,
@@ -32,6 +35,7 @@ const services = [
   },
   {
     name: "Composite Deck",
+    href: "/deck/composite-deck/",
     description:
       "Composite decks are built for homeowners who want a beautiful outdoor space without heavy maintenance. They resist moisture, fading, and everyday wear, making them a strong long-term choice for outdoor living.",
     image: servicesCompositeDeck,
@@ -39,6 +43,7 @@ const services = [
   },
   {
     name: "Custom Deck",
+    href: "/deck/custom-deck/",
     description:
       "Custom decks are designed around the home, yard, and lifestyle of the homeowner. Whether the goal is entertaining, relaxing, improving access, or creating a standout outdoor feature, each design should feel intentional and built for the space.",
     image: servicesCustomDeck,
@@ -46,6 +51,7 @@ const services = [
   },
   {
     name: "Outdoor Deck",
+    href: "/deck/outdoor-deck/",
     description:
       "Outdoor decks create a functional extension of the home. They give homeowners a dedicated space for family time, hosting guests, outdoor dining, and enjoying the yard in a more comfortable way.",
     image: servicesOutdoorDeck,
@@ -69,13 +75,13 @@ const ServicesSection = () => (
 
     <div className="services-section__grid">
       {services.map((service) => (
-        <article className="service-card" key={service.name}>
+        <Link className="service-card" key={service.name} to={service.href}>
           <img src={service.image} alt={service.alt} loading="lazy" />
           <div className="service-card__body">
             <h3>{renderBrandText(service.name)}</h3>
             <p>{renderBrandText(service.description)}</p>
           </div>
-        </article>
+        </Link>
       ))}
     </div>
   </section>

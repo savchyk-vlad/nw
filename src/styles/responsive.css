@@ -206,6 +206,35 @@
     width: 42px;
   }
 
+  .blog-hero__media,
+  .reviews-hero__media,
+  .recent-work-featured__media,
+  .recent-project-card__media,
+  .city-service-project-card__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .blog-hero__media img,
+  .reviews-hero__media img,
+  .recent-work-featured__media img,
+  .recent-project-card__media img,
+  .city-service-project-card__media img,
+  .testimonials-section__image-wrap img {
+    object-position: center;
+  }
+
+  .before-after-slider {
+    aspect-ratio: auto;
+    border-radius: 22px;
+    height: 360px;
+    max-width: 100%;
+  }
+
+  .before-after-slider__image,
+  .before-after-slider__after img {
+    object-position: center;
+  }
+
   .home-quote-hero {
     margin: 0 0 var(--page-section-gap-y-bottom);
   }
@@ -537,6 +566,18 @@
 }
 
 @media (max-width: 420px) {
+  .blog-hero__media,
+  .reviews-hero__media,
+  .recent-work-featured__media,
+  .recent-project-card__media,
+  .city-service-project-card__media {
+    aspect-ratio: 1 / 1;
+  }
+
+  .before-after-slider {
+    height: 320px;
+  }
+
   .site-header__actions {
     flex-shrink: 1;
     gap: 10px;

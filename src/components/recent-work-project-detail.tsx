@@ -182,7 +182,7 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
             />
             <div
               className="before-after-slider__after"
-              style={{ clipPath: `inset(0 ${100 - comparisonValue}% 0 0)` }}
+              style={{ clipPath: `inset(0 0 0 ${comparisonValue}%)` }}
             >
               <img
                 src={beforeAfterPreview.after}

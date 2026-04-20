@@ -175,7 +175,7 @@ const RecentWorkPage = () => {
             />
             <div
               className="before-after-slider__after"
-              style={{ clipPath: `inset(0 ${100 - comparisonValue}% 0 0)` }}
+              style={{ clipPath: `inset(0 0 0 ${comparisonValue}%)` }}
             >
               <img
                 src={beforeAfterPreview.after}
@@ -206,9 +206,9 @@ const RecentWorkPage = () => {
             />
           </div>
           <p className="recent-work-before-after__copy">
-            This placeholder comparison uses current project photos for now.
-            Once you provide real before and after images, we can swap them in
-            without changing the interaction.
+            A weathered deck was replaced with a cleaner, more durable outdoor
+            space designed to feel safer, brighter, and more usable for everyday
+            backyard living.
           </p>
         </section>
 

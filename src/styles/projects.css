@@ -422,7 +422,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.recent-work-before-after figure {
+.recent-work-before-after__grid figure {
   background: var(--rw-cream);
   border: 1px solid rgba(196, 197, 186, 0.76);
   border-radius: 22px;
@@ -431,7 +431,7 @@
   position: relative;
 }
 
-.recent-work-before-after figure span {
+.recent-work-before-after__grid figure span {
   background: rgba(27, 27, 27, 0.72);
   border: 1px solid rgba(228, 228, 222, 0.22);
   border-radius: 999px;
@@ -447,7 +447,7 @@
   z-index: 1;
 }
 
-.recent-work-before-after img {
+.recent-work-before-after__grid img {
   aspect-ratio: 16 / 10;
   display: block;
   height: auto;
@@ -640,15 +640,16 @@
 }
 
 .before-after-slider {
-  aspect-ratio: 16 / 9;
   background: #c4c5ba;
-  border-radius: 24px;
+  border-radius: 22px;
   cursor: ew-resize;
+  height: clamp(360px, 42vw, 420px);
   margin: 0 auto;
   max-width: 980px;
   overflow: hidden;
   position: relative;
   touch-action: pan-y;
+  width: 100%;
 }
 
 .before-after-slider__image,
@@ -657,6 +658,7 @@
   height: 100%;
   inset: 0;
   object-fit: cover;
+  object-position: center center;
   position: absolute;
   width: 100%;
 }
@@ -681,19 +683,19 @@
   font-size: 12px;
   font-weight: 950;
   letter-spacing: 0.12em;
-  padding: 8px 12px;
+  padding: 8px 14px;
   position: absolute;
   text-transform: uppercase;
-  top: 16px;
+  top: 24px;
   z-index: 3;
 }
 
 .before-after-slider__label--before {
-  right: 16px;
+  left: 24px;
 }
 
 .before-after-slider__label--after {
-  left: 16px;
+  right: 24px;
 }
 
 .before-after-slider__handle {
@@ -701,40 +703,40 @@
   position: absolute;
   top: 0;
   transform: translateX(-50%);
-  width: 3px;
+  width: 1px;
   z-index: 4;
 }
 
 .before-after-slider__handle::before {
-  background: rgba(228, 228, 222, 0.86);
+  background: rgba(228, 228, 222, 0.65);
   bottom: 0;
   content: "";
   left: 50%;
   position: absolute;
   top: 0;
   transform: translateX(-50%);
-  width: 3px;
+  width: 1px;
 }
 
 .before-after-slider__handle span {
   align-items: center;
   background: #e4e4de;
   border-radius: 999px;
-  box-shadow: 0 12px 28px rgba(27, 27, 27, 0.22);
+  box-shadow: 0 8px 24px rgba(27, 27, 27, 0.14);
   color: #595f39;
   display: flex;
-  height: 50px;
+  height: 58px;
   justify-content: center;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
+  width: 58px;
 }
 
 .before-after-slider__handle span::before {
   content: "↔";
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
 }
 

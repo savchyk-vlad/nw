@@ -1,4 +1,6 @@
 import deckRailingHouse from "../images/gallery/deck-with-railing-house.jpg";
+import deckLocalAfterImage from "../images/cities/deck-local-carousel-after-premium-deck.png";
+import deckLocalBeforeImage from "../images/cities/deck-local-carousel-before-weathered-deck.png";
 import fenceBackyard from "../images/gallery/fence-backyard.jpg";
 import gardenFenceTrees from "../images/gallery/garden-fence-trees.jpeg";
 import horizontalWoodFence from "../images/gallery/horizontal-wood-fence.jpg";
@@ -360,6 +362,6 @@ export const getRecentWorkProject = (slug: string) =>
   recentWorkProjects.find((project) => project.slug === slug);
 
 export const beforeAfterPreview = {
-  before: newBackyardDeck,
-  after: deckRailingHouse,
+  before: deckLocalBeforeImage,
+  after: deckLocalAfterImage,
 };

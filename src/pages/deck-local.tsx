@@ -1,10 +1,21 @@
 import * as React from "react";
 import { HeadFC } from "gatsby";
 import logo from "../images/deck-local-logo.svg";
-import deckHeroImage from "../images/gallery/deck-with-railing-house.jpg";
-import beforeDeckImage from "../images/gallery/deck-bench-shovel.jpg";
-import afterDeckImage from "../images/gallery/modern-backyard-deck.jpg";
+import angiLogo from "../images/angi-logo.svg";
+import bbbLogo from "../images/bbb-logo.svg";
+import deckHeroImage from "../images/cities/lucid-origin_Create_a_realistic_professional_photo_of_a_Seattle-area_residential_home_with_a_-0 (4).jpg";
+import beforeDeckImage from "../images/cities/deck-local-before.png";
+import afterDeckImage from "../images/cities/lucid-origin_Create_a_realistic_professional_photo_of_a_Seattle-area_residential_home_with_a_-0 (5).jpg";
+import beforePremiumDeckImage from "../images/cities/deck-local-carousel-before-weathered-deck.png";
+import afterPremiumDeckImage from "../images/cities/deck-local-carousel-after-premium-deck.png";
+import beforeLargeDeckImage from "../images/cities/deck-local-carousel-before-large-weathered-deck.png";
+import afterLargeDeckImage from "../images/cities/deck-local-carousel-after-new-wood-deck.jpg";
+import beforePnwDeckImage from "../images/cities/deck-local-carousel-before-pnw-deck.png";
+import afterPnwDeckImage from "../images/cities/deck-local-carousel-after-pnw-deck.png";
+import facebookLogo from "../images/facebook-logo.svg";
+import googleReviewLogo from "../images/google-review-logo.png";
 import workerImage from "../images/about/deck-installation-worker.jpg";
+import yelpLogo from "../images/yelp-logo.png";
 
 const CONTACT_PHONE_DISPLAY = "(000) 000-0000";
 const CONTACT_PHONE_TEL = "+10000000000";
@@ -12,18 +23,53 @@ const CONTACT_EMAIL = "northwoodrenovation@gmail.com";
 const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const trustCards = [
-  ["Google Reviews", "Homeowner feedback"],
-  ["Yelp", "Local project reviews"],
-  ["Facebook", "Community updates"],
-  ["Fully Insured", "Residential deck work"],
-  ["Seattle Area", "Built for Northwest homes"],
+  {
+    alt: "Google Reviews",
+    label: "Google",
+    quantity: "64+ reviews",
+    rating: "4.9/5",
+    showStars: true,
+    src: googleReviewLogo,
+  },
+  {
+    alt: "Yelp",
+    label: "Yelp",
+    quantity: "28+ reviews",
+    rating: "4.7/5",
+    showStars: true,
+    src: yelpLogo,
+  },
+  {
+    alt: "Facebook",
+    label: "Facebook",
+    quantity: "36+ reviews",
+    rating: "4.8/5",
+    showStars: true,
+    src: facebookLogo,
+  },
+  {
+    alt: "Better Business Bureau",
+    label: "BBB",
+    quantity: "Verified profile",
+    rating: "A+",
+    showStars: false,
+    src: bbbLogo,
+  },
+  {
+    alt: "Angi",
+    label: "Angi",
+    quantity: "22+ reviews",
+    rating: "5/5",
+    showStars: true,
+    src: angiLogo,
+  },
 ];
 
 const trustBullets = [
   "Local Seattle-area deck contractor",
-  "Wood, composite, custom, outdoor & covered decks",
-  "Strong framing, safe stairs, clean railings",
-  "Clear communication from estimate to final walkthrough",
+  "Wood, composite & covered decks",
+  "Strong framing, stairs & railings",
+  "Clear estimate and clean process",
 ];
 
 const benefits = [
@@ -42,36 +88,52 @@ const benefits = [
 ];
 
 const includedServices = [
-  "Custom Decks",
-  "Wood Decks",
-  "Composite Decks",
-  "Outdoor Decks",
-  "Covered Decks",
-  "Deck Framing",
-  "Railings & Stairs",
-  "Deck Replacement",
-  "Deck Lighting",
-  "Material Guidance",
-  "Layout Planning",
-  "Final Walkthrough",
+  {
+    href: "/deck/custom-deck/",
+    title: "Custom Decks",
+  },
+  {
+    href: "/deck/wood-deck/",
+    title: "Wood Decks",
+  },
+  {
+    href: "/deck/composite-deck/",
+    title: "Composite Decks",
+  },
+  {
+    href: "/deck/outdoor-deck/",
+    title: "Outdoor Decks",
+  },
+  {
+    href: "/deck/covered-deck/",
+    title: "Covered Decks",
+  },
+  {
+    href: "/fence/cedar-wood-fence/",
+    title: "Cedar Wood Fences",
+  },
+  {
+    href: "/fence/chain-link-fence/",
+    title: "Chain Link Fences",
+  },
 ];
 
 const processSteps = [
   {
     title: "Request an Estimate",
-    text: "Tell us about your deck project, location, and what you want to improve.",
+    text: "Tell us about your project.",
   },
   {
     title: "On-Site Review",
-    text: "We look at your yard, access, layout, stairs, railings, and material options.",
+    text: "We check layout, access, materials, and details.",
   },
   {
-    title: "Clear Plan & Estimate",
-    text: "You receive a straightforward scope, practical recommendations, and clear next steps.",
+    title: "Clear Plan",
+    text: "You get scope, recommendations, and next steps.",
   },
   {
-    title: "Professional Installation",
-    text: "Our crew builds cleanly, communicates clearly, and completes a final walkthrough.",
+    title: "Installation",
+    text: "We build cleanly and complete a final walkthrough.",
   },
 ];
 
@@ -83,18 +145,54 @@ const meetBullets = [
   "Final walkthrough before completion",
 ];
 
-const reviewCards = [
+const transformationSlides = [
   {
-    title: "Clear Estimates",
-    text: "Know what is included before work begins.",
+    afterAlt: "Finished wood deck with clean railings and usable outdoor space",
+    afterImage: afterDeckImage,
+    afterText: "Finished wood deck with clean railings",
+    beforeAlt: "Old weathered deck boards and tired railing",
+    beforeImage: beforeDeckImage,
+    beforeText: "Weathered deck boards and tired railing",
+    description:
+      "A worn backyard deck was replaced with a cleaner, stronger outdoor space designed for Seattle weather.",
+    label: "Seattle Deck Refresh",
+    location: "Seattle, WA",
   },
   {
-    title: "Clean Installation",
-    text: "A professional crew, organized jobsite, and careful finish details.",
+    afterAlt: "Updated backyard deck with black railings and outdoor seating",
+    afterImage: afterPnwDeckImage,
+    afterText: "Updated deck with black railings and outdoor seating",
+    beforeAlt: "Weathered backyard deck behind a Pacific Northwest home",
+    beforeImage: beforePnwDeckImage,
+    beforeText: "Weathered boards, old railings, and tired outdoor seating",
+    description:
+      "An older backyard deck was upgraded into a cleaner, more comfortable outdoor living space with modern railings and room to gather.",
+    label: "Pacific Northwest Deck Upgrade",
+    location: "Seattle Area",
   },
   {
-    title: "Built for Daily Use",
-    text: "Decks planned for real life: stairs, railings, seating, pets, weather, and maintenance.",
+    afterAlt: "Finished backyard deck with black railings and outdoor seating",
+    afterImage: afterPremiumDeckImage,
+    afterText: "Finished deck with black railings and outdoor seating",
+    beforeAlt: "Weathered backyard deck with worn boards and old railings",
+    beforeImage: beforePremiumDeckImage,
+    beforeText: "Weathered deck boards, tired railings, and worn stairs",
+    description:
+      "A weathered deck was rebuilt into a cleaner, safer outdoor living space with sharp railings, fresh boards, and room to gather.",
+    label: "Backyard Deck Rebuild",
+    location: "Seattle Area",
+  },
+  {
+    afterAlt: "New elevated wood deck with fresh stairs and railings",
+    afterImage: afterLargeDeckImage,
+    afterText: "New elevated wood deck with fresh stairs and railings",
+    beforeAlt: "Large weathered backyard deck with gray boards and old stairs",
+    beforeImage: beforeLargeDeckImage,
+    beforeText: "Large weathered deck with worn boards and aging stairs",
+    description:
+      "A large aging deck was rebuilt with fresh wood, safer stairs, and clean railings to make the backyard feel open and usable again.",
+    label: "Large Wood Deck Replacement",
+    location: "Seattle Area",
   },
 ];
 
@@ -159,6 +257,47 @@ const DeckLocalPage = () => {
     "idle" | "submitting" | "success" | "error"
   >("idle");
   const [openFaqIndex, setOpenFaqIndex] = React.useState(0);
+  const [activeTransformationIndex, setActiveTransformationIndex] = React.useState(0);
+  const [isCarouselHovered, setIsCarouselHovered] = React.useState(false);
+  const [carouselInteractionPause, setCarouselInteractionPause] = React.useState(0);
+  const activeTransformation = transformationSlides[activeTransformationIndex];
+
+  React.useEffect(() => {
+    if (isCarouselHovered || carouselInteractionPause > 0) return undefined;
+
+    const timer = window.setTimeout(() => {
+      setActiveTransformationIndex((currentIndex) =>
+        currentIndex === transformationSlides.length - 1 ? 0 : currentIndex + 1,
+      );
+    }, 4500);
+
+    return () => window.clearTimeout(timer);
+  }, [activeTransformationIndex, carouselInteractionPause, isCarouselHovered]);
+
+  React.useEffect(() => {
+    if (carouselInteractionPause === 0) return undefined;
+
+    const timer = window.setTimeout(() => {
+      setCarouselInteractionPause(0);
+    }, 3500);
+
+    return () => window.clearTimeout(timer);
+  }, [carouselInteractionPause]);
+
+  const showTransformationSlide = (index: number, shouldPause = true) => {
+    setActiveTransformationIndex(
+      (index + transformationSlides.length) % transformationSlides.length,
+    );
+    if (shouldPause) setCarouselInteractionPause((pauseCount) => pauseCount + 1);
+  };
+
+  const showPreviousTransformation = () => {
+    showTransformationSlide(activeTransformationIndex - 1);
+  };
+
+  const showNextTransformation = () => {
+    showTransformationSlide(activeTransformationIndex + 1);
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -215,7 +354,7 @@ const DeckLocalPage = () => {
   return (
     <main className="deck-local">
       <div className="deck-local__offer-bar">
-        Deck Builder: $1,500 OFF · Offer Ends May 31
+        Seattle Deck Builder · Free Estimates · Built for Northwest Weather
       </div>
 
       <header className="deck-local-header">
@@ -239,36 +378,105 @@ const DeckLocalPage = () => {
 
       <section className="deck-local-hero">
         <div className="deck-local-hero__copy">
-          <p className="deck-local-hero__review">★★★★★ Trusted by Seattle-area homeowners</p>
-          <p className="deck-local-hero__label">Fully insured deck &amp; fence contractor</p>
-          <h1>Seattle Deck Builder for Custom Wood, Composite &amp; Covered Decks</h1>
-          <p className="deck-local-hero__subtitle">
-            Northwood Renovation builds clean, durable decks designed for
-            Seattle homes, rainy Northwest weather, and everyday outdoor living.
+          <p className="deck-local-hero__review">
+            <span aria-hidden="true">★★★★★</span> Trusted by Seattle-area homeowners
           </p>
-          <p className="deck-local-hero__offer">Free estimate + clear project plan</p>
-          <button className="deck-local-button" type="button" onClick={scrollToForm}>
-            Request a Free Deck Estimate →
-          </button>
+          <p className="deck-local-hero__label">✓ Fully Insured</p>
+          <h1>
+            Seattle&apos;s <span>Deck Builder</span>
+            <br />
+            Custom Composite &amp;
+            <br />
+            Wood Decks Built to Last
+          </h1>
+          <p className="deck-local-hero__subtitle">
+            Northwood Renovation builds clean, durable decks for Seattle homes
+            including custom layouts, covered deck options, safe stairs, and
+            railings built for Northwest weather.
+          </p>
+          <p className="deck-local-hero__offer">FREE Estimate + Clear Project Plan</p>
           <ul className="deck-local-check-list">
             {trustBullets.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
+          <article className="deck-local-confidence-card">
+            <span className="deck-local-confidence-card__icon" aria-hidden="true" />
+            <div>
+              <h2>Plan Your Project With Confidence</h2>
+              <p>
+                Review materials and options, then visualize your project before
+                work begins.
+              </p>
+            </div>
+          </article>
         </div>
-        <div className="deck-local-hero__media">
-          <img
-            src={deckHeroImage}
-            alt="Finished Seattle backyard deck with wood railing and outdoor living space"
-          />
+        <div className="deck-local-hero__visual">
+          <div className="deck-local-hero__media">
+            <img
+              src={deckHeroImage}
+              alt="Finished Seattle backyard deck with wood railing and outdoor living space"
+            />
+          </div>
+          <form className="deck-local-form deck-local-form--hero" id="deck-local-form" onSubmit={handleSubmit}>
+            {status === "success" ? (
+              <p className="deck-local-form__message" role="status">
+                Thanks. Your request has been received and our team will follow up soon.
+              </p>
+            ) : null}
+            {status === "error" ? (
+              <p className="deck-local-form__message deck-local-form__message--error" role="alert">
+                Please complete the required fields and try again.
+              </p>
+            ) : null}
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" autoComplete="name" required />
+            </label>
+            <label>
+              <span>Phone</span>
+              <input name="phone" type="tel" autoComplete="tel" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autoComplete="email" required />
+            </label>
+            <label>
+              <span>ZIP / City</span>
+              <input name="location" type="text" autoComplete="postal-code" required />
+            </label>
+            <label>
+              <span>Project Type</span>
+              <select name="projectType" defaultValue="Custom Deck">
+                {projectTypes.map((type) => (
+                  <option value={type} key={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows={2} required />
+            </label>
+            <button type="submit" disabled={status === "submitting"}>
+              {status === "submitting" ? "Sending..." : "Request My Free Estimate"}
+            </button>
+          </form>
         </div>
       </section>
 
-      <section className="deck-local-trust" aria-label="Trust signals">
-        {trustCards.map(([title, text]) => (
-          <article key={title} className="deck-local-trust-card">
-            <h2>{title}</h2>
-            <p>{text}</p>
+      <section className="deck-local-trust" id="deck-local-reviews" aria-label="Trust signals">
+        {trustCards.map((card) => (
+          <article key={card.label} className="deck-local-trust-card">
+            <img src={card.src} alt={card.alt} />
+            {card.showStars ? (
+              <p className="deck-local-trust-card__stars" aria-hidden="true">
+                ★★★★★
+              </p>
+            ) : null}
+            <strong>{card.rating}</strong>
+            <em>{card.quantity}</em>
           </article>
         ))}
       </section>
@@ -276,30 +484,80 @@ const DeckLocalPage = () => {
       <section className="deck-local-transform" id="deck-local-projects">
         <div className="deck-local-section-copy">
           <p className="deck-local-kicker">Backyard Transformation</p>
-          <h2>From Weathered Outdoor Space to a Backyard You&apos;ll Actually Use</h2>
+          <h2>From Worn-Out Outdoor Spaces to Clean, Usable Backyards</h2>
           <p>
-            See how a well-built deck can make a Seattle backyard feel more
-            finished, private, and ready for everyday living.
+            See how new decks and fences can make a Seattle-area backyard feel
+            safer, cleaner, more private, and ready for everyday use.
           </p>
           <button className="deck-local-button deck-local-button--secondary" type="button" onClick={scrollToForm}>
             Plan My Deck Project →
           </button>
         </div>
-        <div className="deck-local-before-after" aria-label="Before and after deck transformation">
-          <figure>
-            <span>Before</span>
-            <img src={beforeDeckImage} alt="Backyard deck area before a finished deck update" />
-          </figure>
-          <figure>
-            <span>After</span>
-            <img src={afterDeckImage} alt="Finished backyard deck ready for outdoor living" />
-          </figure>
+        <div
+          className="deck-local-before-after-carousel"
+          aria-label="Before and after project carousel"
+          onMouseEnter={() => setIsCarouselHovered(true)}
+          onMouseLeave={() => setIsCarouselHovered(false)}>
+          <div className="deck-local-before-after-carousel__meta">
+            <span>
+              Transformation {activeTransformationIndex + 1} of{" "}
+              {transformationSlides.length}
+            </span>
+            <strong>{activeTransformation.location}</strong>
+          </div>
+          <div className="deck-local-before-after" key={activeTransformation.label}>
+            <figure>
+              <span>Before</span>
+              <img src={activeTransformation.beforeImage} alt={activeTransformation.beforeAlt} />
+            </figure>
+            <figure>
+              <span>After</span>
+              <img src={activeTransformation.afterImage} alt={activeTransformation.afterAlt} />
+            </figure>
+          </div>
+          <div className="deck-local-before-after-carousel__copy">
+            <div>
+              <h3>{activeTransformation.label}</h3>
+              <p>
+                <strong>Before:</strong> {activeTransformation.beforeText}
+              </p>
+              <p>
+                <strong>After:</strong> {activeTransformation.afterText}
+              </p>
+              <p>{activeTransformation.description}</p>
+            </div>
+            <div className="deck-local-before-after-carousel__controls" aria-label="Carousel controls">
+              <button type="button" onClick={showPreviousTransformation} aria-label="Show previous transformation">
+                ←
+              </button>
+              <button type="button" onClick={showNextTransformation} aria-label="Show next transformation">
+                →
+              </button>
+            </div>
+          </div>
+          <div className="deck-local-before-after-carousel__dots" aria-label="Choose transformation">
+            {transformationSlides.map((slide, index) => (
+              <button
+                aria-label={`Show ${slide.label}`}
+                aria-current={index === activeTransformationIndex ? "true" : undefined}
+                className={index === activeTransformationIndex ? "deck-local-before-after-carousel__dot deck-local-before-after-carousel__dot--active" : "deck-local-before-after-carousel__dot"}
+                key={slide.label}
+                type="button"
+                onClick={() => showTransformationSlide(index)}
+              />
+            ))}
+          </div>
+          <div className="deck-local-before-after-carousel__cta">
+            <p>Have a deck or fence that needs an upgrade?</p>
+            <button className="deck-local-button" type="button" onClick={scrollToForm}>
+              Plan My Project →
+            </button>
+          </div>
         </div>
       </section>
 
       <section className="deck-local-section" id="deck-local-benefits">
         <div className="deck-local-section-head">
-          <p className="deck-local-kicker">Why It Works</p>
           <h2>Your Deck, Built for Seattle Weather and Everyday Use</h2>
           <p>
             A good deck should look clean, feel solid, and hold up through wet
@@ -314,31 +572,24 @@ const DeckLocalPage = () => {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="deck-local-included">
-        <div className="deck-local-section-copy">
-          <p className="deck-local-kicker">Included Services</p>
-          <h2>Everything You Need for a Better Deck</h2>
+        <div className="deck-local-included-compact">
+          <h3>Our Comprehensive Services</h3>
           <p>
-            No need to juggle multiple contractors or guess what comes next.
-            Northwood Renovation helps with planning, materials, and installation
-            from start to finish.
+            Explore Northwood Renovation services for decks, fences, materials,
+            and outdoor upgrades built for Seattle-area homes.
           </p>
-          <button className="deck-local-button" type="button" onClick={scrollToForm}>
-            Get My Free Deck Estimate →
-          </button>
-        </div>
-        <div className="deck-local-service-grid">
-          {includedServices.map((service) => (
-            <span key={service}>{service}</span>
-          ))}
+          <div className="deck-local-service-grid">
+            {includedServices.map((service) => (
+              <a href={service.href} key={service.title}>
+                {service.title}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="deck-local-process" id="deck-local-process">
         <div className="deck-local-section-head">
-          <p className="deck-local-kicker">Simple Process</p>
           <h2>How Your New Deck Project Gets Done</h2>
           <p>
             A simple process designed to keep your project clear, organized, and
@@ -364,7 +615,6 @@ const DeckLocalPage = () => {
           />
         </div>
         <div className="deck-local-section-copy">
-          <p className="deck-local-kicker">Local Contractor</p>
           <h2>Meet Northwood Renovation</h2>
           <p>
             Northwood Renovation builds decks, fences, and outdoor spaces for
@@ -379,28 +629,8 @@ const DeckLocalPage = () => {
         </div>
       </section>
 
-      <section className="deck-local-section" id="deck-local-reviews">
-        <div className="deck-local-section-head">
-          <p className="deck-local-kicker">Homeowner Confidence</p>
-          <h2>Beautiful Decks, Clear Communication, Happy Homeowners</h2>
-          <p>
-            Homeowners choose Northwood Renovation for clean work, practical
-            advice, and finished outdoor spaces that feel ready to use.
-          </p>
-        </div>
-        <div className="deck-local-card-grid deck-local-card-grid--three">
-          {reviewCards.map((card) => (
-            <article className="deck-local-card" key={card.title}>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="deck-local-faq" id="deck-local-faq">
         <div className="deck-local-section-head">
-          <p className="deck-local-kicker">Planning Answers</p>
           <h2>Frequently Asked Questions</h2>
           <p>Quick answers to help you plan your deck with confidence.</p>
         </div>
@@ -435,64 +665,8 @@ const DeckLocalPage = () => {
         </div>
       </section>
 
-      <section className="deck-local-estimate" id="deck-local-form">
-        <div className="deck-local-estimate__copy">
-          <p className="deck-local-kicker">Free Deck Estimate</p>
-          <h2>Tell Us About Your Deck Project</h2>
-          <p>
-            Share a few details and Northwood Renovation will help you plan the
-            next step with a clear estimate and practical recommendations.
-          </p>
-        </div>
-        <form className="deck-local-form" onSubmit={handleSubmit}>
-          {status === "success" ? (
-            <p className="deck-local-form__message" role="status">
-              Thanks. Your request has been received and our team will follow up soon.
-            </p>
-          ) : null}
-          {status === "error" ? (
-            <p className="deck-local-form__message deck-local-form__message--error" role="alert">
-              Please complete the required fields and try again.
-            </p>
-          ) : null}
-          <label>
-            <span>Name</span>
-            <input name="name" type="text" autoComplete="name" required />
-          </label>
-          <label>
-            <span>Phone</span>
-            <input name="phone" type="tel" autoComplete="tel" required />
-          </label>
-          <label>
-            <span>Email</span>
-            <input name="email" type="email" autoComplete="email" required />
-          </label>
-          <label>
-            <span>Project ZIP / City</span>
-            <input name="location" type="text" autoComplete="postal-code" required />
-          </label>
-          <label>
-            <span>Project Type</span>
-            <select name="projectType" defaultValue="Custom Deck">
-              {projectTypes.map((type) => (
-                <option value={type} key={type}>
-                  {type}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows={4} required />
-          </label>
-          <button type="submit" disabled={status === "submitting"}>
-            {status === "submitting" ? "Sending..." : "Request My Free Estimate"}
-          </button>
-        </form>
-      </section>
-
       <section className="deck-local-final-cta">
-        <h2>Ready to Build a Better Deck?</h2>
+        <h2>Ready to Build a Deck You&apos;ll Actually Use?</h2>
         <p>
           Tell us about your outdoor project and Northwood Renovation will help
           you plan the next step with a clear estimate and practical
