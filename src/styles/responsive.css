@@ -143,7 +143,7 @@
 @media (max-width: 640px) {
   .site-shell {
     --content-gutter: 20px;
-    --page-section-gap-y-top: 38px;
+    --page-section-gap-y-top: 32px;
     --page-section-gap-y-bottom: 18px;
   }
 
@@ -246,7 +246,7 @@
 
   .home-quote-hero__overlay {
     min-height: auto;
-    padding: 42px 20px;
+    padding: 34px 18px;
   }
 
   .home-quote-hero h1 {
@@ -264,13 +264,28 @@
 
   .home-quote-form {
     max-width: none;
-    padding: 24px;
+    padding: 22px 18px;
+  }
+
+  .home-quote-form__label {
+    clip: auto;
+    clip-path: none;
+    color: rgba(228, 228, 222, 0.9);
+    font-size: 13px;
+    font-weight: 800;
+    height: auto;
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+    overflow: visible;
+    position: static;
+    white-space: normal;
+    width: auto;
   }
 
   .trust-section {
     border-radius: 18px;
     margin: var(--page-section-gap-y-top) 0 var(--page-section-gap-y-bottom);
-    padding: 58px 20px;
+    padding: 42px 18px;
   }
 
   .trust-header {
@@ -306,7 +321,7 @@
   }
 
   .testimonials-section__content {
-    padding: 28px 20px 36px;
+    padding: 24px 18px 30px;
   }
 
   .testimonials-section__header h2 {
@@ -327,7 +342,7 @@
   .testimonial-card {
     border-radius: 18px;
     min-height: auto;
-    padding: 24px;
+    padding: 20px;
   }
 
   .testimonial-card::before {
@@ -366,10 +381,10 @@
     border-radius: 18px;
     margin-left: 0;
     margin-right: 0;
-    padding-bottom: calc(54px + var(--page-section-gap-y-bottom));
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 54px;
+    padding-bottom: calc(40px + var(--page-section-gap-y-bottom));
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 40px;
   }
 
   .builder-gallery__grid {
@@ -385,7 +400,7 @@
     border-radius: 18px;
     margin-left: 0;
     margin-right: 0;
-    padding: 54px 16px;
+    padding: 40px 0;
   }
 
   .services-section__header {
@@ -405,7 +420,7 @@
   .process-section {
     border-radius: 18px;
     margin: var(--page-section-gap-y-top) 0 var(--page-section-gap-y-bottom);
-    padding: 54px 16px;
+    padding: 40px 18px;
   }
 
   .process-section__header {
@@ -530,7 +545,7 @@
   .page-hero {
     border-radius: 18px;
     margin: 28px 0 0;
-    padding: 58px 20px;
+    padding: 42px 18px;
   }
 
   .page-content {
@@ -541,7 +556,7 @@
   .policy-hero {
     border-radius: 18px;
     margin-top: 28px;
-    padding: 48px 20px;
+    padding: 40px 18px;
   }
 
   .policy-content {
@@ -551,7 +566,7 @@
 
   .policy-card {
     border-radius: 18px;
-    padding: 22px;
+    padding: 18px;
   }
 
   .policy-cta {
@@ -562,6 +577,10 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+  }
+
+  .recent-work-grid {
+    grid-template-columns: 1fr;
   }
 }
 

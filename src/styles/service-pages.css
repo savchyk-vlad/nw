@@ -521,8 +521,8 @@
 
 @media (max-width: 640px) {
   .service-page {
-    gap: 22px;
-    padding-top: 20px;
+    gap: 18px;
+    padding-top: 18px;
   }
 
   .service-hero,
@@ -532,13 +532,18 @@
   }
 
   .service-hero__content {
-    padding: 28px;
+    padding: 24px 20px;
+  }
+
+  .service-hero {
+    min-height: 440px;
   }
 
   .service-hero__actions,
   .service-final-cta__actions {
     align-items: stretch;
     flex-direction: column;
+    gap: 10px;
   }
 
   .service-button,
@@ -549,5 +554,12 @@
 
   .service-options {
     grid-template-columns: 1fr;
+  }
+
+  .service-trust,
+  .service-benefits__grid,
+  .service-related__grid,
+  .service-faq__list {
+    gap: 14px;
   }
 }

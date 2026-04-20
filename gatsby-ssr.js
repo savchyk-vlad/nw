@@ -10,12 +10,17 @@ exports.onRenderBody = ({ setHeadComponents }) => {
     React.createElement("meta", {
       key: "theme-color",
       name: "theme-color",
-      content: "#595f39",
+      content: "transparent",
+    }),
+    React.createElement("meta", {
+      key: "apple-mobile-web-app-capable",
+      name: "apple-mobile-web-app-capable",
+      content: "yes",
     }),
     React.createElement("meta", {
       key: "apple-mobile-web-app-status-bar-style",
       name: "apple-mobile-web-app-status-bar-style",
-      content: "default",
+      content: "black-translucent",
     }),
   ]);
 };

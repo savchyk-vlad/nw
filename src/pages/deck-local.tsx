@@ -680,6 +680,13 @@ const DeckLocalPage = () => {
         </div>
       </section>
 
+      <div className="deck-local-mobile-cta" aria-label="Quick actions">
+        <button type="button" onClick={scrollToForm}>
+          Free Estimate
+        </button>
+        <a href={`tel:${CONTACT_PHONE_TEL}`}>Call</a>
+      </div>
+
       <footer className="deck-local-footer">
         <h2>Proudly Serving Seattle &amp; Nearby Areas</h2>
         <p>{serviceAreas.join(" · ")}</p>

@@ -563,8 +563,8 @@
 
 @media (max-width: 640px) {
   .city-service-page {
-    gap: 20px;
-    padding-top: 20px;
+    gap: 18px;
+    padding-top: 18px;
   }
 
   .city-service-hero,
@@ -587,7 +587,7 @@
   }
 
   .city-service-hero__copy {
-    min-height: 380px;
+    min-height: 340px;
     padding: 0;
   }
 
@@ -597,6 +597,21 @@
   .city-service-final-cta__primary,
   .city-service-final-cta__secondary {
     width: 100%;
+  }
+
+  .city-service-hero__cta-row {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .city-service-trust-cards,
+  .city-service-services__grid,
+  .city-service-why__grid,
+  .city-service-projects__grid,
+  .city-service-reviews__summary,
+  .city-service-reviews__grid,
+  .city-service-faq__list {
+    gap: 14px;
   }
 }
 

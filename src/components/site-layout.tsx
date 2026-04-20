@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useLocation } from "@reach/router";
 import { Link } from "gatsby";
 import { cityServicePagePathByCity } from "../data/city-service-pages";
 import renderHighlightedText from "./brand-text";
@@ -169,12 +170,28 @@ const trustLogos = [
 ];
 
 const MOBILE_NAV_BREAKPOINT = 900;
+const CONTACT_PHONE_DISPLAY = "(000) 000-0000";
+const CONTACT_PHONE_TEL = "+10000000000";
+const isServiceNavItem = (item: NavItem) =>
+  item.label === "Deck" || item.label === "Fence";
 
 const SiteLayout = ({ children }: SiteLayoutProps) => {
+  const location = useLocation();
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const [mobileExpandedItems, setMobileExpandedItems] = React.useState<
     Record<string, boolean>
   >({});
+  const pathname = location.pathname || "/";
+  const isContactPage = pathname === "/contact";
+  const isHomePage = pathname === "/";
+  const isServicePage =
+    pathname.startsWith("/deck/") || pathname.startsWith("/fence/");
+  const isCityServicePage =
+    pathname.startsWith("/areas-we-serve/") && pathname !== "/areas-we-serve/";
+  const showMobileStickyCta =
+    isHomePage || isContactPage || isServicePage || isCityServicePage;
+  const mobileMainNavItems = navItems.filter((item) => !isServiceNavItem(item));
+  const mobileServiceNavItems = navItems.filter(isServiceNavItem);
 
   const toggleMobileGroup = (to: string) => {
     setMobileExpandedItems((expandedItems) => ({
@@ -218,7 +235,13 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
   }, []);
 
   return (
-    <main className="site-shell">
+    <main
+      className={
+        showMobileStickyCta
+          ? "site-shell site-shell--has-mobile-cta"
+          : "site-shell"
+      }
+    >
       <header className="site-header">
         <Link
           to="/"
@@ -241,7 +264,8 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
         <div className="site-header__actions">
           <a href="tel:+10000000000" className="site-header__phone">
-            (000) 000-0000
+            <span className="site-header__phone-text-full">{CONTACT_PHONE_DISPLAY}</span>
+            <span className="site-header__phone-text-short">Call</span>
           </a>
           <Link to="/contact" className="site-header__button">
             <span className="site-header__button-text-full">
@@ -283,9 +307,18 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
           aria-labelledby="site-drawer-nav-heading">
           <div className="site-drawer__panel-inner">
             <div className="site-drawer__panel-head">
-              <p className="site-drawer__title" id="site-drawer-nav-heading">
-                Navigation
-              </p>
+              <Link
+                to="/"
+                className="site-drawer__brand"
+                id="site-drawer-nav-heading"
+                onClick={closeMobileNav}
+              >
+                <img src={logo} alt="Northwood Renovation" />
+                <span>
+                  <span className="site-drawer__brand-primary">Northwood</span>{" "}
+                  <span className="site-drawer__brand-accent">Renovation</span>
+                </span>
+              </Link>
               <button
                 type="button"
                 className="site-drawer__close"
@@ -296,108 +329,117 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
             </div>
 
             <nav className="site-drawer__nav" aria-label="Primary navigation">
-              <ul className="site-drawer__list">
-                {navItems.map((item, index) => (
-                  <React.Fragment key={`drawer-${item.to}`}>
-                    <li className="site-drawer__item">
-                      {item.children?.length ? (
-                        <button
-                          type="button"
-                          className={
-                            mobileExpandedItems[item.to]
-                              ? "site-drawer__link site-drawer__link--toggle site-drawer__link--toggle-open"
-                              : "site-drawer__link site-drawer__link--toggle"
-                          }
-                          aria-expanded={Boolean(mobileExpandedItems[item.to])}
-                          onClick={() => toggleMobileGroup(item.to)}
-                          style={{
-                            animationDelay: `${index * 42}ms`,
-                          }}>
-                          <span>{item.label}</span>
-                          <span
-                            className="site-drawer__toggle-icon"
-                            aria-hidden="true">
-                            ⌄
-                          </span>
-                        </button>
-                      ) : (
-                        <Link
-                          to={item.to}
-                          className="site-drawer__link"
-                          activeClassName="site-drawer__link--active"
-                          partiallyActive={item.to !== "/"}
-                          onClick={closeMobileNav}
-                          style={{
-                            animationDelay: `${index * 42}ms`,
-                          }}>
-                          {item.label}
-                        </Link>
-                      )}
-                      {item.children?.length ? (
-                        <div
-                          className={
-                            mobileExpandedItems[item.to]
-                              ? "site-drawer__sublinks site-drawer__sublinks--open"
-                              : "site-drawer__sublinks"
-                          }>
-                          {renderNavGroups(item.children).map((group) => (
-                            <div
-                              className="site-drawer__subgroup"
-                              key={`drawer-group-${item.to}-${group.label}`}>
-                              <p className="site-drawer__subgroup-label">
-                                {group.label}
-                              </p>
-                              {group.items.map((child) => (
-                                <Link
-                                  key={`drawer-sub-${child.to}`}
-                                  to={child.to}
-                                  className="site-drawer__sublink"
-                                  activeClassName="site-drawer__sublink--active"
-                                  partiallyActive
-                                  onClick={closeMobileNav}>
-                                  <span className="site-drawer__sublink-title">
-                                    {child.label}
-                                  </span>
-                                  {child.description ? (
-                                    <span className="site-drawer__sublink-description">
-                                      {child.description}
-                                    </span>
-                                  ) : null}
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
-                        </div>
-                      ) : null}
+              <div className="site-drawer__section">
+                <p className="site-drawer__section-label">Main</p>
+                <ul className="site-drawer__list">
+                  {mobileMainNavItems.map((item, index) => (
+                    <li className="site-drawer__item" key={`drawer-main-${item.to}`}>
+                      <Link
+                        to={item.to}
+                        className="site-drawer__link"
+                        activeClassName="site-drawer__link--active"
+                        partiallyActive={item.to !== "/"}
+                        onClick={closeMobileNav}
+                        style={{
+                          animationDelay: `${index * 42}ms`,
+                        }}>
+                        {item.label}
+                      </Link>
                     </li>
-                    {item.to === "/blog" ? (
-                      <li
-                        className="site-drawer__divider"
-                        aria-hidden="true"
-                      />
-                    ) : null}
-                  </React.Fragment>
-                ))}
-              </ul>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="site-drawer__section">
+                <p className="site-drawer__section-label">Services</p>
+                <ul className="site-drawer__list">
+                  {mobileServiceNavItems.map((item, index) => (
+                    <li className="site-drawer__item" key={`drawer-service-${item.to}`}>
+                      <button
+                        type="button"
+                        className={
+                          mobileExpandedItems[item.to]
+                            ? "site-drawer__link site-drawer__link--toggle site-drawer__link--toggle-open"
+                            : "site-drawer__link site-drawer__link--toggle"
+                        }
+                        aria-expanded={Boolean(mobileExpandedItems[item.to])}
+                        onClick={() => toggleMobileGroup(item.to)}
+                        style={{
+                          animationDelay: `${(mobileMainNavItems.length + index) * 42}ms`,
+                        }}>
+                        <span>{item.label}</span>
+                        <span
+                          className="site-drawer__toggle-icon"
+                          aria-hidden="true">
+                          <svg viewBox="0 0 20 20">
+                            <path
+                              d="M5 7.5 10 12.5l5-5"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                      <div
+                        className={
+                          mobileExpandedItems[item.to]
+                            ? "site-drawer__sublinks site-drawer__sublinks--open"
+                            : "site-drawer__sublinks"
+                        }>
+                        {renderNavGroups(item.children ?? []).map((group) => (
+                          <div
+                            className="site-drawer__subgroup"
+                            key={`drawer-group-${item.to}-${group.label}`}>
+                            <p className="site-drawer__subgroup-label">
+                              {group.label}
+                            </p>
+                            {group.items.map((child) => (
+                              <Link
+                                key={`drawer-sub-${child.to}`}
+                                to={child.to}
+                                className="site-drawer__sublink"
+                                activeClassName="site-drawer__sublink--active"
+                                partiallyActive
+                                onClick={closeMobileNav}>
+                                <span className="site-drawer__sublink-title">
+                                  {child.label}
+                                </span>
+                                {child.description ? (
+                                  <span className="site-drawer__sublink-description">
+                                    {child.description}
+                                  </span>
+                                ) : null}
+                              </Link>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </nav>
 
             <div className="site-drawer__cta-block">
-              <Link
-                to="/contact"
-                className="site-drawer__cta-button"
-                onClick={closeMobileNav}>
-                Request Free Estimate
-              </Link>
-              <a
-                href="tel:+10000000000"
-                className="site-drawer__cta-phone">
-                Call: (000) 000-0000
-              </a>
-            </div>
-
-            <div className="site-drawer__trust-foot">
-              <p>{renderHighlightedText("Serving Seattle & Surrounding Areas")}</p>
-              <p>Licensed &amp; Insured</p>
+              <div className="site-drawer__cta-card">
+                <Link
+                  to="/contact"
+                  className="site-drawer__cta-button"
+                  onClick={closeMobileNav}>
+                  Request Free Estimate
+                </Link>
+                <a
+                  href="tel:+10000000000"
+                  className="site-drawer__cta-phone">
+                  Call: (000) 000-0000
+                </a>
+                <ul className="site-drawer__trust-foot">
+                  <li>{renderHighlightedText("Seattle & Surrounding Areas")}</li>
+                  <li>Licensed &amp; Insured</li>
+                </ul>
+              </div>
             </div>
           </div>
         </aside>
@@ -462,6 +504,29 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
       </div>
 
       <div className="site-content">{children}</div>
+
+      {showMobileStickyCta ? (
+        <div className="site-mobile-cta" aria-label="Quick actions">
+          {isContactPage ? (
+            <a href="#contact-form" className="site-mobile-cta__button site-mobile-cta__button--primary">
+              Free Estimate
+            </a>
+          ) : (
+            <Link
+              to="/contact"
+              className="site-mobile-cta__button site-mobile-cta__button--primary"
+            >
+              Free Estimate
+            </Link>
+          )}
+          <a
+            href={`tel:${CONTACT_PHONE_TEL}`}
+            className="site-mobile-cta__button site-mobile-cta__button--secondary"
+          >
+            Call
+          </a>
+        </div>
+      ) : null}
 
       <footer className="site-footer">
         <div className="site-footer__inner">

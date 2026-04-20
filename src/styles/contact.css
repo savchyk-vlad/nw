@@ -205,9 +205,9 @@
 
 .contact-form__helper {
   color: rgba(27, 27, 27, 0.7);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 650;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 10px 0 20px;
 }
 
@@ -580,7 +580,7 @@
   }
 
   .contact-page {
-    padding-bottom: calc(64px + 68px);
+    padding-bottom: 24px;
   }
 
   .contact-body {
@@ -590,11 +590,11 @@
   }
 
   .contact-body__panel {
-    border-radius: 20px;
+    border-radius: 18px;
   }
 
   .contact-hero__inner {
-    padding: 40px var(--contact-pad-x);
+    padding: 34px var(--contact-pad-x);
   }
 
   .contact-hero__title {
@@ -603,6 +603,10 @@
 
   .contact-hero__lead {
     font-size: clamp(16px, 4.6vw, 19px);
+  }
+
+  .contact-form__call-mobile {
+    display: none;
   }
 
   .contact-hero {
