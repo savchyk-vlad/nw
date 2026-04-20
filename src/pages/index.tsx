@@ -1,4 +1,5 @@
 import * as React from "react";
+import "../styles/home.css";
 import GallerySection from "../components/home/gallery-section";
 import Hero from "../components/home/hero";
 import ProcessSection from "../components/home/process-section";

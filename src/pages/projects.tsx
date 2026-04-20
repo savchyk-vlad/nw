@@ -1,5 +1,7 @@
 import * as React from "react";
 import { HeadFC, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import "../styles/projects.css";
 import renderHighlightedText from "../components/brand-text";
 import SiteLayout from "../components/site-layout";
 import {
@@ -8,8 +10,6 @@ import {
   recentWorkProjects,
   type ProjectFilter,
 } from "../data/recent-work-projects";
-import deckHeroBackground from "../images/deck-hero-background.jpg";
-import horizontalWoodFence from "../images/gallery/horizontal-wood-fence.jpg";
 
 const trustPoints = [
   "Custom-built for each home",
@@ -33,10 +33,17 @@ const RecentWorkPage = () => {
   return (
     <SiteLayout>
       <main className="recent-work-page">
-        <section
-          className="recent-work-hero"
-          style={{ backgroundImage: `url(${deckHeroBackground})` }}
-        >
+        <section className="recent-work-hero">
+          <StaticImage
+            src="../images/deck-hero-background.jpg"
+            alt=""
+            aria-hidden="true"
+            className="recent-work-hero__media"
+            imgClassName="recent-work-hero__image"
+            placeholder="blurred"
+            quality={72}
+            formats={["auto", "webp", "avif"]}
+          />
           <div className="recent-work-hero__overlay" />
           <div className="recent-work-hero__content">
             <p className="recent-work-hero__eyebrow">Recent Work</p>
@@ -113,7 +120,12 @@ const RecentWorkPage = () => {
                   className="recent-project-card__media"
                   aria-label={`View ${project.title}`}
                 >
-                  <img src={project.image} alt={`${project.title} project`} />
+                  <img
+                    src={project.image}
+                    alt={`${project.title} project`}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </Link>
                 <div className="recent-project-card__body">
                   <p className="recent-project-card__type">
@@ -138,9 +150,13 @@ const RecentWorkPage = () => {
 
         <section className="recent-work-featured">
           <div className="recent-work-featured__media">
-            <img
-              src={horizontalWoodFence}
+            <StaticImage
+              src="../images/gallery/horizontal-wood-fence.jpg"
               alt="Finished custom privacy fence installation"
+              imgClassName="recent-work-featured__image"
+              placeholder="blurred"
+              quality={72}
+              formats={["auto", "webp", "avif"]}
             />
           </div>
           <div className="recent-work-featured__content">
@@ -172,6 +188,8 @@ const RecentWorkPage = () => {
               className="before-after-slider__image"
               src={beforeAfterPreview.before}
               alt="Deck project before completion"
+              loading="lazy"
+              decoding="async"
             />
             <div
               className="before-after-slider__after"
@@ -180,6 +198,8 @@ const RecentWorkPage = () => {
               <img
                 src={beforeAfterPreview.after}
                 alt="Finished backyard deck after completion"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <span className="before-after-slider__label before-after-slider__label--before">

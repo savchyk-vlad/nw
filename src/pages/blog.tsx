@@ -1,5 +1,6 @@
 import * as React from "react";
 import { HeadFC, Link } from "gatsby";
+import "../styles/blog.css";
 import renderHighlightedText from "../components/brand-text";
 import SiteLayout from "../components/site-layout";
 import {

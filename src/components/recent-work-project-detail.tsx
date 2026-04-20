@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import "../styles/projects.css";
 import renderHighlightedText from "./brand-text";
 import SiteLayout from "./site-layout";
 import {
@@ -136,6 +137,8 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
               className="project-premium-gallery__main"
               src={project.extraImages[0] ?? project.image}
               alt={`${project.title} main view`}
+              loading="lazy"
+              decoding="async"
             />
             <div className="project-premium-gallery__details">
               {(project.extraImages.length > 1
@@ -146,6 +149,8 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
                   src={image}
                   alt={`${project.title} detail ${index + 1}`}
                   key={`${project.slug}-detail-${image}`}
+                  loading="lazy"
+                  decoding="async"
                 />
               ))}
             </div>
@@ -179,6 +184,8 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
               className="before-after-slider__image"
               src={beforeAfterPreview.before}
               alt={`${project.title} before placeholder`}
+              loading="lazy"
+              decoding="async"
             />
             <div
               className="before-after-slider__after"
@@ -187,6 +194,8 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
               <img
                 src={beforeAfterPreview.after}
                 alt={`${project.title} after placeholder`}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <span className="before-after-slider__label before-after-slider__label--before">
@@ -247,6 +256,8 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
                     <img
                       src={relatedProject.image}
                       alt={`${relatedProject.title} project`}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </Link>
                   <div className="recent-project-card__body">

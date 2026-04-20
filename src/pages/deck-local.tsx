@@ -1,9 +1,10 @@
 import * as React from "react";
 import { HeadFC } from "gatsby";
-import logo from "../images/deck-local-logo.svg";
+import { StaticImage } from "gatsby-plugin-image";
+import "../styles/deck-local.css";
+import logo from "../images/northwood-logo.svg";
 import angiLogo from "../images/angi-logo.svg";
 import bbbLogo from "../images/bbb-logo.svg";
-import deckHeroImage from "../images/cities/lucid-origin_Create_a_realistic_professional_photo_of_a_Seattle-area_residential_home_with_a_-0 (4).jpg";
 import beforeDeckImage from "../images/cities/deck-local-before.png";
 import afterDeckImage from "../images/cities/lucid-origin_Create_a_realistic_professional_photo_of_a_Seattle-area_residential_home_with_a_-0 (5).jpg";
 import beforePremiumDeckImage from "../images/cities/deck-local-carousel-before-weathered-deck.png";
@@ -253,17 +254,21 @@ const projectTypes = [
 ];
 
 const DeckLocalPage = () => {
+  const carouselRef = React.useRef<HTMLDivElement>(null);
   const [status, setStatus] = React.useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
   const [openFaqIndex, setOpenFaqIndex] = React.useState(0);
   const [activeTransformationIndex, setActiveTransformationIndex] = React.useState(0);
   const [isCarouselHovered, setIsCarouselHovered] = React.useState(false);
+  const [isCarouselInView, setIsCarouselInView] = React.useState(false);
   const [carouselInteractionPause, setCarouselInteractionPause] = React.useState(0);
   const activeTransformation = transformationSlides[activeTransformationIndex];
 
   React.useEffect(() => {
-    if (isCarouselHovered || carouselInteractionPause > 0) return undefined;
+    if (!isCarouselInView || isCarouselHovered || carouselInteractionPause > 0) {
+      return undefined;
+    }
 
     const timer = window.setTimeout(() => {
       setActiveTransformationIndex((currentIndex) =>
@@ -272,7 +277,28 @@ const DeckLocalPage = () => {
     }, 4500);
 
     return () => window.clearTimeout(timer);
-  }, [activeTransformationIndex, carouselInteractionPause, isCarouselHovered]);
+  }, [
+    activeTransformationIndex,
+    carouselInteractionPause,
+    isCarouselHovered,
+    isCarouselInView,
+  ]);
+
+  React.useEffect(() => {
+    const node = carouselRef.current;
+    if (!node || typeof IntersectionObserver === "undefined") {
+      setIsCarouselInView(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsCarouselInView(entry.isIntersecting),
+      { rootMargin: "120px 0px", threshold: 0.2 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   React.useEffect(() => {
     if (carouselInteractionPause === 0) return undefined;
@@ -413,9 +439,13 @@ const DeckLocalPage = () => {
         </div>
         <div className="deck-local-hero__visual">
           <div className="deck-local-hero__media">
-            <img
-              src={deckHeroImage}
+            <StaticImage
+              src="../images/cities/lucid-origin_Create_a_realistic_professional_photo_of_a_Seattle-area_residential_home_with_a_-0 (4).jpg"
               alt="Finished Seattle backyard deck with wood railing and outdoor living space"
+              imgClassName="deck-local-hero__media-image"
+              placeholder="blurred"
+              quality={72}
+              formats={["auto", "webp", "avif"]}
             />
           </div>
           <form className="deck-local-form deck-local-form--hero" id="deck-local-form" onSubmit={handleSubmit}>
@@ -469,7 +499,7 @@ const DeckLocalPage = () => {
       <section className="deck-local-trust" id="deck-local-reviews" aria-label="Trust signals">
         {trustCards.map((card) => (
           <article key={card.label} className="deck-local-trust-card">
-            <img src={card.src} alt={card.alt} />
+            <img src={card.src} alt={card.alt} loading="lazy" decoding="async" />
             {card.showStars ? (
               <p className="deck-local-trust-card__stars" aria-hidden="true">
                 ★★★★★
@@ -494,6 +524,7 @@ const DeckLocalPage = () => {
           </button>
         </div>
         <div
+          ref={carouselRef}
           className="deck-local-before-after-carousel"
           aria-label="Before and after project carousel"
           onMouseEnter={() => setIsCarouselHovered(true)}
@@ -508,11 +539,21 @@ const DeckLocalPage = () => {
           <div className="deck-local-before-after" key={activeTransformation.label}>
             <figure>
               <span>Before</span>
-              <img src={activeTransformation.beforeImage} alt={activeTransformation.beforeAlt} />
+              <img
+                src={activeTransformation.beforeImage}
+                alt={activeTransformation.beforeAlt}
+                loading="lazy"
+                decoding="async"
+              />
             </figure>
             <figure>
               <span>After</span>
-              <img src={activeTransformation.afterImage} alt={activeTransformation.afterAlt} />
+              <img
+                src={activeTransformation.afterImage}
+                alt={activeTransformation.afterAlt}
+                loading="lazy"
+                decoding="async"
+              />
             </figure>
           </div>
           <div className="deck-local-before-after-carousel__copy">
@@ -612,6 +653,8 @@ const DeckLocalPage = () => {
           <img
             src={workerImage}
             alt="Northwood Renovation worker on a Seattle-area residential deck project"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="deck-local-section-copy">
@@ -681,10 +724,12 @@ const DeckLocalPage = () => {
       </section>
 
       <div className="deck-local-mobile-cta" aria-label="Quick actions">
-        <button type="button" onClick={scrollToForm}>
-          Free Estimate
-        </button>
-        <a href={`tel:${CONTACT_PHONE_TEL}`}>Call</a>
+        <div className="deck-local-mobile-cta__card">
+          <button type="button" onClick={scrollToForm}>
+            Free Estimate
+          </button>
+          <a href={`tel:${CONTACT_PHONE_TEL}`}>Call</a>
+        </div>
       </div>
 
       <footer className="deck-local-footer">

@@ -1,7 +1,10 @@
 import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import renderHighlightedText from "../brand-text";
-import deckHeroBackground from "../../images/deck-hero-background.jpg";
 import googleReviewLogo from "../../images/google-review-logo.png";
+
+const CONTACT_EMAIL = "northwoodrenovation@gmail.com";
+const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const Hero = () => {
   const [quoteStep, setQuoteStep] = React.useState(1);
@@ -11,6 +14,9 @@ const Hero = () => {
   const [zipTouched, setZipTouched] = React.useState(false);
   const [nameTouched, setNameTouched] = React.useState(false);
   const [phoneTouched, setPhoneTouched] = React.useState(false);
+  const [submitStatus, setSubmitStatus] = React.useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
 
   const isZipValid = /^\d{5}$/.test(zipCode.trim());
   const isNameValid = name.trim().length > 1;
@@ -20,10 +26,22 @@ const Hero = () => {
   const shouldShowNameError = nameTouched && !isNameValid;
   const shouldShowPhoneError = phoneTouched && !isPhoneValid;
 
-  const handleQuoteSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const resetForm = () => {
+    setZipCode("");
+    setName("");
+    setPhone("");
+    setZipTouched(false);
+    setNameTouched(false);
+    setPhoneTouched(false);
+    setQuoteStep(1);
+  };
+
+  const handleQuoteSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (submitStatus === "submitting") return;
 
     if (quoteStep === 1) {
+      setSubmitStatus("idle");
       setZipTouched(true);
 
       if (isZipValid) {
@@ -36,14 +54,38 @@ const Hero = () => {
     setNameTouched(true);
     setPhoneTouched(true);
 
-    if (isContactValid) {
-      setZipCode("");
-      setName("");
-      setPhone("");
-      setZipTouched(false);
-      setNameTouched(false);
-      setPhoneTouched(false);
-      setQuoteStep(1);
+    if (!isContactValid) {
+      setSubmitStatus("error");
+      return;
+    }
+
+    setSubmitStatus("submitting");
+
+    try {
+      const response = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          _captcha: "false",
+          _subject: "New home hero quick quote request",
+          name: name.trim(),
+          phone: phone.trim(),
+          zipCode: zipCode.trim(),
+          source: "Home hero quick quote form",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setSubmitStatus("success");
+      resetForm();
+    } catch {
+      setSubmitStatus("error");
     }
   };
 
@@ -51,12 +93,21 @@ const Hero = () => {
     setQuoteStep(1);
     setNameTouched(false);
     setPhoneTouched(false);
+    setSubmitStatus("idle");
   };
 
   return (
-    <section
-      className="home-quote-hero"
-      style={{ backgroundImage: `url(${deckHeroBackground})` }}>
+    <section className="home-quote-hero">
+      <StaticImage
+        src="../../images/deck-hero-background.jpg"
+        alt=""
+        aria-hidden="true"
+        className="home-quote-hero__media"
+        imgClassName="home-quote-hero__image"
+        placeholder="blurred"
+        quality={72}
+        formats={["auto", "webp", "avif"]}
+      />
       <div className="home-quote-hero__overlay">
         <div className="home-quote-hero__content">
           <div className="home-quote-hero__copy">
@@ -133,6 +184,7 @@ const Hero = () => {
                   onChange={(event) => {
                     setZipCode(event.target.value);
                     setZipTouched(true);
+                    setSubmitStatus("idle");
                   }}
                   onFocus={() => setZipTouched(true)}
                   onBlur={() => setZipTouched(true)}
@@ -169,6 +221,7 @@ const Hero = () => {
                   onChange={(event) => {
                     setName(event.target.value);
                     setNameTouched(true);
+                    setSubmitStatus("idle");
                   }}
                   onFocus={() => setNameTouched(true)}
                   onBlur={() => setNameTouched(true)}
@@ -196,6 +249,7 @@ const Hero = () => {
                   onChange={(event) => {
                     setPhone(event.target.value);
                     setPhoneTouched(true);
+                    setSubmitStatus("idle");
                   }}
                   onFocus={() => setPhoneTouched(true)}
                   onBlur={() => setPhoneTouched(true)}
@@ -205,9 +259,20 @@ const Hero = () => {
                   id="quote-phone-error">
                   Please enter a valid phone number.
                 </p>
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={submitStatus === "submitting"}>
+                  {submitStatus === "submitting" ? "Sending..." : "Submit"}
+                </button>
               </>
             )}
+            <p
+              className={`home-quote-form__status home-quote-form__status--${submitStatus}${submitStatus === "idle" ? " home-quote-form__status--hidden" : ""}`}
+              role={submitStatus === "error" ? "alert" : "status"}>
+              {submitStatus === "success"
+                ? "Thanks. Your request was sent to Northwood Renovation."
+                : submitStatus === "error"
+                  ? "We couldn't send your request. Please check the fields and try again."
+                  : "Sending your request..."}
+            </p>
           </form>
         </div>
       </div>

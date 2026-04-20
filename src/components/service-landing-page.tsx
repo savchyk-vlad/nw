@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import "../styles/service-pages.css";
 import renderHighlightedText from "./brand-text";
 import SiteLayout from "./site-layout";
 import type { ServicePageData } from "../data/service-pages";

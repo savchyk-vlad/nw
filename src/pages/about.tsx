@@ -1,5 +1,6 @@
 import * as React from "react";
 import { HeadFC, Link } from "gatsby";
+import "../styles/about.css";
 import SiteLayout from "../components/site-layout";
 import deckInstallationWorker from "../images/about/deck-installation-worker.jpg";
 import seattleRainTrucks from "../images/about/seattle-rain-trucks.jpg";

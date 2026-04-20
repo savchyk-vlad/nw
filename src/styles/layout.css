@@ -816,6 +816,12 @@
   display: none;
 }
 
+.site-mobile-cta__card {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .site-mobile-cta__button {
   align-items: center;
   border-radius: 999px;

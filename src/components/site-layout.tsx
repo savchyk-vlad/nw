@@ -289,12 +289,11 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
         </div>
       </header>
 
-      <div
-        className={`site-drawer${mobileNavOpen ? " site-drawer--open" : ""}`}
-        aria-hidden={!mobileNavOpen}>
+      {mobileNavOpen ? (
+        <div className="site-drawer site-drawer--open" aria-hidden={false}>
         <button
           type="button"
-          tabIndex={mobileNavOpen ? 0 : -1}
+          tabIndex={0}
           className="site-drawer__backdrop"
           aria-label="Close menu"
           onClick={closeMobileNav}
@@ -443,7 +442,8 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
             </div>
           </div>
         </aside>
-      </div>
+        </div>
+      ) : null}
 
       <div className="site-nav-wrap">
         <nav
@@ -507,24 +507,26 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
       {showMobileStickyCta ? (
         <div className="site-mobile-cta" aria-label="Quick actions">
-          {isContactPage ? (
-            <a href="#contact-form" className="site-mobile-cta__button site-mobile-cta__button--primary">
-              Free Estimate
+          <div className="site-mobile-cta__card">
+            {isContactPage ? (
+              <a
+                href="#contact-form"
+                className="site-mobile-cta__button site-mobile-cta__button--primary">
+                Free Estimate
+              </a>
+            ) : (
+              <Link
+                to="/contact"
+                className="site-mobile-cta__button site-mobile-cta__button--primary">
+                Free Estimate
+              </Link>
+            )}
+            <a
+              href={`tel:${CONTACT_PHONE_TEL}`}
+              className="site-mobile-cta__button site-mobile-cta__button--secondary">
+              Call
             </a>
-          ) : (
-            <Link
-              to="/contact"
-              className="site-mobile-cta__button site-mobile-cta__button--primary"
-            >
-              Free Estimate
-            </Link>
-          )}
-          <a
-            href={`tel:${CONTACT_PHONE_TEL}`}
-            className="site-mobile-cta__button site-mobile-cta__button--secondary"
-          >
-            Call
-          </a>
+          </div>
         </div>
       ) : null}
 

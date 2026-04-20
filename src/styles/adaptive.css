@@ -474,7 +474,7 @@ video {
   }
 
   .site-shell--has-mobile-cta {
-    padding-bottom: 88px;
+    padding-bottom: 112px;
   }
 
   .site-content {
@@ -483,19 +483,67 @@ video {
   }
 
   .site-mobile-cta {
-    background: rgba(228, 228, 222, 0.96);
-    box-shadow: 0 -8px 24px rgba(27, 27, 27, 0.12);
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: linear-gradient(
+      180deg,
+      rgba(228, 228, 222, 0) 0%,
+      rgba(228, 228, 222, 0.72) 24%,
+      rgba(228, 228, 222, 0.9) 100%
+    );
+    display: block;
     inset: auto 0 0 0;
-    padding: 10px 14px;
+    padding: 22px 14px 12px;
     position: fixed;
     z-index: 50;
   }
 
+  .site-mobile-cta__card {
+    backdrop-filter: blur(14px);
+    background: rgba(228, 228, 222, 0.76);
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(27, 27, 27, 0.12);
+    gap: 12px;
+    padding: 16px;
+  }
+
   .site-mobile-cta__button {
     min-height: 50px;
+    width: 100%;
+  }
+
+  .home-quote-hero__rating {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 12px 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home-quote-hero__google-review-logo,
+  .home-quote-hero__stars {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .home-quote-hero__rating strong {
+    text-align: center;
+    white-space: normal;
+    width: 100%;
+  }
+
+  .site-header__phone,
+  .site-header__button {
+    display: none;
+  }
+
+  .site-header__actions {
+    gap: 0;
+    justify-content: flex-end;
     width: 100%;
   }
 
@@ -639,6 +687,35 @@ video {
     padding-right: 20px;
   }
 
+  .trust-section,
+  .builder-gallery,
+  .services-section,
+  .process-section,
+  .recent-work-projects,
+  .recent-work-before-after {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .trust-header,
+  .builder-gallery__intro,
+  .services-section__header,
+  .process-section__header,
+  .recent-work-intro > p,
+  .recent-work-intro__trust,
+  .recent-work-projects .recent-work-section-head,
+  .recent-work-before-after .recent-work-section-head,
+  .recent-work-before-after__copy,
+  .recent-work-cta > div {
+    padding-left: var(--content-gutter);
+    padding-right: var(--content-gutter);
+  }
+
+  .recent-work-cta .recent-work-button {
+    margin-left: var(--content-gutter);
+    margin-right: var(--content-gutter);
+  }
+
   .contact-page .contact-body__panel {
     padding-left: 0;
     padding-right: 0;
@@ -701,7 +778,19 @@ video {
   }
 
   .site-footer__trust-logos {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: flex-start;
+  }
+
+  .site-footer__trust-logo {
+    flex: 0 1 calc(50% - 5px);
+    max-width: calc(50% - 5px);
+    min-width: 0;
+    width: calc(50% - 5px);
   }
 }
 
@@ -755,7 +844,6 @@ video {
 
   .home-quote-form,
   .testimonial-card,
-  .service-card,
   .contact-form,
   .contact-aside,
   .blog-card__body,
@@ -768,6 +856,10 @@ video {
   .review-card,
   .areas-card__body {
     padding: 18px;
+  }
+
+  .home-page .service-card {
+    padding: 0;
   }
 
   .builder-gallery__grid {
@@ -788,7 +880,9 @@ video {
   }
 
   .site-footer__trust-logo {
+    flex-basis: calc(50% - 5px);
+    max-width: calc(50% - 5px);
     min-width: 0;
-    width: calc(50% - 6px);
+    width: calc(50% - 5px);
   }
 }

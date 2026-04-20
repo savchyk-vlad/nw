@@ -1,5 +1,6 @@
 import * as React from "react";
 import { HeadFC, Link } from "gatsby";
+import "../styles/city-service-pages.css";
 import { CityServicePageData } from "../data/city-service-pages";
 import { recentWorkProjects } from "../data/recent-work-projects";
 import cityServiceHeroImage from "../images/city-service-hero.png";

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { HeadFC, Link } from "gatsby";
+import "../styles/reviews-areas.css";
 import renderHighlightedText from "../components/brand-text";
 import SiteLayout from "../components/site-layout";
 import { cityServicePagePathByCity } from "../data/city-service-pages";

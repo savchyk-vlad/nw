@@ -1,5 +1,7 @@
 import * as React from "react";
 import { HeadFC } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import "../styles/contact.css";
 import renderHighlightedText from "../components/brand-text";
 import SiteLayout from "../components/site-layout";
 
@@ -90,11 +92,32 @@ const emailValid = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 const phoneValid = (raw: string) => raw.replace(/\D/g, "").length >= 10;
 
 const CONTACT_HERO_VIDEO_RATE = 0.55;
+const CONTACT_HERO_VIDEO_MOBILE_BREAKPOINT = 768;
 
 const ContactPage = () => {
   const heroVideoRef = React.useRef<HTMLVideoElement>(null);
+  const [shouldLoadHeroVideo, setShouldLoadHeroVideo] = React.useState(false);
 
   React.useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+    if (window.innerWidth <= CONTACT_HERO_VIDEO_MOBILE_BREAKPOINT) {
+      return undefined;
+    }
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(
+        () => setShouldLoadHeroVideo(true),
+        { timeout: 1200 },
+      );
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timeoutId = window.setTimeout(() => setShouldLoadHeroVideo(true), 700);
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
+  React.useEffect(() => {
+    if (!shouldLoadHeroVideo) return undefined;
     const el = heroVideoRef.current;
     if (!el) return;
     const applySlowPlayback = () => {
@@ -103,7 +126,7 @@ const ContactPage = () => {
     applySlowPlayback();
     el.addEventListener("loadedmetadata", applySlowPlayback);
     return () => el.removeEventListener("loadedmetadata", applySlowPlayback);
-  }, []);
+  }, [shouldLoadHeroVideo]);
 
   const [name, setName] = React.useState("");
   const [contactMethod, setContactMethod] = React.useState("");
@@ -169,16 +192,28 @@ const ContactPage = () => {
       <div className="contact-page">
         <section className="contact-hero">
           <div className="contact-hero__media" aria-hidden="true">
-            <video
-              ref={heroVideoRef}
-              className="contact-hero__video"
-              src="/videos/vecteezy_person-sanding-wooden-plank-with-sander-on-workbench-in_78821674.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
+            <StaticImage
+              src="../images/about/deck-installation-worker.jpg"
+              alt=""
+              aria-hidden="true"
+              className="contact-hero__poster"
+              imgClassName="contact-hero__poster-image"
+              placeholder="blurred"
+              quality={70}
+              formats={["auto", "webp", "avif"]}
             />
+            {shouldLoadHeroVideo ? (
+              <video
+                ref={heroVideoRef}
+                className="contact-hero__video"
+                src="/videos/vecteezy_person-sanding-wooden-plank-with-sander-on-workbench-in_78821674.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="none"
+              />
+            ) : null}
             <div className="contact-hero__overlay" />
           </div>
           <div className="contact-hero__inner">

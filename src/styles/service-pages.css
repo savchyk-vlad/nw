@@ -231,10 +231,6 @@
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
 }
 
-.service-card {
-  padding: clamp(28px, 4vw, 42px);
-}
-
 .service-card--sage {
   background: rgba(196, 197, 186, 0.58);
 }
