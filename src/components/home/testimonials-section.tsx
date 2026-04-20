@@ -154,6 +154,7 @@ const TestimonialsSection = () => {
                 {activeTestimonial.source}
                 <span
                   className="testimonial-card__stars"
+                  role="img"
                   aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, index) => (
                     <svg viewBox="0 0 24 24" key={index} aria-hidden="true">

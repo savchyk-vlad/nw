@@ -161,9 +161,8 @@ const Hero = () => {
           </div>
 
           <form className="home-quote-form" onSubmit={handleQuoteSubmit}>
-            <div
-              className="home-quote-form__accent"
-              aria-label={`Step ${quoteStep} of 2`}>
+            <span className="sr-only">{`Step ${quoteStep} of 2`}</span>
+            <div className="home-quote-form__accent" aria-hidden="true">
               <span
                 className={
                   quoteStep === 1 ? "home-quote-form__step--active" : ""

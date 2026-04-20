@@ -2,6 +2,7 @@ import * as React from "react";
 import { HeadFC } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "../styles/deck-local.css";
+import SeoHead from "../components/seo";
 import logo from "../images/northwood-logo.svg";
 import angiLogo from "../images/angi-logo.svg";
 import bbbLogo from "../images/bbb-logo.svg";
@@ -17,10 +18,15 @@ import facebookLogo from "../images/facebook-logo.svg";
 import googleReviewLogo from "../images/google-review-logo.png";
 import workerImage from "../images/about/deck-installation-worker.jpg";
 import yelpLogo from "../images/yelp-logo.png";
+import {
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_TEL,
+} from "../lib/site-metadata";
 
-const CONTACT_PHONE_DISPLAY = "(000) 000-0000";
-const CONTACT_PHONE_TEL = "+10000000000";
-const CONTACT_EMAIL = "northwoodrenovation@gmail.com";
+const CONTACT_PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
+const CONTACT_PHONE_TEL = BUSINESS_PHONE_TEL;
+const CONTACT_EMAIL = BUSINESS_EMAIL;
 const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const trustCards = [
@@ -742,14 +748,10 @@ const DeckLocalPage = () => {
 
 export default DeckLocalPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>
-      Seattle Deck Builder | Custom Wood &amp; Composite Decks | Northwood Renovation
-    </title>
-    <meta
-      name="description"
-      content="Northwood Renovation builds custom wood, composite, outdoor, and covered decks for Seattle-area homeowners. Request a free estimate for a deck built for Northwest weather."
-    />
-  </>
+export const Head: HeadFC = ({ location }) => (
+  <SeoHead
+    title="Seattle Deck Builder | Custom Wood & Composite Decks | Northwood Renovation"
+    description="Northwood Renovation builds custom wood, composite, outdoor, and covered decks for Seattle-area homeowners. Request a free estimate for a deck built for Northwest weather."
+    pathname={location.pathname}
+  />
 );

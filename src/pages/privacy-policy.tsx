@@ -1,7 +1,13 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { HeadFC, Link } from "gatsby";
 import "../styles/legal.css";
 import renderHighlightedText from "../components/brand-text";
+import SeoHead from "../components/seo";
+import {
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_TEL,
+} from "../lib/site-metadata";
 import SiteLayout from "../components/site-layout";
 
 const effectiveDate = "April 18, 2026";
@@ -180,10 +186,8 @@ const PrivacyPolicyPage = () => (
         </p>
         <address>
           <strong className="brand-highlight">Northwood Renovation</strong>
-          <a href="tel:+10000000000">Phone: (000) 000-0000</a>
-          <a href="mailto:northwoodrenovation@gmail.com">
-            Email: northwoodrenovation@gmail.com
-          </a>
+          <a href={`tel:${BUSINESS_PHONE_TEL}`}>Phone: {BUSINESS_PHONE_DISPLAY}</a>
+          <a href={`mailto:${BUSINESS_EMAIL}`}>Email: {BUSINESS_EMAIL}</a>
           <span>{renderHighlightedText("Service Area: Seattle, WA and nearby areas")}</span>
         </address>
       </article>
@@ -202,3 +206,11 @@ const PrivacyPolicyPage = () => (
 );
 
 export default PrivacyPolicyPage;
+
+export const Head: HeadFC = ({ location }) => (
+  <SeoHead
+    title="Privacy Policy | Northwood Renovation"
+    description="Read the Northwood Renovation privacy policy for details about estimate requests, website data, project communication, and how customer information is handled."
+    pathname={location.pathname}
+  />
+);

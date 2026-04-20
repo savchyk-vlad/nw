@@ -2,6 +2,7 @@ import * as React from "react";
 import { HeadFC, Link } from "gatsby";
 import "../styles/reviews-areas.css";
 import renderHighlightedText from "../components/brand-text";
+import SeoHead from "../components/seo";
 import SiteLayout from "../components/site-layout";
 import { cityServicePagePathByCity } from "../data/city-service-pages";
 import cityImage01 from "../images/cities/Gemini_Generated_Image_3msels3msels3mse.png";
@@ -714,12 +715,10 @@ const AreasWeServePage = () => {
 
 export default AreasWeServePage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>Areas We Serve | Northwood Renovation</title>
-    <meta
-      name="description"
-      content="Explore Seattle-area locations served by Northwood Renovation for deck building, fence installation, railings, repairs, and outdoor renovation services."
-    />
-  </>
+export const Head: HeadFC = ({ location }) => (
+  <SeoHead
+    title="Areas We Serve | Northwood Renovation"
+    description="Explore Seattle-area locations served by Northwood Renovation for deck building, fence installation, railings, repairs, and outdoor renovation services."
+    pathname={location.pathname}
+  />
 );

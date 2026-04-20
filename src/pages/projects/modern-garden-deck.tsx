@@ -1,6 +1,10 @@
 import * as React from "react";
-import RecentWorkProjectDetail from "../../components/recent-work-project-detail";
+import RecentWorkProjectDetail, {
+  createRecentWorkProjectHead,
+} from "../../components/recent-work-project-detail";
 
 export default function ModernGardenDeckPage() {
   return <RecentWorkProjectDetail slug="modern-garden-deck" />;
 }
+
+export const Head = createRecentWorkProjectHead("modern-garden-deck");

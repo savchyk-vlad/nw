@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { HeadFC, Link } from "gatsby";
 import "../styles/projects.css";
 import renderHighlightedText from "./brand-text";
+import SeoHead, { buildCanonicalUrl, buildLocalBusinessReference } from "./seo";
 import SiteLayout from "./site-layout";
 import {
   beforeAfterPreview,
@@ -13,6 +14,42 @@ import {
 type RecentWorkProjectDetailProps = {
   slug: string;
 };
+
+export const createRecentWorkProjectHead =
+  (slug: string): HeadFC =>
+  ({ location }) => {
+    const project = getRecentWorkProject(slug);
+    const pathname = location.pathname;
+    const title = project
+      ? `${project.title} | Recent Work | Northwood Renovation`
+      : "Project Detail | Northwood Renovation";
+    const description =
+      project?.description ??
+      "Recent fence, deck, and outdoor renovation project details from Northwood Renovation.";
+
+    return (
+      <SeoHead
+        title={title}
+        description={description}
+        pathname={pathname}
+        image={project?.image}
+        schema={
+          project
+            ? {
+                "@context": "https://schema.org",
+                "@type": "CreativeWork",
+                name: project.title,
+                description: project.description,
+                image: project.image,
+                about: [project.type, project.location],
+                creator: buildLocalBusinessReference(),
+                url: buildCanonicalUrl(pathname),
+              }
+            : undefined
+        }
+      />
+    );
+  };
 
 const isFenceProject = (project: RecentWorkProject) =>
   project.category === "Fences" || project.type.toLowerCase().includes("fence");

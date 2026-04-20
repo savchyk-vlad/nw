@@ -1,6 +1,10 @@
 const React = require("react");
 
-exports.onRenderBody = ({ setHeadComponents }) => {
+exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
+  setHtmlAttributes({
+    lang: "en",
+  });
+
   setHeadComponents([
     React.createElement("meta", {
       key: "viewport",

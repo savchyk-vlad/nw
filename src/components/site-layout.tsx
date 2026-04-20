@@ -2,6 +2,11 @@ import * as React from "react";
 import { useLocation } from "@reach/router";
 import { Link } from "gatsby";
 import { cityServicePagePathByCity } from "../data/city-service-pages";
+import {
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_TEL,
+} from "../lib/site-metadata";
 import renderHighlightedText from "./brand-text";
 import angiLogo from "../images/angi-logo.svg";
 import bbbLogo from "../images/bbb-logo.png";
@@ -170,8 +175,6 @@ const trustLogos = [
 ];
 
 const MOBILE_NAV_BREAKPOINT = 900;
-const CONTACT_PHONE_DISPLAY = "(000) 000-0000";
-const CONTACT_PHONE_TEL = "+10000000000";
 const isServiceNavItem = (item: NavItem) =>
   item.label === "Deck" || item.label === "Fence";
 
@@ -263,8 +266,8 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
         </Link>
 
         <div className="site-header__actions">
-          <a href="tel:+10000000000" className="site-header__phone">
-            <span className="site-header__phone-text-full">{CONTACT_PHONE_DISPLAY}</span>
+          <a href={`tel:${BUSINESS_PHONE_TEL}`} className="site-header__phone">
+            <span className="site-header__phone-text-full">{BUSINESS_PHONE_DISPLAY}</span>
             <span className="site-header__phone-text-short">Call</span>
           </a>
           <Link to="/contact" className="site-header__button">
@@ -430,9 +433,9 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
                   Request Free Estimate
                 </Link>
                 <a
-                  href="tel:+10000000000"
+                  href={`tel:${BUSINESS_PHONE_TEL}`}
                   className="site-drawer__cta-phone">
-                  Call: (000) 000-0000
+                  {`Call: ${BUSINESS_PHONE_DISPLAY}`}
                 </a>
                 <ul className="site-drawer__trust-foot">
                   <li>{renderHighlightedText("Seattle & Surrounding Areas")}</li>
@@ -522,7 +525,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
               </Link>
             )}
             <a
-              href={`tel:${CONTACT_PHONE_TEL}`}
+              href={`tel:${BUSINESS_PHONE_TEL}`}
               className="site-mobile-cta__button site-mobile-cta__button--secondary">
               Call
             </a>
@@ -545,10 +548,8 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
               <div className="site-footer__contact-group">
                 <h2>Contact Us</h2>
-                <a href="tel:+10000000000">(000) 000-0000</a>
-                <a href="mailto:northwoodrenovation@gmail.com">
-                  northwoodrenovation@gmail.com
-                </a>
+                <a href={`tel:${BUSINESS_PHONE_TEL}`}>{BUSINESS_PHONE_DISPLAY}</a>
+                <a href={`mailto:${BUSINESS_EMAIL}`}>{BUSINESS_EMAIL}</a>
               </div>
 
               <div className="site-footer__contact-group">

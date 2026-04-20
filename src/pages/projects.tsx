@@ -3,6 +3,7 @@ import { HeadFC, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "../styles/projects.css";
 import renderHighlightedText from "../components/brand-text";
+import SeoHead, { buildCanonicalUrl } from "../components/seo";
 import SiteLayout from "../components/site-layout";
 import {
   beforeAfterPreview,
@@ -273,12 +274,22 @@ const RecentWorkPage = () => {
 
 export default RecentWorkPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>Recent Work | Northwood Renovation</title>
-    <meta
-      name="description"
-      content="Explore recent fence, deck, railing, and outdoor renovation projects completed by Northwood Renovation for local homeowners."
+export const Head: HeadFC = ({ location }) => {
+  const pathname = location.pathname;
+
+  return (
+    <SeoHead
+      title="Recent Work | Northwood Renovation"
+      description="Explore recent fence, deck, railing, and outdoor renovation projects completed by Northwood Renovation for local homeowners."
+      pathname={pathname}
+      schema={{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Recent Work",
+        description:
+          "Recent fence, deck, railing, and outdoor renovation projects completed by Northwood Renovation for local homeowners.",
+        url: buildCanonicalUrl(pathname),
+      }}
     />
-  </>
-);
+  );
+};

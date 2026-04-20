@@ -14,8 +14,13 @@ type CityPageSeed = Omit<
   CityServicePageData,
   "climateParagraphs" | "heroTitle" | "introParagraphs" | "metaDescription" | "serviceIntro"
 > & {
+  climateLead?: string;
   climateFocus: string;
+  heroTitle?: string;
+  introLead?: string;
   introFocus: string;
+  metaDescription?: string;
+  serviceIntro?: string;
 };
 
 type CityServiceFocus =
@@ -33,10 +38,15 @@ type GenericCitySeed = {
 
 const createCityPage = ({
   city,
+  climateLead,
   climateFocus,
+  heroTitle,
+  introLead,
   introFocus,
+  metaDescription,
   nearbyProjectSlugs,
   regionLabel,
+  serviceIntro,
   slug,
 }: CityPageSeed): CityServicePageData => {
   const cityName = city.replace(", WA", "");
@@ -44,18 +54,24 @@ const createCityPage = ({
   return {
     city,
     climateParagraphs: [
-      `Outdoor structures in ${city} need to handle rain, moisture, shade, and seasonal weather changes. Northwood Renovation helps homeowners choose layouts, materials, and installation details that fit long-term use in the Pacific Northwest.`,
+      climateLead ??
+        `Outdoor structures in ${city} need to handle rain, moisture, shade, and seasonal weather changes. Northwood Renovation helps homeowners choose layouts, materials, and installation details that fit long-term use in the Pacific Northwest.`,
       climateFocus,
     ],
-    heroTitle: `Deck and Fence Contractor in ${city}`,
+    heroTitle: heroTitle ?? `Deck and Fence Contractor in ${city}`,
     introParagraphs: [
-      `Northwood Renovation provides deck building, fence installation, railings, repairs, and outdoor renovation services throughout ${city}. We help homeowners create outdoor spaces that feel practical, clean, and built to last.`,
+      introLead ??
+        `Northwood Renovation provides deck building, fence installation, railings, repairs, and outdoor renovation services throughout ${city}. We help homeowners create outdoor spaces that feel practical, clean, and built to last.`,
       introFocus,
     ],
-    metaDescription: `Northwood Renovation provides deck building, fence installation, repairs, railings, and outdoor renovation services in ${city}.`,
+    metaDescription:
+      metaDescription ??
+      `Northwood Renovation provides deck building, fence installation, repairs, railings, and outdoor renovation services in ${city}.`,
     nearbyProjectSlugs,
     regionLabel,
-    serviceIntro: `From privacy fences and cedar gates to backyard decks, railing upgrades, and repair work, we help ${cityName} homeowners plan outdoor projects with durable materials and clear next steps.`,
+    serviceIntro:
+      serviceIntro ??
+      `From privacy fences and cedar gates to backyard decks, railing upgrades, and repair work, we help ${cityName} homeowners plan outdoor projects with durable materials and clear next steps.`,
     slug,
   };
 };
@@ -110,7 +126,6 @@ const genericCityPageSeeds: GenericCitySeed[] = [
   { city: "Newcastle, WA", regionLabel: "Eastside", focus: "deck-fence" },
   { city: "Issaquah, WA", regionLabel: "Eastside Foothills", focus: "deck-railing" },
   { city: "Sammamish, WA", regionLabel: "Eastside", focus: "outdoor-upgrades" },
-  { city: "Bothell, WA", regionLabel: "Northshore", focus: "deck-fence" },
   { city: "Kenmore, WA", regionLabel: "Northshore", focus: "fence-repair" },
   { city: "Lake Forest Park, WA", regionLabel: "North King County", focus: "deck-fence" },
   {
@@ -161,16 +176,25 @@ const genericCityPageSeeds: GenericCitySeed[] = [
 export const cityServicePages: CityServicePageData[] = [
   createCityPage({
     city: "Seattle, WA",
+    climateLead:
+      "Seattle outdoor projects usually have to solve for limited yard space, long wet seasons, and a need for cleaner privacy between neighboring homes.",
     climateFocus:
       "Seattle yards often need practical privacy, drainage awareness, and materials that still look clean through long wet seasons. We focus on durable cedar details, strong framing, and outdoor layouts that work for everyday city living.",
+    heroTitle: "Seattle Deck Builder & Fence Contractor",
+    introLead:
+      "Northwood Renovation helps Seattle homeowners build decks, replace fences, update railings, and improve outdoor spaces with layouts that feel intentional instead of overbuilt.",
     introFocus:
       "From privacy fences in compact Seattle yards to decks designed for outdoor living, our team focuses on craftsmanship, clean communication, and exterior work that fits the home and neighborhood.",
+    metaDescription:
+      "Seattle deck builder and fence contractor for cedar fences, custom decks, railings, stairs, and outdoor repairs. Request a free estimate from Northwood Renovation.",
     nearbyProjectSlugs: [
       "cedar-backyard-deck",
       "wood-railing-detail",
       "covered-deck-framing",
     ],
     regionLabel: "King County",
+    serviceIntro:
+      "We help Seattle homeowners plan cedar fences, deck replacements, railing updates, gates, and outdoor repairs with durable materials, practical layouts, and a clear estimate process.",
     slug: "seattle-wa",
   }),
   createCityPage({
@@ -245,44 +269,71 @@ export const cityServicePages: CityServicePageData[] = [
   }),
   createCityPage({
     city: "Bellevue, WA",
+    climateLead:
+      "Bellevue homeowners often want outdoor upgrades that feel polished, private, and easy to maintain without losing the warmth of natural materials.",
     climateFocus:
       "Bellevue homes often need outdoor spaces that feel polished, private, and easy to maintain. We help homeowners choose materials and project scopes that fit the property, the yard layout, and the level of ongoing maintenance they want.",
+    heroTitle: "Bellevue Deck Builder & Fence Contractor",
+    introLead:
+      "Northwood Renovation works with Bellevue homeowners on custom decks, cedar fences, gates, and railings that improve daily use while keeping the finished look clean and well integrated with the property.",
     introFocus:
       "Northwood Renovation serves Bellevue homeowners with custom decks, cedar fences, railings, gates, and outdoor upgrades focused on clean craftsmanship and durable materials.",
+    metaDescription:
+      "Bellevue deck builder and fence contractor for custom decks, cedar fences, gates, railings, and outdoor renovation work. Get a free estimate from Northwood Renovation.",
     nearbyProjectSlugs: [
       "privacy-fence-installation",
       "horizontal-wood-fence",
       "modern-garden-deck",
     ],
     regionLabel: "Eastside",
+    serviceIntro:
+      "From privacy fencing and gate installation to custom decks and refined railing details, we help Bellevue homeowners choose outdoor improvements that match the home and hold up through Northwest weather.",
     slug: "bellevue-wa",
   }),
   createCityPage({
     city: "Kirkland, WA",
+    climateLead:
+      "Kirkland backyards often need a better balance between privacy, outdoor entertaining space, and long-term durability near mature landscaping and moisture-heavy conditions.",
     climateFocus:
       "Kirkland backyards often combine outdoor living goals with privacy needs and moisture exposure from shaded landscaping. We help homeowners choose structures that improve everyday use while staying durable through Northwest weather.",
+    heroTitle: "Kirkland Deck Builder, Fence Installation & Repairs",
+    introLead:
+      "Northwood Renovation helps Kirkland homeowners build backyard decks, replace worn fencing, and handle railing or repair work with practical recommendations and organized scheduling.",
     introFocus:
       "From backyard deck builds to fence replacement and railing work, Northwood Renovation helps Kirkland homeowners plan practical outdoor projects with clear estimates and organized scheduling.",
+    metaDescription:
+      "Kirkland deck builder and fence contractor for backyard decks, fence installation, railing work, and outdoor repairs. Free estimates from Northwood Renovation.",
     nearbyProjectSlugs: [
       "modern-garden-deck",
       "privacy-fence-installation",
       "horizontal-wood-fence",
     ],
     regionLabel: "Eastside",
+    serviceIntro:
+      "We work with Kirkland homeowners on deck construction, fence replacement, gates, railings, and repair scopes that make the yard easier to use and simpler to maintain.",
     slug: "kirkland-wa",
   }),
   createCityPage({
     city: "Renton, WA",
+    climateLead:
+      "Renton projects often start with a functional problem first, such as worn stairs, failing fencing, drainage issues, or deck access that no longer feels safe.",
     climateFocus:
       "Renton homes often need safe access, reliable drainage awareness, and durable materials that work well through wet seasons. We help homeowners prioritize repairs, rebuilds, and upgrades that improve how the yard and deck function together.",
+    heroTitle: "Renton Deck Builder, Fence Contractor & Railing Repairs",
+    introLead:
+      "Northwood Renovation serves Renton homeowners with deck builds, fence installation, stair and railing updates, and exterior repairs that improve both safety and everyday use.",
     introFocus:
       "Northwood Renovation provides deck building, fence installation, stairs, railings, and repair work throughout Renton, WA. Our team keeps the process clear from the first estimate through the final walkthrough.",
+    metaDescription:
+      "Renton deck builder and fence contractor for deck stairs, railings, privacy fences, repairs, and outdoor upgrades. Request a free estimate from Northwood Renovation.",
     nearbyProjectSlugs: [
       "deck-stairs-landing",
       "backyard-fence-refresh",
       "sunset-fence-line",
     ],
     regionLabel: "South King County",
+    serviceIntro:
+      "Whether the scope is a new fence, deck stairs, railing replacement, or a larger outdoor rebuild, we help Renton homeowners choose durable solutions with clear next steps.",
     slug: "renton-wa",
   }),
   createCityPage({
@@ -301,17 +352,49 @@ export const cityServicePages: CityServicePageData[] = [
   }),
   createCityPage({
     city: "Redmond, WA",
+    climateLead:
+      "Redmond homes often need outdoor work that looks refined, handles tree cover and moisture well, and still feels practical for everyday backyard use.",
     climateFocus:
       "Redmond homes often need outdoor structures that feel refined but still practical for wet seasons, tree cover, and everyday backyard use. We help homeowners choose deck and fence solutions that match both the home and the long-term maintenance plan.",
+    heroTitle: "Redmond Deck Builder & Fence Installation Contractor",
+    introLead:
+      "Northwood Renovation helps Redmond homeowners replace aging fencing, build outdoor living decks, and update railings or repairs with materials that fit the property and a maintenance plan that makes sense.",
     introFocus:
       "Whether you are replacing an older fence, planning a deck upgrade, or improving a backyard layout, Northwood Renovation helps Redmond homeowners move forward with durable materials and clear communication.",
+    metaDescription:
+      "Redmond deck builder and fence contractor for deck upgrades, fence installation, gates, railings, and outdoor repairs. Free estimates from Northwood Renovation.",
     nearbyProjectSlugs: [
       "horizontal-wood-fence",
       "privacy-fence-installation",
       "covered-deck-framing",
     ],
     regionLabel: "Eastside",
+    serviceIntro:
+      "We help Redmond homeowners with privacy fencing, deck construction, railing updates, gates, and outdoor repair work that stays durable through wet seasons and shaded yards.",
     slug: "redmond-wa",
+  }),
+  createCityPage({
+    city: "Bothell, WA",
+    climateLead:
+      "Bothell yards often need outdoor structures that can handle moisture, partial shade, and the day-to-day wear that comes with active family spaces.",
+    climateFocus:
+      "Bothell homes often need a balance of privacy, outdoor living space, and durable materials that hold up through Northwest rain. We help homeowners plan fences, decks, and repair work that feels practical from the first estimate to the finished walkthrough.",
+    heroTitle: "Bothell Deck Builder & Fence Contractor",
+    introLead:
+      "Northwood Renovation works with Bothell homeowners on custom decks, cedar fences, gates, railings, and outdoor repairs designed to improve how the yard functions year round.",
+    introFocus:
+      "Whether you are replacing an older fence, building a new deck, or improving stairs and railing safety, we help Bothell homeowners move forward with clean craftsmanship and clear communication.",
+    metaDescription:
+      "Bothell deck builder and fence contractor for custom decks, cedar fences, gates, railings, and outdoor repairs. Request a free estimate from Northwood Renovation.",
+    nearbyProjectSlugs: [
+      "horizontal-wood-fence",
+      "privacy-fence-installation",
+      "cedar-backyard-deck",
+    ],
+    regionLabel: "Northshore",
+    serviceIntro:
+      "From backyard decks and privacy fences to gates, railing updates, and repair work, we help Bothell homeowners choose durable exterior improvements that fit the property and the budget.",
+    slug: "bothell-wa",
   }),
   createCityPage({
     city: "Mercer Island, WA",

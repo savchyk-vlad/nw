@@ -8,10 +8,12 @@ import facebookLogo from "../images/facebook-logo.svg";
 import googleReviewLogo from "../images/google-review-logo.png";
 import yelpLogo from "../images/yelp-logo.png";
 import renderHighlightedText from "./brand-text";
+import SeoHead, { buildCanonicalUrl, buildLocalBusinessReference } from "./seo";
 import SiteLayout from "./site-layout";
-
-const CONTACT_PHONE_DISPLAY = "(000) 000-0000";
-const CONTACT_PHONE_TEL = "+10000000000";
+import {
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_TEL,
+} from "../lib/site-metadata";
 
 const trustCards = [
   {
@@ -207,17 +209,14 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
               </span>
               <span>{page.city.toUpperCase()}</span>
             </p>
-            <h1>
-              Create an <span className="city-service-accent">Outdoor Space</span>{" "}
-              You&apos;ll Love Coming Home To
-            </h1>
+            <h1>{page.heroTitle}</h1>
             <p className="city-service-hero__seo-line">
-              Deck and fence contractor serving{" "}
+              Deck building, fence installation, repairs, and outdoor upgrades in{" "}
               <span className="city-service-accent">{page.city}</span>
             </p>
             <p>
               {renderHighlightedText(
-                "Northwood Renovation builds clean, durable decks, privacy fences, railings, and outdoor spaces designed for Seattle homes and Northwest weather.",
+                `Northwood Renovation builds clean, durable decks, privacy fences, railings, and outdoor spaces designed for ${page.city} homes and Northwest weather.`,
               )}
             </p>
             <div className="city-service-hero__cta-row">
@@ -227,8 +226,8 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
               <Link to="/projects" className="city-service-hero__secondary">
                 View Recent Work →
               </Link>
-              <a href={`tel:${CONTACT_PHONE_TEL}`} className="city-service-hero__phone">
-                Call {CONTACT_PHONE_DISPLAY}
+              <a href={`tel:${BUSINESS_PHONE_TEL}`} className="city-service-hero__phone">
+                Call {BUSINESS_PHONE_DISPLAY}
               </a>
             </div>
             <p className="city-service-hero__trust-line">
@@ -466,9 +465,30 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
   );
 };
 
-export const CityServicePageHead = (page: CityServicePageData): HeadFC => () => (
-  <>
-    <title>{`Deck & Fence Contractor in ${page.city} | Northwood Renovation`}</title>
-    <meta name="description" content={page.metaDescription} />
-  </>
-);
+export const CityServicePageHead =
+  (page: CityServicePageData): HeadFC =>
+  ({ location }) => {
+    const pathname = location.pathname;
+
+    return (
+      <SeoHead
+        title={`${page.heroTitle} | Northwood Renovation`}
+        description={page.metaDescription}
+        pathname={pathname}
+        image={cityServiceHeroImage}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: page.heroTitle,
+          description: page.metaDescription,
+          serviceType: "Deck building, fence installation, repairs, and outdoor renovation",
+          areaServed: {
+            "@type": "City",
+            name: page.city,
+          },
+          provider: buildLocalBusinessReference(),
+          url: buildCanonicalUrl(pathname),
+        }}
+      />
+    );
+  };

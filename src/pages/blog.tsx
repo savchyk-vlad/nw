@@ -2,6 +2,7 @@ import * as React from "react";
 import { HeadFC, Link } from "gatsby";
 import "../styles/blog.css";
 import renderHighlightedText from "../components/brand-text";
+import SeoHead from "../components/seo";
 import SiteLayout from "../components/site-layout";
 import {
   blogArticles,
@@ -330,12 +331,10 @@ const BlogPage = () => {
 
 export default BlogPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>Blog | Northwood Renovation Deck & Fence Tips</title>
-    <meta
-      name="description"
-      content="Explore practical deck, fence, materials, maintenance, and Seattle planning guides from Northwood Renovation."
-    />
-  </>
+export const Head: HeadFC = ({ location }) => (
+  <SeoHead
+    title="Blog | Northwood Renovation Deck & Fence Tips"
+    description="Explore practical deck, fence, materials, maintenance, and Seattle planning guides from Northwood Renovation."
+    pathname={location.pathname}
+  />
 );

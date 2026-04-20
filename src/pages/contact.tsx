@@ -3,11 +3,17 @@ import { HeadFC } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "../styles/contact.css";
 import renderHighlightedText from "../components/brand-text";
+import SeoHead from "../components/seo";
 import SiteLayout from "../components/site-layout";
+import {
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_TEL,
+} from "../lib/site-metadata";
 
-const CONTACT_PHONE_DISPLAY = "(000) 000-0000";
-const CONTACT_PHONE_TEL = "+10000000000";
-const CONTACT_EMAIL = "northwoodrenovation@gmail.com";
+const CONTACT_PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
+const CONTACT_PHONE_TEL = BUSINESS_PHONE_TEL;
+const CONTACT_EMAIL = BUSINESS_EMAIL;
 const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const AsideIconPhone = () => (
@@ -93,6 +99,13 @@ const phoneValid = (raw: string) => raw.replace(/\D/g, "").length >= 10;
 
 const CONTACT_HERO_VIDEO_RATE = 0.55;
 const CONTACT_HERO_VIDEO_MOBILE_BREAKPOINT = 768;
+type IdleWindow = Window & {
+  cancelIdleCallback?: (handle: number) => void;
+  requestIdleCallback?: (
+    callback: IdleRequestCallback,
+    options?: IdleRequestOptions,
+  ) => number;
+};
 
 const ContactPage = () => {
   const heroVideoRef = React.useRef<HTMLVideoElement>(null);
@@ -100,20 +113,22 @@ const ContactPage = () => {
 
   React.useEffect(() => {
     if (typeof window === "undefined") return undefined;
-    if (window.innerWidth <= CONTACT_HERO_VIDEO_MOBILE_BREAKPOINT) {
+    const idleWindow = window as IdleWindow;
+
+    if (idleWindow.innerWidth <= CONTACT_HERO_VIDEO_MOBILE_BREAKPOINT) {
       return undefined;
     }
 
-    if ("requestIdleCallback" in window) {
-      const idleId = window.requestIdleCallback(
+    if (typeof idleWindow.requestIdleCallback === "function") {
+      const idleId = idleWindow.requestIdleCallback(
         () => setShouldLoadHeroVideo(true),
         { timeout: 1200 },
       );
-      return () => window.cancelIdleCallback(idleId);
+      return () => idleWindow.cancelIdleCallback?.(idleId);
     }
 
-    const timeoutId = window.setTimeout(() => setShouldLoadHeroVideo(true), 700);
-    return () => window.clearTimeout(timeoutId);
+    const timeoutId = idleWindow.setTimeout(() => setShouldLoadHeroVideo(true), 700);
+    return () => idleWindow.clearTimeout(timeoutId);
   }, []);
 
   React.useEffect(() => {
@@ -390,7 +405,7 @@ const ContactPage = () => {
                   name="contactMethod"
                   autoComplete="off"
                   className="contact-field__input"
-                  placeholder="(000) 000-0000 or your@email.com"
+                  placeholder="Phone number or your@email.com"
                   value={contactMethod}
                   onChange={(ev) => {
                     setContactMethod(ev.target.value);
@@ -493,12 +508,10 @@ const ContactPage = () => {
 
 export default ContactPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>Free Estimate | Northwood Renovation</title>
-    <meta
-      name="description"
-      content="Request a free estimate from Northwood Renovation — fences, decks, and exterior projects in Seattle. Clear next steps, local crew."
-    />
-  </>
+export const Head: HeadFC = ({ location }) => (
+  <SeoHead
+    title="Free Estimate | Northwood Renovation"
+    description="Request a free estimate from Northwood Renovation — fences, decks, and exterior projects in Seattle. Clear next steps, local crew."
+    pathname={location.pathname}
+  />
 );

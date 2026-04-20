@@ -4,13 +4,11 @@ import "../styles/blog.css";
 import renderHighlightedText from "./brand-text";
 import SiteLayout from "./site-layout";
 import { blogArticles, type BlogArticle } from "../data/blog-articles";
+import { SITE_NAME, SITE_URL } from "../lib/site-metadata";
 
 type BlogArticlePageProps = {
   article: BlogArticle;
 };
-
-const SITE_URL = "https://northwoodrenovation.com";
-const BRAND_NAME = "Northwood Renovation";
 
 const slugifyHeading = (value: string) =>
   value
@@ -235,7 +233,7 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
       article.primaryKeyword,
       ...article.secondaryKeywords,
     ].join(", ");
-    const ogTitle = `${article.title} | ${BRAND_NAME} Blog`;
+    const ogTitle = `${article.title} | ${SITE_NAME} Blog`;
     const ogDescription = article.excerpt;
     const articleJsonLd = {
       "@context": "https://schema.org",
@@ -243,7 +241,7 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
       articleSection: article.category,
       author: {
         "@type": "Organization",
-        name: `${BRAND_NAME} Team`,
+        name: `${SITE_NAME} Team`,
       },
       dateModified: article.dateModifiedIso,
       datePublished: article.datePublishedIso,
@@ -255,7 +253,7 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
       mainEntityOfPage: articleUrl,
       publisher: {
         "@type": "Organization",
-        name: BRAND_NAME,
+        name: SITE_NAME,
       },
       about: [
         {
@@ -275,8 +273,9 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
         <meta name="description" content={ogDescription} />
         <meta name="keywords" content={keywords} />
         <meta name="search-intent" content={article.searchIntent} />
+        <link rel="canonical" href={articleUrl} />
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content={BRAND_NAME} />
+        <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:url" content={articleUrl} />
         <meta property="og:title" content={ogTitle} />
@@ -298,6 +297,7 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
         <meta name="twitter:title" content={ogTitle} />
         <meta name="twitter:description" content={ogDescription} />
         <meta name="twitter:image" content={`${SITE_URL}${article.image}`} />
+        <meta name="twitter:url" content={articleUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

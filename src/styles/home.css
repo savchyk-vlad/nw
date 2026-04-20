@@ -140,6 +140,18 @@
   margin-bottom: 18px;
 }
 
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .home-quote-form__accent span {
   background: rgba(196, 197, 186, 0.42);
   border-radius: 999px;
@@ -712,9 +724,9 @@
 }
 
 .testimonial-card__project {
-  background: #c4c5ba;
+  background: #dde0d2;
   border-radius: 999px;
-  color: #595f39;
+  color: #2f341c;
   display: inline-flex;
   font-size: 13px;
   font-weight: 900;

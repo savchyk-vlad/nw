@@ -2,6 +2,7 @@ import * as React from "react";
 import { HeadFC, Link } from "gatsby";
 import "../styles/reviews-areas.css";
 import renderHighlightedText from "../components/brand-text";
+import SeoHead from "../components/seo";
 import SiteLayout from "../components/site-layout";
 import facebookLogo from "../images/facebook-logo.svg";
 import googleReviewLogo from "../images/google-review-logo.png";
@@ -483,12 +484,10 @@ const ReviewsPage = () => {
 
 export default ReviewsPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>Customer Reviews | Northwood Renovation</title>
-    <meta
-      name="description"
-      content="Read Google, Yelp, and Facebook reviews from Seattle-area homeowners who worked with Northwood Renovation on deck, fence, and outdoor renovation projects."
-    />
-  </>
+export const Head: HeadFC = ({ location }) => (
+  <SeoHead
+    title="Customer Reviews | Northwood Renovation"
+    description="Read Google, Yelp, and Facebook reviews from Seattle-area homeowners who worked with Northwood Renovation on deck, fence, and outdoor renovation projects."
+    pathname={location.pathname}
+  />
 );

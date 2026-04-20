@@ -1,6 +1,7 @@
 import * as React from "react";
 import { HeadFC, Link } from "gatsby";
 import "../styles/about.css";
+import SeoHead from "../components/seo";
 import SiteLayout from "../components/site-layout";
 import deckInstallationWorker from "../images/about/deck-installation-worker.jpg";
 import seattleRainTrucks from "../images/about/seattle-rain-trucks.jpg";
@@ -367,12 +368,10 @@ const AboutPage = () => (
 
 export default AboutPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>About Northwood Renovation | Seattle Fence & Deck Builder</title>
-    <meta
-      name="description"
-      content="Learn about Northwood Renovation, a Seattle fence and deck builder focused on honest communication, clean craftsmanship, and durable outdoor spaces."
-    />
-  </>
+export const Head: HeadFC = ({ location }) => (
+  <SeoHead
+    title="About Northwood Renovation | Seattle Fence & Deck Builder"
+    description="Learn about Northwood Renovation, a Seattle fence and deck builder focused on honest communication, clean craftsmanship, and durable outdoor spaces."
+    pathname={location.pathname}
+  />
 );

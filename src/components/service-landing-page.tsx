@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { HeadFC, Link } from "gatsby";
 import "../styles/service-pages.css";
 import renderHighlightedText from "./brand-text";
+import SeoHead, { buildCanonicalUrl, buildLocalBusinessReference } from "./seo";
 import SiteLayout from "./site-layout";
 import type { ServicePageData } from "../data/service-pages";
 import { recentWorkProjects } from "../data/recent-work-projects";
@@ -9,6 +10,31 @@ import { recentWorkProjects } from "../data/recent-work-projects";
 type ServiceLandingPageProps = {
   service: ServicePageData;
 };
+
+export const createServicePageHead =
+  (service: ServicePageData): HeadFC =>
+  ({ location }) => {
+    const pathname = location.pathname;
+
+    return (
+      <SeoHead
+        title={service.titleTag}
+        description={service.metaDescription}
+        pathname={pathname}
+        image={service.heroImage}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: service.h1,
+          description: service.metaDescription,
+          serviceType: service.serviceName,
+          areaServed: "Seattle, WA and nearby communities",
+          provider: buildLocalBusinessReference(),
+          url: buildCanonicalUrl(pathname),
+        }}
+      />
+    );
+  };
 
 const processSteps = [
   {
