@@ -97,7 +97,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="home-quote-hero">
+    <section
+      className="home-quote-hero"
+      style={{ overflow: "hidden", position: "relative" }}>
       <StaticImage
         src="../../images/deck-hero-background.jpg"
         alt=""
@@ -105,12 +107,28 @@ const Hero = () => {
         className="home-quote-hero__media"
         imgClassName="home-quote-hero__image"
         layout="fullWidth"
+        loading="eager"
         placeholder="blurred"
         quality={72}
         formats={["auto", "webp", "avif"]}
+        style={{
+          display: "block",
+          inset: 0,
+          pointerEvents: "none",
+          position: "absolute",
+          zIndex: 0,
+        }}
+        imgStyle={{
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
       />
-      <div className="home-quote-hero__overlay">
-        <div className="home-quote-hero__content">
+      <div
+        className="home-quote-hero__overlay"
+        style={{ position: "relative", zIndex: 1 }}>
+        <div
+          className="home-quote-hero__content"
+          style={{ position: "relative", zIndex: 1 }}>
           <div className="home-quote-hero__copy">
             <div
               className="home-quote-hero__rating"

@@ -33,7 +33,9 @@ const RecentWorkPage = () => {
   return (
     <SiteLayout>
       <main className="recent-work-page">
-        <section className="recent-work-hero">
+        <section
+          className="recent-work-hero"
+          style={{ overflow: "hidden", position: "relative" }}>
           <StaticImage
             src="../images/deck-hero-background.jpg"
             alt=""
@@ -41,12 +43,29 @@ const RecentWorkPage = () => {
             className="recent-work-hero__media"
             imgClassName="recent-work-hero__image"
             layout="fullWidth"
+            loading="eager"
             placeholder="blurred"
             quality={72}
             formats={["auto", "webp", "avif"]}
+            style={{
+              display: "block",
+              inset: 0,
+              pointerEvents: "none",
+              position: "absolute",
+              zIndex: 0,
+            }}
+            imgStyle={{
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
           />
-          <div className="recent-work-hero__overlay" />
-          <div className="recent-work-hero__content">
+          <div
+            className="recent-work-hero__overlay"
+            style={{ position: "absolute", inset: 0, zIndex: 1 }}
+          />
+          <div
+            className="recent-work-hero__content"
+            style={{ position: "relative", zIndex: 1 }}>
             <p className="recent-work-hero__eyebrow">Recent Work</p>
             <h1>
               {renderHighlightedText("Recent Fence & Deck and outdoor Projects")}
