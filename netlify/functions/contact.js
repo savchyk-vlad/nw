@@ -150,7 +150,11 @@ exports.handler = async (event) => {
   if (!emailResponse.ok) {
     const errorText = await emailResponse.text();
     console.error("Resend email failed", errorText);
-    return json(502, { message: "Email provider failed" });
+    return json(502, {
+      message: "Email provider failed",
+      providerStatus: emailResponse.status,
+      providerResponse: errorText,
+    });
   }
 
   return json(200, { ok: true });
