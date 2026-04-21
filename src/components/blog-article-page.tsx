@@ -2,6 +2,7 @@ import * as React from "react";
 import { HeadFC, Link } from "gatsby";
 import "../styles/blog.css";
 import renderHighlightedText from "./brand-text";
+import SeoHead from "./seo";
 import SiteLayout from "./site-layout";
 import { blogArticles, type BlogArticle } from "../data/blog-articles";
 import { SITE_NAME, SITE_URL } from "../lib/site-metadata";
@@ -228,12 +229,10 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
 
 export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
   (() => {
-    const articleUrl = `${SITE_URL}/blog/${article.slug}`;
-    const keywords = [
-      article.primaryKeyword,
-      ...article.secondaryKeywords,
-    ].join(", ");
-    const ogTitle = `${article.title} | ${SITE_NAME} Blog`;
+    const articlePath = `/blog/${article.slug}/`;
+    const articleUrl = `${SITE_URL}${articlePath}`;
+    const keywords = [article.primaryKeyword, ...article.secondaryKeywords];
+    const ogTitle = article.title;
     const ogDescription = article.excerpt;
     const articleJsonLd = {
       "@context": "https://schema.org",
@@ -269,18 +268,16 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
 
     return (
       <>
-        <title>{ogTitle}</title>
-        <meta name="description" content={ogDescription} />
-        <meta name="keywords" content={keywords} />
+        <SeoHead
+          title={ogTitle}
+          description={ogDescription}
+          pathname={articlePath}
+          image={article.image}
+          keywords={keywords}
+          ogType="article"
+          schema={articleJsonLd}
+        />
         <meta name="search-intent" content={article.searchIntent} />
-        <link rel="canonical" href={articleUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content={SITE_NAME} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content={articleUrl} />
-        <meta property="og:title" content={ogTitle} />
-        <meta property="og:description" content={ogDescription} />
-        <meta property="og:image" content={`${SITE_URL}${article.image}`} />
         <meta property="article:section" content={article.category} />
         <meta
           property="article:published_time"
@@ -293,15 +290,6 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
         {article.secondaryKeywords.slice(0, 8).map((keyword) => (
           <meta key={keyword} property="article:tag" content={keyword} />
         ))}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={ogTitle} />
-        <meta name="twitter:description" content={ogDescription} />
-        <meta name="twitter:image" content={`${SITE_URL}${article.image}`} />
-        <meta name="twitter:url" content={articleUrl} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-        />
       </>
     );
   })();

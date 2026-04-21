@@ -741,8 +741,8 @@ export default DeckLocalPage;
 
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
-    title="Seattle Deck Builder | Custom Wood & Composite Decks | Northwood Renovation"
-    description="Northwood Renovation builds custom wood, composite, outdoor, and covered decks for Seattle-area homeowners. Request a free estimate for a deck built for Northwest weather."
+    title="Seattle Deck Builder | Wood & Composite Decks | Northwood"
+    description="Northwood Renovation builds custom wood, composite, outdoor, and covered decks for Seattle homeowners. Request a free estimate for Northwest weather."
     pathname={location.pathname}
   />
 );

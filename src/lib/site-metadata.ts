@@ -10,7 +10,7 @@ export const DEFAULT_TITLE =
   "Northwood Renovation | Seattle Deck, Fence, and Exterior Remodeling";
 export const DEFAULT_DESCRIPTION =
   "Northwood Renovation builds decks, fences, and exterior upgrades for Seattle-area homeowners. Get a free estimate from a local team focused on clean craftsmanship and durable results.";
-export const DEFAULT_OG_IMAGE = "/deck-hero-background.jpg";
+export const DEFAULT_OG_IMAGE = "/og-northwood-renovation.jpg";
 
 export const SERVICE_AREA_SUMMARY = "Seattle, WA and nearby communities";
 export const PRIMARY_SERVICE_AREAS = [

@@ -25,8 +25,8 @@ const IndexPage = () => (
 
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
-    title="Northwood Renovation | Seattle Deck, Fence, and Exterior Remodeling"
-    description="Northwood Renovation builds decks, fences, and exterior upgrades for Seattle-area homeowners. Get a free estimate from a local team focused on clean craftsmanship and durable results."
+    title="Northwood Renovation | Seattle Deck & Fence Contractor"
+    description="Northwood Renovation builds decks, fences, and exterior upgrades for Seattle-area homeowners with clean craftsmanship and durable Northwest-ready results."
     pathname={location.pathname}
   />
 );

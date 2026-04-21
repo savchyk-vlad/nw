@@ -25,6 +25,55 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         excludes: [`/404`, `/404.html`, `/dev-404-page`, `/offline-plugin-app-shell-fallback`],
+        serialize: (page: { path: string }, { resolvePagePath }: { resolvePagePath: (page: { path: string }) => string }) => {
+          const path = resolvePagePath(page);
+
+          if (path === `/`) {
+            return {
+              url: path,
+              changefreq: `weekly`,
+              priority: 1.0,
+            };
+          }
+
+          if (path === `/cities/`) {
+            return {
+              url: path,
+              changefreq: `weekly`,
+              priority: 0.9,
+            };
+          }
+
+          if (path.startsWith(`/cities/`)) {
+            return {
+              url: path,
+              changefreq: `monthly`,
+              priority: 0.9,
+            };
+          }
+
+          if (path.startsWith(`/deck/`) || path.startsWith(`/fence/`)) {
+            return {
+              url: path,
+              changefreq: `monthly`,
+              priority: 0.8,
+            };
+          }
+
+          if (path === `/privacy-policy/` || path === `/terms-of-service/`) {
+            return {
+              url: path,
+              changefreq: `yearly`,
+              priority: 0.2,
+            };
+          }
+
+          return {
+            url: path,
+            changefreq: `monthly`,
+            priority: 0.6,
+          };
+        },
       },
     },
   ],

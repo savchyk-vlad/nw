@@ -562,7 +562,7 @@ const trustPoints = [
   "Clean job sites and final walkthroughs",
 ];
 
-const AreasWeServePage = () => {
+const CitiesPage = () => {
   const [searchQuery, setSearchQuery] = React.useState("");
 
   const visibleAreas = React.useMemo(() => {
@@ -590,11 +590,11 @@ const AreasWeServePage = () => {
     <SiteLayout>
       <main className="areas-page">
         <section className="areas-hero">
-          <p className="areas-hero__eyebrow">Local Service Area</p>
-          <h1>Areas We Serve</h1>
+          <p className="areas-hero__eyebrow">Local Service Cities</p>
+          <h1>Cities We Serve</h1>
           <p>
             {renderHighlightedText(
-              "Northwood Renovation provides fence, deck, railing, and outdoor renovation services throughout Seattle, WA and nearby communities.",
+              "Northwood Renovation provides fence, deck, railing, and outdoor renovation services throughout Seattle, WA and nearby cities.",
             )}
           </p>
           <p className="areas-hero__subcopy">
@@ -713,12 +713,19 @@ const AreasWeServePage = () => {
   );
 };
 
-export default AreasWeServePage;
+export default CitiesPage;
 
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
-    title="Areas We Serve | Northwood Renovation"
-    description="Explore Seattle-area locations served by Northwood Renovation for deck building, fence installation, railings, repairs, and outdoor renovation services."
+    title="Cities We Serve | Seattle Deck & Fence Contractor"
+    description="Explore cities served by Northwood Renovation for deck building, fence installation, railings, repairs, and outdoor renovation near Seattle."
     pathname={location.pathname}
+    keywords={[
+      "cities served by Northwood Renovation",
+      "Seattle deck contractor cities",
+      "Seattle fence contractor cities",
+      "deck builder near Seattle",
+      "fence installer near Seattle",
+    ]}
   />
 );

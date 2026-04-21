@@ -190,7 +190,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
   const isServicePage =
     pathname.startsWith("/deck/") || pathname.startsWith("/fence/");
   const isCityServicePage =
-    pathname.startsWith("/areas-we-serve/") && pathname !== "/areas-we-serve/";
+    pathname.startsWith("/cities/") && pathname !== "/cities/";
   const showMobileStickyCta =
     isHomePage || isContactPage || isServicePage || isCityServicePage;
   const mobileMainNavItems = navItems.filter((item) => !isServiceNavItem(item));
@@ -583,13 +583,13 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
               <ul className="site-footer__link-list">
                 {areaItems.map((item) => (
                   <li key={item}>
-                    <Link to={cityServicePagePathByCity[item] ?? "/areas-we-serve"}>
+                    <Link to={cityServicePagePathByCity[item] ?? "/cities"}>
                       {renderHighlightedText(item)}
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link to="/areas-we-serve">View Full Service Area</Link>
+                  <Link to="/cities">View Full Service Area</Link>
                 </li>
               </ul>
             </section>

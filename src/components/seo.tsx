@@ -18,6 +18,7 @@ type SeoHeadProps = {
   description?: string;
   pathname?: string;
   image?: string;
+  imageAlt?: string;
   keywords?: string[];
   ogType?: "website" | "article";
   noindex?: boolean;
@@ -45,7 +46,7 @@ export const buildCanonicalUrl = (pathname = "/") =>
   toAbsoluteUrl(normalizePathname(pathname));
 
 export const buildLocalBusinessReference = (): JsonLd => ({
-  "@type": "LocalBusiness",
+  "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
   "@id": `${SITE_URL}/#localbusiness`,
   name: SITE_NAME,
   url: SITE_URL,
@@ -55,7 +56,7 @@ export const buildLocalBusinessReference = (): JsonLd => ({
 
 export const buildOrganizationSchema = (): JsonLd => ({
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
   "@id": `${SITE_URL}/#localbusiness`,
   name: SITE_NAME,
   url: SITE_URL,
@@ -128,6 +129,7 @@ const SeoHead = ({
   description = DEFAULT_DESCRIPTION,
   pathname = "/",
   image = DEFAULT_OG_IMAGE,
+  imageAlt = `${SITE_NAME} deck and fence project`,
   keywords,
   ogType = "website",
   noindex = false,
@@ -147,6 +149,7 @@ const SeoHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="robots" content={robotsContent} />
+      <meta name="theme-color" content="#595f39" />
       {keywords?.length ? (
         <meta name="keywords" content={keywords.join(", ")} />
       ) : null}
@@ -159,11 +162,13 @@ const SeoHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:alt" content={imageAlt} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:url" content={canonicalUrl} />
 
       {schemaItems.map((item, index) => (
         <script

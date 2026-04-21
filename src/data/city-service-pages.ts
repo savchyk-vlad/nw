@@ -417,5 +417,5 @@ export const getCityServicePageBySlug = (slug: string) =>
   cityServicePages.find((page) => page.slug === slug);
 
 export const cityServicePagePathByCity = Object.fromEntries(
-  cityServicePages.map((page) => [page.city, `/areas-we-serve/${page.slug}`]),
+  cityServicePages.map((page) => [page.city, `/cities/${page.slug}`]),
 ) as Record<string, string>;

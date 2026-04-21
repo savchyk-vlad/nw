@@ -465,22 +465,39 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
   );
 };
 
+const buildCitySeoTitle = (city: string) => {
+  const cityName = city.replace(", WA", "");
+
+  return `${cityName} Deck & Fence Contractor | Northwood`;
+};
+
+const buildCitySeoDescription = (page: CityServicePageData) => {
+  if (page.metaDescription.length <= 155) {
+    return page.metaDescription;
+  }
+
+  const cityName = page.city.replace(", WA", "");
+
+  return `${cityName} deck and fence contractor for decks, fences, railings, repairs, and outdoor upgrades. Request a free estimate.`;
+};
+
 export const CityServicePageHead =
   (page: CityServicePageData): HeadFC =>
   ({ location }) => {
     const pathname = location.pathname;
+    const description = buildCitySeoDescription(page);
 
     return (
       <SeoHead
-        title={`${page.heroTitle} | Northwood Renovation`}
-        description={page.metaDescription}
+        title={buildCitySeoTitle(page.city)}
+        description={description}
         pathname={pathname}
         image={cityServiceHeroImage}
         schema={{
           "@context": "https://schema.org",
           "@type": "Service",
           name: page.heroTitle,
-          description: page.metaDescription,
+          description,
           serviceType: "Deck building, fence installation, repairs, and outdoor renovation",
           areaServed: {
             "@type": "City",
