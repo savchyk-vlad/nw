@@ -5,6 +5,7 @@ import "../styles/contact.css";
 import renderHighlightedText from "../components/brand-text";
 import SeoHead from "../components/seo";
 import SiteLayout from "../components/site-layout";
+import { submitLeadForm } from "../lib/lead-form";
 import {
   BUSINESS_EMAIL,
   BUSINESS_PHONE_DISPLAY,
@@ -14,7 +15,6 @@ import {
 const CONTACT_PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
 const CONTACT_PHONE_TEL = BUSINESS_PHONE_TEL;
 const CONTACT_EMAIL = BUSINESS_EMAIL;
-const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const AsideIconPhone = () => (
   <svg
@@ -170,26 +170,13 @@ const ContactPage = () => {
     setStatus("submitting");
 
     try {
-      const response = await fetch(CONTACT_FORM_ENDPOINT, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          _captcha: "false",
-          _subject: "New estimate request from website",
-          description: description.trim(),
-          contact: contactValue,
-          name: name.trim(),
-          preferredTimeline: timeline.trim(),
-          projectType,
-        }),
+      await submitLeadForm("New estimate request from website", {
+        contact: contactValue,
+        description,
+        name,
+        preferredTimeline: timeline,
+        projectType,
       });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
 
       setStatus("success");
       setName("");

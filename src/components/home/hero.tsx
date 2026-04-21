@@ -1,10 +1,8 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import renderHighlightedText from "../brand-text";
+import { submitLeadForm } from "../../lib/lead-form";
 import googleReviewLogo from "../../images/google-review-logo.png";
-
-const CONTACT_EMAIL = "northwoodrenovation@gmail.com";
-const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const Hero = () => {
   const [quoteStep, setQuoteStep] = React.useState(1);
@@ -62,25 +60,12 @@ const Hero = () => {
     setSubmitStatus("submitting");
 
     try {
-      const response = await fetch(CONTACT_FORM_ENDPOINT, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          _captcha: "false",
-          _subject: "New home hero quick quote request",
-          name: name.trim(),
-          phone: phone.trim(),
-          zipCode: zipCode.trim(),
-          source: "Home hero quick quote form",
-        }),
+      await submitLeadForm("New home hero quick quote request", {
+        name,
+        phone,
+        zipCode,
+        source: "Home hero quick quote form",
       });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
 
       setSubmitStatus("success");
       resetForm();
@@ -160,7 +145,10 @@ const Hero = () => {
             </p>
           </div>
 
-          <form className="home-quote-form" onSubmit={handleQuoteSubmit}>
+          <form
+            className="home-quote-form"
+            onSubmit={handleQuoteSubmit}
+          >
             <span className="sr-only">{`Step ${quoteStep} of 2`}</span>
             <div className="home-quote-form__accent" aria-hidden="true">
               <span

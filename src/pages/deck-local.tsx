@@ -3,6 +3,7 @@ import { HeadFC } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "../styles/deck-local.css";
 import SeoHead from "../components/seo";
+import { submitLeadForm } from "../lib/lead-form";
 import logo from "../images/northwood-logo.svg";
 import angiLogo from "../images/angi-logo.svg";
 import bbbLogo from "../images/bbb-logo.svg";
@@ -19,15 +20,12 @@ import googleReviewLogo from "../images/google-review-logo.png";
 import workerImage from "../images/about/deck-installation-worker.jpg";
 import yelpLogo from "../images/yelp-logo.png";
 import {
-  BUSINESS_EMAIL,
   BUSINESS_PHONE_DISPLAY,
   BUSINESS_PHONE_TEL,
 } from "../lib/site-metadata";
 
 const CONTACT_PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
 const CONTACT_PHONE_TEL = BUSINESS_PHONE_TEL;
-const CONTACT_EMAIL = BUSINESS_EMAIL;
-const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const trustCards = [
   {
@@ -349,25 +347,14 @@ const DeckLocalPage = () => {
     setStatus("submitting");
 
     try {
-      const response = await fetch(CONTACT_FORM_ENDPOINT, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          _captcha: "false",
-          _subject: "New deck landing page estimate request",
-          email,
-          location,
-          message,
-          name,
-          phone,
-          projectType: String(formData.get("projectType") ?? ""),
-        }),
+      await submitLeadForm("New deck landing page estimate request", {
+        email,
+        location,
+        message,
+        name,
+        phone,
+        projectType: String(formData.get("projectType") ?? ""),
       });
-
-      if (!response.ok) throw new Error("Form submission failed");
 
       form.reset();
       setStatus("success");
@@ -454,7 +441,11 @@ const DeckLocalPage = () => {
               formats={["auto", "webp", "avif"]}
             />
           </div>
-          <form className="deck-local-form deck-local-form--hero" id="deck-local-form" onSubmit={handleSubmit}>
+          <form
+            className="deck-local-form deck-local-form--hero"
+            id="deck-local-form"
+            onSubmit={handleSubmit}
+          >
             {status === "success" ? (
               <p className="deck-local-form__message" role="status">
                 Thanks. Your request has been received and our team will follow up soon.
