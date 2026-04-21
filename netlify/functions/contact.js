@@ -62,6 +62,22 @@ const getReplyTo = (fields) => {
 const getFieldValue = (fields, label) =>
   fields.find((field) => field.label === label)?.value || "";
 
+const getEmailValue = (fields) => {
+  const explicitEmail = getFieldValue(fields, "Email");
+  if (explicitEmail) return explicitEmail;
+
+  const contact = getFieldValue(fields, "Contact");
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact) ? contact : "";
+};
+
+const getPhoneValue = (fields) => {
+  const explicitPhone = getFieldValue(fields, "Phone");
+  if (explicitPhone) return explicitPhone;
+
+  const contact = getFieldValue(fields, "Contact");
+  return contact.replace(/\D/g, "").length >= 10 ? contact : "";
+};
+
 const truncateTemplateValue = (value) => value.slice(0, 2000);
 
 const buildTemplateVariables = (subject, fields) => {
@@ -76,14 +92,14 @@ const buildTemplateVariables = (subject, fields) => {
     .join("<br />");
 
   return {
-    email: truncateTemplateValue(getFieldValue(fields, "Email")),
+    email: truncateTemplateValue(getEmailValue(fields)),
     message: truncateTemplateValue(
       getFieldValue(fields, "Message") ||
         getFieldValue(fields, "Project Details") ||
         detailsText,
     ),
     name: truncateTemplateValue(getFieldValue(fields, "Name")),
-    phone: truncateTemplateValue(getFieldValue(fields, "Phone")),
+    phone: truncateTemplateValue(getPhoneValue(fields)),
     service: truncateTemplateValue(getFieldValue(fields, "Project Type")),
     zip: truncateTemplateValue(
       getFieldValue(fields, "ZIP / City") || getFieldValue(fields, "ZIP Code"),
