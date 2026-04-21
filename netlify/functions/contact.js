@@ -3,6 +3,7 @@ const SITE_NAME = "Northwood Renovation";
 const SITE_URL = "https://northwoodrenovation.com";
 const BUSINESS_EMAIL = "northwoodrenovation@gmail.com";
 const DEFAULT_FROM_EMAIL = "Northwood Renovation <onboarding@resend.dev>";
+const DEFAULT_TEMPLATE_ID = "new-inquiry";
 
 const fieldLabels = {
   contact: "Contact",
@@ -48,40 +49,6 @@ const normalizeField = ([key, value]) => {
   };
 };
 
-const buildPlainText = (subject, fields) =>
-  [
-    subject,
-    "",
-    ...fields.map((field) => `${field.label}: ${field.value}`),
-    "",
-    `Website: ${SITE_URL}`,
-  ].join("\n");
-
-const buildHtml = (subject, fields) => `
-  <div style="font-family:Arial,sans-serif;color:#1b1b1b;line-height:1.55">
-    <h1 style="font-size:22px;margin:0 0 18px">${escapeHtml(subject)}</h1>
-    <table style="border-collapse:collapse;width:100%;max-width:680px">
-      <tbody>
-        ${fields
-          .map(
-            (field) => `
-              <tr>
-                <th style="border:1px solid #d7d7cf;background:#e4e4de;padding:10px 12px;text-align:left;width:180px">
-                  ${escapeHtml(field.label)}
-                </th>
-                <td style="border:1px solid #d7d7cf;padding:10px 12px">
-                  ${escapeHtml(field.value).replace(/\n/g, "<br />")}
-                </td>
-              </tr>
-            `,
-          )
-          .join("")}
-      </tbody>
-    </table>
-    <p style="margin-top:18px;color:#595f39">Sent from ${escapeHtml(SITE_URL)}</p>
-  </div>
-`;
-
 const getReplyTo = (fields) => {
   const email = fields.find((field) => field.label === "Email")?.value;
   if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return email;
@@ -90,6 +57,57 @@ const getReplyTo = (fields) => {
   if (contact && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact)) return contact;
 
   return undefined;
+};
+
+const getFieldValue = (fields, label) =>
+  fields.find((field) => field.label === label)?.value || "";
+
+const truncateTemplateValue = (value) => value.slice(0, 2000);
+
+const buildTemplateVariables = (subject, fields) => {
+  const detailsText = fields
+    .map((field) => `${field.label}: ${field.value}`)
+    .join("\n");
+  const detailsHtml = fields
+    .map(
+      (field) =>
+        `<strong>${escapeHtml(field.label)}:</strong> ${escapeHtml(field.value)}`,
+    )
+    .join("<br />");
+
+  return {
+    email: truncateTemplateValue(getFieldValue(fields, "Email")),
+    message: truncateTemplateValue(
+      getFieldValue(fields, "Message") ||
+        getFieldValue(fields, "Project Details") ||
+        detailsText,
+    ),
+    name: truncateTemplateValue(getFieldValue(fields, "Name")),
+    phone: truncateTemplateValue(getFieldValue(fields, "Phone")),
+    service: truncateTemplateValue(getFieldValue(fields, "Project Type")),
+    zip: truncateTemplateValue(
+      getFieldValue(fields, "ZIP / City") || getFieldValue(fields, "ZIP Code"),
+    ),
+    CUSTOMER_CONTACT: truncateTemplateValue(getFieldValue(fields, "Contact")),
+    CUSTOMER_EMAIL: truncateTemplateValue(getFieldValue(fields, "Email")),
+    CUSTOMER_NAME: truncateTemplateValue(getFieldValue(fields, "Name")),
+    CUSTOMER_PHONE: truncateTemplateValue(getFieldValue(fields, "Phone")),
+    DETAILS_HTML: truncateTemplateValue(detailsHtml),
+    DETAILS_TEXT: truncateTemplateValue(detailsText),
+    INQUIRY_SUBJECT: truncateTemplateValue(subject),
+    PREFERRED_TIMELINE: truncateTemplateValue(
+      getFieldValue(fields, "Preferred Timeline"),
+    ),
+    PROJECT_DESCRIPTION: truncateTemplateValue(
+      getFieldValue(fields, "Project Details"),
+    ),
+    PROJECT_LOCATION: truncateTemplateValue(getFieldValue(fields, "ZIP / City")),
+    PROJECT_MESSAGE: truncateTemplateValue(getFieldValue(fields, "Message")),
+    PROJECT_TYPE: truncateTemplateValue(getFieldValue(fields, "Project Type")),
+    SOURCE: truncateTemplateValue(getFieldValue(fields, "Source")),
+    WEBSITE_URL: SITE_URL,
+    ZIP_CODE: truncateTemplateValue(getFieldValue(fields, "ZIP Code")),
+  };
 };
 
 exports.handler = async (event) => {
@@ -104,6 +122,7 @@ exports.handler = async (event) => {
   const apiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.CONTACT_TO_EMAIL || BUSINESS_EMAIL;
   const fromEmail = process.env.CONTACT_FROM_EMAIL || DEFAULT_FROM_EMAIL;
+  const templateId = process.env.RESEND_TEMPLATE_ID || DEFAULT_TEMPLATE_ID;
 
   if (!apiKey) {
     return json(500, { message: "Email service is not configured" });
@@ -131,10 +150,12 @@ exports.handler = async (event) => {
 
   const emailPayload = {
     from: fromEmail,
-    html: buildHtml(subject, fields),
     reply_to: getReplyTo(fields),
     subject,
-    text: buildPlainText(subject, fields),
+    template: {
+      id: templateId,
+      variables: buildTemplateVariables(subject, fields),
+    },
     to: [toEmail],
   };
 
