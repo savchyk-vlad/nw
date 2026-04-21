@@ -9,13 +9,13 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
     React.createElement("link", {
       key: "favicon",
       rel: "icon",
-      type: "image/svg+xml",
-      href: "/favicon.svg",
+      type: "image/png",
+      href: "/favicon.png",
     }),
     React.createElement("link", {
       key: "shortcut-icon",
       rel: "shortcut icon",
-      href: "/favicon.svg",
+      href: "/favicon.png",
     }),
     React.createElement("meta", {
       key: "viewport",
