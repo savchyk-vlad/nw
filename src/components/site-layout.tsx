@@ -54,7 +54,7 @@ const navItems: NavItem[] = [
   { label: "About", to: "/about" },
   {
     label: "Deck",
-    to: "/deck/custom-deck",
+    to: "/decking/",
     children: [
       {
         description: "Designed around your home, yard, and outdoor lifestyle.",
@@ -188,7 +188,9 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
   const isContactPage = pathname === "/contact";
   const isHomePage = pathname === "/";
   const isServicePage =
-    pathname.startsWith("/deck/") || pathname.startsWith("/fence/");
+    pathname.startsWith("/deck/") ||
+    pathname.startsWith("/decking/") ||
+    pathname.startsWith("/fence/");
   const isCityServicePage =
     pathname.startsWith("/cities/") && pathname !== "/cities/";
   const showMobileStickyCta =

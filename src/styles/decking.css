@@ -1,0 +1,686 @@
+.decking-page {
+  background: #e4e4de;
+  color: #1b1b1b;
+  display: grid;
+  gap: 58px;
+  padding: 46px 0 0;
+}
+
+.decking-page :where(h1, h2, h3, p) {
+  margin: 0;
+}
+
+.decking-page a {
+  color: inherit;
+}
+
+.decking-hero,
+.decking-section,
+.decking-gallery,
+.decking-transform,
+.decking-seo-copy,
+.decking-why,
+.decking-process,
+.decking-reviews,
+.decking-faq {
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 100%;
+}
+
+.decking-hero {
+  align-items: center;
+  display: grid;
+  gap: 42px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+}
+
+.decking-hero__rating {
+  color: #1b1b1b;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.decking-hero__rating span {
+  color: #d6a83a;
+}
+
+.decking-hero h1 {
+  color: #1b1b1b;
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+  margin-top: 12px;
+  max-width: 680px;
+}
+
+.decking-hero__lead {
+  color: rgba(27, 27, 27, 0.78);
+  font-size: 18px;
+  line-height: 1.65;
+  margin-top: 20px;
+  max-width: 680px;
+}
+
+.decking-zip-form {
+  align-items: end;
+  background: rgba(196, 197, 186, 0.42);
+  border-radius: 22px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 24px;
+  max-width: 640px;
+  padding: 12px;
+}
+
+.decking-zip-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.decking-zip-form span {
+  color: rgba(27, 27, 27, 0.72);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.decking-zip-form input {
+  background: #e4e4de;
+  border: 0;
+  border-radius: 14px;
+  color: #1b1b1b;
+  font-size: 16px;
+  min-height: 50px;
+  padding: 0 16px;
+}
+
+.decking-zip-form button,
+.decking-button,
+.decking-final-cta a:first-child {
+  align-items: center;
+  background: #595f39;
+  border: 0;
+  border-radius: 999px;
+  color: #e4e4de;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.decking-check-list {
+  display: grid;
+  gap: 9px;
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+}
+
+.decking-check-list li {
+  color: #1b1b1b;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+  padding-left: 28px;
+  position: relative;
+}
+
+.decking-check-list li::before {
+  color: #595f39;
+  content: "✓";
+  font-weight: 950;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.decking-hero__media {
+  border-radius: 24px;
+  min-height: 460px;
+  overflow: hidden;
+}
+
+.decking-hero__media img,
+.decking-gallery__item img,
+.decking-before-after img,
+.decking-project-card img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.decking-section__head {
+  margin: 0 auto 28px;
+  max-width: 860px;
+  text-align: center;
+}
+
+.decking-section__head h2 {
+  color: #1b1b1b;
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 950;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.decking-section__head p {
+  color: rgba(27, 27, 27, 0.72);
+  font-size: 17px;
+  line-height: 1.65;
+  margin-top: 14px;
+}
+
+.decking-kicker {
+  color: #595f39 !important;
+  font-size: 12px !important;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+  margin-bottom: 10px !important;
+  text-transform: uppercase;
+}
+
+.decking-services-grid,
+.decking-feature-grid,
+.decking-project-grid,
+.decking-review-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.decking-services-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.decking-feature-grid,
+.decking-review-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.decking-service-card,
+.decking-feature-card,
+.decking-project-card,
+.decking-review-card,
+.decking-faq details {
+  background: #e4e4de;
+  border-radius: 24px;
+  box-shadow: 0 14px 34px rgba(27, 27, 27, 0.08);
+}
+
+.decking-service-card,
+.decking-feature-card,
+.decking-review-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 24px;
+  transition: transform 0.18s ease;
+}
+
+.decking-service-card:hover,
+.decking-feature-card:hover,
+.decking-project-card:hover {
+  transform: translateY(-3px);
+}
+
+.decking-service-card span {
+  color: #595f39;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.decking-service-card h3,
+.decking-feature-card h3,
+.decking-project-card h3,
+.decking-process-card h3 {
+  color: #1b1b1b;
+  font-size: 22px;
+  font-weight: 950;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-top: 12px;
+}
+
+.decking-service-card p,
+.decking-feature-card p,
+.decking-project-card small,
+.decking-process-card p,
+.decking-review-card p,
+.decking-faq p {
+  color: rgba(27, 27, 27, 0.72);
+  font-size: 15px;
+  line-height: 1.62;
+  margin-top: 12px;
+}
+
+.decking-service-card a,
+.decking-project-card a {
+  color: #595f39;
+  font-size: 14px;
+  font-weight: 950;
+  margin-top: auto;
+  padding-top: 22px;
+  text-decoration: none;
+}
+
+.decking-gallery {
+  background: rgba(196, 197, 186, 0.35);
+  border-radius: 28px;
+  padding: 44px;
+}
+
+.decking-gallery__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.decking-gallery__item {
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.decking-gallery__item figcaption {
+  background: linear-gradient(180deg, transparent, rgba(27, 27, 27, 0.78));
+  bottom: 0;
+  color: #e4e4de;
+  display: grid;
+  gap: 4px;
+  left: 0;
+  opacity: 0;
+  padding: 42px 18px 18px;
+  position: absolute;
+  right: 0;
+  transition: opacity 0.18s ease;
+}
+
+.decking-gallery__item:hover figcaption {
+  opacity: 1;
+}
+
+.decking-before-after {
+  background: rgba(196, 197, 186, 0.34);
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.decking-before-after__meta {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.decking-before-after__meta strong {
+  font-size: 18px;
+  font-weight: 950;
+}
+
+.decking-before-after__meta span {
+  color: #595f39;
+  font-weight: 900;
+}
+
+.decking-before-after__hint {
+  color: rgba(27, 27, 27, 0.68);
+  font-size: 13px;
+  font-weight: 850;
+  margin-top: 8px;
+}
+
+.decking-before-after__compare {
+  --compare-position: 50%;
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+  cursor: ew-resize;
+  margin-top: 18px;
+  overflow: hidden;
+  position: relative;
+  touch-action: none;
+  user-select: none;
+}
+
+.decking-before-after__compare--dragging {
+  cursor: grabbing;
+}
+
+.decking-before-after__compare img {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.decking-before-after__after {
+  clip-path: inset(0 0 0 var(--compare-position));
+  inset: 0;
+  position: absolute;
+}
+
+.decking-before-after__label {
+  background: rgba(27, 27, 27, 0.75);
+  border-radius: 999px;
+  color: #e4e4de;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  padding: 7px 12px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 14px;
+  z-index: 1;
+}
+
+.decking-before-after__label--before {
+  left: 14px;
+}
+
+.decking-before-after__label--after {
+  right: 14px;
+}
+
+.decking-before-after__handle {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: var(--compare-position);
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 44px;
+  z-index: 2;
+}
+
+.decking-before-after__handle::before {
+  background: rgba(228, 228, 222, 0.86);
+  bottom: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+
+.decking-before-after__handle span {
+  background: #e4e4de;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(27, 27, 27, 0.18);
+  display: block;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.decking-before-after__handle span::before {
+  color: #595f39;
+  content: "↔";
+  font-size: 18px;
+  font-weight: 950;
+  left: 50%;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.decking-button--secondary {
+  margin: 20px auto 0;
+}
+
+.decking-seo-copy {
+  background: rgba(196, 197, 186, 0.3);
+  border-radius: 28px;
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.decking-seo-copy h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  line-height: 1.06;
+}
+
+.decking-seo-copy h3 {
+  font-size: 24px;
+  font-weight: 950;
+  letter-spacing: -0.025em;
+  margin-top: 26px;
+}
+
+.decking-seo-copy p {
+  color: rgba(27, 27, 27, 0.76);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 14px;
+}
+
+.decking-check-list--large {
+  background: rgba(196, 197, 186, 0.34);
+  border-radius: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 28px;
+}
+
+.decking-project-card {
+  display: grid;
+  grid-template-rows: 220px 1fr;
+  overflow: hidden;
+  transition: transform 0.18s ease;
+}
+
+.decking-project-card div {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.decking-project-card span,
+.decking-process-card span {
+  color: #595f39;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.decking-project-card p {
+  color: #595f39;
+  font-weight: 850;
+  margin-top: 8px;
+}
+
+.decking-process {
+  background: #c4c5ba;
+  border-radius: 28px;
+  padding: 44px;
+}
+
+.decking-process__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.decking-process-card {
+  background: #e4e4de;
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.decking-review-card span {
+  color: #d6a83a;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.decking-review-card strong {
+  margin-top: 14px;
+}
+
+.decking-faq__list {
+  display: grid;
+  gap: 12px;
+}
+
+.decking-faq summary {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 950;
+  list-style: none;
+  padding: 20px 24px;
+}
+
+.decking-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.decking-faq details p {
+  padding: 0 24px 22px;
+}
+
+.decking-final-cta {
+  background: #595f39;
+  color: #e4e4de;
+  display: grid;
+  gap: 18px;
+  margin-top: 10px;
+  padding: 58px max(24px, calc(var(--content-gutter) * 0.72));
+  text-align: center;
+}
+
+.decking-final-cta h2 {
+  color: #e4e4de;
+  font-size: clamp(34px, 4.8vw, 58px);
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.decking-final-cta p {
+  color: rgba(228, 228, 222, 0.86);
+  font-size: 17px;
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.decking-final-cta div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.decking-final-cta a:last-child {
+  align-items: center;
+  border: 1px solid rgba(228, 228, 222, 0.5);
+  border-radius: 999px;
+  color: #e4e4de;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+  min-height: 50px;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.decking-final-cta a:first-child {
+  background: #e4e4de;
+  color: #595f39;
+}
+
+.decking-service-area {
+  padding: 36px 0 60px;
+  text-align: center;
+}
+
+.decking-service-area h2 {
+  font-size: 22px;
+  font-weight: 950;
+}
+
+.decking-service-area p {
+  color: rgba(27, 27, 27, 0.72);
+  line-height: 1.7;
+  margin: 10px auto 0;
+  max-width: 840px;
+}
+
+@media (max-width: 1100px) {
+  .decking-hero,
+  .decking-services-grid,
+  .decking-feature-grid,
+  .decking-process__grid,
+  .decking-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .decking-hero__media {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 760px) {
+  .decking-page {
+    gap: 42px;
+    padding-top: 28px;
+  }
+
+  .decking-hero,
+  .decking-services-grid,
+  .decking-feature-grid,
+  .decking-project-grid,
+  .decking-process__grid,
+  .decking-review-grid,
+  .decking-check-list--large {
+    grid-template-columns: 1fr;
+  }
+
+  .decking-hero {
+    gap: 24px;
+  }
+
+  .decking-hero h1 {
+    font-size: clamp(38px, 12vw, 48px);
+  }
+
+  .decking-zip-form {
+    grid-template-columns: 1fr;
+  }
+
+  .decking-hero__media {
+    min-height: 280px;
+  }
+
+  .decking-gallery,
+  .decking-process,
+  .decking-seo-copy {
+    border-radius: 20px;
+    padding: 22px;
+  }
+
+  .decking-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .decking-final-cta {
+    padding-bottom: calc(58px + env(safe-area-inset-bottom));
+  }
+}

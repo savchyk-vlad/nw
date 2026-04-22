@@ -52,7 +52,11 @@ const config: GatsbyConfig = {
             };
           }
 
-          if (path.startsWith(`/deck/`) || path.startsWith(`/fence/`)) {
+          if (
+            path === `/decking/` ||
+            path.startsWith(`/deck/`) ||
+            path.startsWith(`/fence/`)
+          ) {
             return {
               url: path,
               changefreq: `monthly`,
