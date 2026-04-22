@@ -78,6 +78,27 @@ body {
   font-weight: 950;
 }
 
+:is(
+  .about-final-cta,
+  .areas-final-cta,
+  .blog-article-end-cta,
+  .blog-cards-cta,
+  .blog-final-cta,
+  .blog-mobile-cta,
+  .blog-sidebar__cta,
+  .city-service-final-cta,
+  .deck-local-final-cta,
+  .policy-cta,
+  .project-detail-cta,
+  .project-detail-final-cta,
+  .recent-work-cta,
+  .reviews-final-cta,
+  .service-final-cta,
+  .testimonial-card__cta
+) .brand-highlight {
+  color: inherit;
+}
+
 .hero-accent {
   color: var(--color-trust-green);
   font-weight: 950;

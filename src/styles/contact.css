@@ -442,6 +442,10 @@
   text-align: left;
 }
 
+.contact-aside .brand-highlight {
+  color: inherit;
+}
+
 .contact-aside-panel__city {
   color: rgba(228, 228, 222, 0.82);
   font-size: 13px;
