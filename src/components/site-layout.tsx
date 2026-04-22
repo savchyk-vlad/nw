@@ -130,7 +130,7 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  { label: "Recent Work", to: "/projects" },
+  { label: "Projects", to: "/projects" },
   { label: "Reviews", to: "/reviews" },
   { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
