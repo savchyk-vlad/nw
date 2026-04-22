@@ -200,10 +200,7 @@
   }
 
   .site-footer__back-to-top {
-    bottom: 18px;
-    height: 42px;
-    right: 18px;
-    width: 42px;
+    display: none;
   }
 
   .blog-hero__media,

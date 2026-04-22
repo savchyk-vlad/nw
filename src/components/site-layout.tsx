@@ -394,9 +394,11 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
                           <div
                             className="site-drawer__subgroup"
                             key={`drawer-group-${item.to}-${group.label}`}>
-                            <p className="site-drawer__subgroup-label">
-                              {group.label}
-                            </p>
+                            {group.label === "Helpful Resources" ? (
+                              <p className="site-drawer__subgroup-label">
+                                {group.label}
+                              </p>
+                            ) : null}
                             {group.items.map((child) => (
                               <Link
                                 key={`drawer-sub-${child.to}`}
@@ -408,11 +410,6 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
                                 <span className="site-drawer__sublink-title">
                                   {child.label}
                                 </span>
-                                {child.description ? (
-                                  <span className="site-drawer__sublink-description">
-                                    {child.description}
-                                  </span>
-                                ) : null}
                               </Link>
                             ))}
                           </div>
@@ -437,10 +434,6 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
                   className="site-drawer__cta-phone">
                   {`Call: ${BUSINESS_PHONE_DISPLAY}`}
                 </a>
-                <ul className="site-drawer__trust-foot">
-                  <li>{renderHighlightedText("Seattle & Surrounding Areas")}</li>
-                  <li>Licensed &amp; Insured</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -511,6 +504,11 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
       {showMobileStickyCta ? (
         <div className="site-mobile-cta" aria-label="Quick actions">
           <div className="site-mobile-cta__card">
+            <a
+              href={`tel:${BUSINESS_PHONE_TEL}`}
+              className="site-mobile-cta__button site-mobile-cta__button--secondary">
+              Call
+            </a>
             {isContactPage ? (
               <a
                 href="#contact-form"
@@ -524,11 +522,6 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
                 Free Estimate
               </Link>
             )}
-            <a
-              href={`tel:${BUSINESS_PHONE_TEL}`}
-              className="site-mobile-cta__button site-mobile-cta__button--secondary">
-              Call
-            </a>
           </div>
         </div>
       ) : null}
