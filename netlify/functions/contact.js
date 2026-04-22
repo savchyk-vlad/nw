@@ -2,7 +2,7 @@ const RESEND_API_URL = "https://api.resend.com/emails";
 const SITE_NAME = "Northwood Renovation";
 const SITE_URL = "https://northwoodrenovation.com";
 const BUSINESS_EMAIL = "northwoodrenovation@gmail.com";
-const DEFAULT_FROM_EMAIL = "Northwood Renovation <onboarding@resend.dev>";
+const DEFAULT_FROM_EMAIL = "Northwood Renovation <leads@northwoodrenovation.com>";
 const DEFAULT_TEMPLATE_ID = "new-inquiry";
 
 const fieldLabels = {
