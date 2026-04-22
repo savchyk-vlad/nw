@@ -54,6 +54,7 @@ const config: GatsbyConfig = {
 
           if (
             path === `/decking/` ||
+            path === `/fencing/` ||
             path.startsWith(`/deck/`) ||
             path.startsWith(`/fence/`)
           ) {

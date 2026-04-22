@@ -434,7 +434,7 @@ const ReviewsPage = () => {
                 “From layout to final walkthrough, communication stayed clear and
                 the fence quality is excellent.”
               </p>
-              <Link to="/fence/cedar-wood-fence">Explore Fence Services</Link>
+              <Link to="/fencing/">Explore Fence Services</Link>
             </article>
             <article>
               <h3>Repair Projects</h3>

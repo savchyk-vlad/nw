@@ -102,7 +102,7 @@ const navItems: NavItem[] = [
   },
   {
     label: "Fence",
-    to: "/fence/cedar-wood-fence",
+    to: "/fencing/",
     children: [
       {
         description: "Warm, natural privacy fencing for Seattle-area homes.",
@@ -150,6 +150,7 @@ const serviceItems = [
   { label: "Composite Deck Builder", to: "/deck/composite-deck" },
   { label: "Covered Deck Builder", to: "/deck/covered-deck" },
   { label: "Outdoor Deck Installation", to: "/deck/outdoor-deck" },
+  { label: "Fence Installation", to: "/fencing" },
   { label: "Cedar Wood Fence Installation", to: "/fence/cedar-wood-fence" },
   { label: "Chain Link Fence Installation", to: "/fence/chain-link-fence" },
 ];
@@ -190,6 +191,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
   const isServicePage =
     pathname.startsWith("/deck/") ||
     pathname.startsWith("/decking/") ||
+    pathname.startsWith("/fencing/") ||
     pathname.startsWith("/fence/");
   const isCityServicePage =
     pathname.startsWith("/cities/") && pathname !== "/cities/";
