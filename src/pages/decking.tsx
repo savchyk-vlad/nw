@@ -373,8 +373,16 @@ const DeckingPage = () => {
   const handleZipSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const query = zip.trim() ? `?zip=${encodeURIComponent(zip.trim())}` : "";
-    window.location.href = `/contact${query}#contact-form`;
+    const params = new URLSearchParams({
+      projectType: "deck-build",
+      source: "decking",
+    });
+
+    if (zip.trim()) {
+      params.set("zip", zip.trim());
+    }
+
+    window.location.href = `/contact?${params.toString()}#contact-form`;
   };
 
   const updateComparePosition = (

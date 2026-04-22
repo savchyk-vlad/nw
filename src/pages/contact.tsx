@@ -174,6 +174,7 @@ const ContactPage = () => {
 
   const [name, setName] = React.useState("");
   const [contactMethod, setContactMethod] = React.useState("");
+  const [projectLocation, setProjectLocation] = React.useState("");
   const [projectType, setProjectType] = React.useState("");
   const [timeline, setTimeline] = React.useState("");
   const [description, setDescription] = React.useState("");
@@ -182,6 +183,27 @@ const ContactPage = () => {
   >(
     "idle",
   );
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const params = new URLSearchParams(window.location.search);
+    const incomingLocation =
+      params.get("zip") || params.get("location") || params.get("zipCode");
+    const incomingProjectType =
+      params.get("projectType") || params.get("service");
+
+    if (incomingLocation) {
+      setProjectLocation(incomingLocation.trim());
+    }
+
+    if (
+      incomingProjectType &&
+      projectTypes.some((type) => type.value === incomingProjectType)
+    ) {
+      setProjectType(incomingProjectType);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -202,6 +224,7 @@ const ContactPage = () => {
       await submitLeadForm("New estimate request from website", {
         contact: contactValue,
         description,
+        location: projectLocation,
         name,
         preferredTimeline: timeline,
         projectType,
@@ -210,6 +233,7 @@ const ContactPage = () => {
       setStatus("success");
       setName("");
       setContactMethod("");
+      setProjectLocation("");
       setProjectType("");
       setTimeline("");
       setDescription("");
@@ -428,6 +452,22 @@ const ContactPage = () => {
                     if (status !== "idle") setStatus("idle");
                   }}
                   required
+                />
+              </label>
+
+              <label className="contact-field">
+                <span className="contact-field__label">Project ZIP / City</span>
+                <input
+                  type="text"
+                  name="location"
+                  autoComplete="postal-code"
+                  className="contact-field__input"
+                  placeholder="98103 or Seattle, WA"
+                  value={projectLocation}
+                  onChange={(ev) => {
+                    setProjectLocation(ev.target.value);
+                    if (status !== "idle") setStatus("idle");
+                  }}
                 />
               </label>
 
