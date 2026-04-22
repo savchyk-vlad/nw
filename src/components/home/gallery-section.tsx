@@ -232,7 +232,7 @@ const GalleryLightbox = React.memo(
           </div>
           <div className="gallery-lightbox__meta">
             <p>{activeImage.caption}</p>
-            <Link to="/contact" className="gallery-lightbox__cta">
+            <Link to="/contact#contact-form" className="gallery-lightbox__cta">
               Like this project? Get a free estimate
             </Link>
           </div>

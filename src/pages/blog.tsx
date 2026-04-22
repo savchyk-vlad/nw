@@ -99,7 +99,7 @@ const BlogPage = () => {
               team.
             </p>
             <div className="blog-hero__actions">
-              <Link to="/contact" className="blog-button blog-button--primary">
+              <Link to="/contact#contact-form" className="blog-button blog-button--primary">
                 Request a Free Estimate
               </Link>
               <Link
@@ -235,7 +235,7 @@ const BlogPage = () => {
                 Tell us about your deck or fence project and we&apos;ll help you
                 understand your options.
               </p>
-              <Link to="/contact">Request a Free Estimate</Link>
+              <Link to="/contact#contact-form">Request a Free Estimate</Link>
             </section>
 
             <section className="blog-mobile-cta" aria-label="Planning support">
@@ -244,7 +244,7 @@ const BlogPage = () => {
                 Tell us about your deck, fence, or outdoor renovation project
                 and we&apos;ll help you plan the next step.
               </p>
-              <Link to="/contact">Request a Free Estimate</Link>
+              <Link to="/contact#contact-form">Request a Free Estimate</Link>
             </section>
           </div>
 
@@ -272,7 +272,7 @@ const BlogPage = () => {
                 Tell us about your deck, fence, or outdoor renovation project
                 and we&apos;ll help you plan the next step.
               </p>
-              <Link to="/contact">Request a Free Estimate</Link>
+              <Link to="/contact#contact-form">Request a Free Estimate</Link>
             </div>
           </aside>
         </section>
@@ -316,7 +316,7 @@ const BlogPage = () => {
             that fits your home, budget, and outdoor space.
           </p>
           <div className="blog-final-cta__actions">
-            <Link to="/contact" className="blog-button blog-button--primary">
+            <Link to="/contact#contact-form" className="blog-button blog-button--primary">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="blog-button blog-button--secondary">

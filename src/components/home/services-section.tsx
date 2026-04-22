@@ -73,7 +73,7 @@ const ServicesSection = () => (
       <div>
         <h2 id="services-section-title">Our Comprehensive Services</h2>
       </div>
-      <Link to="/contact" className="services-section__button">
+      <Link to="/contact#contact-form" className="services-section__button">
         Request a Free Estimate
       </Link>
     </div>

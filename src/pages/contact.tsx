@@ -15,6 +15,8 @@ import {
 const CONTACT_PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
 const CONTACT_PHONE_TEL = BUSINESS_PHONE_TEL;
 const CONTACT_EMAIL = BUSINESS_EMAIL;
+const CONTACT_FORM_HASH = "#contact-form";
+const CONTACT_FORM_SCROLL_OFFSET = 65;
 
 const AsideIconPhone = () => (
   <svg
@@ -110,6 +112,33 @@ type IdleWindow = Window & {
 const ContactPage = () => {
   const heroVideoRef = React.useRef<HTMLVideoElement>(null);
   const [shouldLoadHeroVideo, setShouldLoadHeroVideo] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+
+    const scrollToContactForm = () => {
+      if (window.location.hash !== CONTACT_FORM_HASH) return;
+
+      const form = document.getElementById("contact-form");
+
+      if (!form) return;
+
+      const formTop = form.getBoundingClientRect().top + window.scrollY;
+
+      window.scrollTo({
+        behavior: "smooth",
+        top: Math.max(0, formTop - CONTACT_FORM_SCROLL_OFFSET),
+      });
+    };
+
+    const timeoutId = window.setTimeout(scrollToContactForm, 120);
+    window.addEventListener("hashchange", scrollToContactForm);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+      window.removeEventListener("hashchange", scrollToContactForm);
+    };
+  }, []);
 
   React.useEffect(() => {
     if (typeof window === "undefined") return undefined;

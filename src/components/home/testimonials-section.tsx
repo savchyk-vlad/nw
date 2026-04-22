@@ -171,7 +171,7 @@ const TestimonialsSection = () => {
           <blockquote>{renderBrandText(activeTestimonial.text)}</blockquote>
           <div className="testimonial-card__cta">
             <span>Ready for a similar result?</span>
-            <Link to="/contact">Request a Free Estimate</Link>
+            <Link to="/contact#contact-form">Request a Free Estimate</Link>
           </div>
         </article>
       </div>

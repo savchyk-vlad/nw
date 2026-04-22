@@ -829,7 +829,7 @@
   box-shadow: 0 16px 42px rgba(27, 27, 27, 0.13);
   gap: 10px;
   padding: 18px;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 180px;
 }
 
 .deck-local-form label {

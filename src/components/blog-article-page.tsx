@@ -184,7 +184,7 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
             you understand the next step.
           </p>
           <div className="blog-final-cta__actions">
-            <Link to="/contact" className="blog-button blog-button--primary">
+            <Link to="/contact#contact-form" className="blog-button blog-button--primary">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="blog-button blog-button--secondary">

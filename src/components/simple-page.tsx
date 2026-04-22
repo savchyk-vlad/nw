@@ -26,7 +26,7 @@ const SimplePage = ({
         <p className="page-hero__eyebrow">{renderHighlightedText(eyebrow)}</p>
         <h1>{renderHighlightedText(title)}</h1>
         <p>{renderHighlightedText(description)}</p>
-        <Link to="/contact" className="page-hero__button">
+        <Link to="/contact#contact-form" className="page-hero__button">
           Request a Free Estimate
         </Link>
       </section>

@@ -26,6 +26,7 @@ import {
 
 const CONTACT_PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
 const CONTACT_PHONE_TEL = BUSINESS_PHONE_TEL;
+const DECK_LOCAL_FORM_SCROLL_OFFSET = 65;
 
 const trustCards = [
   {
@@ -364,9 +365,15 @@ const DeckLocalPage = () => {
   };
 
   const scrollToForm = () => {
-    document.getElementById("deck-local-form")?.scrollIntoView({
+    const form = document.getElementById("deck-local-form");
+
+    if (!form) return;
+
+    const formTop = form.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
       behavior: "smooth",
-      block: "start",
+      top: Math.max(0, formTop - DECK_LOCAL_FORM_SCROLL_OFFSET),
     });
   };
 

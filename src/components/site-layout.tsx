@@ -270,7 +270,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
             <span className="site-header__phone-text-full">{BUSINESS_PHONE_DISPLAY}</span>
             <span className="site-header__phone-text-short">Call</span>
           </a>
-          <Link to="/contact" className="site-header__button">
+          <Link to="/contact#contact-form" className="site-header__button">
             <span className="site-header__button-text-full">
               Request Free Estimate
             </span>
@@ -427,7 +427,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
             <div className="site-drawer__cta-block">
               <div className="site-drawer__cta-card">
                 <Link
-                  to="/contact"
+                  to="/contact#contact-form"
                   className="site-drawer__cta-button"
                   onClick={closeMobileNav}>
                   Request Free Estimate
@@ -519,7 +519,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
               </a>
             ) : (
               <Link
-                to="/contact"
+                to="/contact#contact-form"
                 className="site-mobile-cta__button site-mobile-cta__button--primary">
                 Free Estimate
               </Link>

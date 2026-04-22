@@ -181,7 +181,7 @@ const ReviewsPage = () => {
               )}
             </p>
             <div className="reviews-hero__actions">
-              <Link to="/contact" className="reviews-button reviews-button--primary">
+              <Link to="/contact#contact-form" className="reviews-button reviews-button--primary">
                 Request a Free Estimate
               </Link>
               <Link
@@ -442,7 +442,7 @@ const ReviewsPage = () => {
                 “They explained repair priorities clearly and fixed safety issues
                 first without overcomplicating the scope.”
               </p>
-              <Link to="/contact">Talk About Repairs</Link>
+              <Link to="/contact#contact-form">Talk About Repairs</Link>
             </article>
           </div>
         </section>
@@ -469,7 +469,7 @@ const ReviewsPage = () => {
             we&apos;ll help you plan the next step.
           </p>
           <div className="reviews-final-cta__actions">
-            <Link to="/contact" className="reviews-final-cta__primary">
+            <Link to="/contact#contact-form" className="reviews-final-cta__primary">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="reviews-final-cta__secondary">

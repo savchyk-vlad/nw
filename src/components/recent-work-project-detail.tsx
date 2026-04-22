@@ -111,7 +111,7 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
               {renderHighlightedText(project.location)}
             </span>
             <strong>{renderHighlightedText(project.description)}</strong>
-            <Link to="/contact" className="project-detail-hero__button">
+            <Link to="/contact#contact-form" className="project-detail-hero__button">
               Request a Similar Project
             </Link>
           </div>
@@ -328,7 +328,7 @@ const RecentWorkProjectDetail = ({ slug }: RecentWorkProjectDetailProps) => {
               )}
             </span>
           </div>
-          <Link to="/contact" className="project-detail-final-cta__button">
+          <Link to="/contact#contact-form" className="project-detail-final-cta__button">
             Request a Free Estimate
           </Link>
         </section>

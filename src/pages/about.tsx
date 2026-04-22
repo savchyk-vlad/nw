@@ -95,7 +95,7 @@ const AboutPage = () => (
             <Highlight>Seattle, WA</Highlight> and surrounding communities.
           </span>
           <div className="about-hero__actions">
-            <Link to="/contact" className="about-button">
+            <Link to="/contact#contact-form" className="about-button">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="about-hero__secondary">
@@ -350,7 +350,7 @@ const AboutPage = () => (
         </div>
         <div className="about-final-cta__actions">
           <div className="about-final-cta__button-row">
-            <Link to="/contact" className="about-final-cta__button">
+            <Link to="/contact#contact-form" className="about-final-cta__button">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="about-final-cta__link">

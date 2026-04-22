@@ -220,7 +220,7 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
               )}
             </p>
             <div className="city-service-hero__cta-row">
-              <Link to="/contact" className="city-service-hero__primary">
+              <Link to="/contact#contact-form" className="city-service-hero__primary">
                 Request a Free Estimate
               </Link>
               <Link to="/projects" className="city-service-hero__secondary">
@@ -452,7 +452,7 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
             )}
           </p>
           <div className="city-service-final-cta__actions">
-            <Link to="/contact" className="city-service-final-cta__primary">
+            <Link to="/contact#contact-form" className="city-service-final-cta__primary">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="city-service-final-cta__secondary">

@@ -77,7 +77,7 @@ const RecentWorkPage = () => {
               )}
             </p>
             <div className="recent-work-hero__actions">
-              <Link to="/contact" className="recent-work-button">
+              <Link to="/contact#contact-form" className="recent-work-button">
                 Request a Free Estimate
               </Link>
               <Link
@@ -193,7 +193,7 @@ const RecentWorkPage = () => {
               <li>Durable exterior materials</li>
               <li>Clean installation and final walkthrough</li>
             </ul>
-            <Link to="/contact" className="recent-work-button">
+            <Link to="/contact#contact-form" className="recent-work-button">
               Start a Similar Project
             </Link>
           </div>
@@ -263,7 +263,7 @@ const RecentWorkPage = () => {
               )}
             </span>
           </div>
-          <Link to="/contact" className="recent-work-button">
+          <Link to="/contact#contact-form" className="recent-work-button">
             Request a Free Estimate
           </Link>
         </section>

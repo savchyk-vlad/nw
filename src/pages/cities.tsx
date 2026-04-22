@@ -700,7 +700,7 @@ const CitiesPage = () => {
             we&apos;ll help you plan the next step.
           </p>
           <div className="areas-final-cta__actions">
-            <Link to="/contact" className="areas-final-cta__primary">
+            <Link to="/contact#contact-form" className="areas-final-cta__primary">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="areas-final-cta__secondary">

@@ -92,7 +92,7 @@ const ServiceLandingPage = ({ service }: ServiceLandingPageProps) => {
             </h1>
             <p>{renderHighlightedText(service.subtitle)}</p>
             <div className="service-hero__actions">
-              <Link to="/contact" className="service-button service-button--primary">
+              <Link to="/contact#contact-form" className="service-button service-button--primary">
                 Request a Free Estimate
               </Link>
               <Link
@@ -263,7 +263,7 @@ const ServiceLandingPage = ({ service }: ServiceLandingPageProps) => {
             </p>
           </div>
           <div className="service-final-cta__actions">
-            <Link to="/contact" className="service-final-cta__primary">
+            <Link to="/contact#contact-form" className="service-final-cta__primary">
               Request a Free Estimate
             </Link>
             <Link to="/projects" className="service-final-cta__secondary">
