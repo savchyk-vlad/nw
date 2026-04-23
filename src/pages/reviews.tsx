@@ -426,7 +426,7 @@ const ReviewsPage = () => {
                 “The crew kept everything organized and delivered a deck that feels
                 durable and cleanly finished.”
               </p>
-              <Link to="/deck/custom-deck">Explore Deck Services</Link>
+              <Link to="/custom-deck/">Explore Deck Services</Link>
             </article>
             <article>
               <h3>Fence Projects</h3>

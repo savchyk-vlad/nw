@@ -11,7 +11,7 @@ const services = [
   {
     category: "Fence Services",
     name: "Cedar Wood Fences",
-    href: "/fence/cedar-wood-fence/",
+    href: "/cedar-wood-fence/",
     description:
       "Cedar wood fencing is a strong choice for homeowners who want natural warmth, privacy, and clean curb appeal that fits Seattle-area homes.",
     image: servicesFenceRoad,
@@ -20,7 +20,7 @@ const services = [
   {
     category: "Fence Services",
     name: "Chain Link Fence",
-    href: "/fence/chain-link-fence/",
+    href: "/chain-link-fence/",
     description:
       "Chain link fencing is practical, durable, and cost-effective for securing yards, side spaces, pet areas, and property lines.",
     image: servicesChainLinkFence,
@@ -29,7 +29,7 @@ const services = [
   {
     category: "Deck Services",
     name: "Wood Deck",
-    href: "/deck/wood-deck/",
+    href: "/wood-deck/",
     description:
       "Wood decks bring warmth and natural character to an outdoor space while creating a comfortable extension of the home.",
     image: servicesWoodDeck,
@@ -38,7 +38,7 @@ const services = [
   {
     category: "Deck Services",
     name: "Composite Deck",
-    href: "/deck/composite-deck/",
+    href: "/composite-deck/",
     description:
       "Composite decks offer a clean, low-maintenance outdoor living space built to handle moisture, fading, and daily use.",
     image: servicesCompositeDeck,
@@ -47,7 +47,7 @@ const services = [
   {
     category: "Deck Services",
     name: "Custom Deck",
-    href: "/deck/custom-deck/",
+    href: "/custom-deck/",
     description:
       "Custom decks are designed around the home, yard, and lifestyle so the final layout feels intentional and built for the space.",
     image: servicesCustomDeck,
@@ -56,7 +56,7 @@ const services = [
   {
     category: "Deck Services",
     name: "Outdoor Deck",
-    href: "/deck/outdoor-deck/",
+    href: "/outdoor-deck/",
     description:
       "Outdoor decks create a functional place for relaxing, hosting guests, outdoor dining, and making the yard more usable every day.",
     image: servicesOutdoorDeck,

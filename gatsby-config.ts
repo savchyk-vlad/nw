@@ -6,6 +6,16 @@ import {
   SITE_URL,
 } from "./src/lib/site-metadata"
 
+const servicePagePaths = new Set([
+  `/custom-deck/`,
+  `/wood-deck/`,
+  `/composite-deck/`,
+  `/covered-deck/`,
+  `/outdoor-deck/`,
+  `/cedar-wood-fence/`,
+  `/chain-link-fence/`,
+]);
+
 const config: GatsbyConfig = {
   siteMetadata: {
     description: DEFAULT_DESCRIPTION,
@@ -55,8 +65,7 @@ const config: GatsbyConfig = {
           if (
             path === `/decking/` ||
             path === `/fencing/` ||
-            path.startsWith(`/deck/`) ||
-            path.startsWith(`/fence/`)
+            servicePagePaths.has(path)
           ) {
             return {
               url: path,

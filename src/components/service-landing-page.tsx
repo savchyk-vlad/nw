@@ -12,6 +12,7 @@ type ServiceLandingPageProps = {
 };
 
 const buildServiceSeoDescription = (service: ServicePageData) =>
+  service.metaDescription ||
   `Northwood Renovation provides ${service.serviceName.toLowerCase()} in Seattle and nearby communities. Built for Northwest weather with clear estimates and clean craftsmanship.`;
 
 export const createServicePageHead =
@@ -26,6 +27,7 @@ export const createServicePageHead =
         description={description}
         pathname={pathname}
         image={service.heroImage}
+        imageAlt={service.heroImageAlt}
         schema={{
           "@context": "https://schema.org",
           "@type": "Service",

@@ -39,19 +39,19 @@ const services = [
     tag: "Privacy + Warmth",
     title: "Cedar Wood Fence",
     text: "Natural cedar privacy fencing with warm character, strong posts, and clean lines built for Seattle residential yards.",
-    to: "/fence/cedar-wood-fence/",
+    to: "/cedar-wood-fence/",
   },
   {
     tag: "Secure + Practical",
     title: "Chain Link Fence",
     text: "Durable, practical chain link fencing for security, property boundaries, pets, and side yards.",
-    to: "/fence/chain-link-fence/",
+    to: "/chain-link-fence/",
   },
   {
     tag: "Backyard Privacy",
     title: "Privacy Fence",
     text: "Full-height privacy fencing designed to create a clean boundary and a more enclosed backyard.",
-    to: "/fence/cedar-wood-fence/",
+    to: "/cedar-wood-fence/",
   },
   {
     tag: "Access + Hardware",

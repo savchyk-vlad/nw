@@ -42,25 +42,25 @@ const services = [
     tag: "Design + Build",
     title: "Custom Decks",
     text: "From design to build, we craft clean, long-lasting decks that fit your Seattle home and outdoor lifestyle.",
-    to: "/deck/custom-deck/",
+    to: "/custom-deck/",
   },
   {
     tag: "Low Maintenance",
     title: "Composite Decking",
     text: "Low-maintenance, weather-resistant composite decks with a clean, modern look built for rainy Northwest weather.",
-    to: "/deck/composite-deck/",
+    to: "/composite-deck/",
   },
   {
     tag: "Natural Finish",
     title: "Wood Decks",
     text: "Natural wood decks with warm textures and timeless appeal, built with careful craftsmanship.",
-    to: "/deck/wood-deck/",
+    to: "/wood-deck/",
   },
   {
     tag: "Outdoor Living",
     title: "Covered Decks & Railings",
     text: "Add usable covered outdoor space with railings, pergolas, and weather protection designed for Seattle.",
-    to: "/deck/covered-deck/",
+    to: "/covered-deck/",
   },
 ];
 

@@ -95,31 +95,31 @@ const benefits = [
 
 const includedServices = [
   {
-    href: "/deck/custom-deck/",
+    href: "/custom-deck/",
     title: "Custom Decks",
   },
   {
-    href: "/deck/wood-deck/",
+    href: "/wood-deck/",
     title: "Wood Decks",
   },
   {
-    href: "/deck/composite-deck/",
+    href: "/composite-deck/",
     title: "Composite Decks",
   },
   {
-    href: "/deck/outdoor-deck/",
+    href: "/outdoor-deck/",
     title: "Outdoor Decks",
   },
   {
-    href: "/deck/covered-deck/",
+    href: "/covered-deck/",
     title: "Covered Decks",
   },
   {
-    href: "/fence/cedar-wood-fence/",
+    href: "/cedar-wood-fence/",
     title: "Cedar Wood Fences",
   },
   {
-    href: "/fence/chain-link-fence/",
+    href: "/chain-link-fence/",
     title: "Chain Link Fences",
   },
 ];

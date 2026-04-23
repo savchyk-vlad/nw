@@ -60,31 +60,31 @@ const navItems: NavItem[] = [
         description: "Designed around your home, yard, and outdoor lifestyle.",
         group: "Deck Services",
         label: "Custom Deck Design",
-        to: "/deck/custom-deck",
+        to: "/custom-deck",
       },
       {
         description: "Natural wood decks with warm character and strong craftsmanship.",
         group: "Deck Services",
         label: "Wood Deck Builder",
-        to: "/deck/wood-deck",
+        to: "/wood-deck",
       },
       {
         description: "Low-maintenance decking built for Seattle weather.",
         group: "Deck Services",
         label: "Composite Deck Builder",
-        to: "/deck/composite-deck",
+        to: "/composite-deck",
       },
       {
         description: "More usable outdoor space with added protection from rain.",
         group: "Deck Services",
         label: "Covered Deck Builder",
-        to: "/deck/covered-deck",
+        to: "/covered-deck",
       },
       {
         description: "Open-air decks for relaxing, dining, and entertaining.",
         group: "Deck Services",
         label: "Outdoor Deck Installation",
-        to: "/deck/outdoor-deck",
+        to: "/outdoor-deck",
       },
       {
         description: "Browse recent deck, fence, and outdoor projects.",
@@ -108,13 +108,13 @@ const navItems: NavItem[] = [
         description: "Warm, natural privacy fencing for Seattle-area homes.",
         group: "Fence Services",
         label: "Cedar Wood Fence Installation",
-        to: "/fence/cedar-wood-fence",
+        to: "/cedar-wood-fence",
       },
       {
         description: "Durable, practical fencing for security and visibility.",
         group: "Fence Services",
         label: "Chain Link Fence Installation",
-        to: "/fence/chain-link-fence",
+        to: "/chain-link-fence",
       },
       {
         description: "Browse recent fence, deck, and outdoor projects.",
@@ -145,15 +145,32 @@ const whyUsItems = [
 ];
 
 const serviceItems = [
-  { label: "Custom Deck Design", to: "/deck/custom-deck" },
-  { label: "Wood Deck Builder", to: "/deck/wood-deck" },
-  { label: "Composite Deck Builder", to: "/deck/composite-deck" },
-  { label: "Covered Deck Builder", to: "/deck/covered-deck" },
-  { label: "Outdoor Deck Installation", to: "/deck/outdoor-deck" },
+  { label: "Custom Deck Design", to: "/custom-deck" },
+  { label: "Wood Deck Builder", to: "/wood-deck" },
+  { label: "Composite Deck Builder", to: "/composite-deck" },
+  { label: "Covered Deck Builder", to: "/covered-deck" },
+  { label: "Outdoor Deck Installation", to: "/outdoor-deck" },
   { label: "Fence Installation", to: "/fencing" },
-  { label: "Cedar Wood Fence Installation", to: "/fence/cedar-wood-fence" },
-  { label: "Chain Link Fence Installation", to: "/fence/chain-link-fence" },
+  { label: "Cedar Wood Fence Installation", to: "/cedar-wood-fence" },
+  { label: "Chain Link Fence Installation", to: "/chain-link-fence" },
 ];
+
+const cleanServicePaths = new Set([
+  "/custom-deck",
+  "/custom-deck/",
+  "/wood-deck",
+  "/wood-deck/",
+  "/composite-deck",
+  "/composite-deck/",
+  "/covered-deck",
+  "/covered-deck/",
+  "/outdoor-deck",
+  "/outdoor-deck/",
+  "/cedar-wood-fence",
+  "/cedar-wood-fence/",
+  "/chain-link-fence",
+  "/chain-link-fence/",
+]);
 
 const areaItems = [
   "Seattle, WA",
@@ -189,10 +206,9 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
   const isContactPage = pathname === "/contact";
   const isHomePage = pathname === "/";
   const isServicePage =
-    pathname.startsWith("/deck/") ||
     pathname.startsWith("/decking/") ||
     pathname.startsWith("/fencing/") ||
-    pathname.startsWith("/fence/");
+    cleanServicePaths.has(pathname);
   const isCityServicePage =
     pathname.startsWith("/cities/") && pathname !== "/cities/";
   const showMobileStickyCta =

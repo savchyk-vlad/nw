@@ -102,42 +102,42 @@ const createServiceItems = (city: string) => [
   {
     title: `Custom Deck Building in ${city}`,
     description: `We build backyard decks for ${city} homeowners who want durable outdoor living space with clean framing, practical layouts, and a finished look that fits the home.`,
-    to: "/deck/custom-deck",
+    to: "/custom-deck",
   },
   {
     title: `Privacy Fence Installation in ${city}`,
     description: `We install cedar privacy fences that help ${city} homeowners add privacy, structure, and curb appeal to their outdoor spaces.`,
-    to: "/fence/cedar-wood-fence",
+    to: "/cedar-wood-fence",
   },
   {
     title: `Cedar Fencing in ${city}`,
     description: `Cedar fences remain a strong choice in ${city} for warmth, durability, and a natural look that fits Northwest homes.`,
-    to: "/fence/cedar-wood-fence",
+    to: "/cedar-wood-fence",
   },
   {
     title: `Composite Decks in ${city}`,
     description: `For homeowners in ${city} who want lower-maintenance outdoor living, we help plan composite deck options that feel clean and built for long-term use.`,
-    to: "/deck/composite-deck",
+    to: "/composite-deck",
   },
   {
     title: `Deck Repairs in ${city}`,
     description: `We repair worn deck boards, railings, stairs, and structural details so ${city} homeowners can improve safety and extend the life of the deck.`,
-    to: "/deck/wood-deck",
+    to: "/wood-deck",
   },
   {
     title: `Fence Repairs in ${city}`,
     description: `From leaning posts to aging panels, we help ${city} homeowners fix fence problems before they become larger exterior issues.`,
-    to: "/fence/cedar-wood-fence",
+    to: "/cedar-wood-fence",
   },
   {
     title: `Gates in ${city}`,
     description: `We build and replace gates for everyday access, privacy, and better yard function across homes in ${city}.`,
-    to: "/fence/cedar-wood-fence",
+    to: "/cedar-wood-fence",
   },
   {
     title: `Railings & Stairs in ${city}`,
     description: `Railings and stair transitions matter for safety and daily use, and we help ${city} homeowners make those details feel clean and dependable.`,
-    to: "/deck/custom-deck",
+    to: "/custom-deck",
   },
   {
     title: `Exterior Carpentry in ${city}`,

@@ -10,3 +10,73 @@
   from = "/api/contact"
   to = "/.netlify/functions/contact"
   status = 200
+
+[[redirects]]
+  from = "/deck/custom-deck"
+  to = "/custom-deck/"
+  status = 301
+
+[[redirects]]
+  from = "/deck/custom-deck/*"
+  to = "/custom-deck/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/deck/wood-deck"
+  to = "/wood-deck/"
+  status = 301
+
+[[redirects]]
+  from = "/deck/wood-deck/*"
+  to = "/wood-deck/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/deck/composite-deck"
+  to = "/composite-deck/"
+  status = 301
+
+[[redirects]]
+  from = "/deck/composite-deck/*"
+  to = "/composite-deck/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/deck/covered-deck"
+  to = "/covered-deck/"
+  status = 301
+
+[[redirects]]
+  from = "/deck/covered-deck/*"
+  to = "/covered-deck/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/deck/outdoor-deck"
+  to = "/outdoor-deck/"
+  status = 301
+
+[[redirects]]
+  from = "/deck/outdoor-deck/*"
+  to = "/outdoor-deck/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/fence/cedar-wood-fence"
+  to = "/cedar-wood-fence/"
+  status = 301
+
+[[redirects]]
+  from = "/fence/cedar-wood-fence/*"
+  to = "/cedar-wood-fence/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/fence/chain-link-fence"
+  to = "/chain-link-fence/"
+  status = 301
+
+[[redirects]]
+  from = "/fence/chain-link-fence/*"
+  to = "/chain-link-fence/:splat"
+  status = 301
