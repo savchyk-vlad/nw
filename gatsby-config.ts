@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: [`/404`, `/404.html`, `/dev-404-page`, `/offline-plugin-app-shell-fallback`],
+        excludes: [`/404`, `/404.html`, `/dev-404-page`, `/offline-plugin-app-shell-fallback`, `/thank-you/`],
         serialize: (page: { path: string }, { resolvePagePath }: { resolvePagePath: (page: { path: string }) => string }) => {
           const path = resolvePagePath(page);
 

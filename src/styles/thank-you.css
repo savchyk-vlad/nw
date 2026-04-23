@@ -1,0 +1,255 @@
+.thank-you-page {
+  align-items: center;
+  background: #e4e4de;
+  color: #1b1b1b;
+  display: flex;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  padding: 34px 40px;
+}
+
+.thank-you-shell {
+  align-items: center;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  margin: 0 auto;
+  max-width: 1180px;
+  width: 100%;
+}
+
+.thank-you-copy {
+  order: 1;
+}
+
+.thank-you-media {
+  order: 2;
+}
+
+.thank-you-media img {
+  border-radius: 28px;
+  box-shadow: 0 16px 48px rgba(27, 27, 27, 0.1);
+  display: block;
+  height: 430px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.thank-you-copy h1 {
+  color: #1b1b1b;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0 0 20px;
+  max-width: 480px;
+}
+
+.thank-you-text {
+  color: rgba(27, 27, 27, 0.62);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  max-width: 420px;
+}
+
+.thank-you-next {
+  margin-top: 30px;
+}
+
+.thank-you-next h2 {
+  background: rgba(89, 95, 57, 0.1);
+  border-radius: 999px;
+  color: #595f39;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  padding: 5px 12px;
+  text-transform: uppercase;
+}
+
+.thank-you-next ol {
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.thank-you-next li {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+}
+
+.thank-you-step-number {
+  align-items: center;
+  background: #1b1b1b;
+  border-radius: 8px;
+  color: #e4e4de;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 800;
+  height: 28px;
+  justify-content: center;
+  width: 28px;
+}
+
+.thank-you-next h3 {
+  color: #1b1b1b;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  margin: 0 0 2px;
+}
+
+.thank-you-next p {
+  color: rgba(27, 27, 27, 0.58);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 430px;
+}
+
+.thank-you-review {
+  background: #ffffff;
+  border: 1px solid rgba(27, 27, 27, 0.07);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(27, 27, 27, 0.07);
+  margin: 26px 0 0;
+  max-width: 420px;
+  padding: 22px 24px;
+}
+
+.thank-you-review__stars {
+  color: #d6a83a;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+}
+
+.thank-you-review p:not(.thank-you-review__stars) {
+  color: rgba(27, 27, 27, 0.76);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.thank-you-review cite {
+  color: rgba(27, 27, 27, 0.52);
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.thank-you-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  margin-top: 26px;
+}
+
+.thank-you-button {
+  background: #595f39;
+  border-radius: 14px;
+  color: #e4e4de;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: -0.01em;
+  min-width: 154px;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.thank-you-button:hover {
+  background: #1b1b1b;
+  transform: translateY(-1px);
+}
+
+.thank-you-projects {
+  color: rgba(27, 27, 27, 0.55);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.thank-you-projects:hover {
+  color: #1b1b1b;
+}
+
+.thank-you-trust {
+  color: rgba(27, 27, 27, 0.38);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin: 30px 0 0;
+}
+
+@media (max-width: 760px) {
+  .thank-you-page {
+    align-items: start;
+    padding: 24px 18px 40px;
+  }
+
+  .thank-you-shell {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .thank-you-media {
+    margin-bottom: 36px;
+    order: 1;
+  }
+
+  .thank-you-copy {
+    order: 2;
+  }
+
+  .thank-you-media img {
+    border-radius: 22px;
+    height: 300px;
+  }
+
+  .thank-you-copy h1 {
+    font-size: clamp(31px, 9vw, 38px);
+    max-width: 420px;
+  }
+
+  .thank-you-text,
+  .thank-you-next p,
+  .thank-you-review {
+    max-width: none;
+  }
+
+  .thank-you-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .thank-you-button {
+    width: 100%;
+  }
+
+  .thank-you-projects {
+    display: inline-flex;
+    justify-content: center;
+    padding: 8px 0;
+  }
+}

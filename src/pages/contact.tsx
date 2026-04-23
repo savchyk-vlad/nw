@@ -230,6 +230,7 @@ const ContactPage = () => {
         projectType,
       });
 
+      window.location.assign("/thank-you/");
       setStatus("success");
       setName("");
       setContactMethod("");

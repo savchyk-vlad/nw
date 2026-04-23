@@ -357,6 +357,7 @@ const DeckLocalPage = () => {
         projectType: String(formData.get("projectType") ?? ""),
       });
 
+      window.location.assign("/thank-you/");
       form.reset();
       setStatus("success");
     } catch {

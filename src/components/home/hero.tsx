@@ -67,6 +67,7 @@ const Hero = () => {
         source: "Home hero quick quote form",
       });
 
+      window.location.assign("/thank-you/");
       setSubmitStatus("success");
       resetForm();
     } catch {
