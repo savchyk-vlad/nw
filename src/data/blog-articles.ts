@@ -477,10 +477,30 @@ const baseBlogArticles: BaseBlogArticle[] = [
     category: "Fences",
     dateLabel: "Updated Apr 2026",
     excerpt:
-      "Review the pros and trade-offs of cedar, chain link, and other fence options for privacy, weather resistance, and upkeep.",
+      "Picking a fence material should not be complicated, but it often becomes that way when homeowners start researching online and get buried in general comparisons that do not account for the specific conditions Pacific Northwest fences deal with. The right material for a yard in Phoenix is not necessarily the right material for a yard in Everett.",
+    ctaParagraphs: [
+      "The best way to make this decision is to have someone who installs fences in Everett regularly look at your specific yard and give you a straight recommendation. We come to your property, walk the fence line, and talk through the material options in the context of your yard, your goals, and your maintenance preference - not a general comparison that may or may not apply to your situation.",
+      "We serve Everett, Marysville, Snohomish, Mill Creek, Mukilteo, Lynnwood, Edmonds, Bothell, Kenmore, Woodinville, Shoreline, Kirkland, Redmond, Bellevue, Kent, and surrounding Snohomish County communities.",
+      "Call (425) 683-2024 or [request an estimate](/contact) online. We'll get back to you within one business day.",
+    ],
+    ctaPrimaryLabel: "Request a Free Estimate",
+    ctaPrimaryTo: "/contact#contact-form",
+    ctaTitle: "Still Deciding? We'll Help You Figure It Out at the Estimate Visit.",
     image: servicesFenceRoad,
-    imageAlt: "Fence material options for Seattle homes",
-    readTime: "5 min read",
+    imageAlt:
+      "Cedar and chain link fence material comparison for Everett and Snohomish County homes - Northwood Renovation",
+    readTime: "9 min read",
+    tocItems: [
+      "What Actually Matters When Choosing a Fence in Everett",
+      "Cedar Wood Fencing — The Most Popular Choice in Snohomish County",
+      "Chain Link Fencing — Practical and Underrated for the Right Situations",
+      "Vinyl Fencing — What It Promises vs. What It Delivers in the Pacific Northwest",
+      "Composite Fencing — The Newer Option Worth Knowing About",
+      "How Your Yard Affects the Choice",
+      "Fence Height, Permits, and What Everett Requires",
+      "Which Fence Material Fits Your Situation",
+      "Frequently Asked Questions About Fence Materials in Everett",
+    ],
     relatedSlugs: [
       "fence-posts-failing-signs",
       "prepare-yard-fence-deck-project",
@@ -488,63 +508,241 @@ const baseBlogArticles: BaseBlogArticle[] = [
     ],
     sections: [
       {
-        heading: "Match material to yard priorities",
+        heading: "What Actually Matters When Choosing a Fence in Everett",
         paragraphs: [
-          "For Seattle homeowners, privacy level, maintenance preference, and slope conditions often matter more than trend-based material choices.",
+          "Most fence comparisons focus on appearance and price. Those matter, but in the Everett area there are a few other factors that should shape the decision before you get to aesthetics.",
+          "Moisture. Everett gets consistent rainfall from October through May. Any fence material you install needs to handle sustained wet conditions - not just occasional rain, but months of dampness, saturated soil, and limited drying time between storms.",
+          "Post stability. The soils in many Snohomish County neighborhoods - particularly lower-lying areas near the Snohomish River flood plain and neighborhoods close to the waterfront - hold moisture and can shift under fence posts if footings are not adequate. Post failure is the most common reason fences lean or fail early in this climate, and it is more about installation quality than material choice.",
+          "Shade and airflow. A lot of Everett backyards are heavily shaded by mature Douglas firs or cedars that never fully dry out between storms. Fences in those conditions develop mold and mildew faster than fences in open sunny yards, and that affects how frequently certain materials need maintenance.",
+          "Maintenance commitment. Be honest with yourself here. A fence that requires sealing every two years will look great if you do it and start deteriorating if you do not. Choose a material that fits your actual maintenance habits, not your aspirational ones.",
+          "With those factors in mind, here is how the main options compare.",
         ],
       },
       {
-        heading: "Common options and trade-offs",
+        heading: "Cedar Wood Fencing — The Most Popular Choice in Snohomish County",
         paragraphs: [
-          "Cedar provides a natural look and privacy. Chain link is practical for security and clear boundaries. Hybrid designs can balance privacy with airflow.",
+          "Cedar is the default fence material in the Pacific Northwest for good reason. Western red cedar has natural oils and tannins that resist moisture, rot, and insects without chemical treatment - which makes it one of the few wood species genuinely suited to outdoor exposure in a wet climate without special treatment at installation.",
+        ],
+      },
+      {
+        heading: "What Makes Cedar a Strong Choice Here",
+        level: 3,
+        paragraphs: [
+          "A [cedar fence](/cedar-wood-fence/) handles Everett's wet seasons well when the installation is done correctly. The key installation details are pressure-treated posts (not cedar posts - more on that below), proper concrete footings, board clearance from the soil, and corrosion-resistant fasteners. Get those right and a cedar fence in Everett can last fifteen to twenty-five years.",
+          "Cedar also looks right alongside most Northwest homes. Craftsman bungalows, farmhouse-style homes, traditional ranchers - cedar fence boards complement the exterior rather than fighting it. The warm reddish tone when new grays out naturally over time if left unsealed, which some homeowners prefer. Staining or sealing every two to three years maintains the original color.",
+        ],
+      },
+      {
+        heading: "Cedar Fence Styles Available",
+        level: 3,
+        paragraphs: [
+          "Cedar fencing comes in several distinct styles that affect privacy, appearance, and cost:",
         ],
         bullets: [
-          "Cedar: strong curb appeal and privacy",
-          "Chain link: practical, durable, and budget friendly",
-          "Custom layouts: better fit for sloped or irregular yards",
+          "Board-on-board: Boards overlap slightly on alternating sides of the rail. Provides full privacy from any angle and handles seasonal wood movement well. The most popular privacy fence style in Everett.",
+          "Dog-ear: Classic vertical boards installed flush to each other. A clean traditional look, slightly less privacy than board-on-board as small gaps appear over time.",
+          "Horizontal cedar: Boards run horizontally for a more contemporary look. Requires heavier posts and deeper footings than vertical fencing due to the lateral load from horizontal boards. Popular on modern and craftsman-style Everett homes.",
+          "Shadowbox: Alternating boards with visible spacing. Partial privacy with airflow - good for front yards or where a full privacy fence would feel too enclosed.",
         ],
       },
       {
-        heading: "Plan for moisture and footing stability",
+        heading: "What Cedar Requires From You",
+        level: 3,
         paragraphs: [
-          "Post setting, drainage, and panel spacing should be planned for wet seasons to reduce movement and early wear.",
+          "Cedar is not maintenance-free. In the Everett climate, a cedar fence needs cleaning once a year and sealing or staining every two to three years to hold color and moisture protection. Shaded fences in damp backyards may develop surface mildew between cleanings - this washes off easily but needs attention.",
+          "The other maintenance point most homeowners miss: posts should be pressure-treated, not cedar. Cedar is excellent for fence boards above grade but is not rated for ground contact. Cedar posts buried in Snohomish County soil will rot at the soil line within five to eight years regardless of how well the rest of the fence is maintained. Pressure-treated posts in concrete footings are the correct approach.",
+          "Cedar is a strong fit if you want natural warmth and a classic residential look, if you are willing to clean and seal the fence on a consistent schedule, if the fence is in a location with reasonable sun and airflow, and if you want the ability to refinish or restain the fence in the future.",
         ],
       },
       {
-        heading: "How to choose the best fence setup for your lot",
+        heading: "Chain Link Fencing — Practical and Underrated for the Right Situations",
         paragraphs: [
-          "Material is only part of fence performance. Layout decisions - gate location, panel height transitions, and slope handling - strongly influence durability and everyday usability.",
-          "For Seattle-area properties, consider privacy needs and runoff behavior together. A fence that looks good on day one should also remain stable through repeated wet seasons.",
+          "[Chain link](/chain-link-fence/) has a reputation problem. Most homeowners associate it with construction sites and commercial properties and dismiss it for residential use. But in the right situation, chain link is genuinely the better option - not a compromise, just the most practical choice for what the fence needs to do.",
+        ],
+      },
+      {
+        heading: "Where Chain Link Makes Sense in Snohomish County",
+        level: 3,
+        paragraphs: [
+          "Chain link is the right call when visibility matters more than privacy, when the fence needs to contain a dog securely, when the property has significant grade changes, or when long-term maintenance is a priority.",
+          "For a dog run, chain link is hard to beat. It's visible so you can see your dog through it, it doesn't rot or get chewed through, and a properly installed chain link fence with the right height and mesh size is very difficult for most dogs to escape. For a sloped backyard, chain link fabric can be racked to follow the grade smoothly in a way that stepped wood panels cannot match.",
+        ],
+      },
+      {
+        heading: "Chain Link Durability in Pacific Northwest Weather",
+        level: 3,
+        paragraphs: [
+          "Hot-dip galvanized chain link holds up to Pacific Northwest moisture remarkably well. It doesn't rot, it doesn't need sealing or staining, and it doesn't develop mold the way wood can. A properly installed galvanized chain link fence with concrete-set posts typically lasts twenty-five to forty years in this climate with minimal maintenance.",
+          "Vinyl-coated chain link - available in black, green, and brown - has a cleaner residential appearance than silver galvanized and blends into the background better. Black vinyl-coated chain link in particular is less visually obtrusive and worth considering when appearance matters.",
+        ],
+      },
+      {
+        heading: "Chain Link Installation Details That Matter",
+        level: 3,
+        paragraphs: [
+          "The most common failure on residential chain link is not the mesh - it's the posts. Terminal posts at corners, ends, and gate openings carry more load than line posts along the fence run and need to be heavier gauge and set deeper. A fence where all posts are the same specification will sag and pull at the corners and gate openings over time. This is the most common reason chain link fences look sloppy after a few years on residential properties.",
+          "Chain link is a strong fit if you need to contain a dog or define a pet area, if the fence is for a side yard or utility area where privacy is not the priority, if the yard has a significant slope that chain link can follow, if you want a low-maintenance fence that will last decades, and if you prefer a lower upfront cost than cedar or vinyl.",
+        ],
+      },
+      {
+        heading: "Vinyl Fencing — What It Promises vs. What It Delivers in the Pacific Northwest",
+        paragraphs: [
+          "Vinyl fencing is marketed heavily on the zero-maintenance angle, and that is partially true. Vinyl doesn't rot, doesn't need painting, and doesn't support mold growth on its surface the way wood does.",
+          "The issues with vinyl in the Pacific Northwest are worth understanding before you commit:",
+        ],
+      },
+      {
+        heading: "Color Fading and Brittleness",
+        level: 3,
+        paragraphs: [
+          "White vinyl fencing in the Pacific Northwest grays and yellows over time, particularly on sides with sun exposure. The fading is uneven and does not look like natural weathering the way cedar gray does - it just looks worn. Cleaning helps, but it does not reverse UV degradation.",
+          "Vinyl also becomes brittle in cold weather. Everett does not get extreme cold consistently, but hard frost does occur, and a brittle vinyl panel hit by a falling branch or strong impact in winter can crack rather than flex. Cedar absorbs impacts differently.",
+        ],
+      },
+      {
+        heading: "Post Failure in Wet Soil",
+        level: 3,
+        paragraphs: [
+          "Vinyl fence posts are typically hollow or foam-filled and are not designed for the load-bearing requirements of a long fence run in soft Pacific Northwest soil. Many vinyl fence systems rely on aluminum post inserts or concrete for structural support - when that is done correctly, the post holds. When it is not, vinyl fences lean and rack noticeably faster than cedar or chain link installations built with properly set posts.",
+        ],
+      },
+      {
+        heading: "When Vinyl Makes Sense",
+        level: 3,
+        paragraphs: [
+          "Vinyl is a reasonable choice for a fence section with minimal post loading - a decorative front yard fence, a short garden border, or an ornamental fence that primarily defines space rather than containing it. For a full backyard privacy fence in Everett, cedar typically performs better over a long term and looks more natural alongside most Northwest home styles.",
+        ],
+      },
+      {
+        heading: "Composite Fencing — The Newer Option Worth Knowing About",
+        paragraphs: [
+          "Composite fence boards - made from a wood fiber and polymer mixture, similar to composite decking - have become more widely available in recent years. They offer a wood-like appearance with better moisture resistance than cedar and less UV degradation than vinyl.",
+        ],
+      },
+      {
+        heading: "How Composite Fence Boards Perform",
+        level: 3,
+        paragraphs: [
+          "Composite fence boards do not rot, do not require sealing, and hold their color better than cedar over time in a wet climate. For a homeowner who wants the appearance of a wood fence without the sealing schedule, composite boards are worth considering.",
+          "The limitations: composite fence boards are heavier than cedar, which affects post loading and gate hardware requirements. They cost more than cedar boards upfront, though the long-term maintenance savings partially offset the difference. The product selection for composite fencing is narrower than for composite decking - not all composite decking manufacturers make fence board equivalents, and the styles available are more limited than cedar.",
+        ],
+      },
+      {
+        heading: "Composite Fence Availability in Everett",
+        level: 3,
+        paragraphs: [
+          "Composite fencing is less common than composite decking in the Everett area, and local supply varies. We install composite fence boards when a homeowner specifically wants the low-maintenance benefit of composite for a fence, but we discuss material availability and lead time during the estimate visit.",
+        ],
+      },
+      {
+        heading: "How Your Yard Affects the Choice",
+        paragraphs: [
+          "Slope, soil, shade, and exposure all change how a fence performs in real life. That is why the same material can look like a smart choice on one property and the wrong one on the next.",
+        ],
+      },
+      {
+        heading: "Sloped Yards",
+        level: 3,
+        paragraphs: [
+          "Slope is one of the most practical constraints in Everett and Snohomish County fence planning. Most of the communities in this area - Kenmore, Bothell, hillside Everett neighborhoods, parts of Marysville - have yards with meaningful grade changes that affect how a fence can be built.",
+          "Cedar and vinyl fences on slopes are built in stepped panels - the fence drops in horizontal increments that follow the grade. This works well visually but leaves triangular gaps at the bottom of each step that may not work for pet containment.",
+          "Chain link fabric can be racked diagonally to follow the grade continuously, keeping the bottom of the fence close to the ground throughout the slope. For pet enclosures on sloped yards, this is a genuine practical advantage.",
+        ],
+      },
+      {
+        heading: "Shaded and Damp Yards",
+        level: 3,
+        paragraphs: [
+          "Heavily shaded Everett backyards - particularly those under mature Douglas firs or on north-facing exposures - stay damp for longer stretches and develop mold more readily.",
         ],
         bullets: [
-          "Select gate locations based on daily traffic patterns",
-          "Plan panel transitions for slope and grade changes",
-          "Use drainage-aware post strategy in moisture-prone zones",
-          "Balance curb appeal with realistic maintenance expectations",
+          "Cedar needs more frequent cleaning between seal cycles - annually rather than every two to three years",
+          "Chain link develops surface algae but it rinses off easily and does not damage the fence structurally",
+          "Vinyl develops mold on the surface that requires cleaning but does not penetrate the material",
+          "Composite handles shaded damp conditions better than cedar with less maintenance",
         ],
       },
       {
-        heading: "Typical budget ranges by fence type",
+        heading: "Soft Soil and Waterfront Properties",
+        level: 3,
         paragraphs: [
-          "Fence budgets differ by material, linear footage, gate count, and slope complexity. A practical estimate should separate base installation from optional upgrades.",
-          "Higher-cost options may provide better durability or lower maintenance depending on your site conditions and priorities.",
+          "Properties in lower-lying Everett neighborhoods near the Snohomish River corridor or close to the waterfront have higher soil moisture year-round. Posts in these areas need deeper concrete footings and more attention to the post-to-concrete seal to prevent water intrusion at the footing top.",
+          "On waterfront or wind-exposed properties in Mukilteo or north Everett, wind load on solid privacy fences is a real consideration. A board-on-board cedar fence with no gaps acts like a solid wall in high winds. A shadowbox or spaced-board design reduces wind load. Chain link has almost no wind resistance and performs well on exposed sites.",
+        ],
+      },
+      {
+        heading: "Fence Height, Permits, and What Everett Requires",
+        paragraphs: [
+          "This section matters before you decide on a fence height, not after.",
+          "In most Everett residential zones, a fence up to six feet high in the rear yard can be built without a building permit. Front yard fences and fences within certain setbacks from the street face lower height limits - typically three to four feet. Fences above the threshold require a [permit](/blog/fence-deck-permits-everett/) through the City of Everett's Development Services department.",
+          "The rules differ in other jurisdictions.",
         ],
         bullets: [
-          "Simple boundary runs: lower complexity and cost",
-          "Multiple gates and transitions: higher labor impact",
-          "Slope-heavy layouts: additional planning and installation effort",
+          "Marysville: Similar rear yard thresholds, but confirm for your specific zone before planning a six-foot front yard fence",
+          "Mukilteo: Has its own fence height ordinance separate from Snohomish County",
+          "Unincorporated Snohomish County: Different process than city jurisdictions - permit requirements vary by zone and fence type",
         ],
       },
       {
-        heading: "Seattle neighborhood scenario: privacy goals on compact lots",
+        heading: "Which Fence Material Fits Your Situation",
         paragraphs: [
-          "In tighter neighborhoods, homeowners often need privacy without making the yard feel closed-in. Mixed-height or strategic panel sections can improve both comfort and appearance.",
-          "Early layout planning around sightlines and access paths helps avoid expensive adjustments later.",
+          "Here is a straightforward summary based on what we see across Everett and Snohomish County.",
+        ],
+      },
+      {
+        heading: "Choose Cedar If:",
+        level: 3,
+        paragraphs: [],
+        bullets: [
+          "You want a natural, warm appearance that fits Northwest home styles",
+          "The fence is for privacy along a rear or side yard",
+          "You are comfortable with a clean and seal schedule every two to three years",
+          "The yard has reasonable sun and airflow",
+          "You want the option to refinish or change the stain color later",
+        ],
+      },
+      {
+        heading: "Choose Chain Link If:",
+        level: 3,
+        paragraphs: [],
+        bullets: [
+          "You need to contain a dog or define a pet area securely",
+          "The fence is for a side yard, utility area, or property boundary where visibility is not a problem",
+          "The yard slopes significantly and you want the fence to follow the grade",
+          "Long-term durability with minimal maintenance is the priority",
+          "You want a lower upfront cost than cedar",
+        ],
+      },
+      {
+        heading: "Consider Vinyl If:",
+        level: 3,
+        paragraphs: [],
+        bullets: [
+          "The fence is decorative or low-load - a front yard border or garden divider rather than a full backyard enclosure",
+          "You want zero-maintenance and understand the trade-offs on color longevity",
+          "The fence run is short and post loading is minimal",
+        ],
+      },
+      {
+        heading: "Consider Composite If:",
+        level: 3,
+        paragraphs: [],
+        bullets: [
+          "You want the look of a wood fence with significantly less maintenance than cedar",
+          "The fence is in a heavily shaded or damp area where cedar would need more frequent attention",
+          "Material availability and lead time work for your project timeline",
+        ],
+      },
+      {
+        heading: "The One Thing We Tell Every Homeowner",
+        level: 3,
+        paragraphs: [
+          "Choose the material that fits how you actually live and maintain your property - not how you plan to. A cedar fence you do not seal for five years will deteriorate faster in Everett's climate than a chain link fence that needs almost nothing. The best fence is the one that still looks right and works correctly in year ten, not just year one.",
         ],
       },
     ],
-    slug: "best-fence-materials-seattle",
-    title: "Best Fence Materials for Seattle Homes",
+    slug: "best-fence-materials-everett",
+    title: "Best Fence Materials for Everett and Snohomish County Homes",
   },
   {
     category: "Maintenance",
@@ -623,7 +821,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
     imageAlt: "Backyard prepared for fence and deck installation",
     readTime: "4 min read",
     relatedSlugs: [
-      "best-fence-materials-seattle",
+      "best-fence-materials-everett",
       "questions-before-hiring-deck-builder",
       "seattle-permits-outdoor-projects",
     ],
@@ -675,7 +873,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
       },
     ],
     slug: "prepare-yard-fence-deck-project",
-    title: "How to Prepare Your Yard Before a Fence or Deck Project",
+    title: "How to Prepare Your Yard Before a Fence or Deck Installation in Everett",
   },
   {
     category: "Seattle Homes",
@@ -688,7 +886,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
     relatedSlugs: [
       "prepare-yard-fence-deck-project",
       "questions-before-hiring-deck-builder",
-      "best-fence-materials-seattle",
+      "best-fence-materials-everett",
     ],
     sections: [
       {
@@ -738,7 +936,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
       },
     ],
     slug: "seattle-permits-outdoor-projects",
-    title: "Permits and Planning for Outdoor Projects in Seattle",
+    title: "Fence and Deck Permits in Everett and Snohomish County: What Homeowners Need to Know",
   },
   {
     category: "Fences",
@@ -749,7 +947,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
     imageAlt: "Fence posts showing early movement and repair needs",
     readTime: "4 min read",
     relatedSlugs: [
-      "best-fence-materials-seattle",
+      "best-fence-materials-everett",
       "replace-your-deck-or-fence",
       "rain-moisture-outdoor-wood",
     ],
@@ -819,7 +1017,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
     relatedSlugs: [
       "rain-moisture-outdoor-wood",
       "wood-deck-lifespan-pnw",
-      "best-fence-materials-seattle",
+      "best-fence-materials-everett",
     ],
     sections: [
       {
@@ -991,17 +1189,21 @@ const articleSeoBySlug: Record<string, BlogArticleSeo> = {
       "wood deck replacement timeline",
     ],
   },
-  "best-fence-materials-seattle": {
-    dateModifiedIso: "2026-04-20",
+  "best-fence-materials-everett": {
+    dateModifiedIso: "2026-04-24",
     datePublishedIso: "2026-04-20",
-    primaryKeyword: "best fence materials for seattle homes",
+    metaDescription:
+      "Cedar, chain link, or something else? A practical guide to fence materials for Everett and Snohomish County homeowners - privacy, weather resistance, cost, and long-term upkeep compared honestly. From Northwood Renovation, Everett fence builders.",
+    seoTitle:
+      "Best Fence Materials for Everett & Snohomish County Homes | Northwood Renovation",
+    primaryKeyword: "best fence materials everett",
     searchIntent: "commercial investigation",
     secondaryKeywords: [
-      "cedar fence seattle",
+      "cedar fence everett",
+      "chain link fence everett",
       "privacy fence material options",
-      "fence installation seattle weather",
       "fence durability rainy climate",
-      "fence contractor planning guide",
+      "everett fence builder",
     ],
   },
   "rain-moisture-outdoor-wood": {
@@ -1251,57 +1453,62 @@ const articleGuideBySlug: Record<string, BlogArticleGuide> = {
       "You need help forecasting replacement timing and budget planning.",
     ],
   },
-  "best-fence-materials-seattle": {
+  "best-fence-materials-everett": {
     checklist: [
-      "Define your privacy goals before comparing material options.",
+      "Define your privacy goals before comparing materials.",
+      "Be honest about how much maintenance you will actually do.",
       "Map slope changes, gates, and access routes on your property.",
-      "Compare maintenance effort across cedar, chain link, and hybrid designs.",
-      "Review how each material handles Seattle rain and shade conditions.",
-      "Ask for material-specific repair strategy and expected service life.",
-      "Select layout and gate plan before final estimate approval.",
+      "Look at how shade, soft soil, and drainage affect the fence line.",
+      "Ask how each material handles dogs, visibility, and wind load.",
+      "Compare total cost, not just the install number.",
     ],
     faq: [
       {
-        question: "Is cedar still a good fence option for Seattle?",
+        question:
+          "What is the most durable fence material for Pacific Northwest weather?",
         answer:
-          "Yes, cedar remains a strong local option when installation details and maintenance are handled consistently.",
+          "Chain link is the most durable in terms of longevity with minimal maintenance - a properly installed galvanized chain link fence can last thirty to forty years in Everett's wet climate. Cedar with proper installation and consistent maintenance is close behind at fifteen to twenty-five years. Vinyl's durability depends heavily on installation quality and is more variable in this climate. The honest answer is that installation quality affects durability more than material choice - a poorly installed cedar fence fails faster than a well-installed chain link fence.",
       },
       {
-        question: "How do I choose between privacy and airflow?",
+        question: "Is cedar still worth it given the maintenance required?",
         answer:
-          "Choose based on lot exposure, neighborhood visibility, and yard use. Many homeowners use mixed approaches across different fence lines.",
+          "Yes, for the right homeowner. Cedar looks and feels like a natural part of a Pacific Northwest yard in a way that no other residential fence material matches. The maintenance is real but not excessive - a full clean and seal once every two to three years is the practical commitment. If that schedule fits your life, cedar is absolutely worth it. If it does not, composite or chain link are honest alternatives.",
       },
       {
-        question: "Do sloped yards limit fence material options?",
+        question: "Which fence material is best for containing dogs in Everett?",
         answer:
-          "Not necessarily. Most materials can work with the right layout and transition planning for grade changes.",
+          "Chain link is the most reliable for dog containment. The mesh does not rot, does not get chewed through, and can be sized and installed to prevent digging under or climbing over. Cedar privacy fences can contain most dogs but have vulnerabilities at the bottom of boards over time as wood moves seasonally. For a dedicated dog enclosure, chain link with the right height and mesh size is the stronger choice.",
       },
       {
-        question: "What usually causes early fence movement?",
+        question: "How much does a fence cost in Everett?",
         answer:
-          "Post instability, poor drainage, and unaddressed soil conditions are common contributors to premature movement.",
+          "It depends on material, linear footage, fence height, gate count, and site conditions. Cedar privacy fencing runs higher than chain link for the same fence run in most cases, though the gap is smaller than most homeowners expect. Slope, difficult access, or complex gate layouts add cost regardless of material. The most accurate number comes from an on-site visit - we come to your property, measure the run, assess the conditions, and give you a real written estimate. It's free and there is no obligation.",
       },
       {
-        question: "Can I phase fence replacement by section?",
+        question: "What causes fences to fail early in Snohomish County?",
         answer:
-          "Yes. Section-by-section planning can work well if structural priorities and gate alignment are handled carefully.",
+          "Post failure is the most common cause. Specifically: posts without adequate concrete footings, posts set too shallow for the soil conditions, cedar posts used in ground contact instead of pressure-treated, or terminal posts at corners and gates that are not heavier spec than line posts. The fence material itself rarely fails first - it's almost always the foundation underneath it.",
+      },
+      {
+        question: "Does Everett require permits for fence installation?",
+        answer:
+          "For most rear yard fences up to six feet in Everett residential zones, no permit is required. Front yard fences, taller installations, and properties with specific zoning constraints may require one. Rules differ between City of Everett limits, Marysville, Mukilteo, and unincorporated Snohomish County. We confirm requirements for your specific address during the estimate visit and handle the permit application as part of the project if one is needed.",
       },
     ],
     introParagraphs: [
-      "Fence material choice affects privacy, maintenance, and long-term durability, especially in Seattle's wet climate.",
-      "Use this guide to compare practical options and avoid design decisions that look good initially but underperform over time.",
+      "This guide covers the most common fence materials installed in Everett and Snohomish County - cedar, chain link, vinyl, and composite - with an honest take on how each performs in this climate, what it costs to install and maintain, and which situations each one suits best. No filler, no sponsored rankings.",
     ],
     localNotes: [
-      "Seattle neighborhoods often combine tight property lines and varied lot shapes, which makes layout planning just as important as material selection.",
-      "Wet-season post stability should be considered early, particularly in yards with uneven drainage.",
-      "Shaded fence runs usually need more active maintenance scheduling than sun-exposed sides.",
+      "Everett's long wet season makes post depth, footing quality, and drainage more important than homeowners often expect.",
+      "Shaded yards under mature evergreens need more cleaning attention with cedar than open sunny lots.",
+      "Slope, wind exposure, and soil moisture can change which fence material makes the most sense on the same street.",
     ],
     proSectionBullets: [
-      "You are unsure how to balance privacy, budget, and long-term upkeep.",
-      "Property slope or boundary complexity affects layout decisions.",
-      "Gate placements require traffic-flow and clearance planning.",
-      "You need phased replacement without compromising overall alignment.",
-      "Current fence movement suggests structural footing issues.",
+      "You need a privacy fence on a sloped or irregular lot.",
+      "You are balancing privacy, dog containment, curb appeal, and maintenance at the same time.",
+      "You want help comparing cedar, chain link, vinyl, and composite honestly.",
+      "You are not sure what Everett or Snohomish County permit rules apply to your address.",
+      "You want a straight recommendation based on your yard rather than a generic material ranking.",
     ],
   },
   "rain-moisture-outdoor-wood": {

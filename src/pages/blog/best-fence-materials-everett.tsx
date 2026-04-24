@@ -6,16 +6,16 @@ import {
 } from "../../components/blog-article-page";
 import { getBlogArticleBySlug } from "../../data/blog-articles";
 
-const article = getBlogArticleBySlug("best-fence-materials-seattle");
+const article = getBlogArticleBySlug("best-fence-materials-everett");
 
 if (!article) {
-  throw new Error("Missing blog article: best-fence-materials-seattle");
+  throw new Error("Missing blog article: best-fence-materials-everett");
 }
 
-const BestFenceMaterialsSeattlePage = () => (
+const BestFenceMaterialsEverettPage = () => (
   <BlogArticlePage article={article} />
 );
 
-export default BestFenceMaterialsSeattlePage;
+export default BestFenceMaterialsEverettPage;
 
 export const Head: HeadFC = () => BlogArticleHead(article);

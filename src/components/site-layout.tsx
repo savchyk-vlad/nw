@@ -126,7 +126,7 @@ const navItems: NavItem[] = [
         description: "Learn which fence materials fit Northwest homes.",
         group: "Helpful Resources",
         label: "Fence Material Guide",
-        to: "/blog/best-fence-materials-seattle",
+        to: "/blog/best-fence-materials-everett",
       },
     ],
   },

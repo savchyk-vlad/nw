@@ -180,3 +180,13 @@
   from = "/blog/cedar-vs-composite-seattle"
   to = "/blog/cedar-vs-composite-decking-everett/"
   status = 301
+
+[[redirects]]
+  from = "/blog/best-fence-materials-seattle/"
+  to = "/blog/best-fence-materials-everett/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-fence-materials-seattle"
+  to = "/blog/best-fence-materials-everett/"
+  status = 301

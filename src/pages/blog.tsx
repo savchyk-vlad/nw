@@ -13,7 +13,7 @@ import {
 } from "../data/blog-articles";
 
 const cardCategoryBySlug: Record<string, string> = {
-  "best-fence-materials-seattle": "Fence Materials",
+  "best-fence-materials-everett": "Fence Materials",
   "cedar-vs-composite-decking-everett": "Deck Materials",
   "fence-posts-failing-signs": "Fence Repairs",
   "prepare-yard-fence-deck-project": "Fence Planning",
