@@ -118,7 +118,7 @@ const Hero = () => {
           <div className="home-quote-hero__copy">
             <div
               className="home-quote-hero__rating"
-              aria-label="Google rating 4.9 stars, number one local exterior experts">
+              aria-label="4.9 Google rating, Everett's number one deck and fence builder">
               <img
                 src={googleReviewLogo}
                 alt=""
@@ -132,16 +132,15 @@ const Hero = () => {
                   </svg>
                 ))}
               </span>
-              <strong>4.9 | #1 Local Exterior Experts</strong>
+              <strong>4.9 ★ Google Rating · Everett&apos;s #1 Deck &amp; Fence Builder</strong>
             </div>
 
             <h1>
-              Everett&apos;s Trusted{" "}
-              <span className="hero-accent">Deck &amp; Fence Builders</span>
+              Deck and Fence Builder in Everett, WA
             </h1>
             <p>
               {renderHighlightedText(
-                "Serving Snohomish County, Greater Seattle, and the Puget Sound area. Locally based in Everett — honest estimates, clear communication, craftsmanship built for Northwest homes.",
+                "Locally based in Everett — we build custom decks, cedar privacy fences, composite decking, and covered decks for Snohomish County and Greater Seattle homeowners. Free on-site estimates. Honest pricing. Built for Northwest weather.",
               )}
             </p>
           </div>
@@ -164,10 +163,10 @@ const Hero = () => {
               />
             </div>
             <div className="home-quote-form__header">
-              <p>{quoteStep === 1 ? "Step 1 of 2" : "Step 2 of 2"}</p>
+              <p>{quoteStep === 1 ? "Get Your Free Estimate" : "Enter your details"}</p>
               <h2>
                 {quoteStep === 1
-                  ? "Start with your ZIP"
+                  ? "Enter your ZIP code to get started"
                   : "Enter your details"}
               </h2>
             </div>
@@ -201,7 +200,7 @@ const Hero = () => {
                   id="zip-code-error">
                   Please enter a valid 5-digit ZIP code.
                 </p>
-                <button type="submit">Get a quick quote →</button>
+                <button type="submit">Check My Area →</button>
               </>
             ) : (
               <>

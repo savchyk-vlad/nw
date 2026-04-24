@@ -48,6 +48,29 @@ const serviceAreas = [
   { label: "Redmond, WA", to: "/cities/redmond-wa/" },
 ];
 
+const aboutTestimonials = [
+  {
+    label: "Cedar Fence Installation — Everett, WA",
+    name: "Bryce F.",
+    text: "Northwood Renovation did an amazing job on our new fence. The team was professional, communicated clearly, and completed the work with great attention to detail.",
+  },
+  {
+    label: "Wood Deck Build — Mill Creek, WA",
+    name: "Amanda R.",
+    text: "We hired Northwood Renovation for a deck project and the result turned out better than we expected. The crew was respectful, organized, and easy to work with from start to finish.",
+  },
+  {
+    label: "Cedar Fence Replacement — Snohomish, WA",
+    name: "Michael T.",
+    text: "Great experience from the estimate to the final walkthrough. They explained our options clearly and built a fence that looks solid, clean, and professionally finished.",
+  },
+  {
+    label: "Composite Deck Installation — Everett, WA",
+    name: "Sarah L.",
+    text: "Our backyard feels completely different after the new deck. Northwood Renovation delivered quality work, stayed communicative, and made the whole process simple.",
+  },
+];
+
 const CheckIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <path d="M5 12.5 9.3 17 19 7" />
@@ -351,6 +374,35 @@ const AboutPage = () => (
             <Link key={area.to} to={area.to}>
               <Highlight>{area.label}</Highlight>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="about-reviews-section">
+        <div className="about-section-head">
+          <p className="about-label">Customer Reviews</p>
+          <h2>What Homeowners Say About Northwood Renovation</h2>
+        </div>
+        <div className="about-rating-card">
+          <div>
+            <span className="about-rating-card__stars" aria-hidden="true">
+              ★★★★★
+            </span>
+            <strong>4.9 Google Rating</strong>
+          </div>
+          <p>
+            Real reviews from Everett and Snohomish County homeowners who hired
+            Northwood Renovation for deck builds, fence installation, and
+            outdoor renovation work.
+          </p>
+        </div>
+        <div className="about-review-grid">
+          {aboutTestimonials.map((testimonial) => (
+            <article key={testimonial.name}>
+              <p>{testimonial.text}</p>
+              <strong>{testimonial.label}</strong>
+              <span>{testimonial.name}</span>
+            </article>
           ))}
         </div>
       </section>

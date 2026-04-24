@@ -103,11 +103,11 @@ const BuilderGallery = React.memo(
       aria-labelledby="builder-gallery-title">
       <div className="builder-gallery__intro">
         <h2 id="builder-gallery-title">
-          {renderHighlightedText("Fence and Deck Builder Gallery")}
+          {renderHighlightedText("Recent Deck and Fence Projects in Everett, WA and Snohomish County")}
         </h2>
         <p>
           {renderHighlightedText(
-            "Explore our fence and deck projects — expertly built for Everett-area and Northwest homes. From privacy fences to custom decks, each project is built to endure weather, time, and everyday use.",
+            "Browse cedar fences, composite decks, wood decks, covered decks, and custom outdoor structures installed by our Everett-based crew across Snohomish County and Greater Seattle. Every project is built to handle Pacific Northwest weather.",
           )}
         </p>
       </div>

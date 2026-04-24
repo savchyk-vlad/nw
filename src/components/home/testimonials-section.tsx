@@ -8,28 +8,28 @@ const testimonials = [
     initials: "BF",
     name: "Bryce F",
     source: "Google",
-    projectType: "Fence Installation",
+    projectType: "Cedar Fence Installation — Everett, WA",
     text: "Northwood Renovation did an amazing job on our new fence. The team was professional, communicated clearly, and completed the work with great attention to detail.",
   },
   {
     initials: "AR",
     name: "Amanda R",
     source: "Google",
-    projectType: "Deck Builder",
+    projectType: "Wood Deck Build — Mill Creek, WA",
     text: "We hired Northwood Renovation for a deck project and the result turned out better than we expected. The crew was respectful, organized, and easy to work with from start to finish.",
   },
   {
     initials: "MT",
     name: "Michael T",
     source: "Google",
-    projectType: "Cedar Fence",
+    projectType: "Cedar Fence Replacement — Snohomish, WA",
     text: "Great experience from the estimate to the final walkthrough. They explained our options clearly and built a fence that looks solid, clean, and professionally finished.",
   },
   {
     initials: "SL",
     name: "Sarah L",
     source: "Google",
-    projectType: "Composite Deck",
+    projectType: "Composite Deck Installation — Everett, WA",
     text: "Our backyard feels completely different after the new deck. Northwood Renovation delivered quality work, stayed communicative, and made the whole process simple.",
   },
 ];
@@ -37,6 +37,16 @@ const testimonials = [
 const TestimonialsSection = () => {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = React.useState(0);
   const activeTestimonial = testimonials[activeTestimonialIndex];
+
+  React.useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setActiveTestimonialIndex(
+        (currentIndex) => (currentIndex + 1) % testimonials.length,
+      );
+    }, 5000);
+
+    return () => window.clearTimeout(timer);
+  }, [activeTestimonialIndex]);
 
   const handleTestimonialPrevious = () => {
     setActiveTestimonialIndex(
@@ -88,11 +98,11 @@ const TestimonialsSection = () => {
           <div>
             <p className="testimonials-section__eyebrow">Customer Reviews</p>
             <h2 id="testimonials-title">
-              Hear From Our Satisfied Customers
+              What Everett Homeowners Say About Northwood Renovation
             </h2>
             <span className="testimonials-section__subtitle">
-              See what local homeowners say about working with{" "}
-              <span className="brand-highlight">Northwood Renovation</span>.
+              Real reviews from Snohomish County homeowners - deck builds, fence installations,
+              and outdoor renovation projects.
             </span>
           </div>
 
@@ -170,8 +180,8 @@ const TestimonialsSection = () => {
           </span>
           <blockquote>{renderBrandText(activeTestimonial.text)}</blockquote>
           <div className="testimonial-card__cta">
-            <span>Ready for a similar result?</span>
-            <Link to="/contact#contact-form">Request a Free Estimate</Link>
+            <span>Get the same quality for your deck or fence project.</span>
+            <Link to="/contact#contact-form">Request a Free On-Site Estimate →</Link>
           </div>
         </article>
       </div>

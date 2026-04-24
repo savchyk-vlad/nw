@@ -13,7 +13,7 @@ const services = [
     name: "Cedar Wood Fences",
     href: "/cedar-wood-fence/",
     description:
-      "Cedar wood fencing is a strong choice for homeowners who want natural warmth, privacy, and clean curb appeal that fits Everett-area and Northwest homes.",
+      "Cedar wood fence installation for Everett and Snohomish County homes. Natural warmth, lasting privacy, and clean curb appeal - built to handle Pacific Northwest moisture and weather.",
     image: servicesFenceRoad,
     alt: "Cedar wood fence installation along a residential sidewalk",
   },
@@ -22,7 +22,7 @@ const services = [
     name: "Chain Link Fence",
     href: "/chain-link-fence/",
     description:
-      "Chain link fencing is practical, durable, and cost-effective for securing yards, side spaces, pet areas, and property lines.",
+      "Chain link fence installation in Everett, WA. Durable, low-maintenance, and cost-effective for securing yards, pet areas, side spaces, and residential property lines.",
     image: servicesChainLinkFence,
     alt: "Chain link fence service for secure residential boundaries",
   },
@@ -31,7 +31,7 @@ const services = [
     name: "Wood Deck",
     href: "/wood-deck/",
     description:
-      "Wood decks bring warmth and natural character to an outdoor space while creating a comfortable extension of the home.",
+      "Cedar and pressure-treated wood deck installation in Everett, WA. Natural warmth, strong construction, and the classic outdoor living feel that complements Northwest homes.",
     image: servicesWoodDeck,
     alt: "Wood deck service for natural outdoor living spaces",
   },
@@ -40,7 +40,7 @@ const services = [
     name: "Composite Deck",
     href: "/composite-deck/",
     description:
-      "Composite decks offer a clean, low-maintenance outdoor living space built to handle moisture, fading, and daily use.",
+      "Composite deck installation in Everett and Snohomish County. Low-maintenance decking built to resist moisture, fading, and the demands of Pacific Northwest weather - with the clean look of wood without the upkeep.",
     image: servicesCompositeDeck,
     alt: "Composite deck service with durable low-maintenance materials",
   },
@@ -49,7 +49,7 @@ const services = [
     name: "Custom Deck",
     href: "/custom-deck/",
     description:
-      "Custom decks are designed around the home, yard, and lifestyle so the final layout feels intentional and built for the space.",
+      "Custom deck design and build in Everett, WA. Every deck is planned around your yard layout, home style, and how you want to use the space - no cookie-cutter designs.",
     image: servicesCustomDeck,
     alt: "Custom deck service designed around the home and yard",
   },
@@ -58,7 +58,7 @@ const services = [
     name: "Outdoor Deck",
     href: "/outdoor-deck/",
     description:
-      "Outdoor decks create a functional place for relaxing, hosting guests, outdoor dining, and making the yard more usable every day.",
+      "Outdoor deck installation for Everett-area homeowners. Open-air decks built for relaxing, entertaining, and outdoor dining - designed to extend your living space into the backyard.",
     image: servicesOutdoorDeck,
     alt: "Outdoor deck service for relaxing and entertaining",
   },
@@ -71,7 +71,7 @@ const ServicesSection = () => (
     aria-labelledby="services-section-title">
     <div className="services-section__header">
       <div>
-        <h2 id="services-section-title">Our Comprehensive Services</h2>
+        <h2 id="services-section-title">Deck and Fence Services in Everett, WA</h2>
       </div>
       <Link to="/contact#contact-form" className="services-section__button">
         Request a Free Estimate

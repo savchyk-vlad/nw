@@ -5,13 +5,14 @@ import processEstimateIcon from "../../images/process-estimate.svg";
 import processPhoneIcon from "../../images/process-phone.svg";
 import processScheduleIcon from "../../images/process-schedule.svg";
 import processWorkBeginsIcon from "../../images/process-work-begins.svg";
+import { BUSINESS_PHONE_DISPLAY } from "../../lib/site-metadata";
 
 const processSteps = [
   {
     label: "Step 1",
     title: "Book Appointment",
     description:
-      "Reach out by phone or online form, and our team will schedule a convenient time to learn about your fence, deck, or exterior project.",
+      `Call ${BUSINESS_PHONE_DISPLAY} or fill out our online form. We'll schedule a convenient time to discuss your deck build, fence installation, or outdoor renovation project in Everett or Snohomish County.`,
     icon: processPhoneIcon,
     alt: "Phone icon",
   },
@@ -19,7 +20,7 @@ const processSteps = [
     label: "Step 2",
     title: "On-Site Estimate",
     description:
-      "We review your space, discuss materials and project goals, take measurements, and provide a clear estimate based on your needs.",
+      "We come to your Everett-area property, review the space, take measurements, discuss cedar vs. composite or wood vs. chain link options, and give you a clear written estimate - no vague phone quotes.",
     icon: processEstimateIcon,
     alt: "Estimate icon",
   },
@@ -27,7 +28,7 @@ const processSteps = [
     label: "Step 3",
     title: "Schedule Installation",
     description:
-      "Once you approve the estimate, we confirm materials, timeline, and installation date so you know exactly what to expect.",
+      "Once you approve the estimate, we lock in materials, pull any required permits, confirm your installation date, and give you a clear project timeline so there are no surprises.",
     icon: processScheduleIcon,
     alt: "Schedule icon",
   },
@@ -35,7 +36,7 @@ const processSteps = [
     label: "Step 4",
     title: "Work Begins",
     description:
-      "Our crew arrives prepared, completes the work with care, and follows up to make sure every detail is handled properly.",
+      "Our Everett-based crew arrives on schedule, completes your deck or fence installation with care, and does a final walkthrough with you before we consider the job done.",
     icon: processWorkBeginsIcon,
     alt: "Construction work icon",
   },
@@ -45,7 +46,7 @@ const ProcessSection = () => (
   <section className="process-section" aria-labelledby="process-title">
     <div className="process-section__header">
       <p>How It Works</p>
-      <h2 id="process-title">Our Simple 4-Step Process</h2>
+      <h2 id="process-title">How Our Deck and Fence Installation Process Works</h2>
       <span>
         From first call to final walkthrough, we keep the process clear,
         organized, and easy to understand.

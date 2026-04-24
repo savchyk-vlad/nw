@@ -57,31 +57,31 @@ const navItems: NavItem[] = [
     to: "/decking/",
     children: [
       {
-        description: "Designed around your home, yard, and outdoor lifestyle.",
+        description: "Tailored deck design for Everett and Snohomish County homes.",
         group: "Deck Services",
         label: "Custom Deck Design",
         to: "/custom-deck",
       },
       {
-        description: "Natural wood decks with warm character and strong craftsmanship.",
+        description: "Cedar and pressure-treated wood deck installation in Everett, WA.",
         group: "Deck Services",
         label: "Wood Deck Builder",
         to: "/wood-deck",
       },
       {
-        description: "Low-maintenance decking built for Northwest weather.",
+        description: "Low-maintenance composite decking for Northwest weather.",
         group: "Deck Services",
         label: "Composite Deck Builder",
         to: "/composite-deck",
       },
       {
-        description: "More usable outdoor space with added protection from rain.",
+        description: "Covered deck and pergola installation — more outdoor space year-round.",
         group: "Deck Services",
         label: "Covered Deck Builder",
         to: "/covered-deck",
       },
       {
-        description: "Open-air decks for relaxing, dining, and entertaining.",
+        description: "Open-air deck builds for entertaining and outdoor living.",
         group: "Deck Services",
         label: "Outdoor Deck Installation",
         to: "/outdoor-deck",
@@ -105,13 +105,13 @@ const navItems: NavItem[] = [
     to: "/fencing/",
     children: [
       {
-        description: "Warm, natural privacy fencing for Everett-area and Northwest homes.",
+        description: "Cedar privacy fence installation in Everett, Marysville, and Snohomish County.",
         group: "Fence Services",
         label: "Cedar Wood Fence Installation",
         to: "/cedar-wood-fence",
       },
       {
-        description: "Durable, practical fencing for security and visibility.",
+        description: "Chain link fence installation — durable and low-maintenance for residential and commercial properties.",
         group: "Fence Services",
         label: "Chain Link Fence Installation",
         to: "/chain-link-fence",
@@ -137,11 +137,11 @@ const navItems: NavItem[] = [
 ];
 
 const whyUsItems = [
-  "Licensed & Insured Experts",
-  "Fast Estimates & Transparent Pricing",
-  "High-Quality Workmanship",
-  "Family-Owned & Locally Trusted",
-  "5-Star Rated Remodeling Team",
+  "Licensed & Insured Deck and Fence Builder",
+  "Free On-Site Estimates — No Obligation",
+  "Cedar, Composite & Pressure-Treated Specialists",
+  "Family-Owned, Everett-Based",
+  "4.9-Star Google Rated — Snohomish County",
 ];
 
 const serviceItems = [
@@ -179,12 +179,8 @@ const areaItems = [
   "Mukilteo, WA",
   "Mill Creek, WA",
   "Bothell, WA",
-  "Shoreline, WA",
+  "Lynnwood, WA",
   "Seattle, WA",
-  "Kirkland, WA",
-  "Redmond, WA",
-  "Bellevue, WA",
-  "Renton, WA",
 ];
 
 const trustLogos = [
@@ -279,7 +275,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
           />
           <span className="site-header__brand-copy">
             <strong className="site-header__slogan">
-              Your #1 Home Improvement Experts
+              Deck &amp; Fence Builder — Everett, WA
             </strong>
             <span className="site-header__subline">
               {renderHighlightedText(
@@ -561,7 +557,9 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
                   className="site-footer__logo"
                 />
               </Link>
-              <p className="site-footer__trust">Licensed &amp; Insured Contractor</p>
+              <p className="site-footer__trust">
+                Licensed deck and fence builder based in Everett, WA. Serving Snohomish County, North Seattle, and the greater Puget Sound area.
+              </p>
 
               <div className="site-footer__contact-group">
                 <h2>Contact Us</h2>
