@@ -136,12 +136,12 @@ const Hero = () => {
             </div>
 
             <h1>
-              Let&apos;s Bring Your{" "}
-              <span className="hero-accent">Dream Project</span> to Life
+              Everett&apos;s Trusted{" "}
+              <span className="hero-accent">Deck &amp; Fence Builders</span>
             </h1>
             <p>
               {renderHighlightedText(
-                "Our team helps homeowners transform outdoor spaces with durable fences, custom decks, and exterior renovation work built to last. Northwood Renovation is your local Seattle-area crew — honest estimates, clear communication, craftsmanship you can trust.",
+                "Serving Snohomish County, North Seattle, and the greater Puget Sound area. Locally based in Everett — honest estimates, clear communication, craftsmanship built for Northwest homes.",
               )}
             </p>
           </div>

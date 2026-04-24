@@ -5,6 +5,7 @@ import {
   SITE_NAME,
   SITE_URL,
 } from "./src/lib/site-metadata"
+import { cityServicePages } from "./src/data/city-service-pages"
 
 const servicePagePaths = new Set([
   `/custom-deck/`,
@@ -15,6 +16,27 @@ const servicePagePaths = new Set([
   `/cedar-wood-fence/`,
   `/chain-link-fence/`,
 ]);
+
+const cityPathMetadata = new Map(
+  cityServicePages.map((city) => [`/cities/${city.slug}/`, city]),
+);
+
+const getCitySitemapPriority = (path: string) => {
+  const city = cityPathMetadata.get(path);
+  if (!city) return 0.3;
+  if (city.slug === `everett-wa`) return 1.0;
+  if (city.tier === 1) return 0.8;
+  if (city.tier === 2) return 0.6;
+  if (city.tier === 3) return 0.4;
+  return 0.3;
+};
+
+const getCitySitemapChangefreq = (path: string) => {
+  const city = cityPathMetadata.get(path);
+  if (!city) return `yearly`;
+  if (city.slug === `everett-wa` || city.tier === 1) return `monthly`;
+  return `yearly`;
+};
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -57,8 +79,8 @@ const config: GatsbyConfig = {
           if (path.startsWith(`/cities/`)) {
             return {
               url: path,
-              changefreq: `monthly`,
-              priority: 0.9,
+              changefreq: getCitySitemapChangefreq(path),
+              priority: getCitySitemapPriority(path),
             };
           }
 

@@ -173,16 +173,18 @@ const cleanServicePaths = new Set([
 ]);
 
 const areaItems = [
+  "Everett, WA",
+  "Marysville, WA",
+  "Snohomish, WA",
+  "Mill Creek, WA",
   "Seattle, WA",
   "Bellevue, WA",
   "Renton, WA",
   "Kirkland, WA",
   "Redmond, WA",
-  "Kent, WA",
   "Shoreline, WA",
-  "Burien, WA",
-  "Tukwila, WA",
-  "Mercer Island, WA",
+  "Bothell, WA",
+  "Mukilteo, WA",
 ];
 
 const trustLogos = [
@@ -280,7 +282,9 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
               Your #1 Home Improvement Experts
             </strong>
             <span className="site-header__subline">
-              {renderHighlightedText("Serving Seattle & Surrounding Areas")}
+              {renderHighlightedText(
+                "Serving Everett, Snohomish County & Greater Seattle",
+              )}
             </span>
           </span>
         </Link>
@@ -567,7 +571,11 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
               <div className="site-footer__contact-group">
                 <h2>Location</h2>
-                <p>{renderHighlightedText("Seattle, WA & Nearby Areas")}</p>
+                <p>
+                  {renderHighlightedText(
+                    "Everett, WA · Snohomish County & Greater Seattle",
+                  )}
+                </p>
               </div>
             </section>
 

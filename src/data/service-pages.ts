@@ -146,7 +146,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "custom-deck",
     subtitle:
       "Custom deck design and installation for Seattle homeowners who want a durable, practical outdoor space built around their home and lifestyle.",
-    titleTag: "Custom Deck in Seattle, WA | Northwood Renovation",
+    titleTag: "Custom Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
         title: "Custom Layouts",
@@ -225,7 +225,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "wood-deck",
     subtitle:
       "Natural wood deck building for Seattle homes with warm character, sturdy construction, and practical Northwest weather planning.",
-    titleTag: "Wood Deck in Seattle, WA | Northwood Renovation",
+    titleTag: "Wood Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
         title: "Natural Warmth",
@@ -304,7 +304,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "composite-deck",
     subtitle:
       "Low-maintenance composite deck installation for Seattle-area homeowners who want a clean look and durable outdoor performance.",
-    titleTag: "Composite Deck in Seattle, WA | Northwood Renovation",
+    titleTag: "Composite Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
         title: "Lower Upkeep",
@@ -376,7 +376,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "outdoor-deck",
     subtitle:
       "Outdoor deck installation for Seattle backyards designed for relaxing, dining, hosting, and daily outdoor living.",
-    titleTag: "Outdoor Deck in Seattle, WA | Northwood Renovation",
+    titleTag: "Outdoor Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
         title: "Built for Everyday Use",
@@ -455,7 +455,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "covered-deck",
     subtitle:
       "Covered deck building for Seattle homes that need more usable outdoor space through rain, shade, and everyday weather.",
-    titleTag: "Covered Deck in Seattle, WA | Northwood Renovation",
+    titleTag: "Covered Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
         title: "More Usable Space",
@@ -534,7 +534,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "cedar-wood-fence",
     subtitle:
       "Cedar wood fence installation for Seattle homes that need privacy, natural warmth, clean lines, and durable outdoor performance.",
-    titleTag: "Cedar Wood Fence in Seattle, WA | Northwood Renovation",
+    titleTag: "Cedar Wood Fence in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
         title: "Privacy & Curb Appeal",
@@ -613,7 +613,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "chain-link-fence",
     subtitle:
       "Chain link fence installation for Seattle-area homeowners who need practical security, visibility, and durable property boundaries.",
-    titleTag: "Chain Link Fence in Seattle, WA | Northwood Renovation",
+    titleTag: "Chain Link Fence in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
         title: "Security & Visibility",

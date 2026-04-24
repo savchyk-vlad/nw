@@ -209,7 +209,15 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
               </span>
               <span>{page.city.toUpperCase()}</span>
             </p>
-            <h1>{page.heroTitle}</h1>
+            <h1>{page.h1}</h1>
+            {page.tier === 1 && !page.isHomeBase ? (
+              <p className="city-service-proximity-note">
+                <span aria-hidden="true">📍</span>
+                <span>
+                  Based in Everett - just {page.driveMin} minutes from {page.cityName}
+                </span>
+              </p>
+            ) : null}
             <p className="city-service-hero__seo-line">
               Deck building, fence installation, repairs, and outdoor upgrades in{" "}
               <span className="city-service-accent">{page.city}</span>
@@ -260,6 +268,11 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
             {page.introParagraphs.map((paragraph) => (
               <p key={paragraph}>{renderHighlightedText(paragraph)}</p>
             ))}
+            {page.permitNote ? (
+              <p className="city-service-intro__permit-note">
+                {renderHighlightedText(page.permitNote)}
+              </p>
+            ) : null}
           </div>
         </section>
 
@@ -441,6 +454,16 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
           </div>
         </section>
 
+        {page.tier >= 2 ? (
+          <section className="city-service-home-base-note">
+            <p>
+              Northwood Renovation is based in{" "}
+              <Link to="/cities/everett-wa/">Everett, WA</Link> and serves{" "}
+              {page.cityName} as part of our extended service area.
+            </p>
+          </section>
+        ) : null}
+
         <section className="city-service-final-cta">
           <h2>
             Ready to Start a Fence or Deck Project in{" "}
@@ -467,8 +490,7 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
 
 const buildCitySeoTitle = (city: string) => {
   const cityName = city.replace(", WA", "");
-
-  return `${cityName} Deck & Fence Contractor | Northwood`;
+  return `Deck & Fence Contractor in ${cityName}, WA | Northwood Renovation`;
 };
 
 const buildCitySeoDescription = (page: CityServicePageData) => {
@@ -489,23 +511,43 @@ export const CityServicePageHead =
 
     return (
       <SeoHead
-        title={buildCitySeoTitle(page.city)}
+        title={page.titleTag || buildCitySeoTitle(page.city)}
         description={description}
         pathname={pathname}
         image={cityServiceHeroImage}
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          name: page.heroTitle,
-          description,
-          serviceType: "Deck building, fence installation, repairs, and outdoor renovation",
-          areaServed: {
-            "@type": "City",
-            name: page.city,
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Northwood Renovation",
+            description: `Deck and fence contractor serving ${page.city}`,
+            telephone: "+14256832024",
+            url: buildCanonicalUrl(pathname),
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Everett",
+              addressRegion: "WA",
+              addressCountry: "US",
+            },
+            areaServed: {
+              "@type": "City",
+              name: page.cityName,
+            },
           },
-          provider: buildLocalBusinessReference(),
-          url: buildCanonicalUrl(pathname),
-        }}
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: page.h1,
+            description,
+            serviceType: "Deck building, fence installation, repairs, and outdoor renovation",
+            areaServed: {
+              "@type": "City",
+              name: page.cityName,
+            },
+            provider: buildLocalBusinessReference(),
+            url: buildCanonicalUrl(pathname),
+          },
+        ]}
       />
     );
   };

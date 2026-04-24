@@ -80,3 +80,93 @@
   from = "/fence/chain-link-fence/*"
   to = "/chain-link-fence/:splat"
   status = 301
+
+[[redirects]]
+  from = "/cities/ballard-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/queen-anne-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/capitol-hill-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/green-lake-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/magnolia-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/fremont-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/wallingford-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/beacon-hill-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/columbia-city-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/rainier-beach-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/northgate-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/greenwood-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/phinney-ridge-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/madison-park-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/ravenna-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/wedgwood-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/mount-baker-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301
+
+[[redirects]]
+  from = "/cities/west-seattle-wa/"
+  to = "/cities/seattle-wa/"
+  status = 301

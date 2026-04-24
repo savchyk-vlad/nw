@@ -25,8 +25,8 @@ const IndexPage = () => (
 
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
-    title="Northwood Renovation | Seattle Deck & Fence Contractor"
-    description="Northwood Renovation builds decks, fences, and exterior upgrades for Seattle-area homeowners with clean craftsmanship and durable Northwest-ready results."
+    title="Deck & Fence Contractor in Everett, WA | Northwood Renovation"
+    description="Northwood Renovation is an Everett-based deck and fence contractor serving Snohomish County, North Seattle, and the greater Puget Sound area. Free on-site estimates. Call (425) 683-2024."
     pathname={location.pathname}
   />
 );

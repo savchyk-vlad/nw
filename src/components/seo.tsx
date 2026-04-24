@@ -64,10 +64,11 @@ export const buildOrganizationSchema = (): JsonLd => ({
   email: BUSINESS_EMAIL,
   telephone: BUSINESS_PHONE_TEL,
   image: toAbsoluteUrl(DEFAULT_OG_IMAGE),
+  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     addressCountry: "US",
-    addressLocality: "Seattle",
+    addressLocality: "Everett",
     addressRegion: "WA",
   },
   areaServed: PRIMARY_SERVICE_AREAS.map((city) => ({
