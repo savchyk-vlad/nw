@@ -776,6 +776,129 @@
   padding-top: 24px;
 }
 
+.covered-deck-page {
+  gap: 24px;
+}
+
+.covered-deck-page .service-hero {
+  min-height: clamp(500px, 58vw, 620px);
+}
+
+.covered-deck-page .service-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(27, 27, 27, 0.78), rgba(27, 27, 27, 0.42) 54%, rgba(27, 27, 27, 0.08)),
+    linear-gradient(180deg, rgba(78, 90, 60, 0.14), rgba(27, 27, 27, 0.34));
+}
+
+.covered-deck-page .service-hero__content {
+  max-width: 760px;
+  padding: clamp(34px, 5vw, 68px);
+}
+
+.covered-deck-page .service-hero__content > p:not(.service-hero__eyebrow) {
+  max-width: 700px;
+}
+
+.covered-deck-page .service-trust {
+  gap: 16px;
+}
+
+.covered-deck-page .service-trust__card,
+.covered-deck-page .service-card,
+.covered-deck-page .service-process-card,
+.covered-deck-page .service-project-card,
+.covered-deck-page .service-faq__item {
+  background: rgba(247, 246, 241, 0.84);
+  border: 1px solid rgba(27, 27, 27, 0.06);
+  box-shadow: 0 14px 34px rgba(27, 27, 27, 0.06);
+}
+
+.covered-deck-page .service-trust__card {
+  min-height: 158px;
+}
+
+.covered-deck-page .service-overview {
+  gap: clamp(24px, 4vw, 66px);
+  padding: 46px 0 18px;
+}
+
+.covered-deck-page .service-overview__copy {
+  gap: 14px;
+  max-width: 930px;
+}
+
+.covered-deck-page .service-overview__copy p {
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.74;
+}
+
+.covered-deck-page .service-split {
+  align-items: start;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+}
+
+.covered-deck-page .service-card {
+  padding: 28px;
+}
+
+.covered-deck-page .service-options--stacked {
+  gap: 12px;
+}
+
+.covered-deck-page .service-options--stacked article {
+  background: rgba(233, 231, 221, 0.56);
+}
+
+.covered-deck-page .service-options--stacked article p + p {
+  margin-top: 10px;
+}
+
+.covered-deck-page .service-process {
+  margin-top: 8px;
+  padding: clamp(30px, 4.5vw, 48px);
+}
+
+.covered-deck-page .service-process__grid--five {
+  gap: 12px;
+}
+
+.covered-deck-page .service-process-card {
+  min-height: 286px;
+  padding: 22px;
+}
+
+.covered-deck-page .service-process-card p + p {
+  margin-top: 12px;
+}
+
+.covered-deck-page .service-benefits {
+  gap: 22px;
+}
+
+.covered-deck-page .service-related__grid,
+.covered-deck-page .service-faq__list {
+  gap: 16px;
+}
+
+.covered-deck-page .service-project-card div,
+.covered-deck-page .service-faq__item {
+  padding: 22px;
+}
+
+.covered-deck-page .service-final-cta {
+  margin-top: 18px;
+  padding: clamp(30px, 4.5vw, 52px);
+}
+
+.covered-deck-page .service-final-cta p {
+  max-width: 760px;
+}
+
+.covered-deck-page .service-area-strip {
+  padding-top: 24px;
+}
+
 .wood-deck-page {
   gap: 24px;
 }
@@ -926,6 +1049,10 @@
     grid-template-columns: 1fr;
   }
 
+  .covered-deck-page .service-trust {
+    grid-template-columns: 1fr;
+  }
+
   .wood-deck-page .service-trust {
     grid-template-columns: 1fr;
   }
@@ -966,6 +1093,12 @@
   .composite-deck-page .service-card,
   .composite-deck-page .service-project-card div,
   .composite-deck-page .service-faq__item {
+    padding: 20px;
+  }
+
+  .covered-deck-page .service-card,
+  .covered-deck-page .service-project-card div,
+  .covered-deck-page .service-faq__item {
     padding: 20px;
   }
 
@@ -1043,6 +1176,19 @@
 
   .composite-deck-page .service-card,
   .composite-deck-page .service-process-card {
+    padding: 18px;
+  }
+
+  .covered-deck-page .service-hero {
+    min-height: 420px;
+  }
+
+  .covered-deck-page .service-hero__content {
+    padding: 22px 18px;
+  }
+
+  .covered-deck-page .service-card,
+  .covered-deck-page .service-process-card {
     padding: 18px;
   }
 
