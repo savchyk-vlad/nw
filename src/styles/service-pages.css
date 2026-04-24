@@ -653,6 +653,129 @@
   padding-top: 24px;
 }
 
+.wood-deck-page {
+  gap: 24px;
+}
+
+.wood-deck-page .service-hero {
+  min-height: clamp(500px, 58vw, 620px);
+}
+
+.wood-deck-page .service-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(27, 27, 27, 0.78), rgba(27, 27, 27, 0.44) 54%, rgba(27, 27, 27, 0.1)),
+    linear-gradient(180deg, rgba(67, 46, 21, 0.12), rgba(27, 27, 27, 0.34));
+}
+
+.wood-deck-page .service-hero__content {
+  max-width: 760px;
+  padding: clamp(34px, 5vw, 68px);
+}
+
+.wood-deck-page .service-hero__content > p:not(.service-hero__eyebrow) {
+  max-width: 700px;
+}
+
+.wood-deck-page .service-trust {
+  gap: 16px;
+}
+
+.wood-deck-page .service-trust__card,
+.wood-deck-page .service-card,
+.wood-deck-page .service-process-card,
+.wood-deck-page .service-project-card,
+.wood-deck-page .service-faq__item {
+  background: rgba(248, 246, 239, 0.82);
+  border: 1px solid rgba(27, 27, 27, 0.06);
+  box-shadow: 0 14px 34px rgba(27, 27, 27, 0.06);
+}
+
+.wood-deck-page .service-trust__card {
+  min-height: 158px;
+}
+
+.wood-deck-page .service-overview {
+  gap: clamp(24px, 4vw, 66px);
+  padding: 46px 0 18px;
+}
+
+.wood-deck-page .service-overview__copy {
+  gap: 14px;
+  max-width: 930px;
+}
+
+.wood-deck-page .service-overview__copy p {
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.74;
+}
+
+.wood-deck-page .service-split {
+  align-items: start;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+}
+
+.wood-deck-page .service-card {
+  padding: 28px;
+}
+
+.wood-deck-page .service-options--stacked {
+  gap: 12px;
+}
+
+.wood-deck-page .service-options--stacked article {
+  background: rgba(235, 230, 220, 0.48);
+}
+
+.wood-deck-page .service-options--stacked article p + p {
+  margin-top: 10px;
+}
+
+.wood-deck-page .service-process {
+  margin-top: 8px;
+  padding: clamp(30px, 4.5vw, 48px);
+}
+
+.wood-deck-page .service-process__grid--five {
+  gap: 12px;
+}
+
+.wood-deck-page .service-process-card {
+  min-height: 286px;
+  padding: 22px;
+}
+
+.wood-deck-page .service-process-card p + p {
+  margin-top: 12px;
+}
+
+.wood-deck-page .service-benefits {
+  gap: 22px;
+}
+
+.wood-deck-page .service-related__grid,
+.wood-deck-page .service-faq__list {
+  gap: 16px;
+}
+
+.wood-deck-page .service-project-card div,
+.wood-deck-page .service-faq__item {
+  padding: 22px;
+}
+
+.wood-deck-page .service-final-cta {
+  margin-top: 18px;
+  padding: clamp(30px, 4.5vw, 52px);
+}
+
+.wood-deck-page .service-final-cta p {
+  max-width: 760px;
+}
+
+.wood-deck-page .service-area-strip {
+  padding-top: 24px;
+}
+
 @media (max-width: 1100px) {
   .service-trust,
   .service-benefits__grid,
@@ -673,6 +796,10 @@
   }
 
   .custom-deck-page .service-trust {
+    grid-template-columns: 1fr;
+  }
+
+  .wood-deck-page .service-trust {
     grid-template-columns: 1fr;
   }
 }
@@ -706,6 +833,12 @@
   .custom-deck-page .service-card,
   .custom-deck-page .service-project-card div,
   .custom-deck-page .service-faq__item {
+    padding: 20px;
+  }
+
+  .wood-deck-page .service-card,
+  .wood-deck-page .service-project-card div,
+  .wood-deck-page .service-faq__item {
     padding: 20px;
   }
 }
@@ -764,6 +897,19 @@
 
   .custom-deck-page .service-card,
   .custom-deck-page .service-process-card {
+    padding: 18px;
+  }
+
+  .wood-deck-page .service-hero {
+    min-height: 420px;
+  }
+
+  .wood-deck-page .service-hero__content {
+    padding: 22px 18px;
+  }
+
+  .wood-deck-page .service-card,
+  .wood-deck-page .service-process-card {
     padding: 18px;
   }
 }
