@@ -485,8 +485,8 @@ video {
   .site-mobile-cta {
     background: transparent;
     display: block;
-    inset: auto 0 calc(2px + env(safe-area-inset-bottom)) 0;
-    padding: 22px 14px 0;
+    inset: auto 14px calc(4px + env(safe-area-inset-bottom)) 14px;
+    padding: 0;
     position: fixed;
     z-index: 50;
   }
