@@ -724,6 +724,124 @@
   text-underline-offset: 0.18em;
 }
 
+.fencing-page {
+  gap: 46px;
+}
+
+.fencing-page .decking-hero {
+  background:
+    radial-gradient(circle at top right, rgba(89, 95, 57, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(236, 238, 228, 0.68));
+  grid-template-columns: minmax(0, 0.96fr) minmax(420px, 1.04fr);
+}
+
+.fencing-page .decking-hero__rating {
+  color: #595f39;
+}
+
+.fencing-page .decking-hero__lead,
+.fencing-page .decking-section__head p {
+  max-width: 700px;
+}
+
+.fencing-page .decking-check-list li::before,
+.fencing-page .decking-service-card span,
+.fencing-page .decking-project-card span,
+.fencing-page .decking-process-card span,
+.fencing-page .decking-before-after__meta span,
+.fencing-page .decking-review-card strong,
+.fencing-page .decking-service-area p a {
+  color: #4f5632;
+}
+
+.fencing-page .decking-services-grid,
+.fencing-page .decking-feature-grid {
+  gap: 18px;
+}
+
+.fencing-page .decking-service-card,
+.fencing-page .decking-feature-card,
+.fencing-page .decking-review-card,
+.fencing-page .decking-faq details {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(239, 241, 233, 0.94));
+}
+
+.fencing-page .decking-service-card {
+  min-height: 320px;
+}
+
+.fencing-page .decking-gallery {
+  background:
+    linear-gradient(180deg, rgba(196, 197, 186, 0.18), rgba(196, 197, 186, 0.3));
+}
+
+.fencing-page .decking-gallery__grid {
+  gap: 16px;
+}
+
+.fencing-page .decking-gallery__item {
+  aspect-ratio: 5 / 4;
+}
+
+.fencing-page .decking-gallery__item:first-child,
+.fencing-page .decking-gallery__item:nth-child(4) {
+  aspect-ratio: 5 / 3.6;
+}
+
+.fencing-page .decking-before-after {
+  padding: 28px;
+}
+
+.fencing-page .decking-before-after__compare {
+  aspect-ratio: 16 / 8.8;
+}
+
+.fencing-page .decking-seo-copy {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(232, 235, 226, 0.72));
+}
+
+.fencing-page .decking-seo-copy h3 {
+  margin-top: 30px;
+}
+
+.fencing-page .decking-seo-copy p {
+  max-width: 1020px;
+}
+
+.fencing-page .decking-process {
+  background:
+    linear-gradient(180deg, rgba(196, 197, 186, 0.74), rgba(210, 214, 200, 0.9));
+}
+
+.fencing-page .decking-process__grid {
+  gap: 16px;
+}
+
+.fencing-page .decking-process-card {
+  min-height: 100%;
+}
+
+.fencing-page .decking-review-grid {
+  gap: 18px;
+}
+
+.fencing-page .decking-review-card {
+  padding: 24px;
+}
+
+.fencing-page .decking-final-cta {
+  background:
+    linear-gradient(135deg, #595f39, #4c522f);
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+}
+
+.fencing-page .decking-service-area {
+  padding-top: 30px;
+}
+
 @media (max-width: 1100px) {
   .decking-hero,
   .decking-services-grid,
@@ -739,6 +857,12 @@
 
   .decking-services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fencing-page .decking-gallery__item,
+  .fencing-page .decking-gallery__item:first-child,
+  .fencing-page .decking-gallery__item:nth-child(4) {
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -844,5 +968,17 @@
   .decking-service-area {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .fencing-page {
+    gap: 38px;
+  }
+
+  .fencing-page .decking-before-after {
+    padding: 20px;
+  }
+
+  .fencing-page .decking-final-cta {
+    border-radius: 22px 22px 0 0;
   }
 }
