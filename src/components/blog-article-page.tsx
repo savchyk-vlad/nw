@@ -31,13 +31,27 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
   );
   const introParagraphs = [article.excerpt, ...article.introParagraphs];
 
-  const tocItems = [
-    ...article.sections.map((section) => section.heading),
-    "Homeowner Checklist",
-    "Local Notes",
-    "When to Call a Professional",
-    "Frequently Asked Questions",
-  ];
+  const checklistHeading = article.checklistHeading ?? "Homeowner Checklist";
+  const checklistIntro =
+    article.checklistIntro ??
+    "Use this checklist before starting your project so scope, budget, and expectations stay clear from the beginning.";
+  const localNotesHeading = article.localNotesHeading ?? "Local Notes";
+  const localNotesIntro = article.localNotesIntro;
+  const proSectionHeading =
+    article.proSectionHeading ?? "When to Call a Professional";
+  const proSectionIntro =
+    article.proSectionIntro ??
+    "DIY can handle light upkeep, but these conditions usually benefit from professional assessment and structured repair planning.";
+
+  const tocItems =
+    article.tocItems ??
+    [
+      ...article.sections.map((section) => section.heading),
+      checklistHeading,
+      ...(article.localNotes.length ? [localNotesHeading] : []),
+      proSectionHeading,
+      "Frequently Asked Questions",
+    ];
 
   return (
     <SiteLayout>
@@ -102,7 +116,11 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
               key={section.heading}
               id={slugifyHeading(section.heading)}
             >
-              <h2>{renderHighlightedText(section.heading)}</h2>
+              {section.level === 3 ? (
+                <h3>{renderHighlightedText(section.heading)}</h3>
+              ) : (
+                <h2>{renderHighlightedText(section.heading)}</h2>
+              )}
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{renderHighlightedText(paragraph)}</p>
               ))}
@@ -121,13 +139,10 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
 
           <section
             className="blog-article-block"
-            id={slugifyHeading("Homeowner Checklist")}
+            id={slugifyHeading(checklistHeading)}
           >
-            <h2>Homeowner Checklist</h2>
-            <p>
-              Use this checklist before starting your project so scope, budget,
-              and expectations stay clear from the beginning.
-            </p>
+            <h2>{checklistHeading}</h2>
+            <p>{renderHighlightedText(checklistIntro)}</p>
             <ul>
               {article.checklist.map((item) => (
                 <li key={item}>{renderHighlightedText(item)}</li>
@@ -135,25 +150,25 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
             </ul>
           </section>
 
-          <section
-            className="blog-article-block"
-            id={slugifyHeading("Local Notes")}
-          >
-            <h2>Local Notes</h2>
-            {article.localNotes.map((note) => (
-              <p key={note}>{renderHighlightedText(note)}</p>
-            ))}
-          </section>
+          {article.localNotes.length ? (
+            <section
+              className="blog-article-block"
+              id={slugifyHeading(localNotesHeading)}
+            >
+              <h2>{localNotesHeading}</h2>
+              {localNotesIntro ? <p>{renderHighlightedText(localNotesIntro)}</p> : null}
+              {article.localNotes.map((note) => (
+                <p key={note}>{renderHighlightedText(note)}</p>
+              ))}
+            </section>
+          ) : null}
 
           <section
             className="blog-article-block"
-            id={slugifyHeading("When to Call a Professional")}
+            id={slugifyHeading(proSectionHeading)}
           >
-            <h2>When to Call a Professional</h2>
-            <p>
-              DIY can handle light upkeep, but these conditions usually benefit
-              from professional assessment and structured repair planning.
-            </p>
+            <h2>{proSectionHeading}</h2>
+            <p>{renderHighlightedText(proSectionIntro)}</p>
             <ul>
               {article.proSectionBullets.map((item) => (
                 <li key={item}>{renderHighlightedText(item)}</li>
@@ -176,20 +191,24 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
         </article>
 
         <section className="blog-article-end-cta">
-          <h2>Need help planning a fence or deck project?</h2>
-          <p>
-            <span className="brand-highlight">Northwood Renovation</span> helps
-            Everett-area and greater Puget Sound homeowners build durable
-            fences, decks, railings, and outdoor structures. Tell us about your
-            project and we&apos;ll help you understand the next step.
-          </p>
+          <h2>{article.ctaTitle ?? "Need help planning a fence or deck project?"}</h2>
+          {(article.ctaParagraphs ?? [
+            "Northwood Renovation helps Everett-area and greater Puget Sound homeowners build durable fences, decks, railings, and outdoor structures. Tell us about your project and we'll help you understand the next step.",
+          ]).map((paragraph) => (
+            <p key={paragraph}>{renderHighlightedText(paragraph)}</p>
+          ))}
           <div className="blog-final-cta__actions">
-            <Link to="/contact#contact-form" className="blog-button blog-button--primary">
-              Request a Free Estimate
+            <Link
+              to={article.ctaPrimaryTo ?? "/contact#contact-form"}
+              className="blog-button blog-button--primary"
+            >
+              {article.ctaPrimaryLabel ?? "Request a Free Estimate"}
             </Link>
-            <Link to="/projects" className="blog-button blog-button--secondary">
-              View Recent Work
-            </Link>
+            {article.ctaSecondaryLabel && article.ctaSecondaryTo ? (
+              <Link to={article.ctaSecondaryTo} className="blog-button blog-button--secondary">
+                {article.ctaSecondaryLabel}
+              </Link>
+            ) : null}
           </div>
         </section>
 
@@ -232,19 +251,20 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
     const articlePath = `/blog/${article.slug}/`;
     const articleUrl = `${SITE_URL}${articlePath}`;
     const keywords = [article.primaryKeyword, ...article.secondaryKeywords];
-    const ogTitle = article.title;
-    const ogDescription = article.excerpt;
+    const ogTitle = article.seoTitle ?? article.title;
+    const ogDescription = article.metaDescription ?? article.excerpt;
     const articleJsonLd = {
       "@context": "https://schema.org",
       "@type": "Article",
       articleSection: article.category,
       author: {
         "@type": "Organization",
-        name: `${SITE_NAME} Team`,
+        name: SITE_NAME,
+        url: SITE_URL,
       },
       dateModified: article.dateModifiedIso,
       datePublished: article.datePublishedIso,
-      description: article.excerpt,
+      description: ogDescription,
       headline: article.title,
       image: [`${SITE_URL}${article.image}`],
       inLanguage: "en-US",
@@ -253,6 +273,10 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
       publisher: {
         "@type": "Organization",
         name: SITE_NAME,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/favicon.png`,
+        },
       },
       about: [
         {
@@ -265,6 +289,20 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
         },
       ],
     };
+    const faqJsonLd = article.faq.length
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: article.faq.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
 
     return (
       <>
@@ -273,9 +311,10 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
           description={ogDescription}
           pathname={articlePath}
           image={article.image}
+          imageAlt={article.imageAlt}
           keywords={keywords}
           ogType="article"
-          schema={articleJsonLd}
+          schema={faqJsonLd ? [articleJsonLd, faqJsonLd] : articleJsonLd}
         />
         <meta name="search-intent" content={article.searchIntent} />
         <meta property="article:section" content={article.category} />

@@ -21,6 +21,7 @@ export type BlogCategory = (typeof blogCategories)[number];
 
 export type BlogSection = {
   heading: string;
+  level?: 2 | 3;
   paragraphs: string[];
   bullets?: string[];
 };
@@ -32,6 +33,12 @@ export type BlogFaqItem = {
 
 type BaseBlogArticle = {
   category: Exclude<BlogCategory, "All">;
+  ctaParagraphs?: string[];
+  ctaPrimaryLabel?: string;
+  ctaPrimaryTo?: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryTo?: string;
+  ctaTitle?: string;
   dateLabel: string;
   excerpt: string;
   image: string;
@@ -40,12 +47,15 @@ type BaseBlogArticle = {
   relatedSlugs: string[];
   sections: BlogSection[];
   slug: string;
+  tocItems?: string[];
   title: string;
 };
 
 export type BlogArticleSeo = {
   dateModifiedIso: string;
   datePublishedIso: string;
+  metaDescription?: string;
+  seoTitle?: string;
   primaryKeyword: string;
   searchIntent: string;
   secondaryKeywords: string[];
@@ -53,9 +63,15 @@ export type BlogArticleSeo = {
 
 export type BlogArticleGuide = {
   checklist: string[];
+  checklistHeading?: string;
+  checklistIntro?: string;
   faq: BlogFaqItem[];
   introParagraphs: string[];
+  localNotesHeading?: string;
+  localNotesIntro?: string;
   localNotes: string[];
+  proSectionHeading?: string;
+  proSectionIntro?: string;
   proSectionBullets: string[];
 };
 
@@ -149,10 +165,30 @@ const baseBlogArticles: BaseBlogArticle[] = [
     category: "Decks",
     dateLabel: "Updated Apr 2026",
     excerpt:
-      "Compare cedar and composite decking options for durability, maintenance, appearance, and long-term value in the Pacific Northwest.",
+      "This is the most common question we get from homeowners planning a new deck in Everett and Snohomish County. Cedar or composite? Both are used regularly in this climate. Both can last a long time when installed correctly. But they're genuinely different materials that suit different homeowners, and the right answer depends on factors specific to your yard, your household, and how much time you want to spend on maintenance.",
+    ctaParagraphs: [
+      "The best way to make this decision is to see the materials in your actual yard. We bring cedar samples and composite board samples to estimate visits so you can compare them in the light your deck will actually be in - not under fluorescent lights at a showroom or on a screen.",
+      "We serve homeowners across Everett, Marysville, Snohomish, Mill Creek, Mukilteo, Lynnwood, Edmonds, Bothell, Kenmore, Shoreline, Kirkland, Redmond, Bellevue, and surrounding Snohomish County communities.",
+      "Call (425) 683-2024 or [request an estimate](/contact) online. We'll get back to you within one business day.",
+    ],
+    ctaPrimaryLabel: "Request a Free Estimate",
+    ctaPrimaryTo: "/contact#contact-form",
+    ctaTitle: "Still Not Sure? We'll Help You Decide at the Estimate Visit.",
     image: servicesCompositeDeck,
-    imageAlt: "Composite and cedar deck materials comparison",
-    readTime: "5 min read",
+    imageAlt:
+      "Cedar and composite deck board comparison for Pacific Northwest homes - Northwood Renovation Everett WA",
+    readTime: "8 min read",
+    tocItems: [
+      "How cedar performs in the Pacific Northwest",
+      "How composite performs in the Pacific Northwest",
+      "Maintenance: what each material actually requires",
+      "Cost comparison: upfront vs. long-term",
+      "Appearance: what each looks and feels like",
+      "How your yard affects the decision",
+      "When a mix of materials makes sense",
+      "What we recommend based on your situation",
+      "Frequently Asked Questions",
+    ],
     relatedSlugs: [
       "wood-deck-lifespan-pnw",
       "spring-checklist-decks-fences",
@@ -160,66 +196,208 @@ const baseBlogArticles: BaseBlogArticle[] = [
     ],
     sections: [
       {
-        heading: "Cedar: natural appearance and warmth",
+        heading: "How Cedar Performs in the Pacific Northwest",
         paragraphs: [
-          "Cedar delivers a classic natural look and is a strong fit for homeowners who value real wood texture and color variation.",
-          "It performs well in Seattle, but it needs consistent cleaning and sealing to stay stable and attractive.",
-        ],
-      },
-      {
-        heading: "Composite: lower maintenance routine",
-        paragraphs: [
-          "Composite is designed for moisture resistance and lower maintenance. It reduces annual upkeep and avoids many of the surface issues common with untreated wood.",
-          "Upfront pricing is usually higher, but many homeowners choose composite for long-term convenience.",
-        ],
-      },
-      {
-        heading: "How to choose for your home",
-        paragraphs: [
-          "The best choice depends on budget, desired appearance, and how much maintenance you are willing to do each year.",
+          "Cedar has been used for outdoor decks in the Puget Sound region for generations, and it earns that track record. Western red cedar - the species used for Pacific Northwest deck boards - is naturally resistant to rot and insects without chemical treatment. That's a meaningful advantage in a climate where decks deal with consistent moisture from October through May.",
+          "A [cedar deck](/wood-deck/) in Everett, installed correctly and maintained reasonably well, can last fifteen to twenty years. Some last longer. The variables that shorten that lifespan are almost always installation and maintenance failures, not the material itself.",
         ],
         bullets: [
-          "Choose cedar for natural character and traditional wood style",
-          "Choose composite for simpler maintenance and durability",
-          "Ask for side-by-side material samples before final selection",
+          "Posts sitting in standing water rather than elevated above grade",
+          "Ledger connections that were not flashed properly against the house",
+          "Boards sealed too infrequently and left to absorb moisture for years",
+          "Fasteners that were not corrosion-resistant and stained or lost grip",
         ],
       },
       {
-        heading: "Seattle planning notes before you choose",
+        heading: "Cedar's Limitations in a Wet Climate",
+        level: 3,
         paragraphs: [
-          "In Seattle, shade and moisture can affect how materials age, especially in corners where airflow is limited. Material performance should be matched to your yard's sun exposure and drainage patterns.",
-          "If your project includes stairs, elevated transitions, or heavy-use entertaining zones, include those details in material decisions early so performance and safety stay aligned.",
-        ],
-        bullets: [
-          "Map high-moisture and low-sun areas before final selection",
-          "Review slip resistance and heat retention by material type",
-          "Plan maintenance schedule before installation starts",
-          "Compare warranty and lifecycle expectations side by side",
+          "When those details are right, cedar is a reliable, long-performing material for an Everett backyard. When they are wrong, you are replacing it in eight years and wondering why wood decks have a bad reputation.",
+          "Cedar is not maintenance-free. In Everett's climate, a cedar deck needs a basic cleaning once a year, a sealer or stain every two to three years to maintain moisture protection, and board and fastener checks after a few winters.",
+          "Shaded yards - particularly those with mature fir or cedar trees overhead that keep the deck surface damp for long stretches - may need more frequent attention for surface mold and mildew. This is a surface condition, not a structural one, and it cleans off easily. But it is worth knowing about before you build.",
+          "Cedar also moves with the seasons. It expands when wet and contracts when dry. Correct board spacing at installation allows for this movement - boards installed too tight will cup or buckle over time. A builder who installs cedar with the right spacing accounts for this from the start.",
         ],
       },
       {
-        heading: "Typical budget ranges for cedar vs composite decks",
+        heading: "How Composite Performs in the Pacific Northwest",
         paragraphs: [
-          "Cedar is often lower upfront but may require more routine maintenance over time. Composite usually has higher initial material cost with lower annual upkeep.",
-          "Total project price also depends on framing complexity, stairs, railing style, and site access conditions.",
-        ],
-        bullets: [
-          "Cedar: lower entry cost, higher maintenance commitment",
-          "Composite: higher entry cost, lower ongoing maintenance",
-          "Design complexity can outweigh pure material pricing differences",
+          "Composite decking has changed significantly over the past ten years. Early composite products developed a reputation for fading, chalking, and surface mold in wet climates that put a lot of homeowners off the material. Current capped composite boards - the standard for quality composite installations - perform much better and carry manufacturer warranties of twenty-five years or more.",
+          "The key distinction in composite quality is the cap layer. Capped composite has a polymer shell on all four sides of the board that prevents moisture from reaching the wood fiber core. Uncapped composite exposes the core on the bottom and sides, which allows moisture absorption over time - leading to swelling, surface mold, and early wear.",
+          "In the Pacific Northwest, where boards sit in damp conditions for months at a time, this distinction matters more than it does in a drier climate. We use capped [composite deck](/composite-deck/) boards as the standard on Everett builds.",
         ],
       },
       {
-        heading:
-          "Seattle neighborhood scenario: shaded yard vs open sun exposure",
+        heading: "What Composite Asks of You",
+        level: 3,
         paragraphs: [
-          "In heavily shaded backyards, moisture retention can increase cleaning and maintenance needs. In open-sun spaces, homeowners may prioritize heat and comfort underfoot during warm periods.",
-          "Comparing these real-use scenarios before purchase often leads to better long-term satisfaction.",
+          "Properly installed capped composite decking in an Everett backyard requires almost no annual maintenance. A rinse with a garden hose once or twice a year removes dirt and debris. A light pressure wash or composite-safe deck cleaner handles mildew if it builds up in heavily shaded areas. No sealing, staining, or sanding - ever.",
+          "For homeowners who have owned a cedar deck and know they did not keep up with the sealing schedule, composite solves that specific problem. The deck looks the same in year ten as it did in year two, without needing any intervention.",
+        ],
+      },
+      {
+        heading: "What Composite Won't Do",
+        level: 3,
+        paragraphs: [
+          "Composite is not wood. The texture is manufactured - some boards have realistic grain patterns and others are clearly more uniform. On a warm summer day, darker composite boards absorb more heat than wood, which some homeowners notice underfoot. In Everett's climate, hot days are limited enough that this is rarely a significant concern, but south-facing decks in full afternoon sun are worth mentioning to your builder at the estimate stage.",
+          "Composite also cannot be sanded or refinished the way wood can. If a composite board gets a deep scratch or gouge, the affected board gets replaced rather than sanded smooth. This is uncommon, but worth knowing.",
+        ],
+      },
+      {
+        heading: "Maintenance: What Cedar and Composite Actually Require",
+        paragraphs: [
+          "This is usually the deciding factor for homeowners who are on the fence. Here is the honest side-by-side breakdown of what each material asks of you over time in the Everett area.",
+        ],
+      },
+      {
+        heading: "Cedar Maintenance Schedule",
+        level: 3,
+        paragraphs: [
+          "Year 1: Let the deck acclimate through one wet season before applying the first sealer or stain. New cedar needs to dry and open its grain before a finish bonds properly. Walk the deck at the end of summer and check that boards are seated correctly and fasteners are holding.",
+          "Years 2-3: Apply a quality deck sealer or semi-transparent stain before the wet season starts, usually September or October. Clean the surface first - a light pressure wash removes the summer's worth of dirt, pollen, and mildew.",
+          "Ongoing every 2-3 years: Repeat the clean and seal cycle. Check post bases and the ledger connection at the house for any signs of moisture damage. Replace any boards that show significant cupping, cracking, or soft spots.",
+          "Total annual time commitment: Two to four hours per year on average, with a longer day every two to three years for the full clean and seal.",
+        ],
+      },
+      {
+        heading: "Composite Maintenance Schedule",
+        level: 3,
+        paragraphs: [
+          "Year 1 and beyond: Rinse the deck surface with a garden hose once or twice a year. If mildew appears in shaded areas, apply a composite-safe cleaner and rinse. This takes about twenty minutes.",
+          "Check fasteners and railings annually - composite boards do not degrade, but hardware can corrode if lower-quality fasteners were used.",
+          "Total annual time commitment: Under an hour per year for most decks.",
+        ],
+      },
+      {
+        heading: "The Honest Conclusion on Maintenance",
+        level: 3,
+        paragraphs: [
+          "If you will realistically seal your cedar deck every two to three years, cedar is a perfectly good choice. If you will not - and a lot of homeowners genuinely will not - composite is the better option for your situation.",
+          "Neither answer is wrong. The mistake is choosing cedar while telling yourself you will maintain it, and then not doing it.",
+        ],
+      },
+      {
+        heading: "Cost Comparison: Upfront vs. Long-Term",
+        paragraphs: [
+          "The cost conversation on cedar versus composite is more nuanced than cedar is cheaper. Here is how to think about it properly.",
+        ],
+      },
+      {
+        heading: "Upfront Material Cost",
+        level: 3,
+        paragraphs: [
+          "Cedar deck boards typically cost less per linear foot than quality capped composite boards. The gap varies by grade, but cedar is usually the lower material cost at time of installation. Pressure-treated framing is used under both, so that cost does not change with the surface material.",
+        ],
+      },
+      {
+        heading: "Total Project Cost",
+        level: 3,
+        paragraphs: [
+          "Total project price - including framing, fasteners, railings, stairs, permits, and labor - is driven more by the size and complexity of the deck than by whether you chose cedar or composite surface boards.",
+          "A 500-square-foot cedar deck with a complex stair layout and a railing system costs more than a 200-square-foot composite deck with simple stairs. Material choice matters less than scope.",
+        ],
+      },
+      {
+        heading: "Long-Term Cost",
+        level: 3,
+        paragraphs: [
+          "Over a ten to fifteen year period, the comparison gets closer. Cedar requires sealing or staining every two to three years - either your time or the cost of hiring someone. Composite requires almost none. The breakeven point depends on the cost of labor in your area and how you value your own time.",
+          "A rough comparison for a 300-square-foot Everett deck over fifteen years: cedar usually means a lower install cost plus approximately three to five professional seal or stain applications over the period if you do not DIY, plus possible board replacement in years ten to twelve. Composite usually means a higher install cost, minimal ongoing maintenance, and full warranty coverage through the period.",
+          "Neither is dramatically cheaper over a full lifecycle. The decision usually comes down to maintenance preference more than total cost.",
+        ],
+      },
+      {
+        heading: "Appearance: What Each Material Looks and Feels Like",
+        paragraphs: [
+          "Appearance is where the decision becomes personal. Cedar and composite can both look good in an Everett backyard, but they do it differently.",
+        ],
+      },
+      {
+        heading: "Cedar",
+        level: 3,
+        paragraphs: [
+          "Fresh cedar has a warm reddish-brown tone with visible grain variation. No two boards are identical - the texture is natural, the color shifts subtly from board to board, and the overall effect is warm and organic. Left unsealed, cedar grays to a silver tone over time, which some homeowners find attractive and others do not.",
+          "Sealed or stained cedar holds color well and has a classic outdoor look that fits most Everett-area home styles - craftsman, farmhouse, traditional Northwest, and ranchers. It feels like wood underfoot because it is wood. Bare feet on a warm cedar deck in summer is a good experience.",
+        ],
+      },
+      {
+        heading: "Composite",
+        level: 3,
+        paragraphs: [
+          "Current composite boards have come a long way from the flat, uniform look of early products. The better board lines have realistic grain texture and subtle color variation that reads as wood-like from a normal viewing distance.",
+          "Colors range from warm browns and ambers to cooler grays and charcoals, with options that suit both traditional and contemporary exteriors. Composite is more consistent than cedar - boards match each other closely, the color stays stable over years without sealing, and the surface feels slightly different underfoot than wood.",
+          "We bring board samples to estimate visits so homeowners can see the options in their actual yard, in the light the deck will live in. Color choices made from a website or brochure do not always match what the material looks like in a shaded Everett backyard.",
+        ],
+      },
+      {
+        heading: "How Your Yard Affects the Decision",
+        paragraphs: [
+          "The Pacific Northwest is not one climate - even within the Everett area, yards differ significantly in ways that affect how decking materials perform.",
+        ],
+      },
+      {
+        heading: "Shaded Yards",
+        level: 3,
+        paragraphs: [
+          "If your backyard is heavily shaded by mature Douglas firs, cedars, or the house itself, the deck surface stays damp for longer stretches through the wet season. This affects both materials, but differently.",
+          "For cedar, shaded conditions mean surface mold builds up more quickly between seal cycles. You are cleaning it more often and the sealer does not last quite as long before reapplication is needed. It is manageable, but the maintenance schedule tightens.",
+          "For composite, shaded conditions mean less UV exposure - which is actually favorable for composite boards. The main thing to watch is mildew on the surface, which cleans off easily and is not a structural concern. Composite in a shaded yard typically performs well with minimal attention.",
+        ],
+      },
+      {
+        heading: "South and West-Facing Decks",
+        level: 3,
+        paragraphs: [
+          "Decks that face south or west get more direct sun in summer. For cedar, this accelerates color fading and the need for resealing - sun and UV break down the finish faster than shade. For composite, a south or west-facing deck in darker colors can feel hot underfoot on warm days.",
+          "Lighter composite tones reduce this. It is worth discussing sun exposure with your builder when choosing a board color.",
+        ],
+      },
+      {
+        heading: "Waterfront and Wind-Exposed Properties",
+        level: 3,
+        paragraphs: [
+          "Homes near the Everett waterfront, Mukilteo, or other exposed locations deal with more wind and some salt-air influence. Cedar handles salt air reasonably well but may need more frequent resealing. Composite is generally more resistant to salt-air exposure because the polymer cap does not absorb moisture or salt the way wood grain does.",
+        ],
+      },
+      {
+        heading: "When a Mix of Materials Makes Sense",
+        paragraphs: [
+          "One option that does not get discussed enough is using both materials on the same project. It is more common than most homeowners realize and can be a practical solution.",
+          "The most common combination is composite surface boards over a pressure-treated structural frame. A more intentional mixed approach might look like composite boards on the main deck surface with cedar used for bench framing, fascia boards, or railing elements.",
+          "Another good combination is cedar for a pergola or [covered deck](/covered-deck/) structure overhead, with composite for the deck surface below. The cover reduces the cedar's rain exposure significantly and the combination looks natural together.",
+          "None of these are complicated to execute. They just require deciding early in the planning process so the framing and material orders reflect the intent from the start.",
+        ],
+      },
+      {
+        heading: "What We Recommend Based on Your Situation",
+        paragraphs: [
+          "After building decks across Everett and Snohomish County for a number of years, here is how we tend to think about the recommendation.",
+        ],
+      },
+      {
+        heading: "Cedar Is Probably the Right Fit If:",
+        level: 3,
+        paragraphs: [
+          "You want the look and feel of natural wood and the manufactured appearance of composite does not appeal to you. You are comfortable with a maintenance schedule and will actually follow it. The deck is going on a covered or partially covered structure where direct rain exposure is reduced. You are working with a tighter material budget and can offset the difference over time through DIY maintenance. The home's style calls for a warmer, more traditional outdoor look.",
+        ],
+      },
+      {
+        heading: "Composite Is Probably the Right Fit If:",
+        level: 3,
+        paragraphs: [
+          "You have owned a wood deck before and know the maintenance did not happen consistently. The deck will see heavy daily use and you want a surface that holds up without annual attention. You want consistent color and appearance over ten or fifteen years without refinishing. The project budget accommodates the higher upfront material cost. The deck faces south or west and will get significant UV exposure that would accelerate cedar's need for resealing.",
+        ],
+      },
+      {
+        heading: "The One Thing We Tell Every Homeowner",
+        level: 3,
+        paragraphs: [
+          "Do not choose cedar while telling yourself you will maintain it regularly if you genuinely will not. A neglected cedar deck in Everett's climate will start looking rough within three to four years and will need significant work within eight to ten.",
+          "If honest self-assessment says you are unlikely to seal it on schedule, composite is the right call - even if you prefer the look of wood.",
         ],
       },
     ],
-    slug: "cedar-vs-composite-seattle",
-    title: "Cedar vs Composite Decking: Which Is Better for Seattle Weather?",
+    slug: "cedar-vs-composite-decking-everett",
+    title: "Cedar vs Composite Decking: Which Is Better for Pacific Northwest Weather?",
   },
   {
     category: "Decks",
@@ -697,7 +875,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
       },
     ],
     slug: "spring-checklist-decks-fences",
-    title: "Spring Maintenance Checklist for Decks and Fences",
+    title: "Spring Deck and Fence Maintenance Checklist for Everett Homeowners",
   },
   {
     category: "Planning",
@@ -765,7 +943,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
       },
     ],
     slug: "questions-before-hiring-deck-builder",
-    title: "Questions to Ask Before Hiring a Deck Builder",
+    title: "10 Questions to Ask a Deck Builder Before You Sign Anything",
   },
 ];
 
@@ -783,17 +961,21 @@ const articleSeoBySlug: Record<string, BlogArticleSeo> = {
       "outdoor structure safety checklist",
     ],
   },
-  "cedar-vs-composite-seattle": {
-    dateModifiedIso: "2026-04-20",
+  "cedar-vs-composite-decking-everett": {
+    dateModifiedIso: "2026-04-24",
     datePublishedIso: "2026-04-20",
-    primaryKeyword: "cedar vs composite decking seattle",
+    metaDescription:
+      "Cedar or composite? A practical comparison for Everett and Snohomish County homeowners - maintenance, cost, appearance, and how each material performs in Pacific Northwest weather. From Northwood Renovation, Everett deck builders.",
+    primaryKeyword: "cedar vs composite decking everett",
+    seoTitle:
+      "Cedar vs Composite Decking: Which Is Better for Everett & Pacific Northwest Weather? | Northwood Renovation",
     searchIntent: "commercial investigation",
     secondaryKeywords: [
-      "best decking material seattle weather",
-      "cedar deck maintenance seattle",
+      "best decking material everett weather",
+      "cedar deck maintenance everett",
       "composite decking pros and cons",
       "deck material comparison pacific northwest",
-      "outdoor decking choices seattle",
+      "everett deck builder",
     ],
   },
   "wood-deck-lifespan-pnw": {
@@ -957,57 +1139,62 @@ const articleGuideBySlug: Record<string, BlogArticleGuide> = {
       "You need a phased plan that protects safety while controlling budget.",
     ],
   },
-  "cedar-vs-composite-seattle": {
+  "cedar-vs-composite-decking-everett": {
+    checklistHeading: "Homeowner Checklist Before You Start",
+    checklistIntro:
+      "Before choosing your material, it helps to think through a few key points:",
     checklist: [
-      "List your priorities: natural look, low maintenance, budget, or long-term value.",
-      "Compare material behavior in shaded and wet zones of your yard.",
-      "Review railing, stair, and fastener compatibility with each option.",
-      "Request side-by-side samples and cleaning guidance before deciding.",
-      "Evaluate lifecycle cost, not only initial install price.",
-      "Confirm warranty details and recommended maintenance cadence.",
+      "Do you prefer natural wood or low maintenance?",
+      "How much time will you spend on upkeep each year?",
+      "Is your yard mostly shaded or open to sun?",
+      "What is your long-term budget, not just upfront cost?",
+      "Do you want the deck to match existing structures?",
     ],
     faq: [
       {
-        question: "Which material usually needs less maintenance in Seattle?",
+        question: "Which material lasts longer in Everett's climate?",
         answer:
-          "Composite typically needs less routine upkeep, while cedar needs regular care to maintain performance and appearance.",
+          "Both can last fifteen to twenty-five years or more when installed and maintained correctly. The difference is in what maintained correctly means for each. Cedar needs regular sealing. Composite needs almost nothing. Decks that fail early in this climate usually have installation problems - improper flashing, incorrect post footings, or the wrong fasteners - more than material problems.",
       },
       {
-        question: "Does cedar always cost less upfront?",
+        question: "Can I switch from cedar to composite without rebuilding the frame?",
         answer:
-          "Often, but not always. Design complexity, framing requirements, and finish choices can change initial costs significantly.",
+          "Sometimes. If the existing pressure-treated frame is structurally sound and the joist spacing is compatible with composite installation specs, resurfacing with composite boards is possible. A frame with rot, soft spots, or incorrect joist spacing usually needs to be rebuilt before composite goes on.",
       },
       {
-        question: "Can I mix cedar and composite in one project?",
+        question: "Does composite get slippery when wet?",
         answer:
-          "Yes. Some homeowners combine materials strategically for visual balance and maintenance efficiency.",
+          "Quality capped composite boards have textured surfaces that provide grip when wet. Current boards from quality manufacturers are designed with wet-weather traction in mind, but debris and mildew should still be cleaned off periodically.",
       },
       {
-        question: "How important is slip resistance in material selection?",
+        question: "Is cedar still a good choice in 2026?",
         answer:
-          "Very important in wet climates. Surface texture and drainage planning both affect day-to-day safety.",
+          "Yes. Cedar is still a reliable, well-performing material for Pacific Northwest decks. The choice between cedar and composite is a practical one based on maintenance preference and budget, not a question of one being obsolete.",
       },
       {
-        question: "Should I decide by color alone?",
+        question: "How do I know which composite board quality to ask for?",
         answer:
-          "No. Appearance matters, but moisture performance, maintenance effort, and expected lifespan should drive final choice.",
+          "Ask specifically about capped composite boards and whether the product carries a warranty of twenty-five years or more. If a composite option is being offered at a much lower price than expected, it is worth asking whether it is capped or uncapped.",
+      },
+      {
+        question: "What does a deck builder in Everett typically recommend?",
+        answer:
+          "We recommend cedar for homeowners who want natural wood and will maintain it. We recommend composite for homeowners who want low maintenance and do not want a recurring sealing schedule. The recommendation comes from understanding how the homeowner plans to use and maintain the space over time.",
       },
     ],
     introParagraphs: [
-      "Cedar and composite both work in Seattle, but they solve different homeowner priorities around look, maintenance, and lifecycle cost.",
-      "Use this guide to compare trade-offs clearly and choose the option that fits your property and routine.",
+      "This article gives you a straight comparison based on what we see on actual builds and replacements in the Pacific Northwest - not a generic national comparison that does not account for the specific conditions Everett-area decks deal with.",
     ],
-    localNotes: [
-      "Shaded Seattle yards can keep surfaces damp longer, which affects cleaning and maintenance expectations.",
-      "Decks used year-round benefit from material choices that pair well with drainage and traction planning.",
-      "Moisture exposure at stairs and railing posts should influence material and detail decisions from day one.",
-    ],
+    localNotes: [],
+    localNotesHeading: "Local Notes",
+    localNotesIntro: "",
+    proSectionHeading: "When to Talk to a Builder",
+    proSectionIntro: "It's a good idea to get professional input if:",
     proSectionBullets: [
-      "You need help balancing appearance goals with practical upkeep.",
-      "Your layout includes complex stairs, rail transitions, or elevation changes.",
-      "You are comparing mixed-material options and need structural guidance.",
-      "You want a lifecycle-cost recommendation based on your site conditions.",
-      "You are unsure which system best fits long-term Seattle weather exposure.",
+      "Your layout includes stairs or elevation changes.",
+      "You are comparing multiple material options.",
+      "You want a long-term cost recommendation.",
+      "You are unsure how weather will affect your deck.",
     ],
   },
   "wood-deck-lifespan-pnw": {
@@ -1446,7 +1633,7 @@ export const blogArticles: BlogArticle[] = baseBlogArticles.map((article) => ({
 }));
 
 export const popularGuideSlugs = [
-  "cedar-vs-composite-seattle",
+  "cedar-vs-composite-decking-everett",
   "fence-posts-failing-signs",
   "spring-checklist-decks-fences",
 ];

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 const HIGHLIGHT_TERMS = [
   "Northwood Renovation",
@@ -107,18 +108,68 @@ const highlightPattern = new RegExp(
 
 const highlightLookup = new Set(HIGHLIGHT_TERMS);
 
-export const renderHighlightedText = (text: string) => {
+const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+const renderPlainTextWithHighlights = (text: string, keyPrefix: string) => {
   const parts = text.split(highlightPattern);
 
   return parts.map((part, index) =>
     highlightLookup.has(part) ? (
-      <span className="brand-highlight" key={`${part}-${index}`}>
+      <span className="brand-highlight" key={`${keyPrefix}-${part}-${index}`}>
         {part}
       </span>
     ) : (
       part
     ),
   );
+};
+
+export const renderHighlightedText = (text: string) => {
+  const nodes: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let matchIndex = 0;
+
+  for (const match of text.matchAll(linkPattern)) {
+    const [fullMatch, label, href] = match;
+    const startIndex = match.index ?? 0;
+
+    if (startIndex > lastIndex) {
+      nodes.push(
+        ...renderPlainTextWithHighlights(
+          text.slice(lastIndex, startIndex),
+          `text-${matchIndex}`,
+        ),
+      );
+    }
+
+    const labelNodes = renderPlainTextWithHighlights(label, `link-${matchIndex}`);
+
+    nodes.push(
+      href.startsWith("/") ? (
+        <Link to={href} key={`link-${href}-${matchIndex}`}>
+          {labelNodes}
+        </Link>
+      ) : (
+        <a href={href} key={`link-${href}-${matchIndex}`}>
+          {labelNodes}
+        </a>
+      ),
+    );
+
+    lastIndex = startIndex + fullMatch.length;
+    matchIndex += 1;
+  }
+
+  if (lastIndex < text.length) {
+    nodes.push(
+      ...renderPlainTextWithHighlights(
+        text.slice(lastIndex),
+        `tail-${matchIndex}`,
+      ),
+    );
+  }
+
+  return nodes;
 };
 
 export const renderBrandText = renderHighlightedText;

@@ -14,7 +14,7 @@ import {
 
 const cardCategoryBySlug: Record<string, string> = {
   "best-fence-materials-seattle": "Fence Materials",
-  "cedar-vs-composite-seattle": "Deck Materials",
+  "cedar-vs-composite-decking-everett": "Deck Materials",
   "fence-posts-failing-signs": "Fence Repairs",
   "prepare-yard-fence-deck-project": "Fence Planning",
   "questions-before-hiring-deck-builder": "Project Planning",

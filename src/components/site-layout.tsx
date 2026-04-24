@@ -96,7 +96,7 @@ const navItems: NavItem[] = [
         description: "Compare cedar, composite, maintenance, and value.",
         group: "Helpful Resources",
         label: "Deck Material Guide",
-        to: "/blog/cedar-vs-composite-seattle",
+        to: "/blog/cedar-vs-composite-decking-everett",
       },
     ],
   },

@@ -6,14 +6,16 @@ import {
 } from "../../components/blog-article-page";
 import { getBlogArticleBySlug } from "../../data/blog-articles";
 
-const article = getBlogArticleBySlug("cedar-vs-composite-seattle");
+const article = getBlogArticleBySlug("cedar-vs-composite-decking-everett");
 
 if (!article) {
-  throw new Error("Missing blog article: cedar-vs-composite-seattle");
+  throw new Error("Missing blog article: cedar-vs-composite-decking-everett");
 }
 
-const CedarVsCompositeSeattlePage = () => <BlogArticlePage article={article} />;
+const CedarVsCompositeDeckingEverettPage = () => (
+  <BlogArticlePage article={article} />
+);
 
-export default CedarVsCompositeSeattlePage;
+export default CedarVsCompositeDeckingEverettPage;
 
 export const Head: HeadFC = () => BlogArticleHead(article);
