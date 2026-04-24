@@ -9,41 +9,43 @@ import seattleTeamTrucks from "../images/about/seattle-team-trucks.jpg";
 import teamTruckHome from "../images/about/team-truck-home.jpg";
 
 const differencePoints = [
-  "We specialize in fences, decks, and outdoor structures.",
-  "We understand Snohomish County weather and exterior material needs.",
-  "We communicate clearly before and during the project.",
-  "We focus on clean lines, strong construction, and durable finishes.",
-  "We respect your property and keep the work area organized.",
-  "We complete a final walkthrough so details are not overlooked.",
+  "Licensed and insured deck and fence contractor based in Everett, WA",
+  "Serving Snohomish County, North Seattle, and the Eastside since day one",
+  "Free on-site estimates with no pressure and clear written scope",
+  "Experienced with cedar, composite, and pressure-treated materials for Northwest climates",
+  "Permit-ready - we handle Everett, Marysville, and Snohomish County building permits",
+  "Clean job sites, clear timelines, and a final walkthrough on every project",
 ];
 
 const services = [
-  "Custom deck building",
-  "Cedar decks",
-  "Composite decks",
-  "Deck repairs and upgrades",
-  "Privacy fence installation",
-  "Cedar fencing",
-  "Wood fence repairs",
-  "Gates and fence upgrades",
-  "Railings and stairs",
-  "Exterior carpentry",
-  "Outdoor structure improvements",
+  "Custom deck design and build",
+  "Cedar wood deck installation",
+  "Composite deck installation",
+  "Covered deck and pergola installation",
+  "Deck repair and board replacement",
+  "Cedar wood privacy fence installation",
+  "Chain link fence installation",
+  "Wood fence repair and replacement",
+  "Gate installation and upgrades",
+  "Deck railings and stair installation",
+  "Exterior carpentry and outdoor structure repairs",
 ];
 
 const serviceAreas = [
-  "Everett",
-  "Marysville",
-  "Snohomish",
-  "Mill Creek",
-  "Seattle",
-  "Shoreline",
-  "Bellevue",
-  "Kirkland",
-  "Redmond",
-  "Lynnwood",
-  "Mukilteo",
-  "Edmonds",
+  { label: "Everett, WA", to: "/cities/everett-wa/" },
+  { label: "Marysville, WA", to: "/cities/marysville-wa/" },
+  { label: "Snohomish, WA", to: "/cities/snohomish-wa/" },
+  { label: "Mill Creek, WA", to: "/cities/mill-creek-wa/" },
+  { label: "Mukilteo, WA", to: "/cities/mukilteo-wa/" },
+  { label: "Lynnwood, WA", to: "/cities/lynnwood-wa/" },
+  { label: "Edmonds, WA", to: "/cities/edmonds-wa/" },
+  { label: "Bothell, WA", to: "/cities/bothell-wa/" },
+  { label: "Kenmore, WA", to: "/cities/kenmore-wa/" },
+  { label: "Shoreline, WA", to: "/cities/shoreline-wa/" },
+  { label: "Seattle, WA", to: "/cities/seattle-wa/" },
+  { label: "Kirkland, WA", to: "/cities/kirkland-wa/" },
+  { label: "Bellevue, WA", to: "/cities/bellevue-wa/" },
+  { label: "Redmond, WA", to: "/cities/redmond-wa/" },
 ];
 
 const CheckIcon = () => (
@@ -87,13 +89,18 @@ const AboutPage = () => (
             <Highlight>Northwood Renovation</Highlight>
           </p>
           <h1>
-            <Highlight>Northwood Renovation</Highlight>
+            About <Highlight>Northwood Renovation</Highlight> - Everett-Based{" "}
+            <Highlight>Deck</Highlight> and <Highlight>Fence</Highlight>{" "}
+            Contractor
           </h1>
           <span>
-            Your trusted, locally owned <Highlight>fence</Highlight> and{" "}
-            <Highlight>deck</Highlight> building company serving{" "}
-            <Highlight>Everett, WA</Highlight>, Snohomish County, and the
-            greater Seattle region.
+            Northwood Renovation is a locally owned <Highlight>deck</Highlight>{" "}
+            and <Highlight>fence</Highlight> contractor serving{" "}
+            <Highlight>Everett</Highlight>, Snohomish County, and the greater
+            Seattle area. We build custom <Highlight>decks</Highlight>, cedar
+            privacy <Highlight>fences</Highlight>, composite decking, covered
+            decks, and railings - with free on-site estimates and clear
+            communication from start to finish.
           </span>
           <div className="about-hero__actions">
             <Link to="/contact#contact-form" className="about-button">
@@ -112,50 +119,53 @@ const AboutPage = () => (
         </p>
         <div>
           <h2>
-            <Highlight>Outdoor</Highlight> spaces built with clear communication
-            and careful craftsmanship
+            Custom <Highlight>Deck</Highlight> and <Highlight>Fence</Highlight>{" "}
+            Installation for <Highlight>Everett</Highlight> &amp; Snohomish
+            County Homeowners
           </h2>
           <p>
-            At <Highlight>Northwood Renovation</Highlight>, we help homeowners
-            improve their <Highlight>outdoor</Highlight> spaces with custom{" "}
-            <Highlight>decks</Highlight>, privacy <Highlight>fences</Highlight>,
-            railings, gates, repairs, and exterior renovation work.
+            At <Highlight>Northwood Renovation</Highlight>, we help{" "}
+            <Highlight>Everett</Highlight> and Snohomish County homeowners build
+            and upgrade outdoor spaces - custom <Highlight>decks</Highlight>,
+            cedar privacy <Highlight>fences</Highlight>, composite decking,
+            railings, gates, and exterior repairs.
           </p>
           <p>
-            Whether you need a new backyard <Highlight>deck</Highlight>, a clean
-            cedar <Highlight>fence</Highlight>, safer stairs, or an upgrade to
-            an existing <Highlight>outdoor</Highlight> structure, our team
-            handles the process with clear communication, durable materials, and
-            careful craftsmanship from start to finish.
+            Whether you need a new backyard <Highlight>deck</Highlight> built
+            from scratch, a cedar wood <Highlight>fence</Highlight> for
+            privacy, composite decking that holds up to Northwest weather, or
+            repairs to an existing outdoor structure, our Everett-based crew
+            manages the full process with honest estimates, clear timelines, and
+            careful craftsmanship.
           </p>
         </div>
       </section>
 
       <AboutTextBlock
         label="Who We Are"
-        title="A locally owned fence and deck company based in Everett"
+        title="Everett&apos;s Locally Owned Deck and Fence Company"
       >
         <p>
           <Highlight>Northwood Renovation</Highlight> is a locally owned{" "}
-          <Highlight>fence</Highlight> and <Highlight>deck</Highlight> company
-          based in <Highlight>Everett, Washington</Highlight>, built on
-          craftsmanship, trust, and straightforward service.
+          <Highlight>deck</Highlight> and <Highlight>fence</Highlight>{" "}
+          contractor based in <Highlight>Everett, Washington</Highlight>. We
+          serve homeowners across Snohomish County, including{" "}
+          <Highlight>Marysville</Highlight>, <Highlight>Mill Creek</Highlight>,{" "}
+          <Highlight>Mukilteo</Highlight>, <Highlight>Lynnwood</Highlight>, and{" "}
+          <Highlight>Edmonds</Highlight>, as well as North Seattle,{" "}
+          <Highlight>Kirkland</Highlight>, and <Highlight>Bellevue</Highlight>.
         </p>
         <p>
-          We started with a simple belief: homeowners deserve outdoor spaces
-          that are built properly, look clean, and last through Northwest
-          weather. Our work focuses on practical, durable exterior projects:
-          <Highlight>decks</Highlight>, <Highlight>fences</Highlight>,
-          railings, gates, repairs, and <Highlight>outdoor</Highlight> upgrades
-          that improve the way people use their homes.
+          We started with a simple belief: homeowners deserve outdoor projects
+          built properly, with honest pricing and workmanship that holds up
+          through Northwest winters. Our focus is exterior renovation - custom
+          deck building, cedar fence installation, composite decking, covered
+          decks, railings, and fence repairs.
         </p>
         <p>
-          We are not trying to be every kind of contractor. Our focus is
-          exterior renovation, especially <Highlight>fences</Highlight> and{" "}
-          <Highlight>decks</Highlight>. That focus helps us deliver better
-          planning, cleaner installation, and more reliable results for{" "}
-          <Highlight>Everett</Highlight>-area and greater Puget Sound
-          homeowners.
+          We do not try to be every kind of contractor. Specializing in{" "}
+          <Highlight>fences</Highlight> and <Highlight>decks</Highlight> means
+          better results for homeowners who want the job done right.
         </p>
       </AboutTextBlock>
 
@@ -168,20 +178,23 @@ const AboutPage = () => (
         </div>
         <div className="about-split-section__content">
           <p className="about-label">Our Mission</p>
-          <h2>Outdoor renovation should feel simple, honest, and organized</h2>
+          <h2>
+            <Highlight>Deck</Highlight> and <Highlight>Fence</Highlight>{" "}
+            Projects Done Right - From Estimate to Final Walkthrough
+          </h2>
           <p>
-            A great <Highlight>deck</Highlight> or <Highlight>fence</Highlight>{" "}
-            is more than just wood, posts, boards, or railings. It changes how a
-            home feels and functions. It can create privacy, improve safety, add
-            usable <Highlight>outdoor</Highlight> space, and make a property
-            feel more finished.
+            A well-built <Highlight>deck</Highlight> or{" "}
+            <Highlight>fence</Highlight> does more than add structure - it
+            creates privacy, improves safety, adds usable outdoor living space,
+            and increases the value and appeal of your home.
           </p>
           <p>
-            At <Highlight>Northwood Renovation</Highlight>, we guide homeowners
-            through the process with clear estimates, practical recommendations,
-            and dependable workmanship. From the first conversation to the final
-            walkthrough, our goal is to make the experience easy to understand
-            and the finished result something you can feel proud of.
+            At <Highlight>Northwood Renovation</Highlight>, we guide{" "}
+            <Highlight>Everett</Highlight> and Snohomish County homeowners
+            through every step: free on-site estimate, material selection,
+            permit handling, installation, and final walkthrough. Our goal is
+            to make outdoor renovation straightforward and the finished result
+            something you&apos;ll use every day.
           </p>
         </div>
       </section>
@@ -189,7 +202,7 @@ const AboutPage = () => (
       <section className="about-why-section">
         <div className="about-section-head">
           <p className="about-label">What Makes Us Different</p>
-          <h2>Quality, communication, and clean execution</h2>
+          <h2>Why Everett Homeowners Choose Northwood Renovation</h2>
         </div>
         <div className="about-difference-copy">
           <p>
@@ -257,9 +270,8 @@ const AboutPage = () => (
         <div>
           <p className="about-label">Our Services</p>
           <h2>
-            <Highlight>Fence</Highlight>, <Highlight>deck</Highlight>, and
-            exterior renovation services for <Highlight>Everett</Highlight> and
-            regional homes
+            <Highlight>Deck</Highlight> and <Highlight>Fence</Highlight>{" "}
+            Services in <Highlight>Everett, WA</Highlight> and Snohomish County
           </h2>
           <p>
             <Highlight>Northwood Renovation</Highlight> provides{" "}
@@ -289,33 +301,38 @@ const AboutPage = () => (
         </div>
         <div className="about-materials-section__content">
           <p className="about-label">Built for Northwest Homes</p>
-          <h2>Outdoor work that can handle Northwest weather</h2>
+          <h2>
+            <Highlight>Decks</Highlight> and <Highlight>Fences</Highlight>{" "}
+            Built for Pacific Northwest Weather
+          </h2>
           <p>
-            <Highlight>Everett-area</Highlight> homes need{" "}
-            <Highlight>outdoor</Highlight> work that can handle moisture, rain,
-            changing seasons, and everyday use.
+            <Highlight>Everett</Highlight> and Snohomish County homes need{" "}
+            <Highlight>decks</Highlight> and <Highlight>fences</Highlight>{" "}
+            built to handle moisture, heavy rain, and the freeze-thaw cycles of
+            Pacific Northwest winters. The wrong materials or improper
+            installation leads to rot, warping, and costly repairs within a few
+            years.
           </p>
           <p>
-            <Highlight>Decks</Highlight> and <Highlight>fences</Highlight> in
-            the Pacific Northwest need more than a good-looking design. They
-            need proper material choices, solid construction, and attention to
-            water exposure. <Highlight>Northwood Renovation</Highlight> builds
-            with those local conditions in mind.
-          </p>
-          <p>
-            We help homeowners choose options that fit their home’s style, their
-            maintenance preferences, and the demands of{" "}
-            <Highlight>Northwest</Highlight> weather.
+            <Highlight>Northwood Renovation</Highlight> selects and installs
+            materials proven in Northwest climates - cedar wood,
+            pressure-treated lumber, and composite decking - with proper
+            drainage, fastener choices, and finishing details that extend the
+            life of every project. We help homeowners choose between cedar vs.
+            composite, open vs. covered decks, and wood vs. chain link fences
+            based on their maintenance preferences, budget, and how they plan to
+            use the space.
           </p>
         </div>
       </section>
 
       <section className="about-service-area-section">
-        <div>
+        <div className="about-service-area-section__content">
           <p className="about-label">Our Service Area</p>
           <h2>
-            Proudly serving <Highlight>Everett, WA</Highlight>, Snohomish County,
-            and surrounding communities
+            <Highlight>Deck</Highlight> and <Highlight>Fence</Highlight>{" "}
+            Contractor Serving <Highlight>Everett</Highlight>, Snohomish County,
+            and Greater Seattle
           </h2>
           <p>
             <Highlight>Northwood Renovation</Highlight> proudly serves{" "}
@@ -325,31 +342,37 @@ const AboutPage = () => (
             homes, neighborhoods, weather, and <Highlight>outdoor</Highlight>{" "}
             living needs of Northwest homeowners.
           </p>
+          <Link to="/cities/" className="about-service-area-section__link">
+            View Full Service Area →
+          </Link>
         </div>
         <div className="about-area-list">
           {serviceAreas.map((area) => (
-            <span key={area}>
-              <Highlight>{area}</Highlight>
-            </span>
+            <Link key={area.to} to={area.to}>
+              <Highlight>{area.label}</Highlight>
+            </Link>
           ))}
         </div>
       </section>
 
       <section className="about-final-cta">
         <div>
-          <p className="about-label">Let’s Build Something That Lasts</p>
-          <h2>Your outdoor space should feel useful, comfortable, and built with care.</h2>
+          <p className="about-label">Get a Free Estimate</p>
+          <h2>Get a Free Deck or Fence Estimate in Everett, WA</h2>
           <span className="about-final-cta__copy">
-            Whether you are planning a new <Highlight>deck</Highlight>,
-            replacing an old <Highlight>fence</Highlight>, improving privacy,
-            repairing <Highlight>outdoor</Highlight> structures, or upgrading
-            your backyard, <Highlight>Northwood Renovation</Highlight> is here
-            to help you take the next step.
+            Whether you&apos;re planning a new deck build, replacing a worn
+            fence, adding a cedar privacy fence, or repairing an outdoor
+            structure, <Highlight>Northwood Renovation</Highlight> is ready to
+            help. We serve <Highlight>Everett</Highlight>,{" "}
+            <Highlight>Marysville</Highlight>, <Highlight>Mill Creek</Highlight>,{" "}
+            <Highlight>Lynnwood</Highlight>, <Highlight>Shoreline</Highlight>,{" "}
+            <Highlight>Seattle</Highlight>, <Highlight>Kirkland</Highlight>, and
+            surrounding Snohomish County communities.
           </span>
           <span className="about-final-cta__copy">
-            We combine clear communication, clean craftsmanship, and local{" "}
-            <Highlight>Everett</Highlight>-based experience to build{" "}
-            <Highlight>outdoor</Highlight> work you can trust.
+            Call <Highlight>(425) 683-2024</Highlight> or request a free
+            estimate online - our Everett-based team responds within one
+            business day.
           </span>
         </div>
         <div className="about-final-cta__actions">
@@ -374,8 +397,8 @@ export default AboutPage;
 
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
-    title="About Northwood Renovation | Everett Deck & Fence Contractor"
-    description="Learn about Northwood Renovation, an Everett-based deck and fence contractor focused on honest communication, clean craftsmanship, and durable outdoor spaces."
+    title="About Northwood Renovation — Everett, WA Deck & Fence Contractor"
+    description="Northwood Renovation is an Everett, WA deck and fence contractor serving Snohomish County and Greater Seattle. Custom decks, cedar fences, composite decking, and exterior renovation. Free on-site estimates. Call (425) 683-2024."
     pathname={location.pathname}
   />
 );
