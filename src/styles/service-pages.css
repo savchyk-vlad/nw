@@ -1151,6 +1151,130 @@
   padding-top: 24px;
 }
 
+.chain-link-fence-page {
+  gap: 24px;
+}
+
+.chain-link-fence-page .service-hero {
+  min-height: clamp(500px, 58vw, 620px);
+}
+
+.chain-link-fence-page .service-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(27, 27, 27, 0.78), rgba(27, 27, 27, 0.42) 54%, rgba(27, 27, 27, 0.1)),
+    linear-gradient(180deg, rgba(60, 74, 70, 0.14), rgba(27, 27, 27, 0.34));
+}
+
+.chain-link-fence-page .service-hero__content {
+  max-width: 780px;
+  padding: clamp(34px, 5vw, 68px);
+}
+
+.chain-link-fence-page .service-hero__content > p:not(.service-hero__eyebrow) {
+  max-width: 720px;
+}
+
+.chain-link-fence-page .service-trust {
+  gap: 16px;
+}
+
+.chain-link-fence-page .service-trust__card,
+.chain-link-fence-page .service-card,
+.chain-link-fence-page .service-process-card,
+.chain-link-fence-page .service-project-card,
+.chain-link-fence-page .service-faq__item {
+  background: rgba(246, 247, 245, 0.84);
+  border: 1px solid rgba(27, 27, 27, 0.06);
+  box-shadow: 0 14px 34px rgba(27, 27, 27, 0.06);
+}
+
+.chain-link-fence-page .service-trust__card {
+  min-height: 158px;
+}
+
+.chain-link-fence-page .service-overview {
+  gap: clamp(24px, 4vw, 66px);
+  padding: 46px 0 18px;
+}
+
+.chain-link-fence-page .service-overview__copy {
+  gap: 14px;
+  max-width: 930px;
+}
+
+.chain-link-fence-page .service-overview__copy p {
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.74;
+}
+
+.chain-link-fence-page .service-split {
+  align-items: start;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+}
+
+.chain-link-fence-page .service-card {
+  padding: 28px;
+}
+
+.chain-link-fence-page .service-options--stacked {
+  gap: 12px;
+}
+
+.chain-link-fence-page .service-options--stacked article {
+  background: transparent;
+}
+
+.chain-link-fence-page .service-options--stacked article p + p {
+  margin-top: 10px;
+}
+
+.chain-link-fence-page .service-benefits {
+  gap: 22px;
+}
+
+.chain-link-fence-page .service-process {
+  margin-top: 8px;
+  padding: clamp(30px, 4.5vw, 48px);
+}
+
+.chain-link-fence-page .service-process__grid {
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.chain-link-fence-page .service-process-card {
+  min-height: 272px;
+  padding: 22px;
+}
+
+.chain-link-fence-page .service-process-card p + p {
+  margin-top: 12px;
+}
+
+.chain-link-fence-page .service-related__grid,
+.chain-link-fence-page .service-faq__list {
+  gap: 16px;
+}
+
+.chain-link-fence-page .service-project-card div,
+.chain-link-fence-page .service-faq__item {
+  padding: 22px;
+}
+
+.chain-link-fence-page .service-final-cta {
+  margin-top: 18px;
+  padding: clamp(30px, 4.5vw, 52px);
+}
+
+.chain-link-fence-page .service-final-cta p {
+  max-width: 760px;
+}
+
+.chain-link-fence-page .service-area-strip {
+  padding-top: 24px;
+}
+
 .cedar-wood-fence-page {
   gap: 24px;
 }
@@ -1350,6 +1474,14 @@
     grid-template-columns: 1fr;
   }
 
+  .chain-link-fence-page .service-trust {
+    grid-template-columns: 1fr;
+  }
+
+  .chain-link-fence-page .service-process__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .cedar-wood-fence-page .service-trust {
     grid-template-columns: 1fr;
   }
@@ -1412,6 +1544,12 @@
   .wood-deck-page .service-card,
   .wood-deck-page .service-project-card div,
   .wood-deck-page .service-faq__item {
+    padding: 20px;
+  }
+
+  .chain-link-fence-page .service-card,
+  .chain-link-fence-page .service-project-card div,
+  .chain-link-fence-page .service-faq__item {
     padding: 20px;
   }
 
@@ -1529,6 +1667,23 @@
   .wood-deck-page .service-card,
   .wood-deck-page .service-process-card {
     padding: 18px;
+  }
+
+  .chain-link-fence-page .service-hero {
+    min-height: 420px;
+  }
+
+  .chain-link-fence-page .service-hero__content {
+    padding: 22px 18px;
+  }
+
+  .chain-link-fence-page .service-card,
+  .chain-link-fence-page .service-process-card {
+    padding: 18px;
+  }
+
+  .chain-link-fence-page .service-process__grid {
+    grid-template-columns: 1fr;
   }
 
   .cedar-wood-fence-page .service-hero {
