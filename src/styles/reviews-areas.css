@@ -148,6 +148,16 @@
   margin: 0;
 }
 
+.reviews-platform-banner__logo-wrap a,
+.reviews-featured__platform a,
+.review-card__platform a,
+.reviews-carousel__platform a,
+.reviews-platform-block__head a {
+  color: inherit;
+  display: inline-flex;
+  text-decoration: none;
+}
+
 .reviews-platform-logo {
   display: block;
   height: 24px;
@@ -1217,4 +1227,3 @@
     border-radius: 18px;
   }
 }
-

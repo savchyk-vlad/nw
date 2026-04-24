@@ -4,6 +4,8 @@ import renderHighlightedText from "../brand-text";
 import { submitLeadForm } from "../../lib/lead-form";
 import googleReviewLogo from "../../images/google-review-logo.png";
 
+const GOOGLE_BUSINESS_PROFILE_URL = "https://share.google/hEzXTLWamjiIJ8qNG";
+
 const Hero = () => {
   const [quoteStep, setQuoteStep] = React.useState(1);
   const [zipCode, setZipCode] = React.useState("");
@@ -116,8 +118,11 @@ const Hero = () => {
           className="home-quote-hero__content"
           style={{ position: "relative", zIndex: 1 }}>
           <div className="home-quote-hero__copy">
-            <div
+            <a
               className="home-quote-hero__rating"
+              href={GOOGLE_BUSINESS_PROFILE_URL}
+              target="_blank"
+              rel="noreferrer"
               aria-label="4.9 Google rating, Everett's number one deck and fence builder">
               <img
                 src={googleReviewLogo}
@@ -133,7 +138,7 @@ const Hero = () => {
                 ))}
               </span>
               <strong>4.9 ★ Google Rating · Everett&apos;s #1 Deck &amp; Fence Builder</strong>
-            </div>
+            </a>
 
             <h1>
               Deck and Fence Builder in Everett, WA

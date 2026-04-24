@@ -454,6 +454,12 @@
   padding: 20px;
 }
 
+.city-service-review-summary-card {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
 .city-service-review-summary-card img {
   display: block;
   height: 24px;

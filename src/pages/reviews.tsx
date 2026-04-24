@@ -9,6 +9,8 @@ import googleReviewLogo from "../images/google-review-logo.png";
 import testimonialsFamilyOutdoor from "../images/testimonials-family-outdoor.avif";
 import yelpLogo from "../images/yelp-logo.png";
 
+const GOOGLE_BUSINESS_PROFILE_URL = "https://share.google/hEzXTLWamjiIJ8qNG";
+
 type ReviewPlatform = "Google" | "Yelp" | "Facebook";
 type ReviewService = "Decks" | "Fences" | "Repairs";
 
@@ -123,10 +125,45 @@ type PlatformFilter = (typeof platformFilters)[number];
 type ServiceFilter = (typeof serviceFilters)[number];
 
 const renderStars = (count: number) => "★★★★★".slice(0, count);
-const platformLogos: Record<ReviewPlatform, { alt: string; src: string }> = {
+const platformLogos: Record<
+  ReviewPlatform,
+  { alt: string; href?: string; src: string }
+> = {
   Facebook: { alt: "Facebook Reviews", src: facebookLogo },
-  Google: { alt: "Google Reviews", src: googleReviewLogo },
+  Google: {
+    alt: "Google Reviews",
+    href: GOOGLE_BUSINESS_PROFILE_URL,
+    src: googleReviewLogo,
+  },
   Yelp: { alt: "Yelp Reviews", src: yelpLogo },
+};
+
+const renderPlatformLogo = (
+  platform: ReviewPlatform,
+  className: string,
+  small = false,
+) => {
+  const logo = platformLogos[platform];
+  const image = (
+    <img
+      src={logo.src}
+      alt={logo.alt}
+      className={small ? `${className} reviews-platform-logo--small` : className}
+      loading="lazy"
+    />
+  );
+
+  if (!logo.href) return image;
+
+  return (
+    <a
+      href={logo.href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`View ${logo.alt} profile`}>
+      {image}
+    </a>
+  );
 };
 
 const ReviewsPage = () => {
@@ -221,12 +258,7 @@ const ReviewsPage = () => {
           ].map((platform) => (
             <article className="reviews-platform-banner__item" key={platform.label}>
               <h2 className="reviews-platform-banner__logo-wrap">
-                <img
-                  src={platformLogos[platform.label as ReviewPlatform].src}
-                  alt={platformLogos[platform.label as ReviewPlatform].alt}
-                  className="reviews-platform-logo"
-                  loading="lazy"
-                />
+                {renderPlatformLogo(platform.label as ReviewPlatform, "reviews-platform-logo")}
               </h2>
               <p className="reviews-platform-banner__stars">
                 <span className="reviews-stars">
@@ -250,12 +282,11 @@ const ReviewsPage = () => {
             <p>{featuredReview.name}</p>
             <span>{renderHighlightedText(featuredReview.location)}</span>
             <span className="reviews-featured__platform">
-              <img
-                src={platformLogos[featuredReview.platform].src}
-                alt={platformLogos[featuredReview.platform].alt}
-                className="reviews-platform-logo reviews-platform-logo--small"
-                loading="lazy"
-              />
+              {renderPlatformLogo(
+                featuredReview.platform,
+                "reviews-platform-logo",
+                true,
+              )}
             </span>
           </div>
         </section>
@@ -307,12 +338,7 @@ const ReviewsPage = () => {
                   </div>
                 </div>
                 <p className="review-card__platform">
-                  <img
-                    src={platformLogos[review.platform].src}
-                    alt={platformLogos[review.platform].alt}
-                    className="reviews-platform-logo reviews-platform-logo--small"
-                    loading="lazy"
-                  />
+                  {renderPlatformLogo(review.platform, "reviews-platform-logo", true)}
                   <span className="reviews-stars">{renderStars(review.rating)}</span>
                 </p>
                 <span className="review-card__tag">{review.projectType}</span>
@@ -356,12 +382,11 @@ const ReviewsPage = () => {
           </div>
           <article className="reviews-carousel__card">
             <p className="reviews-carousel__platform">
-              <img
-                src={platformLogos[carouselReview.platform].src}
-                alt={platformLogos[carouselReview.platform].alt}
-                className="reviews-platform-logo reviews-platform-logo--small"
-                loading="lazy"
-              />
+              {renderPlatformLogo(
+                carouselReview.platform,
+                "reviews-platform-logo",
+                true,
+              )}
             </p>
             <h3>{carouselReview.name}</h3>
             <span>{carouselReview.projectType}</span>
@@ -390,12 +415,7 @@ const ReviewsPage = () => {
               <article key={platform} className="reviews-platform-block">
                 <div className="reviews-platform-block__head">
                   <h2>
-                    <img
-                      src={platformLogos[platform].src}
-                      alt={platformLogos[platform].alt}
-                      className="reviews-platform-logo"
-                      loading="lazy"
-                    />
+                    {renderPlatformLogo(platform, "reviews-platform-logo")}
                   </h2>
                   <p>
                     <span className="reviews-stars">{renderStars(5)}</span> from

@@ -184,10 +184,15 @@ const areaItems = [
 ];
 
 const trustLogos = [
-  { src: googleReviewLogo, alt: "Google Reviews", to: "/contact" },
-  { src: bbbLogo, alt: "Better Business Bureau", to: "/contact" },
-  { src: yelpLogo, alt: "Yelp", to: "/contact" },
-  { src: angiLogo, alt: "Angi", to: "/contact" },
+  {
+    src: googleReviewLogo,
+    alt: "Google Reviews",
+    href: "https://share.google/hEzXTLWamjiIJ8qNG",
+    external: true,
+  },
+  { src: bbbLogo, alt: "Better Business Bureau", href: "/contact" },
+  { src: yelpLogo, alt: "Yelp", href: "/contact" },
+  { src: angiLogo, alt: "Angi", href: "/contact" },
 ];
 
 const MOBILE_NAV_BREAKPOINT = 900;
@@ -616,13 +621,25 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
           <div className="site-footer__trust-logos" aria-label="Trust logos">
             {trustLogos.map((trustLogo) => (
-              <Link
-                to={trustLogo.to}
-                className="site-footer__trust-logo"
-                key={trustLogo.alt}
-                aria-label={`View ${trustLogo.alt} profile`}>
-                <img src={trustLogo.src} alt={trustLogo.alt} loading="lazy" />
-              </Link>
+              trustLogo.external ? (
+                <a
+                  href={trustLogo.href}
+                  className="site-footer__trust-logo"
+                  key={trustLogo.alt}
+                  aria-label={`View ${trustLogo.alt} profile`}
+                  target="_blank"
+                  rel="noreferrer">
+                  <img src={trustLogo.src} alt={trustLogo.alt} loading="lazy" />
+                </a>
+              ) : (
+                <Link
+                  to={trustLogo.href}
+                  className="site-footer__trust-logo"
+                  key={trustLogo.alt}
+                  aria-label={`View ${trustLogo.alt} profile`}>
+                  <img src={trustLogo.src} alt={trustLogo.alt} loading="lazy" />
+                </Link>
+              )
             ))}
           </div>
 

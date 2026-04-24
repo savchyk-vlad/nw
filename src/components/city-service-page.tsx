@@ -15,6 +15,8 @@ import {
   BUSINESS_PHONE_TEL,
 } from "../lib/site-metadata";
 
+const GOOGLE_BUSINESS_PROFILE_URL = "https://share.google/hEzXTLWamjiIJ8qNG";
+
 const trustCards = [
   {
     title: "Fence & Deck Specialists",
@@ -55,6 +57,7 @@ const processSteps = [
 
 const reviewSummary = [
   {
+    href: GOOGLE_BUSINESS_PROFILE_URL,
     label: "Google Reviews",
     logo: googleReviewLogo,
     rating: "4.9",
@@ -418,13 +421,27 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
             </span>
           </div>
           <div className="city-service-reviews__summary">
-            {reviewSummary.map((platform) => (
-              <article key={platform.label} className="city-service-review-summary-card">
-                <img src={platform.logo} alt={platform.label} loading="lazy" />
-                <strong>{platform.rating}</strong>
-                <p>{platform.text}</p>
-              </article>
-            ))}
+            {reviewSummary.map((platform) =>
+              platform.href ? (
+                <a
+                  key={platform.label}
+                  className="city-service-review-summary-card"
+                  href={platform.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`View ${platform.label} profile`}>
+                  <img src={platform.logo} alt={platform.label} loading="lazy" />
+                  <strong>{platform.rating}</strong>
+                  <p>{platform.text}</p>
+                </a>
+              ) : (
+                <article key={platform.label} className="city-service-review-summary-card">
+                  <img src={platform.logo} alt={platform.label} loading="lazy" />
+                  <strong>{platform.rating}</strong>
+                  <p>{platform.text}</p>
+                </article>
+              ),
+            )}
           </div>
           <div className="city-service-reviews__grid">
             {reviewCards.map((card) => (

@@ -27,10 +27,12 @@ import {
 const CONTACT_PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
 const CONTACT_PHONE_TEL = BUSINESS_PHONE_TEL;
 const DECK_LOCAL_FORM_SCROLL_OFFSET = 65;
+const GOOGLE_BUSINESS_PROFILE_URL = "https://share.google/hEzXTLWamjiIJ8qNG";
 
 const trustCards = [
   {
     alt: "Google Reviews",
+    href: GOOGLE_BUSINESS_PROFILE_URL,
     label: "Google",
     quantity: "64+ reviews",
     rating: "4.9/5",
@@ -504,18 +506,37 @@ const DeckLocalPage = () => {
       </section>
 
       <section className="deck-local-trust" id="deck-local-reviews" aria-label="Trust signals">
-        {trustCards.map((card) => (
-          <article key={card.label} className="deck-local-trust-card">
-            <img src={card.src} alt={card.alt} loading="lazy" decoding="async" />
-            {card.showStars ? (
-              <p className="deck-local-trust-card__stars" aria-hidden="true">
-                ★★★★★
-              </p>
-            ) : null}
-            <strong>{card.rating}</strong>
-            <em>{card.quantity}</em>
-          </article>
-        ))}
+        {trustCards.map((card) =>
+          card.href ? (
+            <a
+              key={card.label}
+              className="deck-local-trust-card"
+              href={card.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`View ${card.alt} profile`}>
+              <img src={card.src} alt={card.alt} loading="lazy" decoding="async" />
+              {card.showStars ? (
+                <p className="deck-local-trust-card__stars" aria-hidden="true">
+                  ★★★★★
+                </p>
+              ) : null}
+              <strong>{card.rating}</strong>
+              <em>{card.quantity}</em>
+            </a>
+          ) : (
+            <article key={card.label} className="deck-local-trust-card">
+              <img src={card.src} alt={card.alt} loading="lazy" decoding="async" />
+              {card.showStars ? (
+                <p className="deck-local-trust-card__stars" aria-hidden="true">
+                  ★★★★★
+                </p>
+              ) : null}
+              <strong>{card.rating}</strong>
+              <em>{card.quantity}</em>
+            </article>
+          ),
+        )}
       </section>
 
       <section className="deck-local-transform" id="deck-local-projects">
