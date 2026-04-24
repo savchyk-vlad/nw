@@ -55,7 +55,7 @@ export const recentWorkProjects: RecentWorkProject[] = [
     title: "Cedar Backyard Deck",
     type: "Deck Build",
     category: "Decks",
-    location: "Seattle, WA",
+    location: "Everett, WA",
     description:
       "A custom cedar deck built for backyard entertaining with clean edges, durable framing, and a natural finish.",
     story:
@@ -225,7 +225,7 @@ export const recentWorkProjects: RecentWorkProject[] = [
     title: "Wood Railing Detail",
     type: "Deck Railing",
     category: "Railings",
-    location: "Seattle, WA",
+    location: "Everett, WA",
     description:
       "A railing-focused deck project with sturdy posts, open views, and careful finishing around the perimeter.",
     story:

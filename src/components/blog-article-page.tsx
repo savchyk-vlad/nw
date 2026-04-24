@@ -34,7 +34,7 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
   const tocItems = [
     ...article.sections.map((section) => section.heading),
     "Homeowner Checklist",
-    "Seattle Notes",
+    "Local Notes",
     "When to Call a Professional",
     "Frequently Asked Questions",
   ];
@@ -73,7 +73,7 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
                 {article.dateLabel.replace("Updated ", "")}
               </span>
               <span>
-                <strong>Location:</strong> {renderHighlightedText("Seattle, WA")}
+                <strong>Location:</strong> {renderHighlightedText("Everett, WA")}
               </span>
             </p>
           </div>
@@ -137,9 +137,9 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
 
           <section
             className="blog-article-block"
-            id={slugifyHeading("Seattle Notes")}
+            id={slugifyHeading("Local Notes")}
           >
-            <h2>Seattle Notes</h2>
+            <h2>Local Notes</h2>
             {article.localNotes.map((note) => (
               <p key={note}>{renderHighlightedText(note)}</p>
             ))}
@@ -176,12 +176,12 @@ export const BlogArticlePage = ({ article }: BlogArticlePageProps) => {
         </article>
 
         <section className="blog-article-end-cta">
-          <h2>Need help planning a fence or deck project in Seattle?</h2>
+          <h2>Need help planning a fence or deck project?</h2>
           <p>
             <span className="brand-highlight">Northwood Renovation</span> helps
-            Seattle-area homeowners build durable fences, decks, railings, and
-            outdoor structures. Tell us about your project and we&apos;ll help
-            you understand the next step.
+            Everett-area and greater Puget Sound homeowners build durable
+            fences, decks, railings, and outdoor structures. Tell us about your
+            project and we&apos;ll help you understand the next step.
           </p>
           <div className="blog-final-cta__actions">
             <Link to="/contact#contact-form" className="blog-button blog-button--primary">
@@ -261,7 +261,7 @@ export const BlogArticleHead = (article: BlogArticle): ReturnType<HeadFC> =>
         },
         {
           "@type": "Place",
-          name: "Seattle, WA",
+          name: "Everett, WA",
         },
       ],
     };

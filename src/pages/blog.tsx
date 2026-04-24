@@ -18,9 +18,9 @@ const cardCategoryBySlug: Record<string, string> = {
   "fence-posts-failing-signs": "Fence Repairs",
   "prepare-yard-fence-deck-project": "Fence Planning",
   "questions-before-hiring-deck-builder": "Project Planning",
-  "rain-moisture-outdoor-wood": "Seattle Weather",
+  "rain-moisture-outdoor-wood": "Northwest Weather",
   "replace-your-deck-or-fence": "Repair vs Replace",
-  "seattle-permits-outdoor-projects": "Seattle Planning",
+  "seattle-permits-outdoor-projects": "Local Planning",
   "spring-checklist-decks-fences": "Deck Maintenance",
   "wood-deck-lifespan-pnw": "Deck Maintenance",
 };
@@ -91,7 +91,7 @@ const BlogPage = () => {
               <span className="brand-highlight">Northwood Renovation</span> Blog
             </p>
             <h1 id="blog-hero-title">
-              Deck & Fence Tips for Seattle Homeowners
+              Deck & Fence Tips for Everett and Puget Sound Homeowners
             </h1>
             <p>
               Helpful guides, project ideas, and maintenance advice from the{" "}
@@ -184,7 +184,7 @@ const BlogPage = () => {
               Practical Deck & Fence Resources
             </h2>
             <p className="blog-grid__subtitle">
-              Helpful guides for Seattle homeowners planning deck, fence, and
+              Helpful guides for Everett-area homeowners planning deck, fence, and
               outdoor renovation projects.
             </p>
 
@@ -286,7 +286,7 @@ const BlogPage = () => {
             <h2 id="blog-newsletter-title">Get Outdoor Project Tips</h2>
             <p>
               Receive occasional deck, fence, and maintenance tips for
-              Seattle-area homeowners.
+              Everett-area and Puget Sound homeowners.
             </p>
           </div>
           <form
@@ -334,7 +334,7 @@ export default BlogPage;
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
     title="Blog | Northwood Renovation Deck & Fence Tips"
-    description="Explore practical deck, fence, materials, maintenance, and Seattle planning guides from Northwood Renovation."
+    description="Explore practical deck, fence, materials, maintenance, and local planning guides from Northwood Renovation."
     pathname={location.pathname}
   />
 );

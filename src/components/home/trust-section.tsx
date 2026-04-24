@@ -28,7 +28,9 @@ const TrustSection = () => (
             communication, and dependable results.
           </p>
           <span className="trust-note">
-            {renderHighlightedText("Trusted by homeowners across the Seattle area.")}
+            {renderHighlightedText(
+              "Trusted by homeowners across Everett, Snohomish County, and Greater Seattle.",
+            )}
           </span>
         </article>
         <article className="trust-card">
@@ -42,7 +44,7 @@ const TrustSection = () => (
               <path d="M3.5 20v-1a3.5 3.5 0 0 1 2.2-3.25" />
             </svg>
           </span>
-          <h3>{renderHighlightedText("Local Seattle Area Team")}</h3>
+          <h3>{renderHighlightedText("Local Everett-Based Team")}</h3>
           <p>
             Work with a small local crew that understands Northwest homes,
             weather, materials, and neighborhoods.

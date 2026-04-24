@@ -69,7 +69,7 @@ const navItems: NavItem[] = [
         to: "/wood-deck",
       },
       {
-        description: "Low-maintenance decking built for Seattle weather.",
+        description: "Low-maintenance decking built for Northwest weather.",
         group: "Deck Services",
         label: "Composite Deck Builder",
         to: "/composite-deck",
@@ -105,7 +105,7 @@ const navItems: NavItem[] = [
     to: "/fencing/",
     children: [
       {
-        description: "Warm, natural privacy fencing for Seattle-area homes.",
+        description: "Warm, natural privacy fencing for Everett-area and Northwest homes.",
         group: "Fence Services",
         label: "Cedar Wood Fence Installation",
         to: "/cedar-wood-fence",
@@ -123,7 +123,7 @@ const navItems: NavItem[] = [
         to: "/projects",
       },
       {
-        description: "Learn which fence materials fit Seattle homes.",
+        description: "Learn which fence materials fit Northwest homes.",
         group: "Helpful Resources",
         label: "Fence Material Guide",
         to: "/blog/best-fence-materials-seattle",
@@ -176,15 +176,15 @@ const areaItems = [
   "Everett, WA",
   "Marysville, WA",
   "Snohomish, WA",
+  "Mukilteo, WA",
   "Mill Creek, WA",
+  "Bothell, WA",
+  "Shoreline, WA",
   "Seattle, WA",
-  "Bellevue, WA",
-  "Renton, WA",
   "Kirkland, WA",
   "Redmond, WA",
-  "Shoreline, WA",
-  "Bothell, WA",
-  "Mukilteo, WA",
+  "Bellevue, WA",
+  "Renton, WA",
 ];
 
 const trustLogos = [

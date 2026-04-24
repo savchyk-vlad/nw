@@ -13,7 +13,7 @@ type ServiceLandingPageProps = {
 
 const buildServiceSeoDescription = (service: ServicePageData) =>
   service.metaDescription ||
-  `Northwood Renovation provides ${service.serviceName.toLowerCase()} from its Everett base across Snohomish County, North Seattle, and the greater Puget Sound area. Built for Northwest weather with clear estimates and clean craftsmanship.`;
+  `Northwood Renovation provides ${service.serviceName.toLowerCase()} from its Everett base across Snohomish County, Greater Seattle, and the Puget Sound area. Built for Northwest weather with clear estimates and clean craftsmanship.`;
 
 export const createServicePageHead =
   (service: ServicePageData): HeadFC =>
@@ -34,7 +34,7 @@ export const createServicePageHead =
           name: service.h1,
           description,
           serviceType: service.serviceName,
-          areaServed: "Everett, Snohomish County, North Seattle, and the greater Puget Sound area",
+          areaServed: "Everett, Snohomish County, Greater Seattle, and the Puget Sound area",
           provider: buildLocalBusinessReference(),
           url: buildCanonicalUrl(pathname),
         }}
@@ -209,7 +209,8 @@ const ServiceLandingPage = ({ service }: ServiceLandingPageProps) => {
               Recent {renderHighlightedText(service.serviceName)} Projects
             </h2>
             <span>
-              Browse related outdoor projects completed for Seattle-area
+              Browse related outdoor projects completed for Everett-area and
+              regional
               homeowners.
             </span>
           </div>

@@ -10,7 +10,7 @@ import teamTruckHome from "../images/about/team-truck-home.jpg";
 
 const differencePoints = [
   "We specialize in fences, decks, and outdoor structures.",
-  "We understand Seattle’s wet climate and exterior material needs.",
+  "We understand Snohomish County weather and exterior material needs.",
   "We communicate clearly before and during the project.",
   "We focus on clean lines, strong construction, and durable finishes.",
   "We respect your property and keep the work area organized.",
@@ -32,18 +32,18 @@ const services = [
 ];
 
 const serviceAreas = [
+  "Everett",
+  "Marysville",
+  "Snohomish",
+  "Mill Creek",
   "Seattle",
-  "West Seattle",
-  "Ballard",
-  "Queen Anne",
-  "Capitol Hill",
   "Shoreline",
   "Bellevue",
   "Kirkland",
-  "Renton",
-  "Kent",
   "Redmond",
-  "Mercer Island",
+  "Lynnwood",
+  "Mukilteo",
+  "Edmonds",
 ];
 
 const CheckIcon = () => (
@@ -92,7 +92,8 @@ const AboutPage = () => (
           <span>
             Your trusted, locally owned <Highlight>fence</Highlight> and{" "}
             <Highlight>deck</Highlight> building company serving{" "}
-            <Highlight>Seattle, WA</Highlight> and surrounding communities.
+            <Highlight>Everett, WA</Highlight>, Snohomish County, and the
+            greater Seattle region.
           </span>
           <div className="about-hero__actions">
             <Link to="/contact#contact-form" className="about-button">
@@ -132,12 +133,12 @@ const AboutPage = () => (
 
       <AboutTextBlock
         label="Who We Are"
-        title="A locally owned fence and deck company based in Seattle"
+        title="A locally owned fence and deck company based in Everett"
       >
         <p>
           <Highlight>Northwood Renovation</Highlight> is a locally owned{" "}
           <Highlight>fence</Highlight> and <Highlight>deck</Highlight> company
-          based in <Highlight>Seattle, Washington</Highlight>, built on
+          based in <Highlight>Everett, Washington</Highlight>, built on
           craftsmanship, trust, and straightforward service.
         </p>
         <p>
@@ -153,7 +154,8 @@ const AboutPage = () => (
           exterior renovation, especially <Highlight>fences</Highlight> and{" "}
           <Highlight>decks</Highlight>. That focus helps us deliver better
           planning, cleaner installation, and more reliable results for{" "}
-          <Highlight>Seattle</Highlight>-area homeowners.
+          <Highlight>Everett</Highlight>-area and greater Puget Sound
+          homeowners.
         </p>
       </AboutTextBlock>
 
@@ -161,7 +163,7 @@ const AboutPage = () => (
         <div className="about-split-section__image">
           <img
             src={seattleRainTrucks}
-            alt="Northwood Renovation vehicles in a Seattle neighborhood"
+            alt="Northwood Renovation vehicles in a Northwest neighborhood"
           />
         </div>
         <div className="about-split-section__content">
@@ -256,15 +258,16 @@ const AboutPage = () => (
           <p className="about-label">Our Services</p>
           <h2>
             <Highlight>Fence</Highlight>, <Highlight>deck</Highlight>, and
-            exterior renovation services for <Highlight>Seattle</Highlight> homes
+            exterior renovation services for <Highlight>Everett</Highlight> and
+            regional homes
           </h2>
           <p>
             <Highlight>Northwood Renovation</Highlight> provides{" "}
             <Highlight>fence</Highlight>, <Highlight>deck</Highlight>, and
             exterior renovation services for homeowners in{" "}
-            <Highlight>Seattle, WA</Highlight> and nearby areas. Every project
-            is planned around the home, the yard, the materials, and how the
-            space will be used.
+            <Highlight>Everett, WA</Highlight>, Snohomish County, and nearby
+            areas. Every project is planned around the home, the yard, the
+            materials, and how the space will be used.
           </p>
         </div>
         <div className="about-services-list">
@@ -285,10 +288,10 @@ const AboutPage = () => (
           />
         </div>
         <div className="about-materials-section__content">
-          <p className="about-label">Built for Seattle Homes</p>
+          <p className="about-label">Built for Northwest Homes</p>
           <h2>Outdoor work that can handle Northwest weather</h2>
           <p>
-            <Highlight>Seattle</Highlight> homes need{" "}
+            <Highlight>Everett-area</Highlight> homes need{" "}
             <Highlight>outdoor</Highlight> work that can handle moisture, rain,
             changing seasons, and everyday use.
           </p>
@@ -302,7 +305,7 @@ const AboutPage = () => (
           <p>
             We help homeowners choose options that fit their home’s style, their
             maintenance preferences, and the demands of{" "}
-            <Highlight>Seattle</Highlight> weather.
+            <Highlight>Northwest</Highlight> weather.
           </p>
         </div>
       </section>
@@ -311,15 +314,16 @@ const AboutPage = () => (
         <div>
           <p className="about-label">Our Service Area</p>
           <h2>
-            Proudly serving <Highlight>Seattle, WA</Highlight> and surrounding
-            communities
+            Proudly serving <Highlight>Everett, WA</Highlight>, Snohomish County,
+            and surrounding communities
           </h2>
           <p>
             <Highlight>Northwood Renovation</Highlight> proudly serves{" "}
-            <Highlight>Seattle, WA</Highlight> and surrounding communities. We
-            are local to the <Highlight>Seattle</Highlight> area, which means we
-            understand the homes, neighborhoods, weather, and{" "}
-            <Highlight>outdoor</Highlight> living needs of Northwest homeowners.
+            <Highlight>Everett, WA</Highlight>, Snohomish County, and the
+            greater Seattle region. We are local to the{" "}
+            <Highlight>Everett</Highlight> area, which means we understand the
+            homes, neighborhoods, weather, and <Highlight>outdoor</Highlight>{" "}
+            living needs of Northwest homeowners.
           </p>
         </div>
         <div className="about-area-list">
@@ -344,7 +348,7 @@ const AboutPage = () => (
           </span>
           <span className="about-final-cta__copy">
             We combine clear communication, clean craftsmanship, and local{" "}
-            <Highlight>Seattle</Highlight> experience to build{" "}
+            <Highlight>Everett</Highlight>-based experience to build{" "}
             <Highlight>outdoor</Highlight> work you can trust.
           </span>
         </div>
@@ -358,7 +362,7 @@ const AboutPage = () => (
             </Link>
           </div>
           <p className="about-final-cta__trust">
-            Free estimates · Clear next steps · Seattle-area service
+            Free estimates · Clear next steps · Everett-based service
           </p>
         </div>
       </section>
@@ -370,8 +374,8 @@ export default AboutPage;
 
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
-    title="About Northwood Renovation | Seattle Fence & Deck Builder"
-    description="Learn about Northwood Renovation, a Seattle fence and deck builder focused on honest communication, clean craftsmanship, and durable outdoor spaces."
+    title="About Northwood Renovation | Everett Deck & Fence Contractor"
+    description="Learn about Northwood Renovation, an Everett-based deck and fence contractor focused on honest communication, clean craftsmanship, and durable outdoor spaces."
     pathname={location.pathname}
   />
 );

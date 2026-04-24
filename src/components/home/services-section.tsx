@@ -13,7 +13,7 @@ const services = [
     name: "Cedar Wood Fences",
     href: "/cedar-wood-fence/",
     description:
-      "Cedar wood fencing is a strong choice for homeowners who want natural warmth, privacy, and clean curb appeal that fits Seattle-area homes.",
+      "Cedar wood fencing is a strong choice for homeowners who want natural warmth, privacy, and clean curb appeal that fits Everett-area and Northwest homes.",
     image: servicesFenceRoad,
     alt: "Cedar wood fence installation along a residential sidewalk",
   },

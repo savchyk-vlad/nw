@@ -68,7 +68,7 @@ export default NotFoundPage;
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
     title="Page Not Found | Northwood Renovation"
-    description="The page you were looking for could not be found. Return to Northwood Renovation deck and fence services in Seattle."
+    description="The page you were looking for could not be found. Return to Northwood Renovation deck and fence services based in Everett, WA."
     pathname={location.pathname}
     noindex
   />

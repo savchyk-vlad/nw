@@ -27,7 +27,7 @@ const reviews: ReviewItem[] = [
   {
     id: "r1",
     initials: "MT",
-    location: "Seattle, WA",
+    location: "Everett, WA",
     name: "Michael T.",
     platform: "Google",
     projectType: "Fences",
@@ -57,7 +57,7 @@ const reviews: ReviewItem[] = [
   {
     id: "r4",
     initials: "SN",
-    location: "Seattle, WA",
+    location: "Mill Creek, WA",
     name: "Sofia N.",
     platform: "Facebook",
     projectType: "Fences",
@@ -87,7 +87,7 @@ const reviews: ReviewItem[] = [
   {
     id: "r7",
     initials: "HP",
-    location: "Seattle, WA",
+    location: "Marysville, WA",
     name: "Hannah P.",
     platform: "Google",
     projectType: "Decks",
@@ -112,7 +112,7 @@ const reviews: ReviewItem[] = [
     platform: "Facebook",
     projectType: "Decks",
     rating: 5,
-    text: "They helped us choose a deck option that fits Seattle weather and our maintenance goals. The workmanship is excellent and the project stayed on track.",
+    text: "They helped us choose a deck option that fits Northwest weather and our maintenance goals. The workmanship is excellent and the project stayed on track.",
   },
 ];
 
@@ -177,7 +177,7 @@ const ReviewsPage = () => {
             <h1 id="reviews-hero-title">Reviews From Local Homeowners</h1>
             <p>
               {renderHighlightedText(
-                "See what Seattle-area homeowners say about working with Northwood Renovation on fences, decks, and outdoor renovation projects.",
+                "See what homeowners across Everett, Snohomish County, and the greater Puget Sound area say about working with Northwood Renovation on fences, decks, and outdoor renovation projects.",
               )}
             </p>
             <div className="reviews-hero__actions">
@@ -195,7 +195,7 @@ const ReviewsPage = () => {
           <div className="reviews-hero__media">
             <img
               src={testimonialsFamilyOutdoor}
-              alt="Seattle-area homeowner enjoying finished outdoor deck project"
+              alt="Pacific Northwest homeowner enjoying a finished outdoor deck project"
               loading="lazy"
             />
           </div>
@@ -324,7 +324,7 @@ const ReviewsPage = () => {
               <h3>No reviews match this filter</h3>
               <p>
                 Try selecting <strong>All Reviews</strong> or{" "}
-                <strong>All Projects</strong> to see more Seattle-area feedback.
+                <strong>All Projects</strong> to see more local feedback.
               </p>
             </article>
           )}
@@ -399,7 +399,7 @@ const ReviewsPage = () => {
                   </h2>
                   <p>
                     <span className="reviews-stars">{renderStars(5)}</span> from
-                    Seattle-area project feedback
+                    regional project feedback
                   </p>
                 </div>
                 <div className="reviews-platform-block__grid">
@@ -458,7 +458,7 @@ const ReviewsPage = () => {
             <li>Clear estimates</li>
             <li>Clean job sites</li>
             <li>Final walkthroughs</li>
-            <li>Seattle-area service</li>
+            <li>Everett-based service</li>
           </ul>
         </section>
 
@@ -487,7 +487,7 @@ export default ReviewsPage;
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
     title="Customer Reviews | Northwood Renovation"
-    description="Read Google, Yelp, and Facebook reviews from Seattle-area homeowners who worked with Northwood Renovation on deck, fence, and outdoor renovation projects."
+    description="Read Google, Yelp, and Facebook reviews from Everett-area and greater Puget Sound homeowners who worked with Northwood Renovation on deck, fence, and outdoor renovation projects."
     pathname={location.pathname}
   />
 );

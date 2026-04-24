@@ -171,7 +171,11 @@ const TermsOfServicePage = () => (
           <strong className="brand-highlight">Northwood Renovation</strong>
           <a href={`tel:${BUSINESS_PHONE_TEL}`}>Phone: {BUSINESS_PHONE_DISPLAY}</a>
           <a href={`mailto:${BUSINESS_EMAIL}`}>Email: {BUSINESS_EMAIL}</a>
-          <span>{renderHighlightedText("Service Area: Seattle, WA and nearby areas")}</span>
+          <span>
+            {renderHighlightedText(
+              "Service Area: Everett, WA, Snohomish County, and Greater Seattle",
+            )}
+          </span>
         </address>
       </article>
 

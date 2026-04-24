@@ -64,7 +64,7 @@ const ThankYouPage: React.FC<PageProps> = () => {
               “Great communication from start to finish. Clean installation and
               everything was explained clearly before work began.”
             </p>
-            <cite>— Seattle homeowner, Deck Project</cite>
+            <cite>— Everett homeowner, Deck Project</cite>
           </blockquote>
 
           <div className="thank-you-actions">
@@ -77,7 +77,7 @@ const ThankYouPage: React.FC<PageProps> = () => {
           </div>
 
           <p className="thank-you-trust">
-            Northwood Renovation · Seattle, WA · Fully Insured
+            Northwood Renovation · Everett, WA · Fully Insured
           </p>
         </div>
       </section>

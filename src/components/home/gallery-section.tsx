@@ -107,7 +107,7 @@ const BuilderGallery = React.memo(
         </h2>
         <p>
           {renderHighlightedText(
-            "Explore our fence and deck projects — expertly built for Seattle homes. From privacy fences to custom decks, each project is built to endure weather, time, and everyday use.",
+            "Explore our fence and deck projects — expertly built for Everett-area and Northwest homes. From privacy fences to custom decks, each project is built to endure weather, time, and everyday use.",
           )}
         </p>
       </div>

@@ -72,7 +72,7 @@ const trustCards = [
 ];
 
 const trustBullets = [
-  "Local Seattle-area deck contractor",
+  "Local Everett-area deck contractor",
   "Wood, composite & covered decks",
   "Strong framing, stairs & railings",
   "Clear estimate and clean process",
@@ -80,7 +80,7 @@ const trustBullets = [
 
 const benefits = [
   {
-    title: "Designed for Seattle Homes",
+    title: "Designed for Everett & Northwest Homes",
     text: "Layouts, stairs, railings, and materials planned around your home, yard, and how you want to use the space.",
   },
   {
@@ -145,7 +145,7 @@ const processSteps = [
 
 const meetBullets = [
   "Deck and fence specialists",
-  "Seattle-area residential projects",
+  "Everett-area residential projects",
   "Clean jobsite standards",
   "Practical material guidance",
   "Final walkthrough before completion",
@@ -160,9 +160,9 @@ const transformationSlides = [
     beforeImage: beforeDeckImage,
     beforeText: "Weathered deck boards and tired railing",
     description:
-      "A worn backyard deck was replaced with a cleaner, stronger outdoor space designed for Seattle weather.",
-    label: "Seattle Deck Refresh",
-    location: "Seattle, WA",
+      "A worn backyard deck was replaced with a cleaner, stronger outdoor space designed for Northwest weather.",
+    label: "Everett Deck Refresh",
+    location: "Everett, WA",
   },
   {
     afterAlt: "Updated backyard deck with black railings and outdoor seating",
@@ -174,7 +174,7 @@ const transformationSlides = [
     description:
       "An older backyard deck was upgraded into a cleaner, more comfortable outdoor living space with modern railings and room to gather.",
     label: "Pacific Northwest Deck Upgrade",
-    location: "Seattle Area",
+    location: "Snohomish County",
   },
   {
     afterAlt: "Finished backyard deck with black railings and outdoor seating",
@@ -186,7 +186,7 @@ const transformationSlides = [
     description:
       "A weathered deck was rebuilt into a cleaner, safer outdoor living space with sharp railings, fresh boards, and room to gather.",
     label: "Backyard Deck Rebuild",
-    location: "Seattle Area",
+    location: "Greater Everett",
   },
   {
     afterAlt: "New elevated wood deck with fresh stairs and railings",
@@ -198,20 +198,20 @@ const transformationSlides = [
     description:
       "A large aging deck was rebuilt with fresh wood, safer stairs, and clean railings to make the backyard feel open and usable again.",
     label: "Large Wood Deck Replacement",
-    location: "Seattle Area",
+    location: "North Puget Sound",
   },
 ];
 
 const faqItems = [
   {
-    question: "What deck material works best in Seattle?",
+    question: "What deck material works best in Everett?",
     answer:
-      "Composite decking is a strong low-maintenance option for Seattle weather, while cedar and wood decks offer a warmer natural look. The best choice depends on your budget, maintenance preferences, and how you plan to use the space.",
+      "Composite decking is a strong low-maintenance option for Northwest weather, while cedar and wood decks offer a warmer natural look. The best choice depends on your budget, maintenance preferences, and how you plan to use the space.",
   },
   {
     question: "Do you build both wood and composite decks?",
     answer:
-      "Yes. Northwood Renovation builds wood, cedar, composite, custom, outdoor, and covered decks for Seattle-area homeowners.",
+      "Yes. Northwood Renovation builds wood, cedar, composite, custom, outdoor, and covered decks for Everett-area homeowners.",
   },
   {
     question: "Can you build covered decks?",
@@ -236,17 +236,19 @@ const faqItems = [
 ];
 
 const serviceAreas = [
-  "Seattle",
-  "Bellevue",
+  "Everett",
+  "Marysville",
+  "Snohomish",
+  "Mukilteo",
+  "Mill Creek",
+  "Lynnwood",
+  "Edmonds",
+  "Bothell",
+  "Shoreline",
   "Kirkland",
   "Redmond",
-  "Shoreline",
-  "Bothell",
-  "Edmonds",
+  "Bellevue",
   "Renton",
-  "West Seattle",
-  "Capitol Hill",
-  "Ballard",
 ];
 
 const projectTypes = [
@@ -381,7 +383,7 @@ const DeckLocalPage = () => {
   return (
     <main className="deck-local">
       <div className="deck-local__offer-bar">
-        Seattle Deck Builder · Free Estimates · Built for Northwest Weather
+        Everett Deck Builder · Free Estimates · Built for Northwest Weather
       </div>
 
       <header className="deck-local-header">
@@ -406,18 +408,18 @@ const DeckLocalPage = () => {
       <section className="deck-local-hero">
         <div className="deck-local-hero__copy">
           <p className="deck-local-hero__review">
-            <span aria-hidden="true">★★★★★</span> Trusted by Seattle-area homeowners
+            <span aria-hidden="true">★★★★★</span> Trusted by Everett-area homeowners
           </p>
           <p className="deck-local-hero__label">✓ Fully Insured</p>
           <h1>
-            Seattle&apos;s <span>Deck Builder</span>
+            Everett&apos;s <span>Deck Builder</span>
             <br />
             Custom Composite &amp;
             <br />
             Wood Decks Built to Last
           </h1>
           <p className="deck-local-hero__subtitle">
-            Northwood Renovation builds clean, durable decks for Seattle homes
+            Northwood Renovation builds clean, durable decks for Everett homes
             including custom layouts, covered deck options, safe stairs, and
             railings built for Northwest weather.
           </p>
@@ -442,7 +444,7 @@ const DeckLocalPage = () => {
           <div className="deck-local-hero__media">
             <StaticImage
               src="../images/cities/lucid-origin_Create_a_realistic_professional_photo_of_a_Seattle-area_residential_home_with_a_-0 (4).jpg"
-              alt="Finished Seattle backyard deck with wood railing and outdoor living space"
+              alt="Finished Everett-area backyard deck with wood railing and outdoor living space"
               imgClassName="deck-local-hero__media-image"
               placeholder="blurred"
               quality={72}
@@ -521,7 +523,7 @@ const DeckLocalPage = () => {
           <p className="deck-local-kicker">Backyard Transformation</p>
           <h2>From Worn-Out Outdoor Spaces to Clean, Usable Backyards</h2>
           <p>
-            See how new decks and fences can make a Seattle-area backyard feel
+            See how new decks and fences can make an Everett-area backyard feel
             safer, cleaner, more private, and ready for everyday use.
           </p>
           <button className="deck-local-button deck-local-button--secondary" type="button" onClick={scrollToForm}>
@@ -604,7 +606,7 @@ const DeckLocalPage = () => {
 
       <section className="deck-local-section" id="deck-local-benefits">
         <div className="deck-local-section-head">
-          <h2>Your Deck, Built for Seattle Weather and Everyday Use</h2>
+          <h2>Your Deck, Built for Everett Weather and Everyday Use</h2>
           <p>
             A good deck should look clean, feel solid, and hold up through wet
             seasons, daily traffic, and changing Northwest weather.
@@ -622,7 +624,7 @@ const DeckLocalPage = () => {
           <h3>Our Comprehensive Services</h3>
           <p>
             Explore Northwood Renovation services for decks, fences, materials,
-            and outdoor upgrades built for Seattle-area homes.
+            and outdoor upgrades built for Everett-area homes.
           </p>
           <div className="deck-local-service-grid">
             {includedServices.map((service) => (
@@ -657,7 +659,7 @@ const DeckLocalPage = () => {
         <div className="deck-local-meet__media">
           <img
             src={workerImage}
-            alt="Northwood Renovation worker on a Seattle-area residential deck project"
+            alt="Northwood Renovation worker on an Everett-area residential deck project"
             loading="lazy"
             decoding="async"
           />
@@ -666,7 +668,7 @@ const DeckLocalPage = () => {
           <h2>Meet Northwood Renovation</h2>
           <p>
             Northwood Renovation builds decks, fences, and outdoor spaces for
-            Seattle-area homeowners who want practical craftsmanship, clean
+            Everett-area homeowners who want practical craftsmanship, clean
             communication, and work built for Northwest weather.
           </p>
           <ul className="deck-local-check-list">
@@ -738,7 +740,7 @@ const DeckLocalPage = () => {
       </div>
 
       <footer className="deck-local-footer">
-        <h2>Proudly Serving Seattle &amp; Nearby Areas</h2>
+        <h2>Proudly Serving Everett &amp; Nearby Areas</h2>
         <p>{serviceAreas.join(" · ")}</p>
       </footer>
     </main>
@@ -749,8 +751,8 @@ export default DeckLocalPage;
 
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
-    title="Seattle Deck Builder | Wood & Composite Decks | Northwood"
-    description="Northwood Renovation builds custom wood, composite, outdoor, and covered decks for Seattle homeowners. Request a free estimate for Northwest weather."
+    title="Everett Deck Builder | Wood & Composite Decks | Northwood"
+    description="Northwood Renovation builds custom wood, composite, outdoor, and covered decks for Everett homeowners. Request a free estimate for Northwest weather."
     pathname={location.pathname}
   />
 );

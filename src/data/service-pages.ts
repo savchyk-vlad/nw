@@ -38,7 +38,7 @@ export type ServicePageData = {
 
 const deckFaq = [
   {
-    question: "What deck material works best in Seattle?",
+    question: "What deck material works best in Everett and Northwest weather?",
     answer:
       "The best material depends on budget, maintenance preference, and how the deck will be used. Cedar and wood offer natural warmth, while composite decking can reduce upkeep in rainy Pacific Northwest conditions.",
   },
@@ -61,7 +61,7 @@ const deckFaq = [
 
 const fenceFaq = [
   {
-    question: "What fence material works best for Seattle weather?",
+    question: "What fence material works best for Everett and Northwest weather?",
     answer:
       "Cedar is a strong option for privacy and natural appearance, while chain link is practical for security and visibility. The right choice depends on privacy goals, maintenance, budget, and site conditions.",
   },
@@ -89,7 +89,7 @@ export const servicePages: Record<string, ServicePageData> = {
       "Improves outdoor dining, hosting, relaxing, and everyday access.",
       "Supports better railing, stair, seating, and material decisions.",
       "Helps the finished deck feel connected to the home instead of added on.",
-      "Plans for Seattle moisture, shade, drainage, and long-term use.",
+      "Plans for Northwest moisture, shade, drainage, and long-term use.",
     ],
     bestFit: [
       "You want a deck designed around your home instead of a one-size layout.",
@@ -109,8 +109,8 @@ export const servicePages: Record<string, ServicePageData> = {
       },
     ],
     heroImage: servicesCustomDeck,
-    heroImageAlt: "Finished custom backyard deck for a Seattle home",
-    h1: "Custom Deck Builder in Seattle, WA",
+    heroImageAlt: "Finished custom backyard deck for an Everett-area home",
+    h1: "Custom Deck Builder in Everett, WA",
     materials: [
       {
         title: "Layout Planning",
@@ -126,14 +126,14 @@ export const servicePages: Record<string, ServicePageData> = {
       },
       {
         title: "Weather Details",
-        text: "Seattle decks need practical moisture, drainage, and exposure planning for long-term performance.",
+        text: "Everett-area decks need practical moisture, drainage, and exposure planning for long-term performance.",
       },
     ],
     metaDescription:
-      "Northwood Renovation provides custom deck builder services in Seattle, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
+      "Northwood Renovation provides custom deck builder services in Everett, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
     overview: [
       "A custom deck is a strong choice when your backyard needs more than a standard platform. Northwood Renovation designs and builds decks around the home, yard, materials, and the way homeowners want to use the space.",
-      "For Seattle homes, we consider rain exposure, transitions from the home, shade, railings, stairs, framing, and everyday usability. The goal is a deck that feels intentional, durable, and comfortable for outdoor living.",
+      "For Everett-area homes, we consider rain exposure, transitions from the home, shade, railings, stairs, framing, and everyday usability. The goal is a deck that feels intentional, durable, and comfortable for outdoor living.",
     ],
     processIntro:
       "We review your yard, discuss materials, confirm layout, and provide clear next steps before custom deck installation begins.",
@@ -145,7 +145,7 @@ export const servicePages: Record<string, ServicePageData> = {
     serviceName: "Custom Deck",
     slug: "custom-deck",
     subtitle:
-      "Custom deck design and installation for Seattle homeowners who want a durable, practical outdoor space built around their home and lifestyle.",
+      "Custom deck design and installation for Everett-area homeowners who want a durable, practical outdoor space built around their home and lifestyle.",
     titleTag: "Custom Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
@@ -167,7 +167,7 @@ export const servicePages: Record<string, ServicePageData> = {
       "Adds natural warmth and character to the backyard.",
       "Creates a comfortable surface for daily outdoor living.",
       "Can be maintained, stained, and refreshed over time.",
-      "Works well with many Seattle home styles and landscapes.",
+      "Works well with many Everett-area home styles and landscapes.",
       "Provides a classic deck appearance with strong craftsmanship.",
     ],
     bestFit: [
@@ -175,7 +175,7 @@ export const servicePages: Record<string, ServicePageData> = {
       "You want a warm deck surface that fits a residential backyard.",
       "You are comfortable with maintenance like cleaning and sealing.",
       "You want cedar or wood details that match the home’s exterior style.",
-      "You want practical guidance on moisture and upkeep in Seattle weather.",
+      "You want practical guidance on moisture and upkeep in Northwest weather.",
     ],
     categoryLabel: "DECK SERVICES",
     finalCtaServiceName: "Wood Deck",
@@ -188,8 +188,8 @@ export const servicePages: Record<string, ServicePageData> = {
       },
     ],
     heroImage: servicesWoodDeck,
-    heroImageAlt: "Natural wood deck with railing near a Seattle backyard",
-    h1: "Wood Deck Builder in Seattle, WA",
+    heroImageAlt: "Natural wood deck with railing near an Everett-area backyard",
+    h1: "Wood Deck Builder in Everett, WA",
     materials: [
       {
         title: "Cedar and Wood Decking",
@@ -209,10 +209,10 @@ export const servicePages: Record<string, ServicePageData> = {
       },
     ],
     metaDescription:
-      "Northwood Renovation provides wood deck builder services in Seattle, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
+      "Northwood Renovation provides wood deck builder services in Everett, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
     overview: [
       "Wood decks bring natural warmth, texture, and character to an outdoor space. Northwood Renovation builds wood decks with careful layout, durable framing, clean board installation, and practical finishing details.",
-      "Seattle weather makes material choice and maintenance expectations important. We help homeowners understand cedar, pressure-treated framing, sealing, drainage, and long-term care before the project starts.",
+      "Everett weather makes material choice and maintenance expectations important. We help homeowners understand cedar, pressure-treated framing, sealing, drainage, and long-term care before the project starts.",
     ],
     processIntro:
       "We review your deck goals, discuss wood options and maintenance expectations, then plan a clean installation path.",
@@ -224,7 +224,7 @@ export const servicePages: Record<string, ServicePageData> = {
     serviceName: "Wood Deck",
     slug: "wood-deck",
     subtitle:
-      "Natural wood deck building for Seattle homes with warm character, sturdy construction, and practical Northwest weather planning.",
+      "Natural wood deck building for Everett homes with warm character, sturdy construction, and practical Northwest weather planning.",
     titleTag: "Wood Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
@@ -237,7 +237,7 @@ export const servicePages: Record<string, ServicePageData> = {
       },
       {
         title: "Maintenance Guidance",
-        text: "Clear expectations for care in Seattle rain and moisture.",
+        text: "Clear expectations for care in Northwest rain and moisture.",
       },
     ],
   },
@@ -252,7 +252,7 @@ export const servicePages: Record<string, ServicePageData> = {
     bestFit: [
       "You want lower maintenance than natural wood.",
       "You prefer a clean modern appearance and consistent board color.",
-      "You want strong moisture resistance for Seattle weather.",
+      "You want strong moisture resistance for Northwest weather.",
       "Your deck will be used often for family time or entertaining.",
       "You want to compare long-term value before choosing materials.",
     ],
@@ -268,7 +268,7 @@ export const servicePages: Record<string, ServicePageData> = {
     ],
     heroImage: servicesCompositeDeck,
     heroImageAlt: "Clean composite deck boards with modern railing",
-    h1: "Composite Deck Builder in Seattle, WA",
+    h1: "Composite Deck Builder in Everett, WA",
     materials: [
       {
         title: "Composite Boards",
@@ -288,9 +288,9 @@ export const servicePages: Record<string, ServicePageData> = {
       },
     ],
     metaDescription:
-      "Northwood Renovation provides composite deck builder services in Seattle, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
+      "Northwood Renovation provides composite deck builder services in Everett, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
     overview: [
-      "Composite decking is a practical option for Seattle homeowners who want a polished outdoor space without heavy wood maintenance. It provides a clean look, strong moisture resistance, and dependable everyday performance.",
+      "Composite decking is a practical option for Everett-area homeowners who want a polished outdoor space without heavy wood maintenance. It provides a clean look, strong moisture resistance, and dependable everyday performance.",
       "Northwood Renovation helps homeowners compare composite boards, framing needs, color choices, railings, and long-term value so the finished deck fits both the home and the way the space will be used.",
     ],
     processIntro:
@@ -303,7 +303,7 @@ export const servicePages: Record<string, ServicePageData> = {
     serviceName: "Composite Deck",
     slug: "composite-deck",
     subtitle:
-      "Low-maintenance composite deck installation for Seattle-area homeowners who want a clean look and durable outdoor performance.",
+      "Low-maintenance composite deck installation for Everett-area homeowners who want a clean look and durable outdoor performance.",
     titleTag: "Composite Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
@@ -311,7 +311,7 @@ export const servicePages: Record<string, ServicePageData> = {
         text: "A strong option for homeowners who want less staining and sealing.",
       },
       {
-        title: "Seattle Weather Ready",
+        title: "Northwest Weather Ready",
         text: "Moisture-conscious material planning for Northwest conditions.",
       },
       {
@@ -340,7 +340,7 @@ export const servicePages: Record<string, ServicePageData> = {
     faq: deckFaq,
     heroImage: servicesOutdoorDeck,
     heroImageAlt: "Outdoor deck overlooking a green backyard",
-    h1: "Outdoor Deck Installation in Seattle, WA",
+    h1: "Outdoor Deck Installation in Everett, WA",
     materials: [
       {
         title: "Open-Air Layouts",
@@ -360,10 +360,10 @@ export const servicePages: Record<string, ServicePageData> = {
       },
     ],
     metaDescription:
-      "Northwood Renovation provides outdoor deck installation in Seattle, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
+      "Northwood Renovation provides outdoor deck installation in Everett, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
     overview: [
       "An outdoor deck can turn an underused backyard into a practical extension of the home. Northwood Renovation builds outdoor decks for relaxing, dining, entertaining, and everyday connection with the yard.",
-      "We help Seattle homeowners plan layout, materials, stairs, railings, and transitions so the deck feels useful, comfortable, and built for the way the family lives.",
+      "We help Everett-area homeowners plan layout, materials, stairs, railings, and transitions so the deck feels useful, comfortable, and built for the way the family lives.",
     ],
     processIntro:
       "We learn how you want to use the backyard, review layout options, and plan an outdoor deck that fits the home.",
@@ -375,7 +375,7 @@ export const servicePages: Record<string, ServicePageData> = {
     serviceName: "Outdoor Deck",
     slug: "outdoor-deck",
     subtitle:
-      "Outdoor deck installation for Seattle backyards designed for relaxing, dining, hosting, and daily outdoor living.",
+      "Outdoor deck installation for Everett-area backyards designed for relaxing, dining, hosting, and daily outdoor living.",
     titleTag: "Outdoor Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
@@ -398,7 +398,7 @@ export const servicePages: Record<string, ServicePageData> = {
       "Creates a more comfortable area for dining, grilling, or relaxing.",
       "Can add a premium feel to the backyard or outdoor living area.",
       "Supports future planning for lighting, fans, or covered seating.",
-      "Helps Seattle homeowners get more value from outdoor space year-round.",
+      "Helps Everett-area homeowners get more value from outdoor space year-round.",
     ],
     bestFit: [
       "You want more protection from rain or strong sun.",
@@ -412,14 +412,14 @@ export const servicePages: Record<string, ServicePageData> = {
     faq: [
       ...deckFaq,
       {
-        question: "Can a covered deck help with Seattle weather?",
+        question: "Can a covered deck help with Everett and Northwest weather?",
         answer:
           "Yes. A covered deck can make an outdoor space more usable during rain and shade, though the right cover type depends on layout, structure, budget, and local requirements.",
       },
     ],
     heroImage: pergolaDeckConstruction,
     heroImageAlt: "Covered deck and pergola framing in a residential backyard",
-    h1: "Covered Deck Builder in Seattle, WA",
+    h1: "Covered Deck Builder in Everett, WA",
     materials: [
       {
         title: "Cover Options",
@@ -435,13 +435,13 @@ export const servicePages: Record<string, ServicePageData> = {
       },
       {
         title: "Weather Planning",
-        text: "Seattle covered decks need practical rain, drainage, and connection details.",
+        text: "Northwest covered decks need practical rain, drainage, and connection details.",
       },
     ],
     metaDescription:
-      "Northwood Renovation provides covered deck builder services in Seattle, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
+      "Northwood Renovation provides covered deck builder services in Everett, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
     overview: [
-      "A covered deck helps Seattle homeowners use outdoor space more comfortably through rain, shade, and changing seasons. It can turn a simple deck into a more protected outdoor living area.",
+      "A covered deck helps Everett-area homeowners use outdoor space more comfortably through rain, shade, and changing seasons. It can turn a simple deck into a more protected outdoor living area.",
       "Northwood Renovation helps plan covered deck layouts, material options, cover direction, stairs, railings, and practical weather details so the space feels durable and useful.",
     ],
     processIntro:
@@ -454,7 +454,7 @@ export const servicePages: Record<string, ServicePageData> = {
     serviceName: "Covered Deck",
     slug: "covered-deck",
     subtitle:
-      "Covered deck building for Seattle homes that need more usable outdoor space through rain, shade, and everyday weather.",
+      "Covered deck building for Everett homes that need more usable outdoor space through rain, shade, and everyday weather.",
     titleTag: "Covered Deck in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
@@ -467,7 +467,7 @@ export const servicePages: Record<string, ServicePageData> = {
       },
       {
         title: "Weather Planning",
-        text: "Built with Seattle moisture and seasonal use in mind.",
+        text: "Built with Northwest moisture and seasonal use in mind.",
       },
     ],
   },
@@ -477,7 +477,7 @@ export const servicePages: Record<string, ServicePageData> = {
       "Creates a clean boundary around the yard.",
       "Improves curb appeal with a classic residential look.",
       "Can include gates, height planning, and layout adjustments.",
-      "Works well for Seattle homes when installation and maintenance are planned carefully.",
+      "Works well for Everett-area homes when installation and maintenance are planned carefully.",
     ],
     bestFit: [
       "You want privacy without a cold or industrial look.",
@@ -493,12 +493,12 @@ export const servicePages: Record<string, ServicePageData> = {
       {
         question: "How long does a cedar fence last?",
         answer:
-          "Cedar fence life depends on installation quality, exposure, drainage, maintenance, and soil conditions. Proper posts, layout, and maintenance help the fence perform better in Seattle weather.",
+          "Cedar fence life depends on installation quality, exposure, drainage, maintenance, and soil conditions. Proper posts, layout, and maintenance help the fence perform better in Northwest weather.",
       },
     ],
     heroImage: gardenFenceTrees,
-    heroImageAlt: "Cedar privacy fence in a Seattle backyard",
-    h1: "Cedar Wood Fence Installation in Seattle, WA",
+    heroImageAlt: "Cedar privacy fence in an Everett-area backyard",
+    h1: "Cedar Wood Fence Installation in Everett, WA",
     materials: [
       {
         title: "Cedar Boards",
@@ -518,10 +518,10 @@ export const servicePages: Record<string, ServicePageData> = {
       },
     ],
     metaDescription:
-      "Northwood Renovation provides cedar wood fence installation in Seattle, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
+      "Northwood Renovation provides cedar wood fence installation in Everett, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
     overview: [
-      "Cedar wood fencing is a strong choice for Seattle homeowners who want privacy, natural warmth, and a clean finished look. Northwood Renovation installs cedar fences with careful layout, straight lines, durable posts, and details designed for long-term outdoor use.",
-      "Because Seattle weather brings rain and moisture, fence planning should consider post setting, drainage, gate hardware, exposure, and maintenance expectations before work begins.",
+      "Cedar wood fencing is a strong choice for Everett-area homeowners who want privacy, natural warmth, and a clean finished look. Northwood Renovation installs cedar fences with careful layout, straight lines, durable posts, and details designed for long-term outdoor use.",
+      "Because Northwest weather brings rain and moisture, fence planning should consider post setting, drainage, gate hardware, exposure, and maintenance expectations before work begins.",
     ],
     processIntro:
       "We review your fence line, privacy goals, gate needs, and cedar options before planning installation.",
@@ -533,7 +533,7 @@ export const servicePages: Record<string, ServicePageData> = {
     serviceName: "Cedar Wood Fence",
     slug: "cedar-wood-fence",
     subtitle:
-      "Cedar wood fence installation for Seattle homes that need privacy, natural warmth, clean lines, and durable outdoor performance.",
+      "Cedar wood fence installation for Everett homes that need privacy, natural warmth, clean lines, and durable outdoor performance.",
     titleTag: "Cedar Wood Fence in Everett, WA | Northwood Renovation",
     trustPoints: [
       {
@@ -577,7 +577,7 @@ export const servicePages: Record<string, ServicePageData> = {
     ],
     heroImage: servicesChainLinkFence,
     heroImageAlt: "Residential chain link fence with green landscape",
-    h1: "Chain Link Fence Installation in Seattle, WA",
+    h1: "Chain Link Fence Installation in Everett, WA",
     materials: [
       {
         title: "Chain Link Mesh",
@@ -597,10 +597,10 @@ export const servicePages: Record<string, ServicePageData> = {
       },
     ],
     metaDescription:
-      "Northwood Renovation provides chain link fence installation in Seattle, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
+      "Northwood Renovation provides chain link fence installation in Everett, WA and nearby communities. Request a free estimate for durable fence and deck work built for Northwest weather.",
     overview: [
       "Chain link fencing is practical, durable, and useful for homeowners who need security, visibility, and clear boundaries. It works well for side yards, pet areas, property lines, and functional outdoor spaces.",
-      "Northwood Renovation helps Seattle homeowners plan chain link fence layout, gates, post placement, and practical installation details so the finished fence fits the property’s needs.",
+      "Northwood Renovation helps Everett-area homeowners plan chain link fence layout, gates, post placement, and practical installation details so the finished fence fits the property’s needs.",
     ],
     processIntro:
       "We review your boundary needs, gate placement, pets or access requirements, then provide clear fence installation recommendations.",
@@ -612,7 +612,7 @@ export const servicePages: Record<string, ServicePageData> = {
     serviceName: "Chain Link Fence",
     slug: "chain-link-fence",
     subtitle:
-      "Chain link fence installation for Seattle-area homeowners who need practical security, visibility, and durable property boundaries.",
+      "Chain link fence installation for Everett-area homeowners who need practical security, visibility, and durable property boundaries.",
     titleTag: "Chain Link Fence in Everett, WA | Northwood Renovation",
     trustPoints: [
       {

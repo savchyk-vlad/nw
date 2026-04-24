@@ -141,7 +141,7 @@ const Hero = () => {
             </h1>
             <p>
               {renderHighlightedText(
-                "Serving Snohomish County, North Seattle, and the greater Puget Sound area. Locally based in Everett — honest estimates, clear communication, craftsmanship built for Northwest homes.",
+                "Serving Snohomish County, Greater Seattle, and the Puget Sound area. Locally based in Everett — honest estimates, clear communication, craftsmanship built for Northwest homes.",
               )}
             </p>
           </div>

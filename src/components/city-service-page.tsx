@@ -90,7 +90,7 @@ const reviewCards = [
 ];
 
 const whyPoints = [
-  "Local Seattle-area experience",
+  "Everett-based local experience",
   "Fence and deck focused team",
   "Clear project communication",
   "Durable exterior materials",
@@ -168,7 +168,7 @@ const createFaqItems = (city: string) => [
     question: "Can you repair an existing deck or fence?",
   },
   {
-    answer: `Yes. We provide free estimates in ${city} and nearby Seattle-area communities so homeowners can understand scope, options, and next steps before work begins.`,
+    answer: `Yes. We provide free estimates in ${city} and nearby communities throughout Snohomish County and Greater Seattle so homeowners can understand scope, options, and next steps before work begins.`,
     question: `Do you provide free estimates in ${city}?`,
   },
 ];
@@ -331,7 +331,7 @@ export const CityServicePage = ({ page }: CityServicePageProps) => {
             </h2>
             <span>
               {renderHighlightedText(
-                `Here are a few recent outdoor projects completed in Seattle-area communities near ${page.city}.`,
+                `Here are a few recent outdoor projects completed in nearby communities around ${page.city}.`,
               )}
             </span>
           </div>

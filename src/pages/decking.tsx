@@ -19,21 +19,21 @@ import largeDeckAfterImage from "../images/cities/deck-local-carousel-after-new-
 import largeDeckBeforeImage from "../images/cities/deck-local-carousel-before-large-weathered-deck.png";
 
 const seoTitle =
-  "Decking in Seattle, WA | Custom Wood & Composite Decks | Northwood Renovation";
+  "Decking in Everett, WA | Custom Wood & Composite Decks | Northwood Renovation";
 const seoDescription =
-  "Northwood Renovation builds custom wood, composite, and covered decks for Seattle homeowners. Strong craftsmanship, clean installations, and free estimates for decking in Seattle, WA.";
+  "Northwood Renovation builds custom wood, composite, and covered decks for Everett homeowners. Strong craftsmanship, clean installations, and free estimates for decking in Everett, WA.";
 
 const seoKeywords = [
-  "decking in Seattle WA",
-  "Seattle deck builder",
-  "deck builder Seattle WA",
-  "deck installation Seattle",
-  "deck replacement Seattle",
-  "composite decking Seattle",
-  "wood decks Seattle",
-  "cedar decks Seattle",
-  "covered decks Seattle",
-  "custom decks Seattle",
+  "decking in Everett WA",
+  "Everett deck builder",
+  "deck builder Everett WA",
+  "deck installation Everett",
+  "deck replacement Everett",
+  "composite decking Everett",
+  "wood decks Everett",
+  "cedar decks Everett",
+  "covered decks Everett",
+  "custom decks Everett",
   "Northwood Renovation decking",
 ];
 
@@ -41,7 +41,7 @@ const services = [
   {
     tag: "Design + Build",
     title: "Custom Decks",
-    text: "From design to build, we craft clean, long-lasting decks that fit your Seattle home and outdoor lifestyle.",
+    text: "From design to build, we craft clean, long-lasting decks that fit your Everett-area home and outdoor lifestyle.",
     to: "/custom-deck/",
   },
   {
@@ -59,7 +59,7 @@ const services = [
   {
     tag: "Outdoor Living",
     title: "Covered Decks & Railings",
-    text: "Add usable covered outdoor space with railings, pergolas, and weather protection designed for Seattle.",
+    text: "Add usable covered outdoor space with railings, pergolas, and weather protection designed for the Pacific Northwest.",
     to: "/covered-deck/",
   },
 ];
@@ -68,22 +68,22 @@ const galleryItems = [
   {
     src: heroDeckImage,
     type: "Composite Deck",
-    location: "Seattle, WA",
+    location: "Everett, WA",
   },
   {
     src: galleryDeckImage,
     type: "Custom Deck",
-    location: "Seattle Area",
+    location: "Snohomish County",
   },
   {
     src: galleryDeckAfterImage,
     type: "Backyard Deck",
-    location: "Seattle, WA",
+    location: "Everett, WA",
   },
   {
     src: largeDeckAfterImage,
     type: "Wood Deck",
-    location: "Seattle Area",
+    location: "Greater Seattle",
   },
   {
     src: recentWorkProjects[0].image,
@@ -110,7 +110,7 @@ const featureCards = [
   },
   {
     title: "Premium Materials & Installation",
-    text: "Built with precision for long-term performance and clean finishes that hold up through Seattle rain, moisture, and daily use.",
+    text: "Built with precision for long-term performance and clean finishes that hold up through Northwest rain, moisture, and daily use.",
     points: [
       "Footings & framing done right",
       "Composite, cedar, treated lumber options",
@@ -119,7 +119,7 @@ const featureCards = [
     ],
   },
   {
-    title: "Built for Seattle Homes",
+    title: "Built for Everett & Northwest Homes",
     text: "Every deck we build is designed to handle wet seasons, daily traffic, and Pacific Northwest weather.",
     points: [
       "Moisture-resistant materials",
@@ -135,27 +135,27 @@ const transformations = [
     before: beforeAfterPreview.before,
     after: beforeAfterPreview.after,
     title: "Weathered Deck Replacement",
-    location: "Seattle, WA",
+    location: "Everett, WA",
   },
   {
     before: galleryDeckBeforeImage,
     after: galleryDeckAfterImage,
     title: "Backyard Deck Rebuild",
-    location: "Seattle Area",
+    location: "Snohomish County",
   },
   {
     before: largeDeckBeforeImage,
     after: largeDeckAfterImage,
     title: "Large Wood Deck Replacement",
-    location: "Seattle Area",
+    location: "Greater Seattle",
   },
 ];
 
 const whyChoosePoints = [
-  "Expert deck builders serving Seattle and surrounding areas",
+  "Expert deck builders serving Everett and surrounding areas",
   "Custom designs to fit your home, yard, and outdoor lifestyle",
   "Quality materials: composite, wood, cedar, or covered options",
-  "Fully insured and trusted by Seattle-area homeowners",
+  "Fully insured and trusted by Everett-area homeowners",
   "Clean installations, clear communication, no surprise costs",
 ];
 
@@ -184,9 +184,9 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "What deck material works best in Seattle weather?",
+    question: "What deck material works best in Everett weather?",
     answer:
-      "Composite decking is a strong choice for Seattle because it resists moisture, rot, and mold without requiring regular sealing or staining. Cedar is also popular for its natural warmth and character. The best material depends on your maintenance preferences, budget, and how you plan to use the space.",
+      "Composite decking is a strong choice for Everett because it resists moisture, rot, and mold without requiring regular sealing or staining. Cedar is also popular for its natural warmth and character. The best material depends on your maintenance preferences, budget, and how you plan to use the space.",
   },
   {
     question: "Do you build both wood and composite decks?",
@@ -194,9 +194,9 @@ const faqs = [
       "Yes. Northwood Renovation builds both wood and composite decks, including cedar decks, custom layouts, outdoor decks, and replacement deck projects.",
   },
   {
-    question: "Can you build covered decks in Seattle?",
+    question: "Can you build covered decks in Everett?",
     answer:
-      "Yes. We can plan covered deck structures, pergolas, railings, stairs, and weather protection details for Seattle homes.",
+      "Yes. We can plan covered deck structures, pergolas, railings, stairs, and weather protection details for Everett-area homes.",
   },
   {
     question: "Do you handle deck stairs and railings?",
@@ -214,14 +214,14 @@ const faqs = [
       "Yes. We replace old, unsafe, or weathered decks and can update framing, stairs, railings, layout, and material choices during the rebuild.",
   },
   {
-    question: "Do you offer free estimates for Seattle deck projects?",
+    question: "Do you offer free estimates for Everett deck projects?",
     answer:
-      "Yes. Northwood Renovation offers free estimates for deck installation, replacement, and remodeling projects in Seattle and surrounding areas. We review the yard, discuss options, and provide a clear scope before any work begins.",
+      "Yes. Northwood Renovation offers free estimates for deck installation, replacement, and remodeling projects in Everett and surrounding areas. We review the yard, discuss options, and provide a clear scope before any work begins.",
   },
   {
-    question: "What areas near Seattle do you serve?",
+    question: "What areas near Everett do you serve?",
     answer:
-      "We serve Seattle and nearby areas including Bellevue, Kirkland, Redmond, Bothell, Shoreline, Edmonds, Renton, West Seattle, Capitol Hill, and Ballard.",
+      "We serve Everett and nearby areas including Marysville, Snohomish, Mill Creek, Mukilteo, Lynnwood, Bellevue, Kirkland, Redmond, Bothell, Shoreline, and Edmonds.",
   },
 ];
 
@@ -230,17 +230,19 @@ const recentDeckProjects = recentWorkProjects
   .slice(0, 4);
 
 const serviceAreas = [
-  "Seattle",
-  "Bellevue",
-  "Kirkland",
-  "Redmond",
+  "Everett",
+  "Marysville",
+  "Snohomish",
+  "Mukilteo",
+  "Mill Creek",
+  "Lynnwood",
+  "Edmonds",
   "Bothell",
   "Shoreline",
-  "Edmonds",
+  "Kirkland",
+  "Redmond",
+  "Bellevue",
   "Renton",
-  "West Seattle",
-  "Capitol Hill",
-  "Ballard",
 ];
 
 const buildDeckingPageSchema = (pathname: string) => {
@@ -260,11 +262,11 @@ const buildDeckingPageSchema = (pathname: string) => {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": `${canonicalUrl}#decking-service`,
-      name: "Decking in Seattle, WA",
+      name: "Decking in Everett, WA",
       alternateName: [
-        "Seattle deck builder",
-        "Custom deck installation in Seattle",
-        "Composite decking in Seattle",
+        "Everett deck builder",
+        "Custom deck installation in Everett",
+        "Composite decking in Everett",
       ],
       description: seoDescription,
       url: canonicalUrl,
@@ -275,7 +277,7 @@ const buildDeckingPageSchema = (pathname: string) => {
       areaServed,
       audience: {
         "@type": "Audience",
-        audienceType: "Seattle-area homeowners",
+        audienceType: "Everett-area homeowners",
       },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -301,7 +303,7 @@ const buildDeckingPageSchema = (pathname: string) => {
         "@type": "Offer",
         name: "Free deck estimate",
         description:
-          "Free estimate for custom wood, composite, covered, and replacement deck projects in Seattle, WA.",
+          "Free estimate for custom wood, composite, covered, and replacement deck projects in Everett, WA.",
         price: "0",
         priceCurrency: "USD",
         availability: "https://schema.org/InStock",
@@ -335,7 +337,7 @@ const buildDeckingPageSchema = (pathname: string) => {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Decking in Seattle, WA",
+          name: "Decking in Everett, WA",
           item: canonicalUrl,
         },
       ],
@@ -344,7 +346,7 @@ const buildDeckingPageSchema = (pathname: string) => {
       "@context": "https://schema.org",
       "@type": "ItemList",
       "@id": `${canonicalUrl}#deck-projects`,
-      name: "Recent Deck Projects in Seattle, WA",
+      name: "Recent Deck Projects in Everett, WA",
       itemListElement: recentDeckProjects.map((project, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -424,14 +426,14 @@ const DeckingPage = () => {
         <section className="decking-hero">
           <div className="decking-hero__copy">
             <p className="decking-hero__rating">
-              <span aria-hidden="true">★★★★★</span> 4.9 · #1 Local Deck Builder in Seattle
+              <span aria-hidden="true">★★★★★</span> 4.9 · Trusted Deck Builder in Everett
             </p>
-            <h1>Top Deck Builder in Seattle, WA</h1>
+            <h1>Top Deck Builder in Everett, WA</h1>
             <p className="decking-hero__lead">
               From custom wood decks to modern composite designs, Northwood
-              Renovation builds strong, beautiful outdoor spaces for Seattle
+              Renovation builds strong, beautiful outdoor spaces for Everett
               homes. Expert craftsmanship, clean installations, and trusted
-              service across the Seattle area.
+              service across Snohomish County and Greater Seattle.
             </p>
             <form className="decking-zip-form" onSubmit={handleZipSubmit}>
               <label>
@@ -447,7 +449,7 @@ const DeckingPage = () => {
               <button type="submit">Get a Quick Quote →</button>
             </form>
             <ul className="decking-check-list">
-              <li>Seattle-area deck contractor</li>
+              <li>Everett-area deck contractor</li>
               <li>Wood, composite, and custom deck options</li>
               <li>Built for Northwest weather</li>
               <li>Free estimates</li>
@@ -456,7 +458,7 @@ const DeckingPage = () => {
           <div className="decking-hero__media">
             <img
               src={heroDeckImage}
-              alt="Deck project in Seattle, WA by Northwood Renovation"
+              alt="Deck project in Everett, WA by Northwood Renovation"
               loading="eager"
               decoding="async"
             />
@@ -468,7 +470,7 @@ const DeckingPage = () => {
             <h2>Deck & Outdoor Services</h2>
             <p>
               Build your dream outdoor space: durable, practical, and designed
-              for everyday Seattle living.
+              for everyday Northwest living.
             </p>
           </div>
           <div className="decking-services-grid">
@@ -486,10 +488,10 @@ const DeckingPage = () => {
         <section className="decking-gallery">
           <div className="decking-section__head">
             <p className="decking-kicker">Deck Builder Gallery</p>
-            <h2>Finished Deck Projects Around Seattle</h2>
+            <h2>Finished Deck Projects Around Everett</h2>
             <p>
               From custom wood decks to composite installations, explore
-              completed outdoor projects by Northwood Renovation in Seattle and
+              completed outdoor projects by Northwood Renovation in Everett and
               nearby areas.
             </p>
           </div>
@@ -498,7 +500,7 @@ const DeckingPage = () => {
               <figure className="decking-gallery__item" key={`${item.type}-${item.location}`}>
                 <img
                   src={item.src}
-                  alt="Deck project in Seattle, WA by Northwood Renovation"
+                  alt="Deck project in Everett, WA by Northwood Renovation"
                   loading="lazy"
                   decoding="async"
                 />
@@ -513,12 +515,12 @@ const DeckingPage = () => {
 
         <section className="decking-section">
           <div className="decking-section__head">
-            <h2>Complete Deck Building Service for Seattle Homeowners</h2>
+            <h2>Complete Deck Building Service for Everett Homeowners</h2>
             <p>
               When you choose Northwood Renovation for your deck project, you get
               more than just installation. From selecting durable materials to
               precise framing and clean finishing, we handle every step of the
-              process for Seattle-area homeowners.
+              process for Everett-area homeowners.
             </p>
           </div>
           <div className="decking-feature-grid">
@@ -542,7 +544,7 @@ const DeckingPage = () => {
             <p>
               Watch how we replace old, weathered decks with beautiful,
               long-lasting outdoor spaces designed for relaxing, entertaining,
-              and Seattle daily life.
+              and everyday Northwest living.
             </p>
           </div>
           <div className="decking-before-after">
@@ -567,14 +569,14 @@ const DeckingPage = () => {
             >
               <img
                 src={activeTransformation.before}
-                alt="Before deck project in Seattle, WA by Northwood Renovation"
+                alt="Before deck project in Everett, WA by Northwood Renovation"
                 loading="lazy"
                 decoding="async"
               />
               <div className="decking-before-after__after">
                 <img
                   src={activeTransformation.after}
-                  alt="After deck project in Seattle, WA by Northwood Renovation"
+                  alt="After deck project in Everett, WA by Northwood Renovation"
                   loading="lazy"
                   decoding="async"
                 />
@@ -596,56 +598,57 @@ const DeckingPage = () => {
         </section>
 
         <section className="decking-seo-copy">
-          <h2>Deck Builder in Seattle, WA — Custom Outdoor Living Experts</h2>
+          <h2>Deck Builder in Everett, WA — Custom Outdoor Living Experts</h2>
           <p>
-            Northwood Renovation is a trusted deck builder serving Seattle, WA
-            and surrounding communities including Bellevue, Kirkland, Redmond,
-            Bothell, Edmonds, and Shoreline. We provide professional deck
-            installation, deck replacement, and deck repair for homeowners across
-            the Seattle area. Our team builds durable outdoor living spaces using
+            Northwood Renovation is a trusted deck builder serving Everett, WA
+            and surrounding communities including Marysville, Snohomish, Mill
+            Creek, Mukilteo, Lynnwood, Bellevue, Kirkland, Redmond, Bothell,
+            Edmonds, and Shoreline. We provide professional deck installation,
+            deck replacement, and deck repair for homeowners across Snohomish
+            County and the greater Puget Sound area. Our team builds durable outdoor living spaces using
             composite, wood, and cedar materials engineered to withstand Pacific
             Northwest weather. Every deck we build is designed for comfort,
             strength, and long-term performance.
           </p>
-          <h3>Custom Deck Installation in Seattle, WA</h3>
+          <h3>Custom Deck Installation in Everett, WA</h3>
           <p>
-            Our Seattle deck installation services combine thoughtful design and
+            Our Everett deck installation services combine thoughtful design and
             precise construction. Each deck is custom-built to fit your home's
             layout, yard size, and daily outdoor use. We work closely with
             homeowners to plan decks that match both modern and traditional
-            Seattle homes, using materials like composite boards, cedar, and
+            Northwest homes, using materials like composite boards, cedar, and
             pressure-treated framing. Whether you want an attached deck,
             freestanding platform, covered outdoor space, or multi-level design,
             our installation process ensures clean alignment, solid framing, and
             a finished result built to last.
           </p>
-          <h3>Composite Decking Installation in Seattle, WA</h3>
+          <h3>Composite Decking Installation in Everett, WA</h3>
           <p>
-            Composite decking is a top choice for Seattle homeowners who want low
+            Composite decking is a top choice for Everett homeowners who want low
             maintenance and lasting durability in a rainy climate. Composite deck
             boards are resistant to rot, mold, moisture, and warping, making them
             ideal for wet Pacific Northwest weather. These decks hold their color
             and texture for years without sanding, sealing, or staining. Northwood
             Renovation installs high-quality composite boards with clean edges,
             hidden fasteners, and solid framing that performs well through
-            Seattle's changing seasons.
+            Western Washington's changing seasons.
           </p>
-          <h3>Wood Deck Builder in Seattle, WA</h3>
+          <h3>Wood Deck Builder in Everett, WA</h3>
           <p>
             Wood decks bring warmth, natural beauty, and a timeless feel to any
-            Seattle backyard. Northwood Renovation builds wood decks using cedar
+            Everett backyard. Northwood Renovation builds wood decks using cedar
             and pressure-treated lumber designed to handle moisture, daily use,
             and outdoor conditions. Our wood decks are carefully framed, cleanly
             finished, and sealed for long-term protection. Whether you prefer a
             natural cedar look or a more finished painted surface, wood remains
             one of the most customizable and visually warm materials for
-            Seattle-area homes.
+            Everett-area homes.
           </p>
-          <h3>Deck Replacement and Remodeling in Seattle</h3>
+          <h3>Deck Replacement and Remodeling in Everett</h3>
           <p>
             If your existing deck is unsafe, outdated, or simply worn out from
             years of Northwest weather, Northwood Renovation provides complete
-            deck replacement in Seattle. We remove the old structure, inspect the
+            deck replacement in Everett. We remove the old structure, inspect the
             foundation and framing, and rebuild with stronger materials and
             updated design. Our remodeling services allow you to upgrade from old
             wood to composite, add new railings, extend the deck footprint, or
@@ -657,31 +660,32 @@ const DeckingPage = () => {
             Northwood Renovation can turn a simple deck into a complete covered
             outdoor living area. We plan and build pergolas, covered deck
             structures, railings, stairs, and built-in seating designed for
-            Seattle homeowners who want to use their outdoor space year-round.
+            Everett-area homeowners who want to use their outdoor space year-round.
             Covered decks add significant usability in a rainy climate, providing
             shade in summer and protection from rain in fall and spring. These
             additions make your outdoor area more comfortable and practical while
             maintaining visual harmony with your home.
           </p>
-          <h3>Why Choose Northwood Renovation for Decking in Seattle, WA</h3>
+          <h3>Why Choose Northwood Renovation for Decking in Everett, WA</h3>
           <p>
             Northwood Renovation stands out through craftsmanship, clear
-            communication, and a practical understanding of Seattle residential
-            projects. We are fully insured and locally operated, serving Seattle
-            and nearby communities including Bellevue, Kirkland, Redmond, Bothell,
+            communication, and a practical understanding of Snohomish County and
+            Puget Sound residential projects. We are fully insured and locally
+            operated, serving Everett and nearby communities including Marysville,
+            Snohomish, Mill Creek, Bellevue, Kirkland, Redmond, Bothell,
             Shoreline, Edmonds, and Renton. Our clients appreciate honest
             estimates, organized job sites, and finished results that hold up
             through Northwest weather. We use quality materials and careful
             framing to ensure structural integrity and clean finishes on every
             deck project.
           </p>
-          <h3>Schedule Your Free Deck Estimate in Seattle, WA</h3>
+          <h3>Schedule Your Free Deck Estimate in Everett, WA</h3>
           <p>
-            Ready to build a new deck for your Seattle home? Contact Northwood
+            Ready to build a new deck for your Everett home? Contact Northwood
             Renovation today for a free estimate. Our team will walk you through
             material options, layout planning, and practical next steps from your
             first call to final walkthrough. Request an online estimate or call us
-            directly to start your deck project with a trusted Seattle deck
+            directly to start your deck project with a trusted Everett deck
             builder.
           </p>
         </section>
@@ -699,14 +703,14 @@ const DeckingPage = () => {
 
         <section className="decking-section">
           <div className="decking-section__head">
-            <h2>Recent Deck Projects in Seattle, WA</h2>
+            <h2>Recent Deck Projects in Everett, WA</h2>
           </div>
           <div className="decking-project-grid">
             {recentDeckProjects.map((project) => (
               <article className="decking-project-card" key={project.slug}>
                 <img
                   src={project.image}
-                  alt="Deck project in Seattle, WA by Northwood Renovation"
+                  alt="Deck project in Everett, WA by Northwood Renovation"
                   loading="lazy"
                   decoding="async"
                 />
@@ -739,7 +743,7 @@ const DeckingPage = () => {
 
         <section className="decking-reviews">
           <div className="decking-section__head">
-            <h2>What Seattle Homeowners Say About Northwood Renovation</h2>
+            <h2>What Everett-Area Homeowners Say About Northwood Renovation</h2>
             <p>
               Homeowners choose Northwood Renovation for clean work, practical
               advice, and finished outdoor spaces that feel ready to use.
@@ -762,7 +766,7 @@ const DeckingPage = () => {
 
         <section className="decking-faq">
           <div className="decking-section__head">
-            <h2>Frequently Asked Questions About Decking in Seattle</h2>
+            <h2>Frequently Asked Questions About Decking in Everett</h2>
           </div>
           <div className="decking-faq__list">
             {faqs.map((faq) => (
@@ -775,10 +779,10 @@ const DeckingPage = () => {
         </section>
 
         <section className="decking-final-cta">
-          <h2>Ready to Build a Deck in Seattle?</h2>
+          <h2>Ready to Build a Deck in Everett?</h2>
           <p>
             Tell us about your outdoor space and Northwood Renovation will help
-            you plan a clean, durable deck built for Seattle homes and Northwest
+            you plan a clean, durable deck built for Everett homes and Northwest
             weather.
           </p>
           <div>
@@ -790,7 +794,7 @@ const DeckingPage = () => {
         </section>
 
         <footer className="decking-service-area">
-          <h2>Proudly Serving Seattle &amp; Surrounding Areas</h2>
+          <h2>Proudly Serving Everett &amp; Surrounding Areas</h2>
           <p>{serviceAreas.join(" · ")}</p>
         </footer>
       </main>
@@ -806,7 +810,7 @@ export const Head: HeadFC = ({ location }) => (
     description={seoDescription}
     pathname={location.pathname}
     image="/og-northwood-renovation.jpg"
-    imageAlt="Decking in Seattle, WA by Northwood Renovation"
+    imageAlt="Decking in Everett, WA by Northwood Renovation"
     keywords={seoKeywords}
     schema={buildDeckingPageSchema(location.pathname)}
   />

@@ -9,11 +9,11 @@ export const BUSINESS_PHONE_TEL = "+14256832024";
 export const DEFAULT_TITLE =
   "Deck & Fence Contractor in Everett, WA | Northwood Renovation";
 export const DEFAULT_DESCRIPTION =
-  "Northwood Renovation is an Everett-based deck and fence contractor serving Snohomish County, North Seattle, and the greater Puget Sound area. Free on-site estimates. Call (425) 683-2024.";
+  "Northwood Renovation is an Everett-based deck and fence contractor serving Snohomish County, Greater Seattle, and the Puget Sound area. Free on-site estimates. Call (425) 683-2024.";
 export const DEFAULT_OG_IMAGE = "/og-northwood-renovation.jpg";
 
 export const SERVICE_AREA_SUMMARY =
-  "Everett, Snohomish County, North Seattle, and the greater Puget Sound area";
+  "Everett, Snohomish County, Greater Seattle, and the Puget Sound area";
 export const PRIMARY_SERVICE_AREAS = [
   "Everett, WA",
   "Marysville, WA",

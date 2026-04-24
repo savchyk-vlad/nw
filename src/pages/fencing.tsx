@@ -17,20 +17,20 @@ import sunsetWoodFence from "../images/gallery/sunset-wood-fence.jpg";
 import chainLinkFence from "../images/services-chain-link-fence.jpg";
 
 const seoTitle =
-  "Fencing in Seattle, WA | Cedar Wood & Chain Link Fence | Northwood Renovation";
+  "Fencing in Everett, WA | Cedar Wood & Chain Link Fence | Northwood Renovation";
 const seoDescription =
-  "Northwood Renovation installs cedar wood and chain link fences for Seattle homeowners. Strong craftsmanship, clean fence lines, and free estimates for fencing in Seattle, WA.";
+  "Northwood Renovation installs cedar wood and chain link fences for Everett homeowners. Strong craftsmanship, clean fence lines, and free estimates for fencing in Everett, WA.";
 
 const seoKeywords = [
-  "fencing in Seattle WA",
-  "Seattle fence contractor",
-  "fence contractor Seattle WA",
-  "fence installation Seattle",
-  "fence replacement Seattle",
-  "cedar wood fence Seattle",
-  "chain link fence Seattle",
-  "privacy fence Seattle",
-  "fence gates Seattle",
+  "fencing in Everett WA",
+  "Everett fence contractor",
+  "fence contractor Everett WA",
+  "fence installation Everett",
+  "fence replacement Everett",
+  "cedar wood fence Everett",
+  "chain link fence Everett",
+  "privacy fence Everett",
+  "fence gates Everett",
   "Northwood Renovation fencing",
 ];
 
@@ -38,7 +38,7 @@ const services = [
   {
     tag: "Privacy + Warmth",
     title: "Cedar Wood Fence",
-    text: "Natural cedar privacy fencing with warm character, strong posts, and clean lines built for Seattle residential yards.",
+    text: "Natural cedar privacy fencing with warm character, strong posts, and clean lines built for Everett-area residential yards.",
     to: "/cedar-wood-fence/",
   },
   {
@@ -65,9 +65,9 @@ const galleryItems = [
   { src: fenceBackyard, type: "Privacy Fence", location: "Bellevue, WA" },
   { src: horizontalWoodFence, type: "Horizontal Cedar Fence", location: "Redmond, WA" },
   { src: sunsetWoodFence, type: "Cedar Fence Line", location: "Woodinville, WA" },
-  { src: chainLinkFence, type: "Chain Link Fence", location: "Seattle Area" },
+  { src: chainLinkFence, type: "Chain Link Fence", location: "Snohomish County" },
   { src: morningGardenFence, type: "Fence Refresh", location: "Kent, WA" },
-  { src: gardenFenceTrees, type: "Garden Fence", location: "Seattle Area" },
+  { src: gardenFenceTrees, type: "Garden Fence", location: "Greater Seattle" },
 ];
 
 const featureCards = [
@@ -83,7 +83,7 @@ const featureCards = [
   },
   {
     title: "Quality Materials & Installation",
-    text: "Built with straight posts, correct spacing, and clean board placement for long-term performance through Seattle rain and moisture.",
+    text: "Built with straight posts, correct spacing, and clean board placement for long-term performance through Northwest rain and moisture.",
     points: [
       "Strong post footings",
       "Cedar boards or chain link mesh",
@@ -92,7 +92,7 @@ const featureCards = [
     ],
   },
   {
-    title: "Built for Seattle Homes",
+    title: "Built for Everett & Northwest Homes",
     text: "Every fence we install is designed to handle wet seasons, daily outdoor conditions, and Pacific Northwest weather.",
     points: [
       "Moisture-resistant cedar",
@@ -108,15 +108,15 @@ const transformations = [
     before: morningGardenFence,
     after: fenceBackyard,
     title: "Privacy Fence Replacement",
-    location: "Seattle Area",
+    location: "Greater Seattle",
   },
 ];
 
 const whyChoosePoints = [
-  "Fence specialists serving Seattle and surrounding areas",
+  "Fence specialists serving Everett and surrounding areas",
   "Cedar wood and chain link fence options",
   "Gates, hardware, and complete fence installations",
-  "Fully insured and trusted by Seattle-area homeowners",
+  "Fully insured and trusted by Everett-area homeowners",
   "Clean fence lines, clear communication, no surprise costs",
 ];
 
@@ -145,19 +145,19 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "What fence material works best in Seattle weather?",
+    question: "What fence material works best in Everett weather?",
     answer:
-      "Cedar wood is a popular choice for Seattle because it naturally resists moisture and decay, making it a durable option for a rainy climate. Chain link is also a strong choice for homeowners who want a low-maintenance, practical fence for security or property boundaries. The best material depends on your privacy needs, budget, and how the fence will be used.",
+      "Cedar wood is a popular choice for Everett because it naturally resists moisture and decay, making it a durable option for a rainy climate. Chain link is also a strong choice for homeowners who want a low-maintenance, practical fence for security or property boundaries. The best material depends on your privacy needs, budget, and how the fence will be used.",
   },
   {
     question: "Do you install cedar wood fences?",
     answer:
-      "Yes. Northwood Renovation installs cedar privacy fences for Seattle residential homes, including board-on-board designs, straight-top panels, and custom height options with gate access.",
+      "Yes. Northwood Renovation installs cedar privacy fences for Everett-area residential homes, including board-on-board designs, straight-top panels, and custom height options with gate access.",
   },
   {
     question: "Do you install chain link fences?",
     answer:
-      "Yes. We install galvanized chain link fencing for Seattle homeowners, including property boundary fencing, side yard enclosures, pet areas, and gates with proper hardware.",
+      "Yes. We install galvanized chain link fencing for Everett-area homeowners, including property boundary fencing, side yard enclosures, pet areas, and gates with proper hardware.",
   },
   {
     question: "Can you install a gate with a new fence?",
@@ -167,7 +167,7 @@ const faqs = [
   {
     question: "Can you replace an old or damaged fence?",
     answer:
-      "Yes. Northwood Renovation provides complete fence replacement in Seattle. We remove the old fence, check existing post locations, and install a new fence with better materials and cleaner alignment.",
+      "Yes. Northwood Renovation provides complete fence replacement in Everett. We remove the old fence, check existing post locations, and install a new fence with better materials and cleaner alignment.",
   },
   {
     question: "How long does a fence installation usually take?",
@@ -175,14 +175,14 @@ const faqs = [
       "Most residential fence projects take one to three days depending on the fence length, materials, ground conditions, and gate complexity. We confirm the timeline before work begins.",
   },
   {
-    question: "Do you offer free estimates for fence projects in Seattle?",
+    question: "Do you offer free estimates for fence projects in Everett?",
     answer:
-      "Yes. Northwood Renovation offers free on-site estimates for fence installation, replacement, and gate work in Seattle and surrounding areas.",
+      "Yes. Northwood Renovation offers free on-site estimates for fence installation, replacement, and gate work in Everett and surrounding areas.",
   },
   {
-    question: "What areas near Seattle do you serve?",
+    question: "What areas near Everett do you serve?",
     answer:
-      "We serve Seattle and nearby communities including Bellevue, Kirkland, Redmond, Bothell, Shoreline, Edmonds, Renton, West Seattle, and other Seattle-area neighborhoods.",
+      "We serve Everett and nearby communities including Marysville, Snohomish, Mill Creek, Mukilteo, Lynnwood, Bellevue, Kirkland, Redmond, Bothell, Shoreline, Edmonds, and Renton.",
   },
 ];
 
@@ -191,17 +191,19 @@ const recentFenceProjects = recentWorkProjects
   .slice(0, 4);
 
 const serviceAreas = [
-  "Seattle",
-  "Bellevue",
-  "Kirkland",
-  "Redmond",
+  "Everett",
+  "Marysville",
+  "Snohomish",
+  "Mukilteo",
+  "Mill Creek",
+  "Lynnwood",
+  "Edmonds",
   "Bothell",
   "Shoreline",
-  "Edmonds",
+  "Kirkland",
+  "Redmond",
+  "Bellevue",
   "Renton",
-  "West Seattle",
-  "Capitol Hill",
-  "Ballard",
 ];
 
 const buildFencingPageSchema = (pathname: string) => {
@@ -221,11 +223,11 @@ const buildFencingPageSchema = (pathname: string) => {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": `${canonicalUrl}#fencing-service`,
-      name: "Fencing in Seattle, WA",
+      name: "Fencing in Everett, WA",
       alternateName: [
-        "Seattle fence contractor",
-        "Cedar wood fence installation in Seattle",
-        "Chain link fence installation in Seattle",
+        "Everett fence contractor",
+        "Cedar wood fence installation in Everett",
+        "Chain link fence installation in Everett",
       ],
       description: seoDescription,
       url: canonicalUrl,
@@ -236,7 +238,7 @@ const buildFencingPageSchema = (pathname: string) => {
       areaServed,
       audience: {
         "@type": "Audience",
-        audienceType: "Seattle-area homeowners",
+        audienceType: "Everett-area homeowners",
       },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -257,7 +259,7 @@ const buildFencingPageSchema = (pathname: string) => {
         "@type": "Offer",
         name: "Free fence estimate",
         description:
-          "Free estimate for cedar wood, chain link, privacy fence, and gate installation projects in Seattle, WA.",
+          "Free estimate for cedar wood, chain link, privacy fence, and gate installation projects in Everett, WA.",
         price: "0",
         priceCurrency: "USD",
         availability: "https://schema.org/InStock",
@@ -291,7 +293,7 @@ const buildFencingPageSchema = (pathname: string) => {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Fencing in Seattle, WA",
+          name: "Fencing in Everett, WA",
           item: canonicalUrl,
         },
       ],
@@ -360,14 +362,14 @@ const FencingPage = () => {
         <section className="decking-hero">
           <div className="decking-hero__copy">
             <p className="decking-hero__rating">
-              <span aria-hidden="true">★★★★★</span> Trusted Fence Contractor in Seattle, WA
+              <span aria-hidden="true">★★★★★</span> Trusted Fence Contractor in Everett, WA
             </p>
-            <h1>Top Fence Contractor in Seattle, WA</h1>
+            <h1>Top Fence Contractor in Everett, WA</h1>
             <p className="decking-hero__lead">
               From cedar privacy fences to durable chain link installations,
-              Northwood Renovation builds strong, clean fences for Seattle
+              Northwood Renovation builds strong, clean fences for Everett
               homes. Professional craftsmanship, straight fence lines, and
-              trusted service across the Seattle area.
+              trusted service across Snohomish County and Greater Seattle.
             </p>
             <form className="decking-zip-form" onSubmit={handleZipSubmit}>
               <label>
@@ -383,7 +385,7 @@ const FencingPage = () => {
               <button type="submit">Get a Quick Quote →</button>
             </form>
             <ul className="decking-check-list">
-              <li>Seattle-area fence contractor</li>
+              <li>Everett-area fence contractor</li>
               <li>Cedar wood and chain link fence options</li>
               <li>Built for Northwest weather</li>
               <li>Free estimates</li>
@@ -392,7 +394,7 @@ const FencingPage = () => {
           <div className="decking-hero__media">
             <img
               src={fenceBackyard}
-              alt="Fence project in Seattle, WA by Northwood Renovation"
+              alt="Fence project in Everett, WA by Northwood Renovation"
               loading="eager"
               decoding="async"
             />
@@ -404,7 +406,7 @@ const FencingPage = () => {
             <h2>Fence & Outdoor Services</h2>
             <p>
               Build a clean, secure, and private outdoor boundary: designed for
-              everyday Seattle living and Northwest weather.
+              everyday Northwest living and weather.
             </p>
           </div>
           <div className="decking-services-grid">
@@ -422,10 +424,10 @@ const FencingPage = () => {
         <section className="decking-gallery">
           <div className="decking-section__head">
             <p className="decking-kicker">Fence Builder Gallery</p>
-            <h2>Finished Fence Projects Around Seattle</h2>
+            <h2>Finished Fence Projects Around Everett</h2>
             <p>
               From cedar privacy fences to chain link installations, explore
-              completed fence projects by Northwood Renovation in Seattle and
+              completed fence projects by Northwood Renovation in Everett and
               nearby areas.
             </p>
           </div>
@@ -434,7 +436,7 @@ const FencingPage = () => {
               <figure className="decking-gallery__item" key={`${item.type}-${item.location}`}>
                 <img
                   src={item.src}
-                  alt="Fence project in Seattle, WA by Northwood Renovation"
+                  alt="Fence project in Everett, WA by Northwood Renovation"
                   loading="lazy"
                   decoding="async"
                 />
@@ -449,12 +451,12 @@ const FencingPage = () => {
 
         <section className="decking-section">
           <div className="decking-section__head">
-            <h2>Complete Fence Installation Service for Seattle Homeowners</h2>
+            <h2>Complete Fence Installation Service for Everett Homeowners</h2>
             <p>
               When you choose Northwood Renovation for your fence project, you
               get more than just installation. From selecting the right
               materials to precise post placement and clean finishing, we handle
-              every step of the process for Seattle-area homeowners.
+              every step of the process for Everett-area homeowners.
             </p>
           </div>
           <div className="decking-feature-grid">
@@ -477,7 +479,8 @@ const FencingPage = () => {
             <h2>Before & After Transformations</h2>
             <p>
               See how we replace old, tired fences with clean, strong new
-              installations designed for privacy, security, and everyday Seattle
+              installations designed for privacy, security, and everyday
+              Northwest
               living.
             </p>
           </div>
@@ -503,14 +506,14 @@ const FencingPage = () => {
             >
               <img
                 src={activeTransformation.before}
-                alt="Before fence project in Seattle, WA by Northwood Renovation"
+                alt="Before fence project in Everett, WA by Northwood Renovation"
                 loading="lazy"
                 decoding="async"
               />
               <div className="decking-before-after__after">
                 <img
                   src={activeTransformation.after}
-                  alt="After fence project in Seattle, WA by Northwood Renovation"
+                  alt="After fence project in Everett, WA by Northwood Renovation"
                   loading="lazy"
                   decoding="async"
                 />
@@ -532,19 +535,20 @@ const FencingPage = () => {
         </section>
 
         <section className="decking-seo-copy">
-          <h2>Fence Contractor in Seattle, WA — Cedar Wood & Chain Link Specialists</h2>
+          <h2>Fence Contractor in Everett, WA — Cedar Wood & Chain Link Specialists</h2>
           <p>
-            Northwood Renovation is a trusted fence contractor serving Seattle,
-            WA and surrounding communities including Bellevue, Kirkland, Redmond,
-            Bothell, Edmonds, and Shoreline. We provide professional fence
-            installation, fence replacement, and gate installation for homeowners
-            across the Seattle area. Our team builds durable outdoor fencing
+            Northwood Renovation is a trusted fence contractor serving Everett,
+            WA and surrounding communities including Marysville, Snohomish, Mill
+            Creek, Mukilteo, Lynnwood, Bellevue, Kirkland, Redmond, Bothell,
+            Edmonds, and Shoreline. We provide professional fence installation,
+            fence replacement, and gate installation for homeowners across
+            Snohomish County and the greater Puget Sound area. Our team builds durable outdoor fencing
             using cedar wood, chain link, and treated post materials engineered
             to withstand Pacific Northwest weather. Every fence we install is
             planned for privacy, security, and long-term performance.
           </p>
           <p>
-            Seattle fence projects need more than a straight run of boards or
+            Everett fence projects need more than a straight run of boards or
             mesh. Rain, sloped yards, tree roots, narrow side yards, and soft
             soil can all affect how a fence should be planned. Our team looks at
             the full property layout before work begins, including access,
@@ -553,15 +557,15 @@ const FencingPage = () => {
             build fence lines that feel clean, stable, and practical after the
             first rainy season and for years beyond it.
           </p>
-          <h3>Cedar Wood Fence Installation in Seattle, WA</h3>
+          <h3>Cedar Wood Fence Installation in Everett, WA</h3>
           <p>
-            Cedar wood fencing is one of the most popular choices for Seattle
+            Cedar wood fencing is one of the most popular choices for Everett
             homeowners who want natural warmth, privacy, and a clean residential
             look. Cedar is naturally resistant to moisture and decay, making it a
             strong long-term choice for the wet Pacific Northwest climate.
             Northwood Renovation installs cedar fences with careful post
             placement, straight board alignment, and clean top edges designed to
-            look right alongside Seattle residential homes.
+            look right alongside Everett-area residential homes.
           </p>
           <p>
             A cedar fence can be built for privacy, curb appeal, pets, side-yard
@@ -578,12 +582,12 @@ const FencingPage = () => {
             the finished fence looks intentional and handles wet outdoor
             conditions. A well-built cedar fence should not only look good on day
             one; it should also age in a way that still feels solid, straight,
-            and appropriate for a Seattle residential property.
+            and appropriate for an Everett-area residential property.
           </p>
-          <h3>Chain Link Fence Installation in Seattle, WA</h3>
+          <h3>Chain Link Fence Installation in Everett, WA</h3>
           <p>
             Chain link fencing is a practical, durable, and cost-effective
-            solution for Seattle homeowners who need a clear property boundary,
+            solution for Everett homeowners who need a clear property boundary,
             security, or pet enclosure. Galvanized chain link holds up well
             through rain, moisture, and outdoor use without requiring regular
             maintenance.
@@ -598,23 +602,23 @@ const FencingPage = () => {
             system feels tight, stable, and easy to use.
           </p>
           <p>
-            For Seattle-area homes, chain link can also be a smart solution when
+            For Everett-area homes, chain link can also be a smart solution when
             the yard has mixed terrain or when homeowners want durable fencing
             without the visual weight of a full privacy fence. We review the
             fence run, corners, gate locations, and connection points before
             installation so the finished fence works with the property instead
             of fighting against it.
           </p>
-          <h3>Fence Replacement in Seattle, WA</h3>
+          <h3>Fence Replacement in Everett, WA</h3>
           <p>
             If your existing fence is leaning, rotting, or simply worn out from
-            years of Seattle weather, Northwood Renovation provides complete
+            years of Northwest weather, Northwood Renovation provides complete
             fence replacement. We remove the old fence, inspect existing post
             locations, and install a new fence with stronger materials and
             better alignment.
           </p>
           <p>
-            Many older fences in Seattle fail first at the posts, gates, and
+            Many older fences in Everett fail first at the posts, gates, and
             lower boards where moisture collects. Other signs include uneven top
             lines, loose panels, dragging gates, cracked posts, missing boards,
             or sections that move in the wind. During a replacement project, we
@@ -648,12 +652,13 @@ const FencingPage = () => {
             access gate for equipment, or a gate positioned for pets, trash bins,
             gardens, or backyard traffic.
           </p>
-          <h3>Why Choose Northwood Renovation for Fencing in Seattle, WA</h3>
+          <h3>Why Choose Northwood Renovation for Fencing in Everett, WA</h3>
           <p>
             Northwood Renovation is a local fence contractor focused on
-            residential fence and deck work in Seattle and nearby communities.
-            We are fully insured and serve Seattle, Bellevue, Kirkland, Redmond,
-            Bothell, Shoreline, Edmonds, and Renton. Our clients appreciate
+            residential fence and deck work in Everett and nearby communities.
+            We are fully insured and serve Everett, Marysville, Snohomish,
+            Bellevue, Kirkland, Redmond, Bothell, Shoreline, Edmonds, and
+            Renton. Our clients appreciate
             straightforward estimates, organized job sites, and finished fence
             lines that look clean and hold up through Northwest weather.
           </p>
@@ -673,13 +678,13 @@ const FencingPage = () => {
             That is why we approach fencing as part of the whole property, not
             just a material installation.
           </p>
-          <h3>Schedule Your Free Fence Estimate in Seattle, WA</h3>
+          <h3>Schedule Your Free Fence Estimate in Everett, WA</h3>
           <p>
-            Ready to install a new fence at your Seattle home? Contact Northwood
+            Ready to install a new fence at your Everett home? Contact Northwood
             Renovation today for a free estimate. Our team will visit your
             property, review layout options, and provide a clear scope before any
             work begins. Request an online estimate or call us directly to start
-            your fence project with a trusted Seattle fence contractor.
+            your fence project with a trusted Everett fence contractor.
           </p>
         </section>
 
@@ -696,14 +701,14 @@ const FencingPage = () => {
 
         <section className="decking-section">
           <div className="decking-section__head">
-            <h2>Recent Fence Projects in Seattle, WA</h2>
+            <h2>Recent Fence Projects in Everett, WA</h2>
           </div>
           <div className="decking-project-grid">
             {recentFenceProjects.map((project) => (
               <article className="decking-project-card" key={project.slug}>
                 <img
                   src={project.image}
-                  alt="Fence project in Seattle, WA by Northwood Renovation"
+                  alt="Fence project in Everett, WA by Northwood Renovation"
                   loading="lazy"
                   decoding="async"
                 />
@@ -736,7 +741,7 @@ const FencingPage = () => {
 
         <section className="decking-reviews">
           <div className="decking-section__head">
-            <h2>What Seattle Homeowners Say About Northwood Renovation</h2>
+            <h2>What Everett-Area Homeowners Say About Northwood Renovation</h2>
             <p>
               Homeowners choose Northwood Renovation for clean fence lines,
               practical advice, and finished outdoor spaces that feel secure and
@@ -760,7 +765,7 @@ const FencingPage = () => {
 
         <section className="decking-faq">
           <div className="decking-section__head">
-            <h2>Frequently Asked Questions About Fencing in Seattle</h2>
+            <h2>Frequently Asked Questions About Fencing in Everett</h2>
           </div>
           <div className="decking-faq__list">
             {faqs.map((faq) => (
@@ -773,10 +778,10 @@ const FencingPage = () => {
         </section>
 
         <section className="decking-final-cta">
-          <h2>Ready to Install a Fence in Seattle?</h2>
+          <h2>Ready to Install a Fence in Everett?</h2>
           <p>
             Tell us about your property and Northwood Renovation will help you
-            plan a clean, durable fence built for Seattle homes and Northwest
+            plan a clean, durable fence built for Everett homes and Northwest
             weather.
           </p>
           <div>
@@ -788,7 +793,7 @@ const FencingPage = () => {
         </section>
 
         <footer className="decking-service-area">
-          <h2>Proudly Serving Seattle &amp; Surrounding Areas</h2>
+          <h2>Proudly Serving Everett &amp; Surrounding Areas</h2>
           <p>{serviceAreas.join(" · ")}</p>
         </footer>
       </main>
@@ -804,7 +809,7 @@ export const Head: HeadFC = ({ location }) => (
     description={seoDescription}
     pathname={location.pathname}
     image="/og-northwood-renovation.jpg"
-    imageAlt="Fencing in Seattle, WA by Northwood Renovation"
+    imageAlt="Fencing in Everett, WA by Northwood Renovation"
     keywords={seoKeywords}
     schema={buildFencingPageSchema(location.pathname)}
   />

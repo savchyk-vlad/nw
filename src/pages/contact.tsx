@@ -302,7 +302,7 @@ const ContactPage = () => {
               {renderHighlightedText("Contact Northwood Renovation")}
             </h2>
             <p className="contact-aside-panel__city">
-              {renderHighlightedText("Seattle, WA")}
+              {renderHighlightedText("Everett, WA")}
             </p>
             <p className="contact-aside-panel__intro">
               Have questions about a deck, fence, railing, repair, or outdoor
@@ -345,7 +345,9 @@ const ContactPage = () => {
                 <div className="contact-aside-panel__row-text">
                   <span className="contact-aside-panel__label">Service Area</span>
                   <span className="contact-aside-panel__value">
-                    {renderHighlightedText("Seattle, WA and nearby communities")}
+                    {renderHighlightedText(
+                      "Everett, WA · Snohomish County & Greater Seattle",
+                    )}
                   </span>
                 </div>
               </li>
@@ -371,7 +373,7 @@ const ContactPage = () => {
             </ul>
 
             <div className="contact-aside-panel__rating-banner" role="note">
-              <p>Trusted by Seattle-area homeowners</p>
+              <p>Trusted by homeowners across Everett and the Puget Sound region</p>
               <span>4.9 average rating on Google, Yelp, and Facebook</span>
             </div>
           </aside>
@@ -463,7 +465,7 @@ const ContactPage = () => {
                   name="location"
                   autoComplete="postal-code"
                   className="contact-field__input"
-                  placeholder="98103 or Seattle, WA"
+                  placeholder="98201 or Everett, WA"
                   value={projectLocation}
                   onChange={(ev) => {
                     setProjectLocation(ev.target.value);
@@ -568,7 +570,7 @@ export default ContactPage;
 export const Head: HeadFC = ({ location }) => (
   <SeoHead
     title="Free Estimate | Northwood Renovation"
-    description="Request a free estimate from Northwood Renovation — fences, decks, and exterior projects in Seattle. Clear next steps, local crew."
+    description="Request a free estimate from Northwood Renovation — fences, decks, and exterior projects from our Everett base across Snohomish County and Greater Seattle."
     pathname={location.pathname}
   />
 );
