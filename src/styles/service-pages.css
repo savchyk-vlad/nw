@@ -899,6 +899,133 @@
   padding-top: 24px;
 }
 
+.outdoor-deck-page {
+  gap: 24px;
+}
+
+.outdoor-deck-page .service-hero {
+  min-height: clamp(500px, 58vw, 620px);
+}
+
+.outdoor-deck-page .service-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(27, 27, 27, 0.8), rgba(27, 27, 27, 0.42) 54%, rgba(27, 27, 27, 0.08)),
+    linear-gradient(180deg, rgba(89, 95, 57, 0.12), rgba(27, 27, 27, 0.34));
+}
+
+.outdoor-deck-page .service-hero__content {
+  max-width: 760px;
+  padding: clamp(34px, 5vw, 68px);
+}
+
+.outdoor-deck-page .service-hero__content > p:not(.service-hero__eyebrow) {
+  max-width: 700px;
+}
+
+.outdoor-deck-page .service-trust {
+  gap: 16px;
+}
+
+.outdoor-deck-page .service-trust__card,
+.outdoor-deck-page .service-card,
+.outdoor-deck-page .service-process-card,
+.outdoor-deck-page .service-project-card,
+.outdoor-deck-page .service-faq__item {
+  background: rgba(248, 247, 242, 0.84);
+  border: 1px solid rgba(27, 27, 27, 0.06);
+  box-shadow: 0 14px 34px rgba(27, 27, 27, 0.06);
+}
+
+.outdoor-deck-page .service-trust__card {
+  min-height: 158px;
+}
+
+.outdoor-deck-page .service-overview {
+  gap: clamp(24px, 4vw, 66px);
+  padding: 46px 0 18px;
+}
+
+.outdoor-deck-page .service-overview__copy {
+  gap: 14px;
+  max-width: 930px;
+}
+
+.outdoor-deck-page .service-overview__copy p {
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.74;
+}
+
+.outdoor-deck-page .service-split {
+  align-items: start;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.outdoor-deck-page .service-card {
+  padding: 28px;
+}
+
+.outdoor-deck-page .service-options--stacked {
+  gap: 12px;
+}
+
+.outdoor-deck-page .service-options--stacked article {
+  background: rgba(233, 231, 221, 0.52);
+}
+
+.outdoor-deck-page .service-options--stacked article p + p {
+  margin-top: 10px;
+}
+
+.outdoor-deck-page .service-card__intro {
+  margin-top: 20px !important;
+}
+
+.outdoor-deck-page .service-process {
+  margin-top: 8px;
+  padding: clamp(30px, 4.5vw, 48px);
+}
+
+.outdoor-deck-page .service-process__grid--five {
+  gap: 12px;
+}
+
+.outdoor-deck-page .service-process-card {
+  min-height: 286px;
+  padding: 22px;
+}
+
+.outdoor-deck-page .service-process-card p + p {
+  margin-top: 12px;
+}
+
+.outdoor-deck-page .service-benefits {
+  gap: 22px;
+}
+
+.outdoor-deck-page .service-related__grid,
+.outdoor-deck-page .service-faq__list {
+  gap: 16px;
+}
+
+.outdoor-deck-page .service-project-card div,
+.outdoor-deck-page .service-faq__item {
+  padding: 22px;
+}
+
+.outdoor-deck-page .service-final-cta {
+  margin-top: 18px;
+  padding: clamp(30px, 4.5vw, 52px);
+}
+
+.outdoor-deck-page .service-final-cta p {
+  max-width: 760px;
+}
+
+.outdoor-deck-page .service-area-strip {
+  padding-top: 24px;
+}
+
 .wood-deck-page {
   gap: 24px;
 }
@@ -1053,6 +1180,10 @@
     grid-template-columns: 1fr;
   }
 
+  .outdoor-deck-page .service-trust {
+    grid-template-columns: 1fr;
+  }
+
   .wood-deck-page .service-trust {
     grid-template-columns: 1fr;
   }
@@ -1099,6 +1230,12 @@
   .covered-deck-page .service-card,
   .covered-deck-page .service-project-card div,
   .covered-deck-page .service-faq__item {
+    padding: 20px;
+  }
+
+  .outdoor-deck-page .service-card,
+  .outdoor-deck-page .service-project-card div,
+  .outdoor-deck-page .service-faq__item {
     padding: 20px;
   }
 
@@ -1189,6 +1326,19 @@
 
   .covered-deck-page .service-card,
   .covered-deck-page .service-process-card {
+    padding: 18px;
+  }
+
+  .outdoor-deck-page .service-hero {
+    min-height: 420px;
+  }
+
+  .outdoor-deck-page .service-hero__content {
+    padding: 22px 18px;
+  }
+
+  .outdoor-deck-page .service-card,
+  .outdoor-deck-page .service-process-card {
     padding: 18px;
   }
 
