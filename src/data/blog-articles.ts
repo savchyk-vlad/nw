@@ -14,7 +14,6 @@ export const blogCategories = [
   "Materials",
   "Maintenance",
   "Planning",
-  "Seattle Homes",
 ] as const;
 
 export type BlogCategory = (typeof blogCategories)[number];
@@ -876,7 +875,7 @@ const baseBlogArticles: BaseBlogArticle[] = [
     title: "How to Prepare Your Yard Before a Fence or Deck Installation in Everett",
   },
   {
-    category: "Seattle Homes",
+    category: "Planning",
     dateLabel: "Updated Apr 2026",
     excerpt:
       "Learn where permits are commonly needed, what site factors matter, and how better planning avoids costly delays.",

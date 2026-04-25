@@ -4,7 +4,6 @@ export type ServiceAreaSection =
   | "Snohomish County"
   | "North King County & Seattle"
   | "Eastside"
-  | "South King County"
   | "Skagit Valley";
 
 export type CityServicePageData = {
@@ -57,11 +56,6 @@ const projectSlugsBySection: Record<ServiceAreaSection, string[]> = {
     "cedar-backyard-deck",
     "privacy-fence-installation",
     "horizontal-wood-fence",
-  ],
-  "South King County": [
-    "deck-stairs-landing",
-    "backyard-fence-refresh",
-    "sunset-fence-line",
   ],
 };
 
@@ -188,22 +182,8 @@ const citySeeds: CitySeed[] = [
   { slug: "bellevue-wa", cityName: "Bellevue", county: "King County", tier: 2, driveMin: 45, section: "Eastside", regionLabel: "Eastside" },
   { slug: "sammamish-wa", cityName: "Sammamish", county: "King County", tier: 2, driveMin: 47, section: "Eastside", regionLabel: "Eastside" },
   { slug: "issaquah-wa", cityName: "Issaquah", county: "King County", tier: 2, driveMin: 50, section: "Eastside", regionLabel: "Eastside Foothills" },
-  { slug: "mercer-island-wa", cityName: "Mercer Island", county: "King County", tier: 2, driveMin: 52, section: "Eastside", regionLabel: "Lake Washington" },
-  { slug: "newcastle-wa", cityName: "Newcastle", county: "King County", tier: 2, driveMin: 52, section: "Eastside", regionLabel: "Eastside" },
   { slug: "mount-vernon-wa", cityName: "Mount Vernon", county: "Skagit County", tier: 2, driveMin: 45, section: "Skagit Valley", regionLabel: "Skagit Valley" },
   { slug: "burlington-wa", cityName: "Burlington", county: "Skagit County", tier: 2, driveMin: 50, section: "Skagit Valley", regionLabel: "Skagit Valley" },
-  { slug: "anacortes-wa", cityName: "Anacortes", county: "Skagit County", tier: 2, driveMin: 55, section: "Skagit Valley", regionLabel: "Skagit / Fidalgo" },
-  { slug: "sedro-woolley-wa", cityName: "Sedro-Woolley", county: "Skagit County", tier: 2, driveMin: 55, section: "Skagit Valley", regionLabel: "Skagit Valley" },
-  { slug: "renton-wa", cityName: "Renton", county: "King County", tier: 3, driveMin: 58, section: "South King County", regionLabel: "South King County" },
-  { slug: "kent-wa", cityName: "Kent", county: "King County", tier: 3, driveMin: 62, section: "South King County", regionLabel: "South King County" },
-  { slug: "burien-wa", cityName: "Burien", county: "King County", tier: 3, driveMin: 60, section: "South King County", regionLabel: "Southwest King County" },
-  { slug: "federal-way-wa", cityName: "Federal Way", county: "King County", tier: 3, driveMin: 68, section: "South King County", regionLabel: "South King County" },
-  { slug: "auburn-wa", cityName: "Auburn", county: "King County", tier: 3, driveMin: 65, section: "South King County", regionLabel: "South King County" },
-  { slug: "covington-wa", cityName: "Covington", county: "King County", tier: 3, driveMin: 68, section: "South King County", regionLabel: "South King County" },
-  { slug: "maple-valley-wa", cityName: "Maple Valley", county: "King County", tier: 3, driveMin: 65, section: "South King County", regionLabel: "South King County" },
-  { slug: "des-moines-wa", cityName: "Des Moines", county: "King County", tier: 3, driveMin: 63, section: "South King County", regionLabel: "Puget Sound South" },
-  { slug: "seatac-wa", cityName: "SeaTac", county: "King County", tier: 3, driveMin: 60, section: "South King County", regionLabel: "South King County" },
-  { slug: "tukwila-wa", cityName: "Tukwila", county: "King County", tier: 3, driveMin: 58, section: "South King County", regionLabel: "South King County" },
   { slug: "medina-wa", cityName: "Medina", county: "King County", tier: 3, driveMin: 50, section: "Eastside", regionLabel: "Lake Washington" },
   { slug: "clyde-hill-wa", cityName: "Clyde Hill", county: "King County", tier: 3, driveMin: 50, section: "Eastside", regionLabel: "Eastside" },
 ];

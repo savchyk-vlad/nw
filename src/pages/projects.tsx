@@ -143,8 +143,6 @@ const completedCities = [
   ["Redmond", "/cities/redmond-wa/"],
   ["Woodinville", "/cities/woodinville-wa/"],
   ["Bellevue", "/cities/bellevue-wa/"],
-  ["Renton", "/cities/renton-wa/"],
-  ["Kent", "/cities/kent-wa/"],
   ["Issaquah", "/cities/issaquah-wa/"],
 ] as const;
 

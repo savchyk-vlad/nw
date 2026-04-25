@@ -176,8 +176,6 @@ const areaLinks = [
   { label: "Kirkland", to: "/cities/kirkland-wa/" },
   { label: "Redmond", to: "/cities/redmond-wa/" },
   { label: "Bellevue", to: "/cities/bellevue-wa/" },
-  { label: "Renton", to: "/cities/renton-wa/" },
-  { label: "Kent", to: "/cities/kent-wa/" },
 ];
 
 const platformLogoByReviewPlatform: Record<ReviewPlatform, { alt: string; src: string }> = {
